@@ -1,0 +1,38 @@
+{
+    "environment": {
+        "title": "Environment",
+        "slug": "environment",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/environment.md",
+        "parent": null
+    },
+    "get-involved": {
+        "title": "Get Involved",
+        "slug": "get-involved",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/get-involved.md",
+        "parent": null
+    },
+    "index": {
+        "title": "Handbook",
+        "slug": "handbook",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/index.md",
+        "parent": null
+    },
+    "performance": {
+        "title": "",
+        "slug": "performance",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/performance.md",
+        "parent": null
+    },
+    "reliability": {
+        "title": "",
+        "slug": "reliability",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/reliability.md",
+        "parent": null
+    },
+    "security": {
+        "title": "Security",
+        "slug": "security",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/security.md",
+        "parent": null
+    }
+}
