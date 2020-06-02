@@ -18,13 +18,13 @@
         "parent": null
     },
     "performance": {
-        "title": "",
+        "title": "Performance",
         "slug": "performance",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/performance.md",
         "parent": null
     },
     "reliability": {
-        "title": "",
+        "title": "Reliability",
         "slug": "reliability",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/reliability.md",
         "parent": null
