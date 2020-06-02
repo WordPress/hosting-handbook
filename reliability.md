@@ -1,3 +1,5 @@
+# Reliability
+
 Once your site is up, how do you keep it that way? And what can you do if it goes down? In most cases, the same best practices apply to WordPress as with other web applications, but some differences and recommendations are detailed here.
 
 ## Backups
