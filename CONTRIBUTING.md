@@ -16,7 +16,7 @@ Please feel free to do [using the "Edit" button](https://help.github.com/en/gith
 
 Either way, please include a description of the purpose behind the change so that it's easy for folks to review.
 
-Any edit should have at least one review from a hosting team member before being merged.
+Any edit requires review from two hosting team members before being merged.
 
 ## Assets in Pages
 
