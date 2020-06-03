@@ -18,6 +18,13 @@ Either way, please include a description of the purpose behind the change so tha
 
 Any edit should have at least one review from a hosting team member before being merged.
 
+## Assets in Pages
+
+Assets like images are not automatically imported into the handbook.
+Please include them in PRs within the `assets/` directory in the repo for tracking.
+
+If you are merging a PR with assets, please upload these to the [handbook's media library](https://make.wordpress.org/hosting/wp-admin/upload.php) before merge, and link to the uploaded media directly.
+
 ## Generating Manifest
 
 When a new page is added to the handbook, or if a page's title or path has been changed during a PR, re-generating the manifest manually is currently required so that it can be imported to the handbook.
