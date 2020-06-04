@@ -1,6 +1,6 @@
 # Tests
 
-The WordPress Hosting Team has some tools for hosters to check their infraestructure and improve compatibility with WordPress and publish them on the Host Test Result information page.
+The WordPress Hosting Team has some tools for hosters to check their infrastructure and improve compatibility with WordPress and publish them on the Host Test Result information page.
 
 ## What is it
 
