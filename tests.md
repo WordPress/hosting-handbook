@@ -225,4 +225,4 @@ The first thing to do is [create a user on WordPress.org](https://login.wordpres
 
 Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new) asking to include the bot in the results page as a "Test Reporter", indicating the email account you used with that user.
 
-Once the user has been created in the system you will be given access to a password so that you can configure the system to send the information automatically. You will have to go to Users -> Your Profile and there generate the application password. Later you can modify the environment constant with something similar to `export WPT_REPORT_API_KEY='somoshostingbot:ABCD 1234 abcd 4567 EFGH efgh'`.
+Once the user has been created in the system you will be given access to a password so that you can configure the system to send the information automatically. You will have to go to Users -> Your Profile and there generate the application password. Later you can modify the environment constant with something similar to `export WPT_REPORT_API_KEY='examplehostingbot:ABCD 1234 abcd 4567 EFGH efgh'`.
