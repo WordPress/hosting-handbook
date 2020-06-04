@@ -1,0 +1,90 @@
+# Server Environment
+
+Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively.
+
+## Web Server
+
+The web server is the system where the files of the web site are hosted and where the users arrive to consult them. There are many web servers, and in principle anyone who supports a PHP connection should be able to work with WordPress.
+
+When it comes to the server, web, WordPress works best with these (sorted alphabetically):
+
+* [Apache HTTPD](https://httpd.apache.org/) 2.4.x
+* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.3.x / 5.4.x
+* [nginx](https://nginx.org/) 1.18.x / 1.17x
++ [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x / 1.5.x / 1.4.x
+
+Remember that if you have a website running in production, it is recommended to use the latest stable version of each of the web servers (mainly for security, rather than functionality), but not alpha, beta or candidate (RC) versions.
+
+## PHP
+
+PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and mainly for functionality.
+
+WordPress supports many versions of PHP, some already obsolete, but always all that are supported and maintained.
+
+Officially the WordPress core supports from PHP 7.0 to PHP 7.4. However, not all themes or plugins are supported.
+
+When it comes to PHP, WordPress (including its extensions) works best with the following versions:
+
+* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4).x
+* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
+* [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
+
+WordPress does not work with versions less than 7.0. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
+
+### PHP Extensions
+
+WordPress core makes use of PHP extensions. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality. Therefore the PHP extensions listed below are recommended.
+
+*   curl - Performs remote request operations.
+*   dom - Used to validate Text Widget content and to automatically configuring IIS7+.
+*   exif - Works with metadata stored in images.
+*   fileinfo - Used to detect mimetype of file uploads.
+*   hash - Used for hashing, including passwords and update packages.
+*   json - Used for communications with other servers.
+*   mbstring - Used to properly handle UTF8 text.
+*   mysqli - Connects to MySQL for database interactions.
+*   libsodium - Validates Signatures and provides securely random bytes.
+*   openssl - Permits SSL-based connections to other hosts.
+*   pcre - Increases performance of pattern matching in code searches.
+*   imagick - Provides better image quality for media uploads. See [WP\_Image\_Editor is incoming!](https://make.wordpress.org/core/2012/12/06/wp_image_editor-is-incoming/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   xml - Used for XML parsing, such as from a third-party site.
+*   zip - Used for decompressing Plugins, Themes, and WordPress update packages.
+
+For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
+
+*   filter – Used for securely filtering user input.
+*   gd - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
+*   iconv - Used to convert between character sets.
+*   mcrypt - Generates random bytes when `libsodium` and `/dev/urandom` aren't available.
+*   simplexml - Used for XML parsing.
+*   xmlreader - Used for XML parsing.
+*   zlib - Gzip compression and decompression.
+
+These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
+
+*   ssh2
+*   ftp
+*   sockets (For when the ftp extension is unavailable)
+
+The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP implemented with Sockets, and FTP implemented through PHP alone.
+
+### System Packages
+
+*   ImageMagick - Required by Imagick extension
+*   Ghost Script - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+
+## Database
+
+For data storage, WordPress uses systems based on MySQL distributions, such as MySQL, MariaDB or Percona. All three systems are compatible with WordPress, so at this moment any of the three can be used for its operation.
+
+The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems:
+
+* [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0.x / 5.7.x
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database/percona-server) 8.0.x / 5.7.x
+
+## How do I know which version I have?
+
+By choosing a web server, PHP and a database you will get your WordPress base installation working at first.
+
+If you already have WordPress installed and want to know what you have, we recommend using the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)). If you have WordPress 5.2+, the system already has check tools to have that information in the Site Health section (at Tools in the menu).
