@@ -1,19 +1,39 @@
-# Environment
+# Server Environment
 
-WordPress will run in a minimum server environment. However, WordPress doesn't run optimally on the minimum system requirements. This section will cover the _recommended_ server environment for WordPress to run more effectively.
+Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively.
 
-## Recommended Servers
+## Web Server
 
-WordPress recommends using one of these servers:
+The web server is the software dedicated to run the files of the website and where users come to consult them, mainly through the Web.
 
-*   Apache 2.4 or higher
-*   NGINX 1.14 or higher
+There are many web servers and, in principle, anyone who supports the execution of PHP files should be able to work with WordPress.
+
+When it comes to the server, web, WordPress works best with these (sorted alphabetically):
+
+* [Apache HTTPD](https://httpd.apache.org/) 2.4.x
+* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.3.x / 5.4.x
+* [nginx](https://nginx.org/) 1.18.x / 1.17.x
+* [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x / 1.5.x / 1.4.x
+
+_WordPress may work with older versions, but we recommend only versions that are stable and supported._
+
+Remember that if you have a website running in production, it is recommended to use the latest stable version of each of the web servers (mainly for security, rather than functionality), but not alpha, beta or candidate (RC) versions.
 
 ## PHP
 
-### PHP Version
+PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
-PHP `7.3` or greater is highly encouraged but WordPress will run on older versions. Please note, however, that versions of PHP lower than `7.2` have reached end-of-life status (EOL) and are no longer receiving security updates. For this reason, PHP versions lower than `7.2` are not recommended.
+WordPress supports many versions of PHP, some even obsolete, but as a general rule you should use only those with security or stable support.
+
+Officially the WordPress core supports from PHP 7.0 to PHP 7.4. However, not all themes or plugins are supported.
+
+When it comes to PHP, WordPress works best with the following versions:
+
+* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4).x
+* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
+* [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
+
+WordPress does with PHP 5.6+. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
 
 ### PHP Extensions
 
@@ -59,23 +79,16 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ## Database
 
-WordPress stores content, configuration, and other information inside of a database. The database for a WordPress website is where all of the WordPress website's user-defined data is stored. WordPress is primarily designed to use a MySQL or MySQL-related database server; WordPress officially only supports MySQL or MariaDB, a drop-in replacement for MySQL.
+For data storage, WordPress uses systems compatible with MySQL, such as MySQL, MariaDB or Percona. All three systems are compatible with WordPress, so at this moment any of the three can be used for its operation.
 
-### MySQL
+The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems:
 
-MySQL is a widely used relational database server. MySQL comes in both open-source and commercial distributions. Either distribution should work with MySQL. The commercial distribution has additional features not found in the open-source distribution; however, WordPress does not require or use the additional features. It is designed to run on either the open-source or the commercial distribution.
+* [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x / 10.1.x
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0.x / 5.7.x
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database/percona-server) 8.0.x / 5.7.x
 
-### MariaDB
+## How do I know which version I have?
 
-MariaDB is a drop-in replacement for MySQL supported by WordPress. It's a fork of the open-source distribution of MySQL. MariaDB was originally created to maintain a more open-source version of MySQL, but it has grown into its own relational database server alternative to MySQL with features and changes not found in MySQL. Despite its differences, MariaDB is still a fully compatible replacement for MySQL and can generally seamlessly replace MySQL.
+If you have WordPress 5.2+, the WordPress Admin already has tools with that information in the `Site Health` section (at `Tools` in the menu).
 
-### Percona
-
-Percona server is a drop-in replacement for MySQL, focused on performance. Although it's a drop-in replacement for MySQL, WordPress does not officially support Percona.
-
-### Recommended Versions
-
-WordPress recommends the following versions for your Database:
-
-*   MySQL 5.6 or greater
-*   MariaDB 10.1 or greater
+If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
