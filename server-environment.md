@@ -10,8 +10,10 @@ When it comes to the server, web, WordPress works best with these (sorted alphab
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4.x
 * [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.3.x / 5.4.x
-* [nginx](https://nginx.org/) 1.18.x / 1.17x
-+ [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x / 1.5.x / 1.4.x
+* [nginx](https://nginx.org/) 1.18.x / 1.17.x
+* [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x / 1.5.x / 1.4.x
+
+_WordPress may work with older versions, but we recommend only versions that are stable and supported._
 
 Remember that if you have a website running in production, it is recommended to use the latest stable version of each of the web servers (mainly for security, rather than functionality), but not alpha, beta or candidate (RC) versions.
 
@@ -85,7 +87,6 @@ The use of these versions is recommended, both for performance and security reas
 
 ## How do I know which version I have?
 
-By choosing a web server, PHP and a database you will get your WordPress base installation working at first.
+If you have WordPress 5.2+, the WordPress Admin already has tools with that information in the `Site Health` section (at `Tools` in the menu).
 
-If you have WordPress 5.2+, the Admin already has check tools to have that information in the Site Health section (at Tools in the menu).
-If you have an older version, you can activate the Site Health section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
+If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
