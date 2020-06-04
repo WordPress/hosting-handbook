@@ -19,7 +19,7 @@ Remember that if you have a website running in production, it is recommended to 
 
 PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
-WordPress supports many versions of PHP, some already obsolete, but always all that are supported and maintained.
+WordPress supports many versions of PHP, some even obsolete, but as a general rule you should use only those with security or stable support.
 
 Officially the WordPress core supports from PHP 7.0 to PHP 7.4. However, not all themes or plugins are supported.
 
@@ -75,11 +75,11 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ## Database
 
-For data storage, WordPress uses systems based on MySQL distributions, such as MySQL, MariaDB or Percona. All three systems are compatible with WordPress, so at this moment any of the three can be used for its operation.
+For data storage, WordPress uses systems compatible with MySQL, such as MySQL, MariaDB or Percona. All three systems are compatible with WordPress, so at this moment any of the three can be used for its operation.
 
 The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems:
 
-* [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x
+* [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x / 10.1.x
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0.x / 5.7.x
 * [Percona MySQL Server](https://www.percona.com/software/mysql-database/percona-server) 8.0.x / 5.7.x
 
@@ -87,4 +87,5 @@ The use of these versions is recommended, both for performance and security reas
 
 By choosing a web server, PHP and a database you will get your WordPress base installation working at first.
 
-If you already have WordPress installed and want to know what you have, we recommend using the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)). If you have WordPress 5.2+, the system already has check tools to have that information in the Site Health section (at Tools in the menu).
+If you have WordPress 5.2+, the Admin already has check tools to have that information in the Site Health section (at Tools in the menu).
+If you have an older version, you can activate the Site Health section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
