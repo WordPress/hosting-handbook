@@ -8,7 +8,7 @@ The WordPress Hosting Team has some tools for hosters to check their infraestruc
 
 Hosting companies can have hundreds of websites hosted with WordPress, so it's important to make sure your configuration is as compatible as possible with the software.
 
-To verify this compatibility, the [WordPress Hosting Community team](https://make.wordpress.org/hosting/) provides a series of [PHPUnit](https://phpunit.de/) tests with which to check the operation of WordPress in any environment.
+To verify this compatibility, the WordPress Community provides a series of [PHPUnit](https://phpunit.de/) tests with which to check the operation of WordPress in any environment.
 
 ### Reporter
 
