@@ -72,10 +72,10 @@ export WPT_TABLE_PREFIX=${WPT_TABLE_PREFIX-wptests_}
 export WPT_PHP_EXECUTABLE=${WPT_PHP_EXECUTABLE-php}
 
 # (Optionally) define the PHPUnit command execution call. Use if `php phpunit.phar` can't be called directly for some reason.
-WPT_PHPUNIT_CMD=
+export WPT_PHPUNIT_CMD=
 
 # (Optionally) define the command execution to remove the test directory. Use if `rm -r` can't be called directly for some reason.
-WPT_RM_TEST_DIR_CMD=
+export WPT_RM_TEST_DIR_CMD=
 
 # SSH connection string (can also be an alias). Leave empty if tests are meant to run in the same environment.
 export WPT_SSH_CONNECT=
