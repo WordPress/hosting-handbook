@@ -14,16 +14,6 @@ To verify this compatibility, the WordPress Community provides a series of [PHPU
 
 The Runner tests generates some reports related to a bot user (a hosting company), and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page. 
 
-## Setting up on hosting systems
-
-### Local Environment Recommendations
-
-Something here...
-
-### Travis, Circle or other CI
-
-Something here...
-
 ## Try the PHPUnit Test Runner
 
 ### What's the phpunit-test-runner
