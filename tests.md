@@ -12,7 +12,7 @@ To verify this compatibility, the WordPress Community provides a series of [PHPU
 
 ### Reporter
 
-The Runner tests generates some reports related to a bot user (a hosting company), and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page. 
+The Runner tests generates a report with the test results related to a bot user (a hosting company), and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page.
 
 ## Try the PHPUnit Test Runner
 
