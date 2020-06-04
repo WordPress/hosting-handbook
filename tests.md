@@ -49,31 +49,43 @@ The content (in summary form) can be something like this:
 ```php
 // Path to the directory where files can be prepared before being delivered to the environment.
 export WPT_PREPARE_DIR=/tmp/wordpress
+
 // Path to the directory where the WordPress develop checkout can be placed and tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
 export WPT_TEST_DIR=/tmp/wordpress
+
 // API key to authenticate with the reporting service in 'username:password' format.
 export WPT_REPORT_API_KEY=
+
 // (Optionally) define an alternate reporting URL
 export WPT_REPORT_URL=
+
 // Credentials for a database that can be written to and reset. WARNING!!! This database will be destroyed between tests. Only use safe database credentials.
 export WPT_DB_NAME=wordpress
 export WPT_DB_USER=wordpress
 export WPT_DB_PASSWORD=__PASSWORD__
 export WPT_DB_HOST=localhost
+
 // (Optionally) set a custom table prefix to permit concurrency against the same database.
 export WPT_TABLE_PREFIX=${WPT_TABLE_PREFIX-wptests_}
+
 // (Optionally) define the PHP executable to be called
 export WPT_PHP_EXECUTABLE=${WPT_PHP_EXECUTABLE-php}
+
 // (Optionally) define the PHPUnit command execution call. Use if `php phpunit.phar` can't be called directly for some reason.
 WPT_PHPUNIT_CMD=
+
 // (Optionally) define the command execution to remove the test directory. Use if `rm -r` can't be called directly for some reason.
 WPT_RM_TEST_DIR_CMD=
+
 // SSH connection string (can also be an alias). Leave empty if tests are meant to run in the same environment.
 export WPT_SSH_CONNECT=
-// // Any options to be passed to the SSH connection. Defaults to '-o StrictHostKeyChecking=no'
+
+// Any options to be passed to the SSH connection. Defaults to '-o StrictHostKeyChecking=no'
 export WPT_SSH_OPTIONS=
+
 // SSH private key, base64 encoded.
 export WPT_SSH_PRIVATE_KEY_BASE64=
+
 // Output logging. Use 'verbose' to increase verbosity
 export WPT_DEBUG=
 ```
