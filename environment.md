@@ -17,19 +17,19 @@ Remember that if you have a website running in production, it is recommended to 
 
 ## PHP
 
-PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and mainly for functionality.
+PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
 WordPress supports many versions of PHP, some already obsolete, but always all that are supported and maintained.
 
 Officially the WordPress core supports from PHP 7.0 to PHP 7.4. However, not all themes or plugins are supported.
 
-When it comes to PHP, WordPress (including its extensions) works best with the following versions:
+When it comes to PHP, WordPress works best with the following versions:
 
 * [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4).x
 * [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
 * [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
 
-WordPress does not work with versions less than 7.0. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
+WordPress does with PHP 5.6+. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
 
 ### PHP Extensions
 
