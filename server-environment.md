@@ -33,7 +33,7 @@ When it comes to PHP, WordPress works best with the following versions:
 * [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
 * [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
 
-WordPress does with PHP 5.6+. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
+WordPress does with PHP 5.6.20+. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
 
 ### PHP Extensions
 
