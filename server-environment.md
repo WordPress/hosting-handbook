@@ -8,12 +8,15 @@ The web server is the software dedicated to run the files of the website and whe
 
 There are many web servers and, generally, any that support the execution of PHP files should be able to work with WordPress.
 
-When it comes to the server, web, WordPress works best with these (sorted alphabetically):
+When it comes to the server, web, WordPress officially supports:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4.x
-* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.3.x / 5.4.x
-* [nginx](https://nginx.org/) 1.18.x / 1.17.x
-* [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x / 1.5.x / 1.4.x
+* [nginx](https://nginx.org/) 1.19.x / 1.18.x
+
+Also, checked or used by hosting companies and developers:
+
+* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.4.x / 5.3.x
+* [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x
 
 _WordPress may work with older versions, but we recommend only versions that are stable and supported._
 
@@ -33,7 +36,7 @@ When it comes to PHP, WordPress works best with the following versions:
 * [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
 * [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
 
-WordPress does with PHP 5.6.20+. Versions prior to PHP 7.2 are not recommended because it no longer has support of any kind, and only PHP 7.2 if you have the latest version, since it only has security support.
+WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.2 are not recommended because it doesn't have support of any kind, and only use PHP 7.2.x if you have the latest version, since it only has security support.
 
 ### PHP Extensions
 
