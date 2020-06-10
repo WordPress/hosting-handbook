@@ -82,13 +82,22 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ## Database
 
-For data storage, WordPress uses systems compatible with MySQL, such as MySQL, MariaDB or Percona. All three systems are compatible with WordPress, so at this moment any of the three can be used for its operation.
+For data storage, WordPress uses systems compatible with MySQL.
 
-The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems:
+Officially supported by WordPress:
 
 * [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x / 10.1.x
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0.x / 5.7.x
-* [Percona MySQL Server](https://www.percona.com/software/mysql-database/percona-server) 8.0.x / 5.7.x
+
+Checked or used by hosting companies and developers:
+
+* [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
+* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
+* [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
+* [Google Cloud SQL](https://cloud.google.com/sql/)
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0.x / 5.7.x
+
+The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems.
 
 ## How do I know which version I have?
 
