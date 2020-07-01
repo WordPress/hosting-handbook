@@ -8,7 +8,7 @@ Welcome to the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/h
 
 The [Hosting Team](https://make.wordpress.org/hosting/) works to improve the WordPress user experience across hosting environments through user collaboration and education.
 
-Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such as plugin authors and system architects.
+Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such System Engineers, System Architects, DevOps Engineers and Developers that are working on core, plugins or themes.
 
 ### When does the Hosting team meet?
 
