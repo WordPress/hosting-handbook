@@ -1,18 +1,12 @@
 {
-    "environment": {
-        "title": "Environment",
-        "slug": "environment",
-        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/environment.md",
-        "parent": "hosting-wordpress"
-    },
     "get-involved": {
         "title": "Get Involved",
         "slug": "get-involved",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/get-involved.md",
-        "parent": null
+        "parent": "handbook"
     },
     "index": {
-        "title": "Handbook",
+        "title": "WordPress Hosting Handbook",
         "slug": "handbook",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/index.md",
         "parent": null
@@ -21,24 +15,24 @@
         "title": "Performance",
         "slug": "performance",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/performance.md",
-        "parent": "hosting-wordpress"
+        "parent": "handbook"
     },
     "reliability": {
         "title": "Reliability",
         "slug": "reliability",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/reliability.md",
-        "parent": "hosting-wordpress"
+        "parent": "handbook"
     },
     "security": {
         "title": "Security",
         "slug": "security",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/security.md",
-        "parent": "hosting-wordpress"
+        "parent": "handbook"
     },
-    "hosting-wordpress":{
-        "title": "Hosting WordPress",
-        "slug": "hosting-wordpress",
-        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/hosting-wordpress.md",
-        "parent": null
+    "server-environment": {
+        "title": "Server Environment",
+        "slug": "server-environment",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/server-environment.md",
+        "parent": "handbook"
     }
 }
