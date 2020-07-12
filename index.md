@@ -17,3 +17,5 @@ The Hosting Team meets in the WordPress Slack, in the [#hosting-community](https
 ### Team Reps
 
 The Hosting Team is represented by team reps [@amykamala](https://profiles.wordpress.org/amykamala/), [@mikeschroder](https://profiles.wordpress.org/mikeschroder/), and [@jadonn](https://profiles.wordpress.org/jadonn/).
+
+\[info\]If you’re interested in improving this handbook, leave a message in the [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel of the [official WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
