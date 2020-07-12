@@ -100,7 +100,7 @@ In case you work with systems like nginx or LiteSpeed you have these: [LiteSpeed
 
 Every time a request comes to your web server, PHP has to execute and calculate everything, but PHP allows an internal operation caching system, which means that a copy of each execution is stored in memory or on disk. If it is active and the same operation is executed again, the system will take advantage of this system to return the calculation much faster, since it does not have to calculate everything completely.
 
-If your hosting provider has it active and configured, you can make use of it, but always taking into account that you will need a plugin to make the invalidation of the contents when necessary.
+If your hosting provider has it active and configured, you can make use of it, but always taking into account that you may need a plugin to make the invalidation of the contents when necessary, considering `opcache.validate_timestamps` may or may not be configured.
 
 Some plugins that can be useful: [OPcache Reset](https://wordpress.org/plugins/opcache-reset/), [WP OPcache](https://wordpress.org/plugins/flush-opcache/), [OPCache Scripts](https://wordpress.org/plugins/opcache-scripts/).
 
