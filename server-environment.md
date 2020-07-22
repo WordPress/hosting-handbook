@@ -43,7 +43,7 @@ WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.2 are not recommen
 WordPress core makes use of PHP extensions. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality. Therefore the PHP extensions listed below are recommended.
 
 *   curl - Performs remote request operations.
-*   dom - Used to validate Text Widget content and to automatically configuring IIS7+.
+*   dom - Used to validate Text Widget content and to automatically configure IIS7+.
 *   exif - Works with metadata stored in images.
 *   fileinfo - Used to detect mimetype of file uploads.
 *   hash - Used for hashing, including passwords and update packages.
