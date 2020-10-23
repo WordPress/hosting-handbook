@@ -1,33 +1,49 @@
 # Reliability
 
-Once your site is up, how do you keep it that way? And what can you do if it goes down? In most cases, the same best practices apply to WordPress as with other web applications, but some differences and recommendations are detailed here.
+When we have a site operational already, hosting's work is not finished. Servers can fail, so we need to have some methodology to check it is working and has a backup.
 
-## Backups
+## Backup
 
-A WordPress site is composed of three (3) main components: Code WordPress core, zero (0) or more plugins, and one (1) or more themes Assets Typically images, documents and other user-upload files. This can also contain plugin or theme cache and/or configuration files as well. Database A set of tables containing your posts, pages, comments, links, settings, and other data.
+WordPress does not have automatic backup system by default, so you have to rely on a third-party tool to do it.
 
-> Your WordPress database contains user-generated content and configuration, including every post, every comment and every link you have on your website. If your database gets erased or corrupted, you stand to lose everything you have written. There are many reasons why this could happen and not all are things you can control. With a proper backup of your WordPress database and files, you can quickly restore things back to normal.
+When you are making a backup, you must remember WordPress is made up of thre completely different elements: files, data and configuration. The files part is stored on your file-server, and can be accessed by FTP or any other method, the data is stored in the database and the config files are associate on each application (web server, database server...). 
 
-It's recommended to keep and test regular backups of your WordPress sites using the system-level backup or snapshot infrastructure of your choice. One thing to be aware of is that the code, assets and database change in conjunction with WordPress but may be backed up separately. For this reason, it is a good idea to keep restore points that include backups of code, assets, and database taken at the same point in time. It’s recommended to create restore points before any critical action, e.g. WordPress core update.
+When you make a backup you have to do it from those three elements, since one does not work without the others.
+
+### Where to make copies
+
+There are many ways to back up, so you must use the best for your project / site.
+
+The first one is the hosting server itself. Usually providers themselves offer the possibility of making a copy of all the contents hosted on the machine. Usually these copies are made externally on a specific backup server. In this case, you should know how it works and when the copies are done, as well as how to restore the copy, if it can be partial or total, and if you have access to the data in a simple way.
+
+A second way is manually, through the operating system. In this case you must create everything to make a copy of all files (for example in a ZIP), dump the database to obtain a copy of the SQL file with all the data and also the configurations. Once you have all the information, you should try to have a local copy and an external out the actual network.
+
+WordPress users may not know how they can access the server o create a manual backup, so the easiest way is to use a backup plugin. There are many [backup plugins](https://wordpress.org/plugins/search/backup/) and you should try them until you find the one that suits your needs. It is not the same to make a backup of a small site (500 MB) than a large one (5 GB). Response times and server's performance could cause saturation on the system and not create the copies; try different plugins until you find the one that works the best.
+
+It is also important to have redundancy on your copies. This means you should have a local copy (for easy access in simple restoring) for that moment when your site gets corrupted but it doesn't affect the machine, so having the files close by and available quickly is usually very helpful. The other is to have them outside the server, in an external place, even outside the same network or provider or country. The fact that it is in another place would allow that even if that provider had a serious problem (and for example you had no possibility to access it) you could restore your site from an external place or another provider.
+
+### When to make copies
+
+You can make as many copies as you want. It will depend on how many changes are made in your site and knowing how much data you are willing to lose in an extreme case. Everything has risk, so you must know them.
+
+For example, if you have a site where you publish content every week, and your visitors post some comments, a daily backup is probably enough.
+
+On the other hand, if you are newspaper publishing some articles a day and there is a lot of interaction, you will probably want to make a copy every few hours.
+
+In any case, be advised to have, at least, one daily copy for a week, and then store a weekly copy for at least a few months. This way you'll be sure to have copies that go back 3-6 months. Again, this will depend on the size and configuration of your site.
 
 ## Monitoring
 
-Site monitoring systems and services can notify you when your site isn't working properly. They can often correct any minor issues, or help you to do so before they become major issues.
+Monitoring tools will allow you to check if your site is working properly, at many different levels.
 
-### Uptime Monitoring
+### Uptime
 
-Uptime monitoring is traditionally done at the server level or by checking one or more URLs on the site at regular intervals to make sure they are responding properly. A combination of internal and external uptime monitoring is ideal for users, and there exist a variety of software and services to handle this for you.
+One of the basic monitoring systems is to know that the site is active, in addition to small elements of loading speed or response times. Usually you use external ping services that call your website frequently and check that it is working and online, and whether access is fast or slow. In case there is a problem, it usually sends some kind of warning as an alert.
 
-### Performance Monitoring
+In addition, these services usually have panels in which they can analyze these times and possible service failures in a historical way and notifications system (like mail, SMS, mobile-push...).
 
-While a site's services may be responding, to a user, a site being "up" means more than this to them. Performance monitoring is similar to uptime monitoring, but also takes note of certain metrics that could indicate trouble. Metrics like "page load time" and "slowest average transactions" should be monitored and reported regularly to help keep you ahead of performance issues. Monitoring slow logs for problematic queries or requests can also help keep user sites stable. MySQL, PHP-FPM, and others provide options to capture these for monitoring.
+### Performance
 
-### Performance Profiling
+Your hosting has some common data, like the CPU and memory load, the bandwidth consumption, storage space. The web server has the amount of valid and invalid requests and responses. PHP has the memory and execution consumption. Database has the size, the amount of queries and those that are slow.
 
-It is best practice to use performance profiling tools, such as New Relic, AppDynamics or Tideways, to diagnose the performance bottlenecks of your website and infrastructure. These tools will give you insight such as slow performing functions, external HTTP requests, slow database queries and more that are causing poor performance.
-
-## Version Control
-
-Version control is a way of tracking the changes made to files over time by different people, such as the code for a website or another application. It allows people to track the revision history of code and to revert or apply changes easily via the command line. It is also a good way to debug your website if something goes wrong, as you can quickly restore to a previous state of the site's code without restoring from a full backup.
-
-A lot of WordPress hosts offer version control but there are third-party services and self hosted options as well.
+The measurement of these data is usually done internally as they mainly affect the services available to the machine. Those data should be monitored so your site works well.
