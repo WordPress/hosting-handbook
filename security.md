@@ -6,7 +6,7 @@ The goal of the page is to inform users who manage a WordPress site about genera
 
 WordPress is committed to providing a secure experience for users. Information about WordPress's official stance on security and a general discussion about WordPress's overall aims for security can be found on [WordPress.org's Security page](https://wordpress.org/about/security/).
 
-This guide borrows heavily from the WordPress Codex's guide on [Hardening WordPress](https://codex.wordpress.org/Hardening_WordPress). Since it's publicly editable, advice in the codex should be viewed with caution.
+This guide borrows heavily from the WordPress Codex's guide on [Hardening WordPress](https://wordpress.org/support/article/hardening-wordpress/). Since it's publicly editable, advice in the codex should be viewed with caution.
 
 Keeping any system, not just WordPress, secure is continuous work. Good security requires careful planning, monitoring, and periodic maintenance.
 

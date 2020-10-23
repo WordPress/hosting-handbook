@@ -2,7 +2,7 @@
     "environment": {
         "title": "Environment",
         "slug": "environment",
-        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/environment.md",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/server-environment.md",
         "parent": null
     },
     "get-involved": {
