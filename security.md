@@ -97,9 +97,7 @@ Plugins and themes can modify existing, as well as add additional types of, user
 
 ## HTTPS and SSL
 
-> Link to this guide with more info about implementing HTTPS for WordPress? https://make.wordpress.org/support/user-manual/web-publishing/https-for-wordpress/
-
-WordPress is fully compatible with HTTPS when an SSL certificate is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
+WordPress is [fully compatible with HTTPS](https://make.wordpress.org/support/user-manual/web-publishing/https-for-wordpress/) when an SSL certificate is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
 
 ## Caching Security
 
@@ -162,3 +160,5 @@ Memcached is a memory object caching solution commonly used to provide database 
 
 WordPress has the ability to automatically apply security updates. This should be enabled in almost all cases. The exception is if files are not writeable, outside of `wp-content/uploads`, for security reasons. In this instance, an alternative, expedient, and, preferably, automatic update process should be made available. See [Configuring Automatic Background Updates  
 ](https://codex.wordpress.org/Configuring_Automatic_Background_Updates)for details on automatic update configuration.
+
+\[info\]If you’re interested in improving this handbook, check the <a href="https://github.com/WordPress/hosting-handbook/">Github Handbook repo</a>, or leave a message in the <a href="https://wordpress.slack.com/archives/hosting-community/">#hosting-community channel</a> of the official <a href="https://make.wordpress.org/chat/">WordPress Slack</a>.\[/info\]
