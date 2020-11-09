@@ -31,3 +31,5 @@ It is best practice to use performance profiling tools, such as New Relic, AppDy
 Version control is a way of tracking the changes made to files over time by different people, such as the code for a website or another application. It allows people to track the revision history of code and to revert or apply changes easily via the command line. It is also a good way to debug your website if something goes wrong, as you can quickly restore to a previous state of the site's code without restoring from a full backup.
 
 A lot of WordPress hosts offer version control but there are third-party services and self hosted options as well.
+
+\[info\]If you’re interested in improving this handbook, check the <a href="https://github.com/WordPress/hosting-handbook/">Github Handbook repo</a>, or leave a message in the <a href="https://wordpress.slack.com/archives/hosting-community/">#hosting-community channel</a> of the official <a href="https://make.wordpress.org/chat/">WordPress Slack</a>.\[/info\]
