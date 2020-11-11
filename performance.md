@@ -105,11 +105,11 @@ As PHP is an interpreted language, its version and configuration has a large imp
 
 ### Version
 
-When possible, PHP 7.3 or greater should be used to run WordPress. As of the writing of this document, PHP 7 is the only major version of PHP still receiving active development and support. The PHP group regularly retires support for older versions of PHP, and older versions are not guaranteed to be updated for security concerns.
+When possible, PHP 7.4 or greater should be used to run WordPress. As of the writing of this document, PHP 7 is the only major version of PHP still receiving active development and support. The PHP group regularly retires support for older versions of PHP, and older versions are not guaranteed to be updated for security concerns.
 
 At the same time, newer versions of PHP contain both security and performance improvements, while being accompanied by new features and bug fixes, which are not guaranteed to be backwards compatible. However, extreme care must be taken when upgrading the version of PHP. While WordPress is compatible with the latest releases of PHP, sites built to use older versions of PHP may not be compatible due to their included plugins and themes.
 
-If upgrading to PHP 7.3 is not immediately possible, upgrading to PHP 7.1 should be done as soon as possible. PHP 7.1 is the oldest version of PHP that is still receiving security patches. While WordPress _may_ work with older versions of PHP, these versions have reached official End Of Life, and running outdated PHP installations **may expose your site to security vulnerabilities**.
+If upgrading to PHP 7.4 is not immediately possible, upgrading to PHP 7.2 should be done as soon as possible. PHP 7.2 is the oldest version of PHP that is still receiving security patches. While WordPress _may_ work with older versions of PHP, these versions have reached official End Of Life, and running outdated PHP installations **may expose your site to security vulnerabilities**.
 
 More information about the support versions of PHP can always be found [on PHP's supported versions page](http://php.net/supported-versions.php).
 
