@@ -1,6 +1,8 @@
 # Tests
 
-The WordPress Hosting Team has some tools for hosters to check their infrastructure and improve compatibility with WordPress and publish them on the Host Test Result information page.
+The WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published them on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to help WordPress' compatibility with hosts as well.
+
+It consists of two tools: the Runner, which is part of the core's PHPUnit tests, which work on a hosting, and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter, which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
 
 ## What is it
 
@@ -20,30 +22,29 @@ The Runner tests generates a report with the test results related to a bot user 
 
 The [phpunit-test-runner](https://github.com/WordPress/phpunit-test-runner) is a small test piece of PHPUnit specifically designed for hosting companies. There is a [whole documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
 
-The tool can be run manually or through an automated system like Travis. To see how it works and the purpose of this document, we will run the tests manually.
+The tool can be run manually or through an automated system like Travis. To see how it works and the purpose of this document, will be shown how to run the tests manually.
 
 ### Requirements
 
-It takes little to make the tests. The first thing is to have an infrastructure with the usual configuration of your system. On the other hand, a database where you can test (as it will be created and destroyed).
+To use the Runner, the following is required:
+* A server / hosting (infrastructure) with the usual configuration you have.
+* A database where you can test (it will be created and destroyed several times)
 
+### Installing the Runner
 
-### Installing the test
-
-The first thing we'll do is download and synchronize the tool.
+First, download and synchronize the tool.
 
 ```bash
 cd /tmp/
 git clone https://github.com/WordPress/phpunit-test-runner.git
 cd phpunit-test-runner/
 ```
-
-The next step will be to configure the environment. To do this, first we'll make a copy of the example file and then we'll configure it.
+The next step will be to configure the environment. To do this, make a copy of the example file and then configure it.
 
 ```bash
 cp .env.default .env
 vim .env
 ```
-
 The content (in summary form) can be something like this:
 
 ```bash
@@ -90,11 +91,11 @@ export WPT_SSH_PRIVATE_KEY_BASE64=
 export WPT_DEBUG=
 ```
 
-We will configure the folder where the WordPress software downloads and the database accesses will be made in order to prepare the tests.
+Configure the folder where the WordPress software downloads and the database accesses will be made in order to prepare the tests.
 
 ### Preparing the environment
 
-Before we do the first test, we'll catch up on everything. This process can be run before each test in this environment if we want to keep it up to date, although it will depend more if it is in a production environment.
+Before doing the first test, catch up on everything. This process can be run before each test in this environment if wanted to keep it up to date, although it will depend more if it is in a production environment.
 
 ```bash
 cd /tmp/phpunit-test-runner/
@@ -105,7 +106,7 @@ source .env
 
 ### Preparing the test
 
-Now that we have the environment ready, we can run the test preparation.
+Now there is the environment ready, run the test preparation.
 
 ```bash
 cd /tmp/phpunit-test-runner/
@@ -124,7 +125,7 @@ If the environment has been prepared, the next step is to make a first test.
 
 ### Running the test
 
-Now that we have the environment ready, let's go get the test. To do this we will execute the file that will perform it.
+The environment is ready, so let's go get the test. To do this, execute the file that will perform it.
 
 ```bash
 cd /tmp/phpunit-test-runner/
@@ -147,16 +148,15 @@ If you have followed all the steps up to this point it is very likely that the t
 
 ### Creating a report
 
-Even if the test has failed, we can generate the report and (if necessary) send it. But first things first, which is the creation of the reports. To do this we will execute the file that does it.
+Even if the test has failed, generate the report and (if necessary) send it. But first things first, which is the creation of the reports. To do this, execute the file that does it.
 
 ```bash
 cd /tmp/phpunit-test-runner/
 php report.php
 ```
-
 This system will generate the two files that are sent as reports.
 
-In the first one we can see the information about our environment.
+The first shows the information about our environment.
 
 ```bash
 cat /tmp/wordpress/env.json
@@ -201,28 +201,39 @@ The other file is the one that includes all the tests that are made (more than 1
 ```bash
 cat /tmp/wordpress/junit.xml
 ```
-
 ### Cleaning up the environment for other tests
 
-Now that we have the tests working, all that remains is to delete all the files that have been created so that we can start over. To do this we will execute the following command:
+Having the tests working, all that remains is to delete all the files that have been created so that we can start over. To do this, execute the following command:
 
 ```bash
 cd /tmp/phpunit-test-runner/
 php cleanup.php
 ```
 
+### Automating the execution
+
+Once this first manual test has been done, please automate all these steps in a script, since it is required that each of these steps is executed sequentially for each test execution.
+
+This script should be run every time there is a change / commit in the WordPress master. Many hosting companies use a cron to run the script every few hours / days to make the appropriate checks, or when a change is made.
+
 ### Improving the configuration
 
-We must not forget that the aim of this tool is to verify that our environment and infrastructure is the optimal one for WordPress to work, so, following the example above, we could make several improvements such as installing the extension of bcmath, gd, libsodium, mcrypt, mod_xml and imagick or utilities such as ghostscript and imagemagick.
+Do not forget that the aim of this tool is to verify that the environment and infrastructure is the optimal one for WordPress to work, so, following the example, could make several improvements such as installing the extension of `bcmath`, `gd`, `libsodium`, `mcrypt`, `mod_xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`.
 
 The goal? To be error free and have the green light for the perfect configuration.
 
+\[alert\]Some tests may be skipped or there may be tests with some risk. It is normal for errors to occur even with a properly configured environment.\[/alert\]
+
 ## How to report: Creating your bot for WordPress.org
 
-If you want your test [results to appear on the WordPress.org page](https://make.wordpress.org/hosting/test-results/), you can create a user for that.
+If you / your company want the test [results to appear on the WordPress.org page](https://make.wordpress.org/hosting/test-results/), create a user for that.
 
-The first thing to do is [create a user on WordPress.org](https://login.wordpress.org/register). If your company is called *ExampleHostingCompany, Inc*, for example, you can call your users something like examplehostingcmpanybot. Keep in mind that the associated email account should be checked frequently, as emails will arrive regarding the possible operation of the tests.
+The first thing to do is [create a user on WordPress.org](https://login.wordpress.org/register). If your company is called *ExampleHostingCompany, Inc*, for example, call your user something like *examplehostingcmpanybot*. Keep in mind that the associated email account should be checked frequently, as emails will arrive regarding the possible operation of the tests.
 
-Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new) asking to include the bot in the results page as a "Test Reporter", indicating the email account you used with that user.
+Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
 
-Once the user has been created in the system you will be given access to a password so that you can configure the system to send the information automatically. You will have to go to Users -> Your Profile and there generate the application password. Later you can modify the environment constant with something similar to `export WPT_REPORT_API_KEY='examplehostingbot:ABCD 1234 abcd 4567 EFGH efgh'`.
+\[tip\]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is.\[/tip\]
+
+Once the user has been created in the system, you'll get an invitation to join via email. Then, you can log into make/hosting and create an Application Password in Users -> Your Profile.
+
+To get things reporting properly, place the username for the bot, along with the application password in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingbot:ABCD 1234 abcd 4567 EFGH efgh'`.
