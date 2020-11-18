@@ -32,10 +32,10 @@ To use the Runner, the following is required:
 
 ### Installing the Runner
 
-First, download and synchronize the tool.
+First, download and synchronize the tool. The example use the `/wptestrunner/` folder, but use the best for you.
 
 ```bash
-cd /tmp/
+cd /wptestrunner/
 git clone https://github.com/WordPress/phpunit-test-runner.git
 cd phpunit-test-runner/
 ```
@@ -49,10 +49,10 @@ The content (in summary form) can be something like this:
 
 ```bash
 # Path to the directory where files can be prepared before being delivered to the environment.
-export WPT_PREPARE_DIR=/tmp/wordpress
+export WPT_PREPARE_DIR=/wptestrunner/wordpress
 
 # Path to the directory where the WordPress develop checkout can be placed and tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
-export WPT_TEST_DIR=/tmp/wordpress
+export WPT_TEST_DIR=/wptestrunner/wordpress
 
 # API key to authenticate with the reporting service in 'username:password' format.
 export WPT_REPORT_API_KEY=
@@ -98,7 +98,7 @@ Configure the folder where the WordPress software downloads and the database acc
 Before doing the first test, catch up on everything. This process can be run before each test in this environment if wanted to keep it up to date, although it will depend more if it is in a production environment.
 
 ```bash
-cd /tmp/phpunit-test-runner/
+cd /wptestrunner/phpunit-test-runner/
 git pull
 npm update
 source .env
@@ -109,7 +109,7 @@ source .env
 Now there is the environment ready, run the test preparation.
 
 ```bash
-cd /tmp/phpunit-test-runner/
+cd /wptestrunner/phpunit-test-runner/
 php prepare.php
 ```
 
@@ -128,7 +128,7 @@ If the environment has been prepared, the next step is to make a first test.
 The environment is ready, so let's go get the test. To do this, execute the file that will perform it.
 
 ```bash
-cd /tmp/phpunit-test-runner/
+cd /wptestrunner/phpunit-test-runner/
 php test.php
 ```
 
@@ -151,7 +151,7 @@ If you have followed all the steps up to this point it is very likely that the t
 Even if the test has failed, generate the report and (if necessary) send it. But first things first, which is the creation of the reports. To do this, execute the file that does it.
 
 ```bash
-cd /tmp/phpunit-test-runner/
+cd /wptestrunner/phpunit-test-runner/
 php report.php
 ```
 This system will generate the two files that are sent as reports.
@@ -159,7 +159,7 @@ This system will generate the two files that are sent as reports.
 The first shows the information about our environment.
 
 ```bash
-cat /tmp/wordpress/env.json
+cat /wptestrunner/wordpress/env.json
 ```
 
 The content of this file is somewhat similar to this:
@@ -199,14 +199,14 @@ As you can see, among the most important elements are the extensions that are co
 The other file is the one that includes all the tests that are made (more than 10,000) giving information of the time that they take to be executed, problems that have arisen...
 
 ```bash
-cat /tmp/wordpress/junit.xml
+cat /wptestrunner/wordpress/junit.xml
 ```
 ### Cleaning up the environment for other tests
 
 Having the tests working, all that remains is to delete all the files that have been created so that we can start over. To do this, execute the following command:
 
 ```bash
-cd /tmp/phpunit-test-runner/
+cd /wptestrunner/phpunit-test-runner/
 php cleanup.php
 ```
 
