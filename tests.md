@@ -32,10 +32,10 @@ To use the Runner, the following is required:
 
 ### Installing the Runner
 
-First, download and synchronize the tool. The example use the `/wptestrunner/` folder, but use the best for you.
+First, download the software. This example use `/home/wptestrunner/` folder, but set the best for this environment.
 
 ```bash
-cd /wptestrunner/
+cd /home/wptestrunner/
 git clone https://github.com/WordPress/phpunit-test-runner.git
 cd phpunit-test-runner/
 ```
@@ -49,13 +49,14 @@ The content (in summary form) can be something like this:
 
 ```bash
 # Path to the directory where files can be prepared before being delivered to the environment.
-export WPT_PREPARE_DIR=/wptestrunner/wordpress
+export WPT_PREPARE_DIR=/home/wptestrunner/wordpress
 
 # Path to the directory where the WordPress develop checkout can be placed and tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
-export WPT_TEST_DIR=/wptestrunner/wordpress
+export WPT_TEST_DIR=/home/wptestrunner/wordpress
 
-# API key to authenticate with the reporting service in 'username:password' format.
+# API key to authenticate with the reporting service in 'username:password' format. Check the "Creating your bot" section on how to get your authentication.
 export WPT_REPORT_API_KEY=
+#export WPT_REPORT_API_KEY=myhostingbot:XXXX XXXX XXXX XXXX
 
 # (Optionally) define an alternate reporting URL
 export WPT_REPORT_URL=
@@ -95,10 +96,10 @@ Configure the folder where the WordPress software downloads and the database acc
 
 ### Preparing the environment
 
-Before doing the first test, catch up on everything. This process can be run before each test in this environment if wanted to keep it up to date, although it will depend more if it is in a production environment.
+Before performing the first test, let's update all the components. This process can be run before each test in this environment if wanted to keep it up to date, although it will depend more if it is in a production environment.
 
 ```bash
-cd /wptestrunner/phpunit-test-runner/
+cd /home/wptestrunner/phpunit-test-runner/
 git pull
 npm update
 source .env
@@ -109,11 +110,10 @@ source .env
 Now there is the environment ready, run the test preparation.
 
 ```bash
-cd /wptestrunner/phpunit-test-runner/
 php prepare.php
 ```
 
-The system will run a long series of installations, configurations and compilations of different elements in order to prepare the test. If warnings and warnings come out you should not worry too much, as it is quite normal. At the end of the process it will warn you if it needs something it doesn't have. In principle, there should be something like this:
+The system will run a long series of installations, configurations and compilations of different elements in order to prepare the test. If warnings and warnings come out you should not worry too much, as it is quite normal. At the end of the process it will warn you if it needs something it doesn't have. If it works, you should see something like this at the end:
 
 ```
 Done.
@@ -121,14 +121,15 @@ Replacing variables in wp-tests-config.php
 Success: Prepared environment.
 ```
 
-If the environment has been prepared, the next step is to make a first test.
+Now that the environment has been prepared, the next step is to run the tests for the first time.
+
+\[info\]The 4 steps have to be executed every time a test is done. The preparation of the environment as well, even if you do not change the configuration.\[/info\]
 
 ### Running the test
 
-The environment is ready, so let's go get the test. To do this, execute the file that will perform it.
+Now that the environment is ready, let's run the tests. To do this, execute the file that will perform it.
 
 ```bash
-cd /wptestrunner/phpunit-test-runner/
 php test.php
 ```
 
@@ -144,22 +145,14 @@ What do the symbols mean?
 
 `I` → Means that the test has been marked as incomplete.
 
-If you have followed all the steps up to this point it is very likely that the test you have run will fail quite a bit (for example, because by default it will not be able to do image processing). But that's OK, as I said, this is an example to check and verify the operation.
+If you follow these steps, everything should work perfectly and not make any mistakes. In case you get any error, it may be normal due to some missing adjustment or extension of PHP, among others. We recommend that you adjust the configuration until it works correctly. After all, this tool is to help you improve the optimal configuration for WordPress in that infrastructure.
 
 ### Creating a report
 
-Even if the test has failed, generate the report and (if necessary) send it. But first things first, which is the creation of the reports. To do this, execute the file that does it.
+Even if the test has failed, a report will be made. The first one shows the information about our environment. Among the most important elements are the extensions that are commonly used in WordPress and some utilities that are also generally useful.
 
 ```bash
-cd /wptestrunner/phpunit-test-runner/
-php report.php
-```
-This system will generate the two files that are sent as reports.
-
-The first shows the information about our environment.
-
-```bash
-cat /wptestrunner/wordpress/env.json
+cat /home/wptestrunner/wordpress/env.json
 ```
 
 The content of this file is somewhat similar to this:
@@ -194,19 +187,23 @@ The content of this file is somewhat similar to this:
 }
 ```
 
-As you can see, among the most important elements are the extensions that are commonly used in WordPress and some utilities that are also generally useful.
-
-The other file is the one that includes all the tests that are made (more than 10,000) giving information of the time that they take to be executed, problems that have arisen...
+In addition to this report, a definitive file with all the information of what happened in the tests. This is the one that includes all the tests that are made (more than 10,000) giving information of the time that they take to be executed, problems that have arisen...
 
 ```bash
-cat /wptestrunner/wordpress/junit.xml
+cat /home/wptestrunner/wordpress/junit.xml
 ```
+
+At this point we can generate the reports by sending them to WordPress.org, if necessary. Even if you haven't included the WordPress user (see below for how to create it), you can still run this file.
+
+```bash
+php report.php
+```
+
 ### Cleaning up the environment for other tests
 
 Having the tests working, all that remains is to delete all the files that have been created so that we can start over. To do this, execute the following command:
 
 ```bash
-cd /wptestrunner/phpunit-test-runner/
 php cleanup.php
 ```
 
@@ -233,6 +230,8 @@ The first thing to do is [create a user on WordPress.org](https://login.wordpres
 Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
 
 \[tip\]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is.\[/tip\]
+
+\[info\]Someone in the hosting team will review the request and add a user for you, or request additional information. The team will reply as quickly as possible, but as this step is manual, please be patient.\[/info\]
 
 Once the user has been created in the system, you'll get an invitation to join via email. Then, you can log into make/hosting and create an Application Password in Users -> Your Profile.
 
