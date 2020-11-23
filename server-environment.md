@@ -105,4 +105,4 @@ If you have WordPress 5.2+, the WordPress Admin already has tools with that info
 
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
 
-\[info\]If you’re interested in improving this handbook, check the <a href="https://github.com/WordPress/hosting-handbook/">Github Handbook repo</a>, or leave a message in the <a href="https://wordpress.slack.com/archives/hosting-community/">#hosting-community channel</a> of the official <a href="https://make.wordpress.org/chat/">WordPress Slack</a>.\[/info\]
+\[info\]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
