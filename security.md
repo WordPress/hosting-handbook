@@ -95,7 +95,7 @@ When WordPress is first installed, an Administrator account is automatically set
 
 Plugins and themes can modify existing, as well as add additional types of, users and capabilities to WordPress beyond the defaults. These additional options are commonly used by plugins and themes to manage the functionality they add to WordPress.
 
-## HTTPS and SSL
+## HTTPS and TLS / SSL
 
 WordPress is [fully compatible with HTTPS](https://make.wordpress.org/support/user-manual/web-publishing/https-for-wordpress/) when an SSL certificate is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
 
