@@ -29,7 +29,7 @@ WordPress 3.7 | PHP 5.2.4 | PHP 5.5 | 2013-10-24 | PHP 5.3 - 5.4
 
 * WordPress 5.6 and PHP 8.0 are expected to be launched at the end of 2020.
 
-\[tip\]If you are a developer, you will also be interested in the <a href="https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/">PHP Compatibility and WordPress Versions</a> document from the Core team.\[/tip\]
+\[tip\]If you are a developer, you will also be interested in the [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/) document from the Core team.\[/tip\]
 
 ## WordPress and MySQL versions matrix
 
