@@ -99,7 +99,6 @@ Plugins and themes can modify existing, as well as add additional types of, user
 
 WordPress is fully [compatible with HTTPS when an TLS / SSL certificate](https://make.wordpress.org/support/user-manual/web-publishing/https-for-wordpress/) is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
 
-
 ## Caching Security
 
 While caching can significantly improve the performance of WordPress websites, caching can expose WordPress websites to new vulnerabilities if the caching providers are not configured correctly. Some common vulnerabilities include but are not limited to websites accessing the cached data for other websites or caching applications serving the wrong cached data or files. Each kind of caching application usually has security settings and configuration to provide a safe environment for enjoying the performance benefits of caching.
