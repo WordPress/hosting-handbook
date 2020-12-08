@@ -73,7 +73,7 @@ For these reasons, persistent object caching support is commonly offered with ma
 
 ### Opcode Cache
 
-The web server must read, compile, and run each PHP script. An opcode cache stores a compiled copy of each PHP script in memory or on disk. When the web server starts processing PHP scripts for WordPress, the web server checks the opcode cache for a cached copy of the PHP script. If there is a cached copy, the web server can skip straight to running the PHP script using the cached copy instead of having to read and compile the script again. Skipping this reading and compiling PHP scripts can greatly improve the web server's resource usage and enable WordPress to serve many more requests than it might have been able to otherwise. It's particularly helpul for dynamic content and authenticated traffic, where full page caching isn't as effective.
+The web server must read, compile, and run each PHP script. An opcode cache stores a compiled copy of each PHP script in memory or on disk. When the web server starts processing PHP scripts for WordPress, the web server checks the opcode cache for a cached copy of the PHP script. If there is a cached copy, the web server can skip straight to running the PHP script using the cached copy instead of having to read and compile the script again. Skipping this reading and compiling PHP scripts can greatly improve the web server's resource usage and enable WordPress to serve many more requests than it might have been able to otherwise. It's particularly helpful for dynamic content and authenticated traffic, where full page caching isn't as effective.
 
 As with any cache, opcode caches can keep changes from taking effect until the cache expires or is purged. With opcode cache specifically, this means older versions of the compiled PHP code will be loaded. When updating plugins, themes, or WordPress core, the appropriate files should be purged from the cache to avoid continuing to load the older versions.
 
@@ -99,7 +99,7 @@ The Transients API should always be used for fragment caching instead of directl
 
 ## PHP
 
-PHP (PHP: Hypertext Preprocessor) is a popular programming language on the internet. PHP turns dynamic content, like that in WordPress, into HTML, CSS, and JavaScript that web browsers can read. WordPress is written primarily in PHP, and a server must have PHP in order for WordPress to be able to run.
+PHP (PHP: Hypertext Preprocessor) is a popular programming language on the Internet. PHP turns dynamic content, like that in WordPress, into HTML, CSS, and JavaScript that web browsers can read. WordPress is written primarily in PHP, and a server must have PHP in order for WordPress to be able to run.
 
 As PHP is an interpreted language, its version and configuration has a large impact on how well and whether WordPress will run.
 
