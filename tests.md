@@ -101,7 +101,6 @@ Before performing the first test, let's update all the components. This process 
 ```bash
 cd /home/wptestrunner/phpunit-test-runner/
 git pull
-npm update
 source .env
 ```
 
