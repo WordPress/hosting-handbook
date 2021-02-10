@@ -2,13 +2,13 @@
 
 The WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published them on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to help WordPress' compatibility with hosts as well.
 
-It consists of two tools: the Runner, which is part of the core's PHPUnit tests, which work on a hosting, and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter, which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
+It consists of two tools: the Runner is the part that runs core's PHPUnit tests on a host and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
 
 ## What is it
 
 ### Runner
 
-Hosting companies can have hundreds of websites hosted with WordPress, so it's important to make sure their configuration is as compatible as possible with the software.
+Hosting companies can have several to millions of websites hosted with WordPress, so it's important to make sure their configuration is as compatible as possible with the software.
 
 To verify this compatibility, the WordPress Community provides a series of [PHPUnit](https://phpunit.de/) tests with which to check the operation of WordPress in any environment.
 
@@ -20,7 +20,9 @@ The Runner tests generates a report with the test results related to a bot user 
 
 ### What's the phpunit-test-runner
 
-The [phpunit-test-runner](https://github.com/WordPress/phpunit-test-runner) is a small test piece of PHPUnit specifically designed for hosting companies. There is a [whole documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
+The [phpunit-test-runner](https://github.com/WordPress/phpunit-test-runner) is a tool designed to make it easier for hosting companies to run the WordPress project's automated tests.
+
+There is a [whole documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
 
 The tool can be run manually or through an automated system like Travis. To see how it works and the purpose of this document, will be shown how to run the tests manually.
 
@@ -52,7 +54,7 @@ The content (in summary form) can be something like this:
 export WPT_PREPARE_DIR=/home/wptestrunner/wordpress
 
 # Path to the directory where the WordPress develop checkout can be placed and tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
-export WPT_TEST_DIR=/home/wptestrunner/wordpress
+export WPT_TEST_DIR=$WPT_PREPARE_DIR
 
 # API key to authenticate with the reporting service in 'username:password' format. Check the "Creating your bot" section on how to get your authentication.
 export WPT_REPORT_API_KEY=
