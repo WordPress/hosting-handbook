@@ -58,7 +58,7 @@ export WPT_TEST_DIR=$WPT_PREPARE_DIR
 
 # API key to authenticate with the reporting service in 'username:password' format. Check the "Creating your bot" section on how to get your authentication.
 export WPT_REPORT_API_KEY=
-#export WPT_REPORT_API_KEY=myhostingbot:XXXX XXXX XXXX XXXX
+#export WPT_REPORT_API_KEY=examplehostingcompanybot:XXXX XXXX XXXX XXXX
 
 # (Optionally) define an alternate reporting URL
 export WPT_REPORT_URL=
@@ -226,7 +226,7 @@ The goal? To be error free and have the green light for the perfect configuratio
 
 If you / your company want the test [results to appear on the WordPress.org page](https://make.wordpress.org/hosting/test-results/), create a user for that.
 
-The first thing to do is [create a user on WordPress.org](https://login.wordpress.org/register). If your company is called *ExampleHostingCompany, Inc*, for example, call your user something like *myhostingbot*. Keep in mind that the associated email account should be checked frequently, as emails will arrive regarding the possible operation of the tests.
+The first thing to do is [create a user on WordPress.org](https://login.wordpress.org/register). If your company is called *ExampleHostingCompany, Inc*, for example, call your user something like *examplehostingcompanybot*. Keep in mind that the associated email account should be checked frequently, as emails will arrive regarding the possible operation of the tests.
 
 Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
 
@@ -236,4 +236,4 @@ Create [an issue on the test page](https://github.com/WordPress/phpunit-test-run
 
 Once the user has been created in the system, you'll get an invitation to join via email. Then, you can log into make/hosting and create an Application Password in Users -> Your Profile.
 
-To get things reporting properly, place the username for the bot, along with the application password in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='myhostingbot:ABCD 1234 abcd 4567 EFGH efgh'`.
+To get things reporting properly, place the username for the bot, along with the application password in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingcompanybot:ABCD 1234 abcd 4567 EFGH efgh'`.
