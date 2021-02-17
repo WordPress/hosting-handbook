@@ -59,7 +59,7 @@ class Command {
 				'title'           => $title,
 				'slug'            => 'index' === $slug ? 'handbook' : $slug,
 				'markdown_source' => sprintf( 'https://github.com/wordpress/hosting-handbook/blob/master/%s.md', $slug ),
-				'parent'          => null,
+				'parent'          => 'index' === $slug ? null : 'handbook'
 			);
 		}
 		file_put_contents( HOSTING_HANDBOOK_PATH . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
