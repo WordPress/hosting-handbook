@@ -160,3 +160,11 @@ Note that `post_max_size` applies to every PHP request and not only uploads, so 
 #### Replacing WordPress' Cron Triggers
 
 The `wp-cron.php` script is responsible for causing certain tasks to be scheduled and executed automatically. Every time someone visits your website, `wp-cron.php` checks whether it is time to execute a job or not. Even though these checks are small and fast they consume time and produce load. For this reason, it's worth considering setting the [`DISABLE_WP_CRON` constant](https://codex.wordpress.org/Editing_wp-config.php#Disable_Cron_and_Cron_Timeout) and using an alternative method to trigger WordPress' cron system.
+
+\[info\]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
+
+## Changelog
+
+- 2021-02-17: Changelog added.
+- 2020-11-09: Lifted PHP Recommendation to 7.4.
+- 2020-06-02: Published from Github.

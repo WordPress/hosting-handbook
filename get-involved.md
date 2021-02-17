@@ -100,3 +100,10 @@ If you want to get an idea of what a contributor day with the hosting team might
 
 *   [WordCamp US 2019 Contributor Day](https://docs.google.com/document/d/1Mb_7ZVslbD4L_cmXqBuiaeOPd8CF7v2D3c3iCN572QY/)
 *   [WordCamp EU 2020 Contributor Day](https://docs.google.com/document/d/14BuRJRp7bS1dqj2Dezxawg9QMWOWrMmg1XXJPyLKOis/)
+
+\[info\]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
+
+## Changelog
+
+- 2021-02-17: Changelog added.
+- 2020-06-02: Published from Github.

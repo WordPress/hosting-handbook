@@ -237,3 +237,10 @@ Create [an issue on the test page](https://github.com/WordPress/phpunit-test-run
 Once the user has been created in the system, you'll get an invitation to join via email. Then, you can log into make/hosting and create an Application Password in Users -> Your Profile.
 
 To get things reporting properly, place the username for the bot, along with the application password in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingcompanybot:ABCD 1234 abcd 4567 EFGH efgh'`.
+
+\[info\]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
+
+## Changelog
+
+- 2021-02-17: Changelog added.
+- 2021-02-10: Published from Github.
