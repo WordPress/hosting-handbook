@@ -162,3 +162,9 @@ WordPress has the ability to automatically apply security updates. This should b
 ](https://codex.wordpress.org/Configuring_Automatic_Background_Updates)for details on automatic update configuration.
 
 \[info\]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
+
+## Changelog
+
+- 2021-02-17: Changelog added.
+- 2020-11-23: Minor text changes and info-block. Changed "SSL" to "TLS / SSL".
+- 2020-06-02: Published from Github.
