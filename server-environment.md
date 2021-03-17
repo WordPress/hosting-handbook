@@ -53,7 +53,7 @@ WordPress core makes use of PHP extensions. If the preferred extension is missin
 *   sodium - Validates Signatures and provides securely random bytes.
 *   openssl - Permits SSL-based connections to other hosts.
 *   pcre - Increases performance of pattern matching in code searches.
-*   imagick - Provides better image quality for media uploads. See [WP\_Image\_Editor is incoming!](https://make.wordpress.org/core/2012/12/06/wp_image_editor-is-incoming/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   imagick - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   xml - Used for XML parsing, such as from a third-party site.
 *   zip - Used for decompressing Plugins, Themes, and WordPress update packages.
 
