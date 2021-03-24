@@ -1,53 +1,53 @@
 # WordPress Hosting Live
 
-El WordPress Hosting Team promueve una serie de eventos en directo enfocados a enseñar elementos que promueve el equipo y que lleguen a todos los usuarios.
+The WordPress Hosting Team promotes a series of live events focused on teaching elements promoted by the team and reaching all users.
 
-El sitio principal de WordPress Hosting Live estará en [meetup.com/wphosting](https://www.meetup.com/wphosting/), comunidando en [Make Hosting](https://make.wordpress.org/hosting/) y en colaboración con el equipo de [Learn WordPress](https://learn.wordpress.org/).
+The main WordPress Hosting Live site will be at [meetup.com/wphosting](https://www.meetup.com/wphosting/), hosted at [Make Hosting](https://make.wordpress.org/hosting/) and in collaboration with the [Learn WordPress](https://learn.wordpress.org/) team.
 
-## ¿Qué es?
+## What is it?
 
-La idea original de este proyecto era la de tener eventos en streaming en las que una persona dirija el evento a modo de host, y una o varias personas den una presentación sobre un tema en concreto. Posteriormente, se haría una ronda de preguntas y respuestas. La plataforma inicial para retransmitir será Youtube en directo, aunque pueden plantearse otros sistemas.
+The original idea of this project was to have streaming events in which a person directs the event as a host, and one or more people give a presentation on a particular topic. Afterwards, there would be a round of questions and answers. The initial platform for broadcasting will be Youtube live, although other systems may be considered.
 
-Otros sistemas alternativos pueden ser los de tener conversaciones grupales en modo Zoom en las que todo el mundo pueda participar más dinámicamente.
+Other alternative systems can be to have group conversations in Zoom mode in which everyone can participate more dynamically.
 
-## Los temas
+## The topics
 
-La temática de estos eventos han de ir alrededor del mundo del hosting y de lo que el equipo suele trabajar. Entre ellos podemos tener:
+The subject of these events have to be around the world of hosting and what the team usually works on. Among them we can have:
 
 * Server Environment (PHP, MySQL, nginx...)
 * Web Performance (caching, CDN, configuration...)
 * Reliability (backups, monitoring...)
 * Security (firewall, permissions, updates...)
 
-### El nivel de las presentaciones
+### Level of presentations
 
-Las charlas pueden ir dirigidas a usuarios de cualquier nivel. Si bien es cierto que las Meetup locales suelen llegar a todo tipo de usuarios, este canal se pensó para subir el nivel a profesionales del mundo del hosting y enseñar o tratar temas que habitualmente no se tratan.
+The talks can be directed to users of any level. While it is true that local Meetups tend to reach all types of users, this channel was designed to raise the level of hosting professionals and teach or discuss topics that are not usually covered.
 
-Algunas ideas de títulos de ponencias:
+Some ideas for presentation titles:
 
-* WordPress y la nueva versión de PHP
-* Cómo gestionamos las actualizaciones y mantenimientos
-* Optimizando el hosting para los sitios con WordPress
-* Instalaciones complejas y distribuidas de WordPress
+* WordPress and the new PHP version
+* How we manage updates and maintenance
+* Optimizing hosting for WordPress sites
+* Complex and distributed WordPress installations
 
-## Los idiomas
+## Languages
 
-El idioma vehicular principal será el inglés, pero no está limitado sólo a éste. Como objetivo principal se plantea una presentación en inglés con la frecuencia establecida, y de forma intercalada se podrán incluir presentaciones, en el mismo formato, en otros idiomas. ¡A cuánta más personas consigamos llegar, mejor!
+The main vehicular language will be English, but it is not limited to English only. The main objective is to give a presentation in English at the established frequency, and in an interspersed manner, presentations in other languages can be included in the same format. The more people we can reach, the better!
 
-## Las presentaciones
+## Presentations
 
-Como en cualquier evento WordPress, existen una serie de limitaciones que se plantea a nivel general. Estas están incluidas para el bien de la Comunidad WordPress global.
+As with any WordPress event, there are a number of limitations that apply across the board. These are included for the good of the global WordPress Community.
 
-* La primera diapositiva incluirá el título de la presentación, el nombre del ponente y, si es una obra derivada, los autores originales.
-* La segunda diapositiva incluirá una ficha de presentación del ponente o ponentes. En esta diapositiva se puede informar de la empresa o relación comercial que se tiene, incluir logos, la página y redes sociales del ponente.
-* En el resto de diapositivas no se podrá incluir ninguna mención o logos comerciales. Por nroma general tampoco se incluirán hastags o cuentas de redes sociales.
-* La última diapositiva puede incluir un mensaje de cierre (en modo ¡Gracias!) además de un enlace al sitio personal, cuenta de correo personal o redes sociales personales del ponente, por si alguno de los que vean la presentación quieren contactar.
-* La presentación deberá estar bajo licencia GPL o compatibles (EUPL, etc...)
-* En todo momento se debe cumplir el [Codigo de Conducta](https://learn.wordpress.org/code-of-conduct/).
+* The first slide will include the title of the presentation, the name of the speaker and, if it is a derivative work, the original authors.
+* The second slide will include a presentation card of the speaker(s). In this slide you can inform about the company or business relationship you have, include logos, the page and social networks of the speaker.
+* The rest of the slides may not include any mention or commercial logos. As a general rule, no hashtags or social network accounts may be included.
+* The last slide can include a closing message (in Thank You! mode) as well as a link to the speaker's personal website, personal email account or personal social networks, in case anyone viewing the presentation wants to get in touch.
+* The presentation must be under GPL or compatible licenses (EUPL, etc...).
+* The [Code of Conduct](https://learn.wordpress.org/code-of-conduct/) must be observed at all times.
 
-## Proponer una charla
+## Propose a talk
 
-Si tienes alguna idea de propuesta para una charla, puedes contactar con nosotros proponiendo un tema desde:
+If you have an idea for a talk proposal, you can contact us proposing a topic from:
 
 * [WordPress Hosting Meetup](https://www.meetup.com/wphosting/discussions/)
 * [Make Hosting](https://make.wordpress.org/hosting/)
