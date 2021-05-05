@@ -110,6 +110,7 @@ If you have an older version, you can activate the `Site Health` section install
 ## Changelog
 
 - 2021-05-05: Updated the imagick (WP\_Image\_Editor) link.
+- 2021-05-05: Updated versions (webserver, PHP, SQL).
 - 2021-02-17: Changelog added.
 - 2020-11-23: Minor text changes and info-block.
 - 2020-07-16: Updated webserver versions and vendors. Updated PHP versions. Updated SQL versions and vendors. Added: How do I know which version I have?. Updated libsodium to sodium.
