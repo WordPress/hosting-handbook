@@ -10,13 +10,13 @@ There are many web servers and, generally, any that support the execution of PHP
 
 When it comes to the server, web, WordPress officially supports:
 
-* [Apache HTTPD](https://httpd.apache.org/) 2.4
-* [nginx](https://nginx.org/) 1.19 / 1.18
+* [Apache HTTPD](https://httpd.apache.org/) 2.4.x
+* [nginx](https://nginx.org/) 1.19.x / 1.18.x
 
 Also, checked or used by hosting companies and developers:
 
-* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.0 / 5.4 / 5.3
-* [OpenLiteSpeed](https://openlitespeed.org/) 1.7 / 1.6 / 1.5 / 1.4
+* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.4.x / 5.3.x
+* [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x
 
 _WordPress may work with older versions, but we recommend only versions that are stable and supported._
 
@@ -28,15 +28,15 @@ PHP is a programming language on which WordPress code is based. This language ru
 
 WordPress supports many versions of PHP, some even obsolete, but as a general rule you should use only those with security or stable support.
 
-Officially the WordPress core supports from PHP 5.6.20 to PHP 8.0, and recommends PHP 7.4. However, not all themes or plugins are supported.
+Officially the WordPress core supports from PHP 7.0 to PHP 7.4. However, not all themes or plugins are supported.
 
 When it comes to PHP, WordPress works best with the following versions:
 
-* [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
-* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
-* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3)
+* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4).x
+* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
+* [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
 
-WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.3 are not recommended because it doesn't have support of any kind, and only use PHP 7.3 if you have the latest version, since it only has security support.
+WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.2 are not recommended because it doesn't have support of any kind, and only use PHP 7.2.x if you have the latest version, since it only has security support.
 
 ### PHP Extensions
 
@@ -86,8 +86,8 @@ For data storage, WordPress uses systems compatible with MySQL.
 
 Officially supported by WordPress:
 
-* [MariaDB](https://mariadb.org/) 10.5 / 10.4 / 10.3 / 10.2
-* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
+* [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x / 10.1.x
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0.x / 5.7.x
 
 Checked or used by hosting companies and developers:
 
@@ -95,7 +95,7 @@ Checked or used by hosting companies and developers:
 * [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 * [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
 * [Google Cloud SQL](https://cloud.google.com/sql/)
-* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0.x / 5.7.x
 
 The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems.
 
@@ -109,8 +109,8 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
-- 2021-03-17: Updated the imagick (WP\_Image\_Editor) link.
-- 2021-02-17: Changelog added. Updated versions (webserver, PHP, SQL).
+- 2021-05-05: Updated the imagick (WP\_Image\_Editor) link.
+- 2021-02-17: Changelog added.
 - 2020-11-23: Minor text changes and info-block.
 - 2020-07-16: Updated webserver versions and vendors. Updated PHP versions. Updated SQL versions and vendors. Added: How do I know which version I have?. Updated libsodium to sodium.
 - 2020-06-02: Published from Github.
