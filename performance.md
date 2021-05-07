@@ -13,12 +13,12 @@ Caches typically expire after a certain amount of time and are regenerated so th
 In a typical page load, various caches might be checked in the following order:
 
 1.  Local Browser cache / Local Storage / Web App Manifest
-2.  [Content Delivery Network (CDN)](#Content-Distribution-Network-CDN-Cache)
-3.  [Full Page Cache](#Full-Page-Cache) (Reverse Proxy; RAM or SSD with Nginx+)
-4.  [Full Page Cache](#Full-Page-Cache) (Static; PHP)
-5.  [Opcode Cache](#Opcode-Cache)
-6.  [Object Cache](#Object-Cache) (wp\_options, transient API)
-7.  [Fragment Cache](#Fragment-Cache) (Database, static files, transient API)
+2.  [Content Delivery Network (CDN)](#content-distribution-network-cdn-cache)
+3.  [Full Page Cache](#full-page-cache) (Reverse Proxy; RAM or SSD with Nginx+)
+4.  [Full Page Cache](#full-page-cache) (Static; PHP)
+5.  [Opcode Cache](#opcode-cache)
+6.  [Object Cache](#object-cache) (wp\_options, transient API)
+7.  [Fragment Cache](#fragment-cache) (Database, static files, transient API)
 8.  Transients API (Object Cache or Database Cache)
 9.  Database Cache
 10.  File Storage Cache (Static Files, SSD or spinning disk)
