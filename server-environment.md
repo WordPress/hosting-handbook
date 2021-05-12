@@ -10,13 +10,13 @@ There are many web servers and, generally, any that support the execution of PHP
 
 When it comes to the server, web, WordPress officially supports:
 
-* [Apache HTTPD](https://httpd.apache.org/) 2.4.x
-* [nginx](https://nginx.org/) 1.19.x / 1.18.x
+* [Apache HTTPD](https://httpd.apache.org/) 2.4
+* [nginx](https://nginx.org/) 1.20 / 1.19
 
 Also, checked or used by hosting companies and developers:
 
-* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 5.4.x / 5.3.x
-* [OpenLiteSpeed](https://openlitespeed.org/) 1.7.x / 1.6.x
+* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.0 / 5.4 / 5.3
+* [OpenLiteSpeed](https://openlitespeed.org/) 1.7 / 1.6 / 1.5 / 1.4
 
 _WordPress may work with older versions, but we recommend only versions that are stable and supported._
 
@@ -28,15 +28,15 @@ PHP is a programming language on which WordPress code is based. This language ru
 
 WordPress supports many versions of PHP, some even obsolete, but as a general rule you should use only those with security or stable support.
 
-Officially the WordPress core supports from PHP 7.0 to PHP 7.4. However, not all themes or plugins are supported.
+Officially the WordPress core supports from PHP 5.6.20 to PHP 8.0. However, not all themes or plugins are supported.
 
 When it comes to PHP, WordPress works best with the following versions:
 
-* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4).x
-* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3).x
-* [PHP 7.2](https://www.php.net/ChangeLog-7.php#PHP_7_2).x
+* [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
+* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
+* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3)
 
-WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.2 are not recommended because it doesn't have support of any kind, and only use PHP 7.2.x if you have the latest version, since it only has security support.
+WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.3 are not recommended because it doesn't have support of any kind, and only use PHP 7.3 if you have the latest version, since it only has security support.
 
 ### PHP Extensions
 
@@ -47,21 +47,23 @@ WordPress core makes use of PHP extensions. If the preferred extension is missin
 *   exif - Works with metadata stored in images.
 *   fileinfo - Used to detect mimetype of file uploads.
 *   hash - Used for hashing, including passwords and update packages.
+*   imagick - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   json - Used for communications with other servers.
 *   mbstring - Used to properly handle UTF8 text.
 *   mysqli - Connects to MySQL for database interactions.
-*   sodium - Validates Signatures and provides securely random bytes.
 *   openssl - Permits SSL-based connections to other hosts.
 *   pcre - Increases performance of pattern matching in code searches.
-*   imagick - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   sodium - Validates Signatures and provides securely random bytes.
 *   xml - Used for XML parsing, such as from a third-party site.
 *   zip - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
 
+*   bcmath - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
 *   filter – Used for securely filtering user input.
 *   gd - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   iconv - Used to convert between character sets.
+*   intl - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   mcrypt - Generates random bytes when `libsodium` and `/dev/urandom` aren't available.
 *   simplexml - Used for XML parsing.
 *   xmlreader - Used for XML parsing.
@@ -69,16 +71,16 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-*   ssh2
-*   ftp
-*   sockets (For when the ftp extension is unavailable)
+*   ssh2 - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+*   ftp - Implement client access to files servers speaking the File Transfer Protocol (FTP).
+*   sockets - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
 The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP implemented with Sockets, and FTP implemented through PHP alone.
 
 ### System Packages
 
-*   ImageMagick - Required by Imagick extension
-*   Ghost Script - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+*   [ImageMagick](https://imagemagick.org/) - Required by Imagick extension
+*   [Ghost Script](https://www.ghostscript.com/) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 
 ## Database
 
@@ -86,8 +88,8 @@ For data storage, WordPress uses systems compatible with MySQL.
 
 Officially supported by WordPress:
 
-* [MariaDB](https://mariadb.org/) 10.4.x / 10.3.x / 10.2.x / 10.1.x
-* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0.x / 5.7.x
+* [MariaDB](https://mariadb.org/) 10.5 / 10.4 / 10.3 / 10.2
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
 
 Checked or used by hosting companies and developers:
 
@@ -95,7 +97,7 @@ Checked or used by hosting companies and developers:
 * [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 * [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
 * [Google Cloud SQL](https://cloud.google.com/sql/)
-* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0.x / 5.7.x
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
 
 The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems.
 
@@ -109,6 +111,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2021-05-07: Updated versions and extensions. [PHP 7.3 bump based on Trac](https://meta.trac.wordpress.org/changeset/10960).
 - 2021-05-05: Updated the imagick (WP\_Image\_Editor) link.
 - 2021-05-05: Updated versions (webserver, PHP, SQL).
 - 2021-02-17: Changelog added.
