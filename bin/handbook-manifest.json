@@ -1,10 +1,4 @@
 {
-    "environment": {
-        "title": "Environment",
-        "slug": "environment",
-        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/server-environment.md",
-        "parent": null
-    },
     "get-involved": {
         "title": "Get Involved",
         "slug": "get-involved",
@@ -33,6 +27,18 @@
         "title": "Security",
         "slug": "security",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/security.md",
+        "parent": null
+    },
+    "server-environment": {
+        "title": "Server Environment",
+        "slug": "server-environment",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/server-environment.md",
+        "parent": null
+    },
+    "tests": {
+        "title": "Tests",
+        "slug": "tests",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/tests.md",
         "parent": null
     }
 }
