@@ -2,7 +2,7 @@
 
 The WordPress Hosting Team promotes a series of live events focused on teaching elements promoted by the team and reaching all users.
 
-The main WordPress Hosting Live site will be at [meetup.com/wphosting](https://www.meetup.com/wphosting/), hosted at [Make Hosting](https://make.wordpress.org/hosting/) and in collaboration with the [Learn WordPress](https://learn.wordpress.org/) team.
+The main WordPress Hosting Live site will be at [meetup.com/wphosting](https://www.meetup.com/wphosting/), hosted at [Make Hosting](https://make.wordpress.org/hosting/) and in collaboration with the [Learn WordPress](https://learn.wordpress.org/) team. You can also find the streaming at [Youtube](https://www.youtube.com/channel/UCUHFMCXJxXHcfls9w6Hzt6A) and [Twitter](https://twitter.com/WPHostingTeam).
 
 ## What is it?
 
@@ -32,7 +32,7 @@ Some ideas for presentation titles:
 
 ## Languages
 
-The main vehicular language will be English, but it is not limited to English only. The main objective is to give a presentation in English at the established frequency, and in an interspersed manner, presentations in other languages can be included in the same format. The more people we can reach, the better!
+Although the main language used in the WordPress Community is English, and the main language of the presentations (initially established once a month) will also be English, presentations in other languages will be included from time to time, in an effort to ensure that the goals of this initiative will reach as many people as possible, regardless of where they are or what language they speak. The more people we can reach, the better!
 
 ## Presentations
 
@@ -53,7 +53,7 @@ If you have an idea for a talk proposal, you can contact us proposing a topic fr
 * [Make Hosting](https://make.wordpress.org/hosting/)
 * [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel on Slack.
 
-\[info\]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).\[/info\]
+[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
