@@ -11,6 +11,12 @@
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/index.md",
         "parent": null
     },
+    "live": {
+        "title": "WordPress Hosting Live",
+        "slug": "live",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/live.md",
+        "parent": null
+    },
     "performance": {
         "title": "Performance",
         "slug": "performance",
