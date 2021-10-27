@@ -2,11 +2,11 @@
 
 ## What does the Hosting Team do?
 
-The Hosting Team is working on [several projects](https://make.wordpress.org/hosting/team-projects/).
+To improve the hosting experience and educate people on the best practices on hosting WordPress, the Hosting Team is working on [several projects](https://make.wordpress.org/hosting/team-projects/).
 
 There is a set of hosting best practices in the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), including [Performance](https://make.wordpress.org/hosting/handbook/handbook/performance/), [Reliability](https://make.wordpress.org/hosting/handbook/handbook/reliability/), [Security](https://make.wordpress.org/hosting/handbook/handbook/security/) and [Server Environment](https://make.wordpress.org/hosting/handbook/handbook/server-environment/) recommendations.
 
-The team also runs and maintains a set of [automated hosting tests](https://make.wordpress.org/hosting/test-results/) that run across many hosting companies. You can set up tests to run on your hosting environment(s), and help improve the tools through fixing bugs, adding features, or improving the design of the test reporter pages.
+The team also runs and maintains a set of [automated hosting tests](https://make.wordpress.org/hosting/test-results/) that run across the hosting environment of many hosting companies. You can set up tests to run on your hosting environment(s), and help improve the tools through fixing bugs, adding features, or improving the design of the test reporter pages.
 
 #### Improving Hosting Handbook
 
