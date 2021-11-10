@@ -1,42 +1,35 @@
 # Server Environment
 
-Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively.
+Although WordPress will run in almost any environment, there are some minimal requirements that should be met if you want to achieve at least minimum level of performance and stability.
+
 
 ## Web Server
 
-The web server is the software dedicated to run the files of the website and where users come to consult them, mainly through the Web.
+The web server is piece of software that accepts user web requests and serves them the appropriate result. There are many different web servers that run on different operation systems Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
 
-There are many web servers and, generally, any that support the execution of PHP files should be able to work with WordPress.
-
-When it comes to the server, web, WordPress officially supports:
+The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
 * [nginx](https://nginx.org/) 1.20 / 1.19
 
-Also, checked or used by hosting companies and developers:
+
+Others are used by hosting companies and developers and are known to work well too:
 
 * [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.0 / 5.4 / 5.3
 * [OpenLiteSpeed](https://openlitespeed.org/) 1.7 / 1.6 / 1.5 / 1.4
 
-_WordPress may work with older versions, but we recommend only versions that are stable and supported._
-
-Remember that if you have a website running in production, it is recommended to use the latest stable version of each of the web servers (mainly for security, rather than functionality), but not alpha, beta or candidate (RC) versions.
+_Those are the latest versions at the time of writing this document. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
 PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
-WordPress supports many versions of PHP, some even obsolete, but as a general rule you should use only those with security or stable support.
-
-Officially the WordPress core supports from PHP 5.6.20 to PHP 8.0. However, not all themes or plugins are supported.
-
-When it comes to PHP, WordPress works best with the following versions:
+WordPress supports many versions of PHP, some even obsolete, we recommend running PHP version 7.4 or higher:
 
 * [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
 * [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
-* [PHP 7.3](https://www.php.net/ChangeLog-7.php#PHP_7_3)
 
-WordPress does work with PHP 5.6.20+. Versions prior to PHP 7.3 are not recommended because it doesn't have support of any kind, and only use PHP 7.3 if you have the latest version, since it only has security support.
+Versions prior to PHP 7.4 are not recommended because it doesn't have support of any kind. Security support for PHP 7.3 ends in Dec 6th 2021 which means that even if there are security problems with it, new version won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
 
 ### PHP Extensions
 
@@ -86,20 +79,20 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 For data storage, WordPress uses systems compatible with MySQL.
 
-Officially supported by WordPress:
+Officially recommended by WordPress are 
 
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 5.6 / 5.7 / 8.0
 * [MariaDB](https://mariadb.org/) 10.5 / 10.4 / 10.3 / 10.2
-* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
 
-Checked or used by hosting companies and developers:
+Other MySQL servers that are known to perform well are:
 
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
 * [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 * [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 * [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
 * [Google Cloud SQL](https://cloud.google.com/sql/)
-* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
 
-The use of these versions is recommended, both for performance and security reasons, although previous versions usually work without problems.
+Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
 
 ## How do I know which version I have?
 
