@@ -1,6 +1,6 @@
 # Server Environment
 
-Although WordPress will run in almost any environment, there are some minimal requirements that should be met if you want to achieve at least minimum level of performance and stability.
+Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively when considering that most WordPress websites use third party plugins and themes which commonly introduce additional server-level requirements.
 
 
 ## Web Server
@@ -33,7 +33,14 @@ Versions prior to PHP 7.4 are not recommended because it doesn't have support of
 
 ### PHP Extensions
 
-WordPress core makes use of PHP extensions. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality. Therefore the PHP extensions listed below are recommended.
+WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality.
+
+The PHP extensions listed below are required for a WordPress site to work.
+
+* json - Used for communications with other servers and processing data in JSON format.
+* One of either mysqli, mysql, or mysqlnd - Connects to MySQL for database interactions.
+
+The PHP extensions listed below are highly recommended in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 *   curl - Performs remote request operations.
 *   dom - Used to validate Text Widget content and to automatically configure IIS7+.
@@ -41,12 +48,9 @@ WordPress core makes use of PHP extensions. If the preferred extension is missin
 *   fileinfo - Used to detect mimetype of file uploads.
 *   hash - Used for hashing, including passwords and update packages.
 *   imagick - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
-*   json - Used for communications with other servers.
 *   mbstring - Used to properly handle UTF8 text.
-*   mysqli - Connects to MySQL for database interactions.
 *   openssl - Permits SSL-based connections to other hosts.
 *   pcre - Increases performance of pattern matching in code searches.
-*   sodium - Validates Signatures and provides securely random bytes.
 *   xml - Used for XML parsing, such as from a third-party site.
 *   zip - Used for decompressing Plugins, Themes, and WordPress update packages.
 
@@ -59,6 +63,7 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 *   intl - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   mcrypt - Generates random bytes when `libsodium` and `/dev/urandom` aren't available.
 *   simplexml - Used for XML parsing.
+*   sodium - Validates Signatures and provides securely random bytes.
 *   xmlreader - Used for XML parsing.
 *   zlib - Gzip compression and decompression.
 
