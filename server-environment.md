@@ -5,7 +5,7 @@ Although WordPress can work in almost any environment, even very minimal ones, i
 
 ## Web Server
 
-The web server is piece of software that accepts user web requests and serves them the appropriate result. There are many different web servers that run on different operation systems Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
+The web server is piece of software that accepts user web requests and serves them the appropriate result. There are many different web servers that run on different operation systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
 
 The two most popular ones that are recommended are:
 
