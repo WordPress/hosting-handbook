@@ -61,7 +61,7 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 *   gd - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   iconv - Used to convert between character sets.
 *   intl - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
-*   mcrypt - Generates random bytes when `libsodium` and `/dev/urandom` aren't available.
+*   mcrypt - Generates random bytes when `libsodium` and `/dev/urandom` aren't available. (This module was DEPRECATED in PHP 7.1.0, and REMOVED in PHP 7.2.0, and should no longer be used in favor of `sodium` & `openssl` unless they aren't available.)
 *   simplexml - Used for XML parsing.
 *   sodium - Validates Signatures and provides securely random bytes.
 *   xmlreader - Used for XML parsing.
