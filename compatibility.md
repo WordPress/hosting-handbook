@@ -8,7 +8,7 @@ This table shows the versions available (and security supported) at the time of 
 
 WordPress | PHP | MySQL | MariaDB | Launch date
 ------------ | ------------- | ------------- | ------------- | -------------
-WordPress 6.0* | PHP 7.4 - 8.1 | MySQL 5.7 - 8.0 | MariaDB 10.3 - 10.7 | 2022-05-24
+WordPress 6.0 | PHP 7.4 - 8.1 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.7 | 2022-05-24
 WordPress 5.9 | PHP 7.4 - 8.1 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.6 | 2022-01-25
 WordPress 5.8 | PHP 7.3 - 8.0 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.6 | 2021-07-20
 WordPress 5.7 | PHP 7.3 - 8.0 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.5 | 2021-03-09
