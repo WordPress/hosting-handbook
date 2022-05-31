@@ -10,7 +10,7 @@ The web server is piece of software that accepts user web requests and serves th
 The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
-* [nginx](https://nginx.org/) 1.21 / 1.20
+* [nginx](https://nginx.org/) 1.22
 
 
 Others are used by hosting companies and developers and are known to work well too:
@@ -32,7 +32,7 @@ WordPress supports many versions of PHP, some even obsolete, we recommend runnin
 
 _IMPORTANT: WordPress 6.0 has beta support for PHP 8.0 and PHP 8.1. If used some of these versions may get some Warnings._
 
-Versions prior to PHP 7.4 are not recommended because it doesn't have support of any kind. Security support for PHP 7.3 ended in 2021-12-06 which means that even if there are security problems with it, new version won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+Versions prior to PHP 7.4 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions. Security support for PHP 7.3 ended in 2021-12-06 which means that even if there are security problems with it, official versions won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
 
 ### PHP Extensions
 
@@ -89,7 +89,7 @@ For data storage, WordPress uses systems compatible with MySQL.
 Officially recommended by WordPress are 
 
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
-* [MariaDB](https://mariadb.org/) 10.7 / 10.6 / 10.5 / 10.4 / 10.3 / 10.2
+* [MariaDB](https://mariadb.org/) 10.6 / 10.5 / 10.4 / 10.3 / 10.2
 
 Other MySQL servers that are known to perform well are:
 
