@@ -22,7 +22,7 @@ The first thing you'll have to do is [visit the repository page](https://github.
 
 After you submit an issue, we can discuss together the suggested changes.
 
-Once a PR is submitted, it will require an approval process. By default, once it is submitted it will require review and approval by two people from the Hosting team. In cases where there are PRs related to corrections or internal operational elements, created by someone from the Hosting Team, only one review will be required.
+Once a PR is submitted, it will require an approval process. By default, once it is submitted, it will require review and approval by two people from the Hosting team. In cases where there are PRs related to corrections or internal operational elements, created by someone from the Hosting Team, only one review will be required.
 
 #### Improvements in the development of the Automated Hosting Tests
 
