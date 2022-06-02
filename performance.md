@@ -141,11 +141,11 @@ The maximum amount of memory that PHP is allowed to use per page render is speci
 
 In addition to setting memory limits within PHP, WordPress has two memory configuration constants that can be changed in the **wp-config.php** file. WordPress will raise the PHP `memory_limit` to these values if it has permission to do so, but if the `php.ini` specifies higher amounts, WordPress will not lower the amount allowed.
 
-The option `WP_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the frontend of the website. WordPress default: 60 MB.
+The option `WP_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the frontend of the website. WordPress default is 40 MB and WordPress MultiSite default is 64 MB.
 
     define( 'WP_MEMORY_LIMIT', '128M' );
 
-The option `WP_MAX_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the backend of the website. WordPress default: 256 MB.
+The option `WP_MAX_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the backend of the website. WordPress default is 256 MB.
 
     define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
