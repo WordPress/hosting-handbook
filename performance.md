@@ -137,13 +137,15 @@ Note that these timeouts are often configured per server and you won't be able t
 
 #### Memory Limits
 
-The maximum amount of memory that PHP is allowed to use per page render is specified with the [`memory limit`](http://php.net/manual/en/ini.core.php#ini.memory-limit) `php.ini` directive.
+The maximum amount of memory that PHP is allowed to use per page render is specified with the [`memory limit`](https://www.php.net/manual/en/ini.core.php#ini.memory-limit) `php.ini` directive.
 
 In addition to setting memory limits within PHP, WordPress has two memory configuration constants that can be changed in the **wp-config.php** file. WordPress will raise the PHP `memory_limit` to these values if it has permission to do so, but if the `php.ini` specifies higher amounts, WordPress will not lower the amount allowed.
 
-    define('WP_MEMORY_LIMIT', '128M');
+The option `WP_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the frontend of the website. WordPress default: 40 MB.
 
-This option declares the amount of memory WordPress should request for rendering the front end of the website.
+    define( 'WP_MEMORY_LIMIT', '128M' );
+
+The option `WP_MAX_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the backend of the website. WordPress default: 256 MB.
 
     define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
