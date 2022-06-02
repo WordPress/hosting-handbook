@@ -22,6 +22,8 @@ The first thing you'll have to do is [visit the repository page](https://github.
 
 After you submit an issue, we can discuss together the suggested changes.
 
+Once a PR is submitted, it will require an approval process. By default, once it is submitted, it will require review and approval by two people from the Hosting team. In cases where there are PRs related to corrections or internal operational elements, created by someone from the Hosting Team, only one review will be required.
+
 #### Improvements in the development of the Automated Hosting Tests
 
 You can propose improvements or solve those available in both the [PHPUnit test runner (issues)](https://github.com/WordPress/phpunit-test-runner/issues) and the [PHPUnit test reporter (issues)](https://github.com/WordPress/phpunit-test-reporter/issues).
@@ -105,6 +107,7 @@ If you want to get an idea of what a contributor day with the hosting team might
 
 ## Changelog
 
+- 2022-06-02: Adding Github process
 - 2021-05-27: Fixing infoboxes
 - 2021-02-17: Changelog added.
 - 2020-06-02: Published from Github.
