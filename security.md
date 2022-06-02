@@ -156,16 +156,74 @@ If using Redis for database object caching, using a unique Redis cache key salt 
 
 Memcached is a memory object caching solution commonly used to provide database object caching for WordPress. One of the most important configuration concerns for memcached is preventing memcached from being accessed by the public internet. Putting memcached servers behind a firewall is one of the most important parts of using memcached securely for WordPress database object caching.
 
-### WordPress Automatic Updates
 
-WordPress has the ability to automatically apply security updates. This should be enabled in almost all cases. The exception is if files are not writeable, outside of `wp-content/uploads`, for security reasons. In this instance, an alternative, expedient, and, preferably, automatic update process should be made available. See [Configuring Automatic Background Updates  
-](https://codex.wordpress.org/Configuring_Automatic_Background_Updates)for details on automatic update configuration.
+
+## Automatic updates
+WordPress, by default, incorporates a system of automatic updates, but it is a minimum to avoid major disasters and that over time ceases to be effective.
+
+### WordPress Core
+
+There are 3 options when it comes to automatically upgrading or not upgrading the WordPress core: no upgrade, upgrade only minor versions, or upgrade everything, even major versions. It is recommended that you at least upgrade to the smaller versions, which is what the system does by default. This means that if you have version 5.0.1, it will automatically upgrade to 5.0.2, and then to 5.0.3, but it will not upgrade to 5.1.
+
+To configure these automatic updates, it is best to add a series of codes in the configuration file of wp-config.php.
+
+#### 100% automatic core update
+
+You have to add in the file wp-config.php the following line:
+
+```php
+define( 'WP_AUTO_UPDATE_CORE', true );
+```
+
+##### Core update for minor versions only (recommended)
+
+You have to add in the file wp-config.php the following line. When there are major updates you should update it by hand.
+
+```php
+define( 'WP_AUTO_UPDATE_CORE', 'minor' );
+```
+
+##### Disable automatic updates
+
+You have to add in the file wp-config.php the following line. Unless you do very intensive maintenance, this option is not recommended.
+
+```php
+define( 'WP_AUTO_UPDATE_CORE', false );
+```
+#### Plugins, themes and translations
+
+The decision to have plugins, themes and translations done automatically is not trivial and requires important decision making. The main problem you may encounter is that, due to these automatic updates, the site may stop working.
+
+In case you want to set everything up automatically, you can (we recommend) do it through a must-use plugin. These plugins, unlike a normal plugin, will run yes or no in WordPress and cannot be disabled from the admin panel.
+
+The content of the Plugin would be as follows:
+
+```php
+defined( 'ABSPATH' ) or die( 'Bye bye!' );
+add_filter( 'auto_update_core', '__return_true' );
+add_filter( 'auto_update_plugin', '__return_true' );
+add_filter( 'auto_update_theme', '__return_true' );
+add_filter( 'auto_update_translation', '__return_true' );
+add_filter( 'auto_core_update_send_email', '__return_true' );
+```
+
+From WordPress version 5.5 onwards, a system is included that allows you to decide which Plugins and Themes you want to update automatically so that the update work is much lighter and you don't have to resort to the custom Plugin system. Checkout the [Documentation handbook](https://wordpress.org/support/article/plugins-themes-auto-updates/) to learn more about the auto updates.
+
+#### Disabling all updates
+
+In case you want to perform the updates manually or with other different systems, as could be the WP-CLI, and even if you have an installation that for some reason you cannot or should not update, you can include in the wp-config.php a line that will prevent the updates that are not done by alternative methods.
+
+```php
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+```
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
+- 2022-06-02: Adding information about Auto Updates
 - 2021-05-27: Fixing infoboxes
 - 2021-02-17: Changelog added.
 - 2020-11-23: Minor text changes and info-block. Changed "SSL" to "TLS / SSL".
 - 2020-06-02: Published from Github.
+
