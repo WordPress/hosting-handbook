@@ -46,5 +46,11 @@
         "slug": "tests",
         "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/tests.md",
         "parent": null
+    },
+    "compatibility": {
+        "title": "Compatibility",
+        "slug": "compatibility",
+        "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/compatibility.md",
+        "parent": null
     }
 }
