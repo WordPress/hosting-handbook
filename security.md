@@ -172,7 +172,7 @@ To configure these automatic updates, it is best to add a series of codes in the
 You have to add in the file wp-config.php the following line:
 
 ```php
-define('WP_AUTO_UPDATE_CORE', true);
+define( 'WP_AUTO_UPDATE_CORE', true );
 ```
 
 ##### Core update for minor versions only (recommended)
@@ -180,7 +180,7 @@ define('WP_AUTO_UPDATE_CORE', true);
 You have to add in the file wp-config.php the following line. When there are major updates you should update it by hand.
 
 ```php
-define('WP_AUTO_UPDATE_CORE', 'minor');
+define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 ```
 
 ##### Disable automatic updates
@@ -188,7 +188,7 @@ define('WP_AUTO_UPDATE_CORE', 'minor');
 You have to add in the file wp-config.php the following line. Unless you do very intensive maintenance, this option is not recommended.
 
 ```php
-define('WP_AUTO_UPDATE_CORE', false);
+define( 'WP_AUTO_UPDATE_CORE', false );
 ```
 #### Plugins, themes and translations
 
@@ -199,12 +199,12 @@ In case you want to set everything up automatically, you can (we recommend) do i
 The content of the Plugin would be as follows:
 
 ```php
-defined('ABSPATH') or die('Bye bye!');
-add_filter('auto_update_core', '__return_true');
-add_filter('auto_update_plugin', '__return_true');
-add_filter('auto_update_theme', '__return_true');
-add_filter('auto_update_translation', '__return_true');
-add_filter('auto_core_update_send_email', '__return_true');
+defined( 'ABSPATH' ) or die( 'Bye bye!' );
+add_filter( 'auto_update_core', '__return_true' );
+add_filter( 'auto_update_plugin', '__return_true' );
+add_filter( 'auto_update_theme', '__return_true' );
+add_filter( 'auto_update_translation', '__return_true' );
+add_filter( 'auto_core_update_send_email', '__return_true' );
 ```
 
 From WordPress version 5.5 onwards, a system is included that allows you to decide which Plugins and Themes you want to update automatically so that the update work is much lighter and you don't have to resort to the custom Plugin system. Checkout the [Documentation handbook](https://wordpress.org/support/article/plugins-themes-auto-updates/) to learn more about the auto updates.
@@ -214,7 +214,7 @@ From WordPress version 5.5 onwards, a system is included that allows you to deci
 In case you want to perform the updates manually or with other different systems, as could be the WP-CLI, and even if you have an installation that for some reason you cannot or should not update, you can include in the wp-config.php a line that will prevent the updates that are not done by alternative methods.
 
 ```php
-define('AUTOMATIC_UPDATER_DISABLED', true);
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
 ```
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
