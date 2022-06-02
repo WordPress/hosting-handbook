@@ -141,7 +141,7 @@ The maximum amount of memory that PHP is allowed to use per page render is speci
 
 In addition to setting memory limits within PHP, WordPress has two memory configuration constants that can be changed in the **wp-config.php** file. WordPress will raise the PHP `memory_limit` to these values if it has permission to do so, but if the `php.ini` specifies higher amounts, WordPress will not lower the amount allowed.
 
-The option `WP_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the frontend of the website. WordPress default: 40 MB.
+The option `WP_MEMORY_LIMIT` declares the amount of memory WordPress should request for rendering the frontend of the website. WordPress default: 60 MB.
 
     define( 'WP_MEMORY_LIMIT', '128M' );
 
@@ -149,13 +149,13 @@ The option `WP_MAX_MEMORY_LIMIT` declares the amount of memory WordPress should 
 
     define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
-Since the WordPress backend usually requires more memory, there's a separate setting for the amount, that can be set for logged in users. This is mainly required for image uploads. You can have it set higher than the front end limit to ensure your backend has all the resources it needs.
+Since the WordPress backend usually requires more memory, there's a separate setting for the amount, that can be set for logged in users. This is mainly required for media uploads. You can have it set higher than the front end limit to ensure your backend has all the resources it needs. Usually, `WP_MEMORY_LIMIT` <= `WP_MAX_MEMORY_LIMIT`.
 
 #### File Upload Sizes
 
 When uploading media files and other content to WordPress using the WordPress admin dashboard, WordPress uses PHP to process the uploads. PHP's configuration includes limits on the size of files that can be uploaded through PHP and on the size of requests that can be sent to the web server for processing. These will need to align with the server's timeouts, discussed above.
 
-The limit on the size of individual file uploads can be configured using the [`upload_max_filesize`](http://php.net/manual/en/ini.core.php#ini.upload-max-filesize) `php.ini` directive.
+The limit on the size of individual file uploads can be configured using the [`upload_max_filesize`](https://www.php.net/manual/en/ini.core.php#ini.upload-max-filesize) `php.ini` directive.
 
 The limit on the entire size of a request that can be sent from the web server to PHP for processing can be configured using the [`post_max_size`](http://php.net/manual/en/ini.core.php#ini.post-max-size) `php.ini` directive. The value for `post_max_size` must be greater than or equal to the value for `upload_max_filesize`. PHP will not process requests larger in size than the value for `post_max_size`.
 
