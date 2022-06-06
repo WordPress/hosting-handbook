@@ -89,7 +89,7 @@ For data storage, WordPress uses systems compatible with MySQL.
 Officially recommended by WordPress are 
 
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
-* [MariaDB](https://mariadb.org/) 10.6 / 10.5 / 10.4 / 10.3 / 10.2
+* [MariaDB](https://mariadb.org/) 10.6 / 10.5 / 10.4 / 10.3
 
 Other MySQL servers that are known to perform well are:
 
@@ -115,6 +115,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
 - 2022-05-13: Update for WordPress 6.0 and stable software versions; updated deprecated PHP versions and extensions.
 - 2021-05-27: Fixing infoboxes
 - 2021-05-07: Updated versions and extensions. [PHP 7.3 bump based on Trac](https://meta.trac.wordpress.org/changeset/10960).
