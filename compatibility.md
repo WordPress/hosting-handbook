@@ -8,7 +8,7 @@ This table shows the versions available (and security supported) at the time of 
 
 WordPress | PHP | MySQL | MariaDB | Launch date
 ------------ | ------------- | ------------- | ------------- | -------------
-WordPress 6.0 | PHP 7.4 - 8.1 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.7 | 2022-05-24
+WordPress 6.0 | PHP 7.4 - 8.1 | MySQL 5.7 - 8.0 | MariaDB 10.3 - 10.7 | 2022-05-24
 WordPress 5.9 | PHP 7.4 - 8.1 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.6 | 2022-01-25
 WordPress 5.8 | PHP 7.3 - 8.0 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.6 | 2021-07-20
 WordPress 5.7 | PHP 7.3 - 8.0 | MySQL 5.7 - 8.0 | MariaDB 10.2 - 10.5 | 2021-03-09
@@ -32,3 +32,8 @@ WordPress 4.0 | PHP 5.4 - 5.6 | MySQL 5.5 - 5.6 | MariaDB 5.5 - 10.0 | 2014-09-0
 WordPress 3.9 | PHP 5.3 - 5.5 | MySQL 5.5 - 5.6 | MariaDB 5.5 - 10.0 | 2014-04-16
 WordPress 3.8 | PHP 5.3 - 5.5 | MySQL 5.5 - 5.6 | MariaDB 5.5 | 2013-12-12
 WordPress 3.7 | PHP 5.3 - 5.5 | MySQL 5.5 - 5.6 | MariaDB 5.5 | 2013-10-24
+
+## Changelog
+
+- 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
+- 2022-06-02: Published from Github.
