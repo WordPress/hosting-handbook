@@ -10,13 +10,15 @@ This document covers the technical details around setup and submitting your cont
 
 ## Making Edits
 
-Pull Requests are welcome! 
+Pull Requests are welcome!
 
 Please feel free to start a Pull Request (PR) by [using the "Edit" button](https://help.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository) next to one of the Handbook pages, or by [forking and cloning the repo](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) (check the [Forks](https://github.com/WordPress/hosting-handbook/network/members)).
 
+All documentation is written in plain text using the Markdown format. Don't worry about any specific flavor of Markdown it's checked and cleaned before generating it to HTML.
+
 Either way, please include a description of the purpose behind the change so that it's easy for folks to review.
 
-Any edit requires review from two hosting team members before being merged. Reviews can be requested in the upper right of the Pull Request form.
+Any edit requires a review from two hosting team members before being merged. Reviews can be requested in the upper right of the Pull Request form.
 
 ## Assets in Pages
 
