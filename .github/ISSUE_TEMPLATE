@@ -1,0 +1,26 @@
+name: Error Report
+description: File an issue if you found an error in the handbook
+title: "[Error]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
+  - type: textarea
+    id: where
+    attributes:
+      label: On which page you encountered the issue?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is the issue there?
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What is your recommendation?
+      description: Tell us, how you would solve it or what your recommendation would be?
+      render: shell
