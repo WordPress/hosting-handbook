@@ -109,5 +109,5 @@ If you want to get an idea of what a contributor day with the hosting team might
 
 - 2022-06-02: Adding Github process
 - 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added.
-- 2020-06-02: Published from Github.
+- 2021-02-17: Changelog added
+- 2020-06-02: Published from Github

@@ -243,5 +243,5 @@ To get things reporting properly, place the username for the bot, along with the
 ## Changelog
 
 - 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added.
-- 2021-02-10: Published from Github.
+- 2021-02-17: Changelog added
+- 2021-02-10: Published from Github
