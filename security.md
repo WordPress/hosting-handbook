@@ -163,8 +163,18 @@ WordPress has the ability to automatically apply security updates. This should b
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
+
+# Responsible Disclosure
+
+Responsible disclosure means the following: if you encounter a security breach (or a weak spot) concerning the WordPress core software, we would like to hear about this as soon as possible. The WordPress community takes security bugs seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
+
+To report a security issue, please visit the [WordPress HackerOne](https://hackerone.com/wordpress) program and file a ticket there.
+
+If you encounter security issues or insecure recommendations in the hosting documentation, we would like you to raise an issue in the [hosting-handbook Github repository](https://github.com/WordPress/hosting-handbook/issues/).
+
 ## Changelog
 
+- 2022-06-07: Added Responsible Disclosure	
 - 2021-05-27: Fixing infoboxes
 - 2021-02-17: Changelog added.
 - 2020-11-23: Minor text changes and info-block. Changed "SSL" to "TLS / SSL".
