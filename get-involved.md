@@ -102,11 +102,13 @@ If you want to get an idea of what a contributor day with the hosting team might
 
 *   [WordCamp US 2019 Contributor Day](https://docs.google.com/document/d/1Mb_7ZVslbD4L_cmXqBuiaeOPd8CF7v2D3c3iCN572QY/)
 *   [WordCamp EU 2020 Contributor Day](https://docs.google.com/document/d/14BuRJRp7bS1dqj2Dezxawg9QMWOWrMmg1XXJPyLKOis/)
+*   [WordCamp EU 2022 Contributor Day](https://make.wordpress.org/hosting/2022/06/06/wordcamp-europe-2022-contributor-day-summary/)
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
+- 2022-06-08: WordCamp Europe 2022 Contributor Day link
 - 2022-06-02: Adding Github process
 - 2021-05-27: Fixing infoboxes
 - 2021-02-17: Changelog added
