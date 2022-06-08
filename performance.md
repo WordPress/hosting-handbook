@@ -172,6 +172,6 @@ The `wp-cron.php` script is responsible for causing certain tasks to be schedule
 ## Changelog
 
 - 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added.
-- 2020-11-09: Lifted PHP Recommendation to 7.4.
-- 2020-06-02: Published from Github.
+- 2021-02-17: Changelog added
+- 2020-11-09: Lifted PHP Recommendation to 7.4
+- 2020-06-02: Published from Github

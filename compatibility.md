@@ -36,4 +36,4 @@ WordPress 3.7 | PHP 5.3 - 5.5 | MySQL 5.5 - 5.6 | MariaDB 5.5 | 2013-10-24
 ## Changelog
 
 - 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
-- 2022-06-02: Published from Github.
+- 2022-06-02: Published from Github

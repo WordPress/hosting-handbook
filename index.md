@@ -29,7 +29,7 @@ The Hosting Team is represented by team reps [@amykamala](https://profiles.wordp
 ## Changelog
 
 - 2021-05-27: Fixing infoboxes
-- 2021-03-31: Team Reps updated.
-- 2021-02-17: Changelog added.
-- 2020-11-21: Minor text changes and info-block.
-- 2020-06-02: Published from Github.
+- 2021-03-31: Team Reps updated
+- 2021-02-17: Changelog added
+- 2020-11-21: Minor text changes and info-block
+- 2020-06-02: Published from Github

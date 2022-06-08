@@ -37,6 +37,6 @@ A lot of WordPress hosts offer version control but there are third-party service
 ## Changelog
 
 - 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added.
-- 2020-11-23: Minor text changes and info-block.
-- 2020-06-02: Published from Github.
+- 2021-02-17: Changelog added
+- 2020-11-23: Minor text changes and info-block
+- 2020-06-02: Published from Github
