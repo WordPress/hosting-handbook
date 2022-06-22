@@ -40,38 +40,44 @@ WordPress core makes use of various PHP extensions when they're available. If th
 
 The PHP extensions listed below are required for a WordPress site to work.
 
-* [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format.
-* One of either [mysqli](https://www.php.net/manual/en/book.mysqli.php), or [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) - Connects to MySQL for database interactions.
+* [json](https://www.php.net/manual/en/book.json.php) (bundled in >=8.0.0) - Used for communications with other servers and processing data in JSON format.
+* One of either [mysqli](https://www.php.net/manual/en/book.mysqli.php) (bundled in >=5.0.0), or [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) - Connects to MySQL for database interactions.
 
 The PHP extensions listed below are highly recommended in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
-*   [curl](https://www.php.net/manual/en/book.curl.php) - Performs remote request operations.
-*   [dom](https://www.php.net/manual/en/book.dom.php) - Used to validate Text Widget content and to automatically configure IIS7+.
-*   [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
+*   [curl](https://www.php.net/manual/en/book.curl.php) (requires libcurl) - Performs remote request operations.
+*   [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
+*   [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
 *   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect mimetype of file uploads.
-*   [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages.
-*   [imagick](https://www.php.net/manual/en/book.imagick.php) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in >=5.1.2) - Used for hashing, including passwords and update packages.
+*   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
-*   [openssl](https://www.php.net/manual/en/book.openssl.php) - Permits SSL-based connections to other hosts.
+*   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.0 requires OpenSSL >= 0.9.8; PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
 *   [pcre](https://www.php.net/manual/en/book.pcre.php) - Increases performance of pattern matching in code searches.
-*   [xml](https://www.php.net/manual/en/book.xml.php) - Used for XML parsing, such as from a third-party site.
-*   [zip](https://www.php.net/manual/en/book.zip.php) - Used for decompressing Plugins, Themes, and WordPress update packages.
+*   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
+*   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11) - Used for decompressing Plugins, Themes, and WordPress update packages.
+
+The PHP extensions listed below are recommended to allow some WordPress cache (if necessary).
+
+*   [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached - PHP >=5.2.0 requires libmemcached >=0.2.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+*   [opcache](https://www.php.net/manual/en/book.opcache.php) (requires libcurl) - PHP can be configured to preload scripts into the opcache when the engine starts.
+*   [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis
 
 For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
 
 *   [bc](https://www.php.net/manual/en/book.bc.php) - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
 *   [filter](https://www.php.net/manual/en/book.filter.php) – Used for securely filtering user input.
-*   [image](https://www.php.net/manual/en/book.image.php) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
-*   [iconv](https://www.php.net/manual/en/book.iconv.php) - Used to convert between character sets.
-*   [intl](https://www.php.net/manual/en/book.intl.php) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
-*   [simplexml](https://www.php.net/manual/en/book.simplexml.php) - Used for XML parsing.
-*   [sodium](https://www.php.net/manual/en/book.sodium.php) - Validates Signatures and provides securely random bytes.
-*   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) - Used for XML parsing.
-*   [zlib](https://www.php.net/manual/en/book.zlib.php) - Gzip compression and decompression.
+*   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >=2.1.0) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
+*   [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
+*   [intl](https://www.php.net/manual/en/book.intl.php) (bundled in >=5.3.0) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+*   [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
+*   [sodium](https://www.php.net/manual/en/book.sodium.php) - (requires libsodium >=1.0.8 or bundled in >=7.2.0) - Validates Signatures and provides securely random bytes.
+*   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
+*   [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >=1.2.0.4) - Gzip compression and decompression.
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-*   [ssh2](https://www.php.net/manual/en/book.ssh2.php) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+*   [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >=1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
 *   [ftp](https://www.php.net/manual/en/book.ftp.php) - Implement client access to files servers speaking the File Transfer Protocol (FTP).
 *   [sockets](https://www.php.net/manual/en/book.sockets.php) - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
@@ -115,6 +121,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2022-06-22: Added PHP extensions requirements and cache extensions
 - 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
 - 2022-05-13: Update for WordPress 6.0 and stable software versions; updated deprecated PHP versions and extensions
 - 2021-05-27: Fixing infoboxes
