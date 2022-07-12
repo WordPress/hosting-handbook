@@ -31,6 +31,7 @@ The tool can be run manually or through an automated system like Travis. To see 
 To use the Runner, the following is required:
 * A server / hosting (infrastructure) with the usual configuration you have.
 * A database where you can test (it will be created and destroyed several times)
+* NodeJS 14.x
 
 ### Installing the Runner
 
@@ -242,6 +243,7 @@ To get things reporting properly, place the username for the bot, along with the
 
 ## Changelog
 
+- 2022-07-12: Added requirement NodeJS 14.x
 - 2021-05-27: Fixing infoboxes
 - 2021-02-17: Changelog added
 - 2021-02-10: Published from Github
