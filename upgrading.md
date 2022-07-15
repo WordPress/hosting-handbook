@@ -107,7 +107,7 @@ Losses:
 - Plugins: probably yes
 - Themes: probably yes
 
-__If you don't have PHP 5.6.20+ configured yet, do it. Chances are that everything will still work normally.__
+_If you don't have PHP 5.6.20+ configured yet, do it. Chances are that everything will still work normally._
 
 From WordPress 4.1 and PHP 5.6.20+, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can easy the process.
 
@@ -148,13 +148,42 @@ Losses:
 - Plugins: probably no
 - Themes: probably no
 
-__If you don't have PHP 7.2 configured yet, do it. Chances are that everything will still work normally.__
+_If you don't have PHP 7.2 configured yet, do it. Chances are that everything will still work normally._
 
+WordPress 4.9 was the last version with the Classic Editor, so, a lot of people, afraid of the new editor, stopped updating WordPress. WordPress 5.0+ is fully compatible with the Classic Editor content, so it can be upgraded without losing any content.
 
+Also, when WordPress 4.9 was released, PHP 7.0+ was very stablished and 5 WordPress version had support. Upgrading from PHP 5.6 to PHP 7.0+ is very stable.
 
+From WordPress 4.9, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can easy the process.
 
+As with any upgrade, the first thing to do is to make a backup copy.
 
+Remove all themes that are not active, leaving only the main theme. If there is a child theme active, please, maintain the child and parent.
 
+Install and activate the [Twenty Ten](https://wordpress.org/themes/twentyten/) theme and activate it. This theme works in all sites since WordPress 3.7.
+
+In the same way, delete all deactivated plugins (and, therefore, not working).
+
+Now, WordPress will have:
+-	Core: any version (between WordPress 4.1 and WordPress 4.8)
+-	Themes: Twenty Ten is active, and the main theme is deactivated.
+-	Plugins: all plugins that should be active are deactivated.
+
+At this point, overwrite the WordPress Core with [WordPress 5.3](https://wordpress.org/wordpress-5.3.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 5.3 major version or, if available and recommended, the latest 5.3.x minor version.
+
+Upgrade the systems up to PHP 7.4 and, if they are not already, to MySQL 8.0.x or MariaDB 10.3.x. Please, do not install a newest major version.
+
+Access the "/wp-admin/" page, and follow the upgrading process.
+
+WordPress will be able to maintain and update the contents in the database and be able to work with these contents.
+
+Getting this moment, make a new backup copy, because some more updates will be made and, at this point, there is a good WordPress situation.
+
+Most the plugins available in WordPress 4.9+ should work with WordPress 5.3, so try to update everything available in the plugin list. Please, do it one by one and check all the warnings and errors. If you get some big error, try an older release for this plugin. Usually they are at the end of the "Developer" tab in each plugin page at wordpress.org.
+
+Try the same with the theme. Most the theme available in WordPress 4.9+ should work with WordPress 5.3.
+
+Proceed to the next step, which is upgrade to WordPress 6.0 from WordPress 5.3.
 
 ## WordPress 5.3 - 5.9
 
@@ -168,12 +197,9 @@ Losses:
 - Plugins: probably no
 - Themes: probably no
 
-__If you don't have PHP 7.4 configured yet, do it. Chances are that everything will still work normally.__
+_If you don't have PHP 7.4 configured yet, do it. Chances are that everything will still work normally._
 
-
-
-
-
+Upgrade everything normally. Everything should work fine.
 
 ## Changelog
 
