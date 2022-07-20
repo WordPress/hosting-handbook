@@ -16,7 +16,7 @@ IMPORTANT: This is a very manual process, not a massive one. There will be proba
 
 [tip]In case only a major version (X.X) is indicated, use its minor (X.X.x) latest version available.[/tip]
 
-## Upgrading from WordPress 0.7 - 3.6
+## Upgrading from WordPress 0.7 - 3.6 (by migration)
 
 Goals:
 - WordPress: upgrade to WordPress 6.0
@@ -32,21 +32,17 @@ These are the oldest versions of WordPress and the ones that have not been suppo
 
 Considering that the goal is to keep the contents and assuming the loss of the rest of the elements, there are some steps.
 
-As with any upgrade, the first thing to do is to make a backup copy.
+As with any upgrade, the first thing to do is to make a backup copy. The best way to upgrade from WP < 3.6 is to perform a content migration. 
 
-Create a brand-new WordPress, withoud the database.
-
-Copy the old WordPress files from the "/wp-content/uploads/" content to the new one.
-
-Create a new database with the old database information. The best way is using "mysqldump".
-
-Configure the wp-config.php with all the new data.
-
-Access the "/wp-admin/" page, and follow the upgrading process.
+1. Create a brand-new WordPress, withoud the database.
+2. Copy the old WordPress files from the "/wp-content/uploads/" content to the new one.
+3. Create a new database with the old database information. The best way is using "mysqldump".
+4. Configure the wp-config.php with all the new data.
+5. Access the "/wp-admin/" page, and follow the upgrading process.
 
 With this way, WordPress will be able to maintain and update the contents in the database and be able to work with these contents in an updated version of WordPress.
 
-A WordPress with the default theme, and all the contents should be available.
+A WordPress with the default theme, and all the contents should now be available.
 
 A common problem found in these database restorations is the character encoding type. It is very likely that its not in UTF-8 (maybe in an ISO or ASCII "deprecated" format), so make sure that the character encoding is updated correctly.
 
@@ -62,7 +58,7 @@ Losses:
 - Plugins: probably yes
 - Themes: probably yes
 
-These WordPress are compatible with PHP versions that are hardly available today. They can range from PHP 5.2 (or even earlier) to PHP 5.5. That is why the main goal will be to go to a version that is still easy to get on many operating systems.
+WordPress Versions <= 4.0 are compatible with PHP versions that are hardly available today. They can range from PHP 5.2 (or even earlier) to PHP 5.5. That is why the main goal will be to go to a version that is still easy to get on many operating systems.
 
 The same will happen with the database. It is very likely that there is a MySQL 5.5 or earlier. Depending on whether want to continue with MySQL or move to MariaDB, choose which way to go and migrate the database to a MySQL 5.6 or MariaDB 10.0.
 
@@ -85,11 +81,11 @@ Now, WordPress will have:
 
 At this point, overwrite the WordPress Core with [WordPress 4.1](https://wordpress.org/wordpress-4.1.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 4.1 major version or, if available and recommended, the latest 4.1.x minor version.
 
-Upgrade the systems up to PHP 5.6.20+ and MySQL 5.6.x or MariaDB 10.0.x. Please, do not install a newest major version.
+Upgrade the systems up to PHP 5.6.20+ and MySQL 5.6.x or MariaDB 10.0.x. Please, do not install the newest major version.
 
 Access the "/wp-admin/" page, and follow the upgrading process.
 
-WordPress will be able to maintain and update the contents in the database and be able to work with these contents. WordPress, with the default theme and all the contents should be available and working.
+WordPress will be able to maintain and update the contents in the database and be able to work with these contents. WordPress, with the default theme and all the contents should now be available and working.
 
 A common problem found in these database restorations is the character encoding type. It is very likely that its not in UTF-8 (maybe in an ISO or ASCII "deprecated" format), so make sure that the character encoding is updated correctly.
 
