@@ -199,5 +199,4 @@ Upgrade everything normally. Everything should work fine.
 
 ## Changelog
 
-- 2022-07-14: First something... (this is not a real changelog, yet)
-- 2022-06-22: Nothing yet!
+- 2022-08-18: First version
