@@ -16,7 +16,7 @@ In a typical page load, various caches might be checked in the following order:
 2.  [Content Delivery Network (CDN)](#content-delivery-network-cdn-cache)
 3.  [Full Page Cache](#full-page-cache) (Reverse Proxy - Varnish or NGINX)
 4.  [Full Page Cache](#full-page-cache) (File-based Full-page caching with plugins)
-5.  [Static Cache](#static-cache) (JS, CSS, Images with static caching sergices, NGINX tryfiles, etc.)
+5.  [Static Cache](#static-cache) (JS, CSS, Images with static caching services, NGINX tryfiles, etc.)
 6.  [Opcode Cache](#opcode-cache)
 7.  [Object Cache](#object-cache) (wp\_options, transient API)
 8.  [Fragment Cache](#fragment-cache) (Database, static files, transient API)
