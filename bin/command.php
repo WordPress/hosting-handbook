@@ -58,7 +58,7 @@ class Command {
 			$manifest[ $slug ] = array(
 				'title'           => $title,
 				'slug'            => 'index' === $slug ? 'handbook' : $slug,
-				'markdown_source' => sprintf( 'https://github.com/wordpress/hosting-handbook/blob/master/%s.md', $slug ),
+				'markdown_source' => sprintf( 'https://github.com/wordpress/hosting-handbook/blob/main/%s.md', $slug ),
 				'parent'          => null,
 			);
 		}
