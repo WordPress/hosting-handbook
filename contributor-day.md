@@ -67,7 +67,11 @@ Once a PR is submitted, it will require an approval process. By default, once it
 To work on this project yo will need:
 
 - A GitHub account
-- A text editor
+- A text / Markdown editor
+
+#### Help
+
+If help is needed, please ask in the [#hosting-community](https://wordpress.slack.com/archives/hosting-community) channel or contact [@Crixu](https://profiles.wordpress.org/crixu/), [@JavierCasares](https://profiles.wordpress.org/javiercasares/).
 
 ### Automated Hosting Tests
 
@@ -81,16 +85,37 @@ You can propose improvements or solve those available in both the PHPUnit test r
 
 #### Tools
 
+To work on this project yo will need:
+
 - A GitHub account
 - A text / PHP editor
+
+#### Help
+
+If help is needed, please ask in the [#hosting-community](https://wordpress.slack.com/archives/hosting-community) channel or contact [@pfefferle](https://profiles.wordpress.org/pfefferle/).
 
 ### Advanced Admin Handbook
 
 #### What
 
+This new documentation is proposed as advanced regarding what currently exists for end users ([UserHub / Support](https://wordpress.org/support/)), with the goal that the documentation for users is free of advanced technical material, and that the documentation for developers ([DevHub](https://developer.wordpress.org/)) is very differentiated between what is development, and what are advanced development or system configurations.
+
 #### How
 
+Although we are still in a first step, if you know of other WordPress content that could be in this Handbook, please [open an issue](https://github.com/WordPress/Documentation-Issue-Tracker/issues) and discuss it with the Documentation team. Please use the label ["advanced administration"](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration).
+
+If you want to help launch the Handbook as soon as possible, [please take an issue and work on it](https://github.com/zzap/WordPress-Advanced-administration-handbook/issues). You can comment on the site itself if you have any questions, suggestions or improvements.
+
 #### Tools
+
+To work on this project yo will need:
+
+- A GitHub account
+- A text / Markdown editor
+
+#### Help
+
+If help is needed, please ask in the [#docs](https://wordpress.slack.com/archives/docs), [#hosting-community](https://wordpress.slack.com/archives/hosting-community) channel or contact [@JavierCasares](https://profiles.wordpress.org/javiercasares/), [@lucp](https://profiles.wordpress.org/lucp/), [@milana_cap](https://profiles.wordpress.org/milana_cap/).
 
 ## Changelog
 
