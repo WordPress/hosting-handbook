@@ -6,7 +6,7 @@ To participate in a Contributor Day it is only necessary to have a WordPress.org
 
 ## User account
 
-### WordPress.org user account
+### WordPress.org user account _(required)_
 
 **If you already have a user account**, you can [access the Login screen and log in](https://login.wordpress.org/). If you don't remember your password, [you can get an email and change it](https://login.wordpress.org/lostpassword).
 
@@ -14,7 +14,7 @@ To participate in a Contributor Day it is only necessary to have a WordPress.org
 
 To check your WordPress profile, visit your [Profile Page](https://profiles.wordpress.org/me/).
 
-### WordPress Slack user account
+### WordPress Slack user account _(recommended)_
 
 When you create a WordPress.org user account, an email account is automatically created like <your_wordpress.org_username@chat.wordpress.org>, where _your_wordpress.org_username_ is the chosen user.
 
@@ -22,7 +22,7 @@ To access the WordPress Slack, you can [register from the SignUp page](https://w
 
 Once you are there, please [visit the #hosting-community channel](https://wordpress.slack.com/archives/hosting-community).
 
-### GitHub user account _(optional)_
+### GitHub user account _(recommended)_
 
 Some of the projects are developed through GitHub, so you may need an account.
 
@@ -67,15 +67,30 @@ Once a PR is submitted, it will require an approval process. By default, once it
 To work on this project yo will need:
 
 - A GitHub account
-- A text Editor
+- A text editor
 
 ### Automated Hosting Tests
 
-TBA
+#### What
+
+The [Runner repo](https://github.com/WordPress/phpunit-test-runner) _(PHPUnit test runner)_ contains the parts of the hosting tests that run on a host, and the [Reporter repo](https://github.com/WordPress/phpunit-test-reporter) _(PHPUnit test reporter)_ contains the plugin that runs on WordPress.org for receiving and displaying the tests.
+
+#### How
+
+You can propose improvements or solve those available in both the PHPUnit test runner ([issues](https://github.com/WordPress/phpunit-test-runner/issues)) and the PHPUnit test reporter ([issues](https://github.com/WordPress/phpunit-test-reporter/issues)).
+
+#### Tools
+
+- A GitHub account
+- A text / PHP editor
 
 ### Advanced Admin Handbook
 
-TBA
+#### What
+
+#### How
+
+#### Tools
 
 ## Changelog
 
