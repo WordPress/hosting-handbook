@@ -4,7 +4,7 @@ Upgrading WordPress should be a simple task if its maintained and updated over t
 
 **What happens with older versions?**
 
-WordPress provides security support from WordPress 3.7 to the latest version (WordPress 6.0, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
+WordPress provides security support from WordPress 4.1 to the latest version (WordPress 6.1, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
 
 **What if it is not updated?**
 
@@ -19,9 +19,9 @@ IMPORTANT: This is a very manual process, not a massive one. There will be proba
 ## Upgrading from WordPress 0.7 - 3.6 (by migration)
 
 Goals:
-- WordPress: upgrade to WordPress 6.0
-- PHP: upgrade to PHP 7.4
-- SQL: upgrade to MySQL 8.0 / MariaDB 10.5
+- WordPress: upgrade to WordPress 6.1
+- PHP: upgrade to PHP 8.1
+- SQL: upgrade to MySQL 8.0 / MariaDB 10.6
 
 Losses:
 - Content: none
@@ -34,7 +34,7 @@ Considering that the goal is to keep the contents and assuming the loss of the r
 
 As with any upgrade, the first thing to do is to make a backup copy. The best way to upgrade from WP < 3.6 is to perform a content migration. 
 
-1. Create a brand-new WordPress, withoud the database.
+1. Create a brand-new WordPress, without the database.
 2. Copy the old WordPress files from the "/wp-content/uploads/" content to the new one.
 3. Create a new database with the old database information. The best way is using "mysqldump".
 4. Configure the wp-config.php with all the new data.
@@ -44,7 +44,7 @@ With this way, WordPress will be able to maintain and update the contents in the
 
 A WordPress with the default theme, and all the contents should now be available.
 
-A common problem found in these database restorations is the character encoding type. It is very likely that its not in UTF-8 (maybe in an ISO or ASCII "deprecated" format), so make sure that the character encoding is updated correctly.
+Character Encoding commonly presents technical hiccups when restoring a database. It is possible that backup data is not encoded in UTF-8 and instead may be in an ISO or ASCII "deprecated" format. Make sure that the character encoding is updated correctly upon restoring a database! More information on [converting Character Sets in a WordPress database can be found here](https://codex.wordpress.org/Converting_Database_Character_Sets).
 
 ## Upgrading from WordPress 3.7 - 4.0
 
@@ -87,7 +87,7 @@ Access the "/wp-admin/" page, and follow the upgrading process.
 
 WordPress will be able to maintain and update the contents in the database and be able to work with these contents. WordPress, with the default theme and all the contents should now be available and working.
 
-A common problem found in these database restorations is the character encoding type. It is very likely that its not in UTF-8 (maybe in an ISO or ASCII "deprecated" format), so make sure that the character encoding is updated correctly.
+Character Encoding commonly presents technical hiccups when restoring a database. It is possible that backup data is not encoded in UTF-8 and instead may be in an ISO or ASCII "deprecated" format. Make sure that the character encoding is updated correctly upon restoring a database! More information on [converting Character Sets in a WordPress database can be found here](https://codex.wordpress.org/Converting_Database_Character_Sets).
 
 Proceed to the next step, which is upgrade to WordPress 4.9 from WordPress 4.1.
 
@@ -128,7 +128,7 @@ Access the "/wp-admin/" page, and follow the upgrading process.
 
 WordPress will be able to maintain and update the contents in the database and be able to work with these contents. WordPress, with the default theme and all the contents should be available and working.
 
-A common problem found in these database restorations is the character encoding type. It is very likely that its not in UTF-8 (maybe in an ISO or ASCII "deprecated" format), so make sure that the character encoding is updated correctly.
+Character Encoding commonly presents technical hiccups when restoring a database. It is possible that backup data is not encoded in UTF-8 and instead may be in an ISO or ASCII "deprecated" format. Make sure that the character encoding is updated correctly upon restoring a database! More information on [converting Character Sets in a WordPress database can be found here](https://codex.wordpress.org/Converting_Database_Character_Sets).
 
 Proceed to the next step, which is upgrade to WordPress 5.3 from WordPress 4.9.
 
@@ -144,13 +144,13 @@ Losses:
 - Plugins: probably no
 - Themes: probably no
 
-_If you don't have PHP 7.2 configured yet, do it. Chances are that everything will still work normally._
+_If you don't have PHP 7.4 configured yet, do it. Chances are that everything will still work normally._
 
 WordPress 4.9 was the last version with the Classic Editor, so, a lot of people, afraid of the new editor, stopped updating WordPress. WordPress 5.0+ is fully compatible with the Classic Editor content, so it can be upgraded without losing any content.
 
-Also, when WordPress 4.9 was released, PHP 7.0+ was very stablished and 5 WordPress version had support. Upgrading from PHP 5.6 to PHP 7.0+ is very stable.
+Also, when WordPress 4.9 was released, PHP 7.0+ was very stablished and WordPress 5.0 version had support. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
 
-From WordPress 4.9, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can easy the process.
+From WordPress 4.9, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can ease the process.
 
 As with any upgrade, the first thing to do is to make a backup copy.
 
@@ -158,7 +158,7 @@ Remove all themes that are not active, leaving only the main theme. If there is 
 
 Install and activate the [Twenty Ten](https://wordpress.org/themes/twentyten/) theme and activate it. This theme works in all sites since WordPress 3.7.
 
-In the same way, delete all deactivated plugins (and, therefore, not working).
+In the same way, delete all deactivated plugins.
 
 Now, WordPress will have:
 -	Core: any version (between WordPress 4.1 and WordPress 4.8)
@@ -197,6 +197,23 @@ _If you don't have PHP 7.4 configured yet, do it. Chances are that everything wi
 
 Upgrade everything normally. Everything should work fine.
 
+## WordPress 6.0
+
+Goals
+- WordPress: upgrade to WordPress 6.1
+- PHP: upgrade to PHP 8.1
+- SQL: maintain or upgrade to MySQL 8.0 / MariaDB 10.6
+
+Losses:
+- Content: none
+- Plugins: probably no
+- Themes: probably no
+
+_If you don't have PHP 8.1 configured yet, do it. Chances are that everything will still work normally._
+
+Upgrade everything normally. Everything should work fine.
+
 ## Changelog
 
+- 2022-11-12: Updated to WordPress 6.1, and fixes
 - 2022-08-18: First version
