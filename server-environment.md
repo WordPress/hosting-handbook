@@ -2,7 +2,6 @@
 
 Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively when considering that most WordPress websites use third party plugins and themes which commonly introduce additional server-level requirements.
 
-
 ## Web Server
 
 The web server is piece of software that accepts user web requests and serves them the appropriate result. There are many different web servers that run on different operation systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
@@ -11,7 +10,6 @@ The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
 * [nginx](https://nginx.org/) 1.22
-
 
 Others are used by hosting companies and developers and are known to work well too:
 
@@ -24,13 +22,24 @@ _Those are the latest versions at the time of writing this document. Always keep
 
 PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
-WordPress supports many versions of PHP, some even obsolete, we recommend running PHP version 7.4 or higher:
+WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
+
+**WordPress 6.1**
+
+* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
+* [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)*
+* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
+* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)*
+
+_IMPORTANT: WordPress 6.1 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
+
+**WordPress 6.0**
 
 * [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
 * [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)*
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
 
-_IMPORTANT: WordPress 6.0 has beta support for PHP 8.0 and PHP 8.1. If used some of these versions may get some Warnings._
+_IMPORTANT: WordPress 6.0 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/) and [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/). If used some of these versions may get some Warnings._
 
 Versions prior to PHP 7.4 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions. Security support for PHP 7.3 ended in 2021-12-06 which means that even if there are security problems with it, official versions won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
 
@@ -38,12 +47,12 @@ Versions prior to PHP 7.4 are not maintained by the PHP Community, although they
 
 WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality.
 
-The PHP extensions listed below are required for a WordPress site to work.
+The PHP extensions listed below are _required_ for a WordPress site to work.
 
 * [json](https://www.php.net/manual/en/book.json.php) (bundled in >=8.0.0) - Used for communications with other servers and processing data in JSON format.
 * One of either [mysqli](https://www.php.net/manual/en/book.mysqli.php) (bundled in >=5.0.0), or [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) - Connects to MySQL for database interactions.
 
-The PHP extensions listed below are highly recommended in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
+The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 *   [curl](https://www.php.net/manual/en/book.curl.php) (requires libcurl) - Performs remote request operations.
 *   [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
@@ -57,7 +66,7 @@ The PHP extensions listed below are highly recommended in order to allow WordPre
 *   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 *   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
-The PHP extensions listed below are recommended to allow some WordPress cache (if necessary).
+The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary).
 
 *   [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached - PHP >=5.2.0 requires libmemcached >=0.2.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
 *   [opcache](https://www.php.net/manual/en/book.opcache.php) (requires libcurl) - PHP can be configured to preload scripts into the opcache when the engine starts.
@@ -85,7 +94,7 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ### System Packages
 
-*   [ImageMagick](https://imagemagick.org/) - Required by Imagick extension
+*   [ImageMagick](https://imagemagick.org/) - Required by Imagick extension.
 *   [Ghost Script](https://www.ghostscript.com/) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 
 ## Database
@@ -121,6 +130,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2022-11-16: Updated WordPress 6.0 / WordPress 6.1, PHP compatibility information and other versions
 - 2022-06-22: Added PHP extensions requirements and cache extensions
 - 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
 - 2022-05-13: Update for WordPress 6.0 and stable software versions; updated deprecated PHP versions and extensions
