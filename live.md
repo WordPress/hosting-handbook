@@ -2,7 +2,7 @@
 
 The WordPress Hosting Team promotes a series of live events focused on teaching elements promoted by the team and reaching all users.
 
-The main WordPress Hosting Live site will be at [meetup.com/wphosting](https://www.meetup.com/wphosting/), hosted at [Make Hosting](https://make.wordpress.org/hosting/) and in collaboration with the [Learn WordPress](https://learn.wordpress.org/) team. You can also find the streaming at [YouTube](https://www.youtube.com/channel/UCUHFMCXJxXHcfls9w6Hzt6A) and [Twitter](https://twitter.com/WPHostingTeam).
+The main WordPress Hosting Live site will be at [meetup.com/learn-wordpress-online-workshops](https://www.meetup.com/learn-wordpress-online-workshops/), hosted at [Make Hosting](https://make.wordpress.org/hosting/) and in collaboration with the [Learn WordPress](https://learn.wordpress.org/) team. You can also find the streaming at [YouTube](https://www.youtube.com/channel/UCUHFMCXJxXHcfls9w6Hzt6A) and [Twitter](https://twitter.com/WPHostingTeam).
 
 ## What is it?
 
@@ -49,7 +49,7 @@ As with any WordPress event, there are a number of limitations that apply across
 
 If you have an idea for a talk proposal, you can contact us proposing a topic from:
 
-* [WordPress Hosting Meetup](https://www.meetup.com/wphosting/discussions/)
+* [WordPress Hosting Meetup](https://www.meetup.com/learn-wordpress-online-workshops/discussions/)
 * [Make Hosting](https://make.wordpress.org/hosting/)
 * [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel on Slack.
 
