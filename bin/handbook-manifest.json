@@ -11,6 +11,12 @@
 		"markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/get-involved.md",
 		"parent": null
 	},
+	"contributor-day": {
+		"title": "Contributor Day",
+		"slug": "contributor-day",
+		"markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/contributor-day.md",
+		"parent": "get-involved"
+	},
 	"server-environment": {
 		"title": "Server Environment",
 		"slug": "server-environment",
