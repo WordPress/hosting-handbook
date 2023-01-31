@@ -22,12 +22,13 @@ The Hosting Team meets in the WordPress Slack, in the [#hosting-community](https
 
 ### Team Reps
 
-The Hosting Team is represented by team reps [@amykamala](https://profiles.wordpress.org/amykamala/), [@crixu](https://profiles.wordpress.org/crixu/), [@jadonn](https://profiles.wordpress.org/jadonn/), and [@javiercasares](https://profiles.wordpress.org/javiercasares/).
+The Hosting Team is represented by team reps [@amykamala](https://profiles.wordpress.org/amykamala/), [@crixu](https://profiles.wordpress.org/crixu/), [@javiercasares](https://profiles.wordpress.org/javiercasares/), and [@jessibelle](https://profiles.wordpress.org/jessibelle/).
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
+- 2023-01-31: Updated Team Reps
 - 2021-05-27: Fixing infoboxes
 - 2021-03-31: Team Reps updated
 - 2021-02-17: Changelog added
