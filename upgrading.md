@@ -181,12 +181,12 @@ Try the same with the theme. Most the theme available in WordPress 4.9+ should w
 
 Proceed to the next step, which is upgrade to WordPress 6.0 from WordPress 5.3.
 
-## WordPress 5.3 - 5.9
+## WordPress 5.3 - 6.1
 
 Goals
-- WordPress: upgrade to WordPress 6.0
+- WordPress: upgrade to WordPress 6.1
 - PHP: upgrade to PHP 7.4
-- SQL: maintain or upgrade to MySQL 8.0 / MariaDB 10.5
+- SQL: maintain or upgrade to MySQL 8.0 / MariaDB 10.11
 
 Losses:
 - Content: none
@@ -197,23 +197,8 @@ _If you don't have PHP 7.4 configured yet, do it. Chances are that everything wi
 
 Upgrade everything normally. Everything should work fine.
 
-## WordPress 6.0
-
-Goals
-- WordPress: upgrade to WordPress 6.1
-- PHP: upgrade to PHP 8.1
-- SQL: maintain or upgrade to MySQL 8.0 / MariaDB 10.6
-
-Losses:
-- Content: none
-- Plugins: probably no
-- Themes: probably no
-
-_If you don't have PHP 8.1 configured yet, do it. Chances are that everything will still work normally._
-
-Upgrade everything normally. Everything should work fine.
-
 ## Changelog
 
-- 2022-11-12: Updated to WordPress 6.1, and fixes
+- 2023-02-17: Updated to WordPress 6.1
+- 2022-11-12: Updated to WordPress 6.0, and fixes
 - 2022-08-18: First version
