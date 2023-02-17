@@ -13,7 +13,7 @@ The two most popular ones that are recommended are:
 
 Others are used by hosting companies and developers and are known to work well too:
 
-* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.0 / 5.4
+* [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.1 / 6.0 / 5.4
 * [OpenLiteSpeed](https://openlitespeed.org/) 1.7
 
 _Those are the latest versions at the time of writing this document. Always keep your web server up-to-date to ensure best performance!_
@@ -23,6 +23,15 @@ _Those are the latest versions at the time of writing this document. Always keep
 PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
+
+**WordPress 6.2 beta**
+
+* [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
+* [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)*
+* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
+* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)*
+
+_IMPORTANT: WordPress 6.2 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
 
 **WordPress 6.1**
 
@@ -45,7 +54,7 @@ Versions prior to PHP 7.4 are not maintained by the PHP Community, although they
 
 ### PHP Extensions
 
-WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality.
+WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality. All the extensions are for installations with PHP >= 7.4.
 
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
@@ -54,33 +63,33 @@ The PHP extensions listed below are _required_ for a WordPress site to work.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
-*   [curl](https://www.php.net/manual/en/book.curl.php) (requires libcurl) - Performs remote request operations.
+*   [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0) - Performs remote request operations.
 *   [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
 *   [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
-*   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect mimetype of file uploads.
-*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in >=5.1.2) - Used for hashing, including passwords and update packages.
+*   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled) - Used to detect mimetype of file uploads.
+*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) - Used for hashing, including passwords and update packages.
 *   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
-*   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.0 requires OpenSSL >= 0.9.8; PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
+*   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
 *   [pcre](https://www.php.net/manual/en/book.pcre.php) - Increases performance of pattern matching in code searches.
 *   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
-*   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11) - Used for decompressing Plugins, Themes, and WordPress update packages.
+*   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary).
 
-*   [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached - PHP >=5.2.0 requires libmemcached >=0.2.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
-*   [opcache](https://www.php.net/manual/en/book.opcache.php) (requires libcurl) - PHP can be configured to preload scripts into the opcache when the engine starts.
+*   [memcached](https://www.php.net/manual/en/book.memcached.php) (PHP >=5.2.0 requires libmemcached >=0.2.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+*   [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts.
 *   [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis
 
 For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
 
 *   [bc](https://www.php.net/manual/en/book.bc.php) - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
 *   [filter](https://www.php.net/manual/en/book.filter.php) - Used for securely filtering user input.
-*   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >=2.1.0) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
+*   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >=2.1.0; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
-*   [intl](https://www.php.net/manual/en/book.intl.php) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+*   [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
-*   [sodium](https://www.php.net/manual/en/book.sodium.php) - (requires libsodium >=1.0.8 or bundled in >=7.2.0) - Validates Signatures and provides securely random bytes.
+*   [sodium](https://www.php.net/manual/en/book.sodium.php) - (bundled in PHP >=7.2.0) - Validates Signatures and provides securely random bytes.
 *   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
 *   [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >=1.2.0.4) - Gzip compression and decompression.
 
@@ -104,16 +113,16 @@ For data storage, WordPress uses systems compatible with MySQL.
 Officially recommended by WordPress are 
 
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
-* [MariaDB](https://mariadb.org/) 10.6 / 10.5 / 10.4 / 10.3
+* [MariaDB](https://mariadb.org/) 10.11 / 10.6 / 10.5 / 10.4 / 10.3
 
 Other MySQL servers that are known to perform well are:
 
-* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0 / 5.7 / 5.6
 * [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
-* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
-* [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
+* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6 / 10.5 / 10.4 / 10.3
+* [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0 / 5.7
 * [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)
-* [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
+* [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0 / 5.7 / 5.6
 * [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
 * [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
 * [MySQL HeatWave](https://www.oracle.com/mysql/)
@@ -130,6 +139,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-02-17: Updated LiteSpeed Web Server. Updates for WordPress 6.2 beta and PHP >= 7.4.
 - 2022-11-16: Updated WordPress 6.0 / WordPress 6.1, PHP compatibility information and other versions
 - 2022-06-22: Added PHP extensions requirements and cache extensions
 - 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
