@@ -75,10 +75,10 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
 
 *   [bc](https://www.php.net/manual/en/book.bc.php) - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
-*   [filter](https://www.php.net/manual/en/book.filter.php) – Used for securely filtering user input.
+*   [filter](https://www.php.net/manual/en/book.filter.php) - Used for securely filtering user input.
 *   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >=2.1.0) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
-*   [intl](https://www.php.net/manual/en/book.intl.php) (bundled in >=5.3.0) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+*   [intl](https://www.php.net/manual/en/book.intl.php) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
 *   [sodium](https://www.php.net/manual/en/book.sodium.php) - (requires libsodium >=1.0.8 or bundled in >=7.2.0) - Validates Signatures and provides securely random bytes.
 *   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
