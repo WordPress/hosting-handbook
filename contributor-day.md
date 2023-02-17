@@ -1,4 +1,4 @@
-# Contributor Day
+# Contributor Day / Projects to contribute
 
 The Contributor Day is an event, usually parallel to a WordCamp, focused on contributing to the WordPress Community in any of its teams.
 
@@ -40,9 +40,9 @@ The projects of the Hosting team can vary, in addition to being able to cross wi
 
 Currently the list of projects to contribute is:
 
-- [WordPress Hosting Team Handbook](https://make.wordpress.org/hosting/handbook/), mainly focused on documentation.
-- [Automated Hosting Tests](https://make.wordpress.org/hosting/test-results/), mainly focused on PHP development.
-- Advanced Admin Handbook, mainly focused on documentation, in collaboration with the [Documentation Team](https://make.wordpress.org/docs/).
+- [WordPress Hosting Team Handbook](https://make.wordpress.org/hosting/handbook/), focused on documentation.
+- [Automated Hosting Tests](https://make.wordpress.org/hosting/test-results/), focused on PHP compatibility.
+- Advanced Admin Handbook, focused on documentation, in collaboration with the [Documentation Team](https://make.wordpress.org/docs/).
 
 ### WordPress Hosting Team Handbook
 
@@ -119,4 +119,4 @@ If help is needed, please ask in the [#docs](https://wordpress.slack.com/archive
 
 ## Changelog
 
-- 2022-11-12: First version
+- 2022-11-12: First version.
