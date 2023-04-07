@@ -4,7 +4,7 @@ Upgrading WordPress should be a simple task if its maintained and updated over t
 
 **What happens with older versions?**
 
-WordPress provides security support from WordPress 4.1 to the latest version (WordPress 6.1, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
+WordPress provides security support from WordPress 4.1 to the latest version (WordPress 6.2, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
 
 **What if it is not updated?**
 
@@ -19,9 +19,9 @@ IMPORTANT: This is a very manual process, not a massive one. There will be proba
 ## Upgrading from WordPress 0.7 - 3.6 (by migration)
 
 Goals:
-- WordPress: upgrade to WordPress 6.1
-- PHP: upgrade to PHP 8.1
-- SQL: upgrade to MySQL 8.0 / MariaDB 10.6
+- WordPress: upgrade to WordPress 6.2
+- PHP: upgrade to PHP 7.4
+- SQL: upgrade to MySQL 8.0 / MariaDB 10.11
 
 Losses:
 - Content: none
@@ -122,7 +122,7 @@ Now, WordPress will have:
 
 At this point, overwrite the WordPress Core with [WordPress 4.9](https://wordpress.org/wordpress-4.9.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 4.9 major version or, if available and recommended, the latest 4.9.x minor version.
 
-Upgrade the systems up to PHP 7.2 and, if they are not already, to MySQL 5.6.x or MariaDB 10.0.x. Please, do not install a newest major version.
+Upgrade the systems up to PHP 7.2 and, if they are not already, to MySQL 5.6.x or MariaDB 10.0.x. Please, do not install the newest major version.
 
 Access the "/wp-admin/" page, and follow the upgrading process.
 
@@ -161,13 +161,13 @@ Install and activate the [Twenty Ten](https://wordpress.org/themes/twentyten/) t
 In the same way, delete all deactivated plugins.
 
 Now, WordPress will have:
--	Core: any version (between WordPress 4.1 and WordPress 4.8)
+-	Core: any version (between WordPress 4.9 and WordPress 5.2)
 -	Themes: Twenty Ten is active, and the main theme is deactivated.
 -	Plugins: all plugins that should be active are deactivated.
 
 At this point, overwrite the WordPress Core with [WordPress 5.3](https://wordpress.org/wordpress-5.3.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 5.3 major version or, if available and recommended, the latest 5.3.x minor version.
 
-Upgrade the systems up to PHP 7.4 and, if they are not already, to MySQL 8.0.x or MariaDB 10.3.x. Please, do not install a newest major version.
+Upgrade the systems up to PHP 7.4 and, if they are not already, to MySQL 8.0.x or MariaDB 10.3.x. Please, do not install the newest major version.
 
 Access the "/wp-admin/" page, and follow the upgrading process.
 
@@ -175,16 +175,16 @@ WordPress will be able to maintain and update the contents in the database and b
 
 Getting this moment, make a new backup copy, because some more updates will be made and, at this point, there is a good WordPress situation.
 
-Most the plugins available in WordPress 4.9+ should work with WordPress 5.3, so try to update everything available in the plugin list. Please, do it one by one and check all the warnings and errors. If you get some big error, try an older release for this plugin. Usually they are at the end of the "Developer" tab in each plugin page at wordpress.org.
+Most of the plugins available in WordPress 4.9+ should work with WordPress 5.3, so try to update everything available in the plugin list. Please, do it one by one and check all the warnings and errors. If you get some big error, try an older release for this plugin. Usually they are at the end of the "Developer" tab in each plugin page at wordpress.org.
 
-Try the same with the theme. Most the theme available in WordPress 4.9+ should work with WordPress 5.3.
+Try the same with the theme. Most of the themes available in WordPress 4.9+ should work with WordPress 5.3.
 
-Proceed to the next step, which is upgrade to WordPress 6.0 from WordPress 5.3.
+Proceed to the next step, which is upgrade to WordPress 6.2 from WordPress 5.3.
 
-## WordPress 5.3 - 6.1
+## WordPress 5.3 - 6.2
 
 Goals
-- WordPress: upgrade to WordPress 6.1
+- WordPress: upgrade to WordPress 6.2
 - PHP: upgrade to PHP 7.4
 - SQL: maintain or upgrade to MySQL 8.0 / MariaDB 10.11
 
@@ -199,6 +199,7 @@ Upgrade everything normally. Everything should work fine.
 
 ## Changelog
 
+- 2023-04-07: Updated to WordPress 6.2, and fixes
 - 2023-02-17: Updated to WordPress 6.1
 - 2022-11-12: Updated to WordPress 6.0, and fixes
 - 2022-08-18: First version
