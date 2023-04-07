@@ -4,7 +4,7 @@ Upgrading WordPress should be a simple task if its maintained and updated over t
 
 **What happens with older versions?**
 
-WordPress provides security support from WordPress 4.1 to the latest version (WordPress 6.1, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
+WordPress provides security support from WordPress 4.1 to the latest version (WordPress 6.2, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
 
 **What if it is not updated?**
 
@@ -19,9 +19,9 @@ IMPORTANT: This is a very manual process, not a massive one. There will be proba
 ## Upgrading from WordPress 0.7 - 3.6 (by migration)
 
 Goals:
-- WordPress: upgrade to WordPress 6.1
-- PHP: upgrade to PHP 8.1
-- SQL: upgrade to MySQL 8.0 / MariaDB 10.6
+- WordPress: upgrade to WordPress 6.2
+- PHP: upgrade to PHP 7.4
+- SQL: upgrade to MySQL 8.0 / MariaDB 10.11
 
 Losses:
 - Content: none
@@ -181,7 +181,7 @@ Try the same with the theme. Most of the themes available in WordPress 4.9+ shou
 
 Proceed to the next step, which is upgrade to WordPress 6.2 from WordPress 5.3.
 
-## WordPress 5.3 - 6.1
+## WordPress 5.3 - 6.2
 
 Goals
 - WordPress: upgrade to WordPress 6.2
@@ -199,7 +199,7 @@ Upgrade everything normally. Everything should work fine.
 
 ## Changelog
 
-- 2023-04-03: Updated to WordPress 6.2, and fixes
+- 2023-04-07: Updated to WordPress 6.2, and fixes
 - 2023-02-17: Updated to WordPress 6.1
 - 2022-11-12: Updated to WordPress 6.0, and fixes
 - 2022-08-18: First version
