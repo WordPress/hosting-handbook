@@ -24,14 +24,12 @@ PHP is a programming language on which WordPress code is based. This language ru
 
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
 
-**WordPress 6.2 beta**
+**WordPress 6.2**
 
 * [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
-* [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)*
-* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
-* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)*
-
-_IMPORTANT: WordPress 6.2 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
+* [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
+* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
 **WordPress 6.1**
 
@@ -113,13 +111,13 @@ For data storage, WordPress uses systems compatible with MySQL.
 Officially recommended by WordPress are 
 
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
-* [MariaDB](https://mariadb.org/) 10.11 / 10.6 / 10.5 / 10.4 / 10.3
+* [MariaDB](https://mariadb.org/) 10.11 / 10.6
 
 Other MySQL servers that are known to perform well are:
 
 * [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0 / 5.7 / 5.6
 * [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
-* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6 / 10.5 / 10.4 / 10.3
+* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6
 * [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0 / 5.7
 * [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)
 * [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0 / 5.7 / 5.6
