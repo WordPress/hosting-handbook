@@ -111,13 +111,13 @@ For data storage, WordPress uses systems compatible with MySQL.
 Officially recommended by WordPress are 
 
 * [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
-* [MariaDB](https://mariadb.org/) 10.11 / 10.6
+* [MariaDB](https://mariadb.org/) 10.11 / 10.6 / 10.5 / 10.4
 
 Other MySQL servers that are known to perform well are:
 
 * [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0 / 5.7 / 5.6
 * [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
-* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6
+* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6 / 10.5 / 10.4
 * [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0 / 5.7
 * [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)
 * [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0 / 5.7 / 5.6
@@ -137,6 +137,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-04-19: MariaDB fixed with [LTS versions](https://mariadb.org/about/#maintenance-policy)
 - 2023-02-17: Updated LiteSpeed Web Server. Updates for WordPress 6.2 beta and PHP >= 7.4.
 - 2022-11-16: Updated WordPress 6.0 / WordPress 6.1, PHP compatibility information and other versions
 - 2022-06-22: Added PHP extensions requirements and cache extensions
