@@ -6,5 +6,5 @@ The live Handbook is currently being migrated here, but the goal is to have the 
 
 ## Getting Started
 
-- **Discuss:** Conversations and discussions take place in [the #hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) on the [Making WordPress Slack](https://make.wordpress.org/chat/).
+- **Discuss:** Conversations and discussions take place in [the #hosting channel](https://wordpress.slack.com/archives/hosting/) on the [Making WordPress Slack](https://make.wordpress.org/chat/).
 - **Contribute:** Additions and changes to the Hosting Handbook happen in this GitHub repo. Get started by [reading the contributing guidelines](/CONTRIBUTING.md).
