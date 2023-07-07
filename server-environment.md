@@ -65,11 +65,12 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 *   [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
 *   [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
 *   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled) - Used to detect mimetype of file uploads.
-*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) - Used for hashing, including passwords and update packages.
+*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >= 5.1.2) - Used for hashing, including passwords and update packages.
+*   [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
 *   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 *   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
-*   [pcre](https://www.php.net/manual/en/book.pcre.php) - Increases performance of pattern matching in code searches.
+*   [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0) - Increases performance of pattern matching in code searches.
 *   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 *   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
