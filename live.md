@@ -51,9 +51,9 @@ If you have an idea for a talk proposal, you can contact us proposing a topic fr
 
 * [WordPress Hosting Meetup](https://www.meetup.com/learn-wordpress-online-workshops/discussions/)
 * [Make Hosting](https://make.wordpress.org/hosting/)
-* [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel on Slack.
+* [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack.
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
