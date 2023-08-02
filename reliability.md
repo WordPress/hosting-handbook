@@ -4,9 +4,7 @@ Once your site is up, how do you keep it that way? And what can you do if it goe
 
 ## Backups
 
-See [Backup](https://developer.wordpress.org/advanced-administration/security/backup/)
-See [Backing up your database](https://developer.wordpress.org/advanced-administration/security/backup/database/)
-See [Backing up your WordPress files](https://developer.wordpress.org/advanced-administration/security/backup/files/)
+See [Backup](https://developer.wordpress.org/advanced-administration/security/backup/). If you are looking for more specific documentation, please refer to [backing up your database](https://developer.wordpress.org/advanced-administration/security/backup/database/), and [backing up your WordPress files](https://developer.wordpress.org/advanced-administration/security/backup/files/).
 
 ## Monitoring
 
@@ -18,6 +16,7 @@ See [Version Control](https://developer.wordpress.org/advanced-administration/de
 
 ## Changelog
 
+- 2023-06-08: Update the Backups, linking to the Advanced Admin.
 - 2023-05-29: Move the Monitoring to the Advanced Administration Handbook.
 - 2023-05-29: Move the Version Control to the Advanced Administration Handbook.
 - 2021-05-27: Fixing infoboxes
