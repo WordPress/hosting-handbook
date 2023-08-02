@@ -9,7 +9,7 @@ The web server is piece of software that accepts user web requests and serves th
 The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
-* [nginx](https://nginx.org/) 1.22
+* [nginx](https://nginx.org/) 1.24
 
 Others are used by hosting companies and developers and are known to work well too:
 
@@ -24,12 +24,21 @@ PHP is a programming language on which WordPress code is based. This language ru
 
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
 
+**WordPress 6.3**
+
+* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+
+_IMPORTANT: WordPress 6.3 has beta support for PHP 8.2._
+
 **WordPress 6.2**
 
 * [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
 * [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+
+_IMPORTANT: WordPress 6.2 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
 
 **WordPress 6.1**
 
@@ -48,7 +57,20 @@ _IMPORTANT: WordPress 6.1 has beta support for [PHP 8.0](https://make.wordpress.
 
 _IMPORTANT: WordPress 6.0 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/) and [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/). If used some of these versions may get some Warnings._
 
-Versions prior to PHP 7.4 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions. Security support for PHP 7.3 ended in 2021-12-06 which means that even if there are security problems with it, official versions won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+### About PHP
+
+PHP 8.0 is maintained by the PHP Community only as _Security fix only_ starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+
+Versions prior to PHP 7.4 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions. Security support for PHP 7.4 ended in 2022-11-06 which means that even if there are security problems with it, official versions won't be released.
+
+End of life PHP versions:
+
+* PHP 7.4: 2022-11-28 _last release: 7.4.33_
+* PHP 7.3: 2021-12-06 _last release: 7.3.33_
+* PHP 7.2: 2020-11-30 _last release: 7.2.34_
+* PHP 7.1: 2019-12-01 _last release: 7.1.33_
+* PHP 7.0: 2019-01-10 _last release: 7.0.33_
+* PHP 5.6: 2018-12-31 _last release: 5.6.40_
 
 ### PHP Extensions
 
@@ -64,21 +86,21 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 *   [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0) - Performs remote request operations.
 *   [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
 *   [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
-*   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled) - Used to detect mimetype of file uploads.
+*   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled in PHP) - Used to detect mimetype of file uploads.
 *   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) - Used for hashing, including passwords and update packages.
 *   [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
-*   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
-*   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
-*   [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0) - Increases performance of pattern matching in code searches.
+*   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0) - SSL-based connections to other hosts.
+*   [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0 recommended PCRE 8.10) - Increases performance of pattern matching in code searches.
 *   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 *   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary). APCu, Memcached, and Redis are alternatives of which only one needs to be used.
 
 *   [apcu](https://www.php.net/manual/en/book.apcu.php) – In-memory key-value store for PHP (former APC stripped of opcode caching).
-*   [memcached](https://www.php.net/manual/en/book.memcached.php) (PHP >=5.2.0 requires libmemcached >=0.2.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+*   [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached >= 1.0.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
 *   [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts. 
 *   [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
@@ -86,16 +108,16 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 
 *   [bc](https://www.php.net/manual/en/book.bc.php) - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
 *   [filter](https://www.php.net/manual/en/book.filter.php) - Used for securely filtering user input.
-*   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >=2.1.0; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
+*   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >= 2.1.0; requires zlib >= 1.2.0.4; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
 *   [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
-*   [sodium](https://www.php.net/manual/en/book.sodium.php) - (bundled in PHP >=7.2.0) - Validates Signatures and provides securely random bytes.
+*   [sodium](https://www.php.net/manual/en/book.sodium.php) - (bundled in PHP >=7.2.0; requires libsodium >= 1.0.8) - Validates Signatures and provides securely random bytes.
 *   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
-*   [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >=1.2.0.4) - Gzip compression and decompression.
+*   [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >= 1.2.0.4) - Gzip compression and decompression.
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-*   [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >=1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+*   [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >= 1.2; recommended libssh >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
 *   [ftp](https://www.php.net/manual/en/book.ftp.php) - Implement client access to files servers speaking the File Transfer Protocol (FTP).
 *   [sockets](https://www.php.net/manual/en/book.sockets.php) - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
@@ -103,8 +125,8 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ### System Packages
 
-*   [ImageMagick](https://imagemagick.org/) - Required by Imagick extension.
-*   [Ghost Script](https://www.ghostscript.com/) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+*   [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
+*   [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0)- Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 
 ## Database
 
@@ -112,17 +134,17 @@ For data storage, WordPress uses systems compatible with MySQL.
 
 Officially recommended by WordPress are 
 
-* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 / 5.7
-* [MariaDB](https://mariadb.org/) 10.11 / 10.6 / 10.5 / 10.4
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0
+* [MariaDB](https://mariadb.org/) 10.11 / 10.6
 
 Other MySQL servers that are known to perform well are:
 
-* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0 / 5.7 / 5.6
+* [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
 * [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
-* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6 / 10.5 / 10.4
-* [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0 / 5.7
+* [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.6
+* [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0
 * [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)
-* [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0 / 5.7 / 5.6
+* [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0
 * [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
 * [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
 * [MySQL HeatWave](https://www.oracle.com/mysql/)
@@ -139,6 +161,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-08-02: Updated for WordPress 6.3 and up-to-date everything.
 - 2023-06-08: Added PHP igbinary extension.
 - 2023-05-27: Updated PHP extensions requirements and cache extensions.
 - 2023-04-19: MariaDB fixed with [LTS versions](https://mariadb.org/about/#maintenance-policy)
