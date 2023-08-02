@@ -36,7 +36,7 @@ The Runner repo contains the parts of the hosting tests that run on a host, and 
 
 ### Slack
 
-You can find the global WordPress Slack at [wordpress.slack.com](https://wordpress.slack.com/). A signup and walkthrough are available at [chat.wordpress.org](https://make.wordpress.org/chat/). When you are in, find the [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel.
+You can find the global WordPress Slack at [wordpress.slack.com](https://wordpress.slack.com/). A signup and walkthrough are available at [chat.wordpress.org](https://make.wordpress.org/chat/). When you are in, find the [#hosting](https://wordpress.slack.com/archives/hosting/) channel.
 
 You can [sign up](https://wordpress.slack.com/signup) using your WordPress.org username. If you don't have one, [create a WordPress profile](https://login.wordpress.org/register) and you'll be able to create an account as _MyWordPressUsername@chat.wordpress.org_, replacing _MyWordPressUsername_ with your WordPress.org username.
 
@@ -69,13 +69,13 @@ There's always a need for more folks to join! If you're interested in helping ou
 
 You can check out recommendations on style in this [Core Handbook page](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/). They don't all apply because it's a guide from Core — the biggest thing is to be careful not to accidentally representing WordPress.org or the team if it's not a WordPress.org or team decision, and to get peer review before posting.
 
-Feel free to ask in the main [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel for review, or any of the Team Reps directly if you don't get a reply right away.
+Feel free to ask in the main [#hosting](https://wordpress.slack.com/archives/hosting/) channel for review, or any of the Team Reps directly if you don't get a reply right away.
 
 ## Getting Started at Contributing
 
 If you've never been on the Hosting Team before and you want to contribute, a good time to start is on a Contributor Day. You can check to see if your nearest community has a Hosting team, and if not, you can always participate in the Contributor Days associated with WCAsia ([WordCamp Asia](https://asia.wordcamp.org/)), WCEU ([WordCamp Europe](https://europe.wordcamp.org/)) and WCUS ([WordCamp US](https://us.wordcamp.org/)).
 
-Also, you can access the [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel on Slack, check it and start participating. We always have something to do!
+Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, check it and start participating. We always have something to do!
 
 ### Contributor Day Notes
 
@@ -113,7 +113,7 @@ The following are ways that a volunteer currently can earn a hosting contributor
 
 If you've contributed and don't yet have a badge, apologies! Since they need to be added manually, please feel free to ping any of the Team Reps.
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 

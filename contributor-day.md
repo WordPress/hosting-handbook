@@ -20,7 +20,7 @@ When you create a WordPress.org user account, an email account is automatically 
 
 To access the WordPress Slack, you can [register from the SignUp page](https://wordpress.slack.com/signup) and enter your username in the email account field. At that time you will receive the instructions by email to continue. If you had previously logged in, you just have to [visit the WordPress Slack home page](https://wordpress.slack.com/) and enter the Slack username and password.
 
-Once you are there, please [visit the #hosting-community channel](https://wordpress.slack.com/archives/hosting-community).
+Once you are there, please [visit the #hosting channel](https://wordpress.slack.com/archives/hosting).
 
 ### GitHub user account _(recommended)_
 
@@ -71,7 +71,7 @@ To work on this project yo will need:
 
 #### Help
 
-If help is needed, please ask in the [#hosting-community](https://wordpress.slack.com/archives/hosting-community) channel or contact [@Crixu](https://profiles.wordpress.org/crixu/), [@JavierCasares](https://profiles.wordpress.org/javiercasares/).
+If help is needed, please ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@Crixu](https://profiles.wordpress.org/crixu/), [@JavierCasares](https://profiles.wordpress.org/javiercasares/).
 
 ### Automated Hosting Tests
 
@@ -92,7 +92,7 @@ To work on this project yo will need:
 
 #### Help
 
-If help is needed, please ask in the [#hosting-community](https://wordpress.slack.com/archives/hosting-community) channel or contact [@pfefferle](https://profiles.wordpress.org/pfefferle/).
+If help is needed, please ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@pfefferle](https://profiles.wordpress.org/pfefferle/).
 
 ### Advanced Admin Handbook
 
@@ -115,7 +115,7 @@ To work on this project yo will need:
 
 #### Help
 
-If help is needed, please ask in the [#docs](https://wordpress.slack.com/archives/docs), [#hosting-community](https://wordpress.slack.com/archives/hosting-community) channel or contact [@JavierCasares](https://profiles.wordpress.org/javiercasares/), [@lucp](https://profiles.wordpress.org/lucp/), [@milana_cap](https://profiles.wordpress.org/milana_cap/).
+If help is needed, please ask in the [#docs](https://wordpress.slack.com/archives/docs), [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@JavierCasares](https://profiles.wordpress.org/javiercasares/), [@lucp](https://profiles.wordpress.org/lucp/), [@milana_cap](https://profiles.wordpress.org/milana_cap/).
 
 ## Changelog
 
