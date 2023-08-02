@@ -66,11 +66,12 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 *   [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
 *   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled) - Used to detect mimetype of file uploads.
 *   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) - Used for hashing, including passwords and update packages.
+*   [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
 *   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 *   [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 *   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
-*   [pcre](https://www.php.net/manual/en/book.pcre.php) - Increases performance of pattern matching in code searches.
+*   [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0) - Increases performance of pattern matching in code searches.
 *   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 *   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
@@ -103,7 +104,7 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 ### System Packages
 
 *   [ImageMagick](https://imagemagick.org/) - Required by Imagick extension.
-*   [Ghost Script](https://www.ghostscript.com/) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+*   [Ghost Script](https://www.ghostscript.com/) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 
 ## Database
 
@@ -138,6 +139,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-06-08: Added PHP igbinary extension.
 - 2023-05-27: Updated PHP extensions requirements and cache extensions.
 - 2023-04-19: MariaDB fixed with [LTS versions](https://mariadb.org/about/#maintenance-policy)
 - 2023-02-17: Updated LiteSpeed Web Server. Updates for WordPress 6.2 beta and PHP >= 7.4.
