@@ -9,7 +9,7 @@ The web server is piece of software that accepts user web requests and serves th
 The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
-* [nginx](https://nginx.org/) 1.22
+* [nginx](https://nginx.org/) 1.24
 
 Others are used by hosting companies and developers and are known to work well too:
 
@@ -24,12 +24,21 @@ PHP is a programming language on which WordPress code is based. This language ru
 
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
 
+**WordPress 6.3**
+
+* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+
+_IMPORTANT: WordPress 6.3 has beta support for PHP 8.2. If used some of these versions may get some Warnings._
+
 **WordPress 6.2**
 
 * [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
 * [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+
+_IMPORTANT: WordPress 6.2 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
 
 **WordPress 6.1**
 
@@ -48,7 +57,20 @@ _IMPORTANT: WordPress 6.1 has beta support for [PHP 8.0](https://make.wordpress.
 
 _IMPORTANT: WordPress 6.0 has beta support for [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/) and [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/). If used some of these versions may get some Warnings._
 
-Versions prior to PHP 7.4 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions. Security support for PHP 7.3 ended in 2021-12-06 which means that even if there are security problems with it, official versions won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+### About PHP
+
+PHP 8.0 is maintained by the PHP Community only in a Security fix only basis, starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+
+Versions prior to PHP 7.4 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions. Security support for PHP 7.4 ended in 2022-11-06 which means that even if there are security problems with it, official versions won't be released. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+
+End of life PHP versions:
+
+* PHP 7.4: 2022-11-28 _last release: 7.4.33_
+* PHP 7.3: 2021-12-06 _last release: 7.3.33_
+* PHP 7.2: 2020-11-30 _last release: 7.2.34_
+* PHP 7.1: 2019-12-01 _last release: 7.1.33_
+* PHP 7.0: 2019-01-10 _last release: 7.0.33_
+* PHP 5.6: 2018-12-31 _last release: 5.6.40_
 
 ### PHP Extensions
 
