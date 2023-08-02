@@ -18,13 +18,13 @@ Everyone is welcome! This may include folks hosting WordPress, interested in lea
 
 ### When does the Hosting team meet?
 
-The Hosting Team meets in the WordPress Slack, in the [#hosting-community](https://wordpress.slack.com/archives/hosting-community/) channel. The conversations are in English. Check out the [WordPress Meeting calendar](https://make.wordpress.org/meetings#hosting) for the current schedule.
+The Hosting Team meets in the WordPress Slack, in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel. The conversations are in English. Check out the [WordPress Meeting calendar](https://make.wordpress.org/meetings#hosting) for the current schedule.
 
 ### Team Reps
 
 The Hosting Team is represented by team reps [@amykamala](https://profiles.wordpress.org/amykamala/), [@crixu](https://profiles.wordpress.org/crixu/), [@javiercasares](https://profiles.wordpress.org/javiercasares/), and [@jessibelle](https://profiles.wordpress.org/jessibelle/).
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 

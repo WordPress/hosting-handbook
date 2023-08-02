@@ -65,28 +65,29 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 *   [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
 *   [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
 *   [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled) - Used to detect mimetype of file uploads.
-*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >= 5.1.2) - Used for hashing, including passwords and update packages.
+*   [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) - Used for hashing, including passwords and update packages.
 *   [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
-*   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4 and php-imagick) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+*   [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 *   [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP >= 7.1.0 requires OpenSSL >= 1.0.1; PHP >= 8.1 requires OpenSSL >= 3.0) - Permits SSL-based connections to other hosts.
 *   [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0) - Increases performance of pattern matching in code searches.
 *   [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 *   [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
-The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary).
+The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary). APCu, Memcached, and Redis are alternatives of which only one needs to be used.
 
+*   [apcu](https://www.php.net/manual/en/book.apcu.php) – In-memory key-value store for PHP (former APC stripped of opcode caching).
 *   [memcached](https://www.php.net/manual/en/book.memcached.php) (PHP >=5.2.0 requires libmemcached >=0.2.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
-*   [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts.
-*   [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis
+*   [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts. 
+*   [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
-For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
+For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
 
 *   [bc](https://www.php.net/manual/en/book.bc.php) - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
 *   [filter](https://www.php.net/manual/en/book.filter.php) - Used for securely filtering user input.
 *   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >=2.1.0; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
-*   [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 *   [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
 *   [sodium](https://www.php.net/manual/en/book.sodium.php) - (bundled in PHP >=7.2.0) - Validates Signatures and provides securely random bytes.
 *   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
@@ -134,10 +135,11 @@ If you have WordPress 5.2+, the WordPress Admin already has tools with that info
 
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
+- 2023-05-27: Updated PHP extensions requirements and cache extensions.
 - 2023-04-19: MariaDB fixed with [LTS versions](https://mariadb.org/about/#maintenance-policy)
 - 2023-02-17: Updated LiteSpeed Web Server. Updates for WordPress 6.2 beta and PHP >= 7.4.
 - 2022-11-16: Updated WordPress 6.0 / WordPress 6.1, PHP compatibility information and other versions
