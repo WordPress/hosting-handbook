@@ -31,7 +31,25 @@ The tool can be run manually or through an automated system like Travis. To see 
 To use the Runner, the following is required:
 * A server / hosting (infrastructure) with the usual configuration you have.
 * A database where you can test (it will be created and destroyed several times)
-* NodeJS 14.x
+* NodeJS 16.x
+
+#### NodeJS installation
+
+If you are using Debian / Ubuntu, install or update NodeJS 16 with this command:
+
+```
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt -y install nodejs
+node -v
+```
+
+If you are using RHEL / CentOS, install or update NodeJS 16 with this command:
+
+```
+curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+sudo yum install -y nodejs
+node -v
+```
 
 ### Installing the Runner
 
@@ -243,6 +261,7 @@ To get things reporting properly, place the username for the bot, along with the
 
 ## Changelog
 
+- 2023-08-16: Added requirement NodeJS 16.x
 - 2022-07-12: Added requirement NodeJS 14.x
 - 2021-05-27: Fixing infoboxes
 - 2021-02-17: Changelog added
