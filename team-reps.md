@@ -19,14 +19,56 @@ The Hosting Team is represented by:
 
 ## Hosting Team Organization
 
-_NEEDS TO BE IMPROVED, with explanation on the task, and meanings_
+### Team Reps
 
-- Team Reps:
-- Project Leads:
+Within the extensive ecosystem of WordPress, different teams work together to ensure the platform's ongoing development and success. Each of these teams has at least one representative, often referred to as a 'Team Rep'. For the Hosting Team, the Team Rep plays a vital role.
+
+**Role of the Hosting Team Rep**
+
+A Team Rep, specifically from the Hosting team, acts as the voice and ambassador of the Hosting Team within the broader WordPress Community. Their tasks are multifaceted:
+
+1. **Representation:** The Team Rep acts as the primary point of contact for the Hosting Team, representing their interests, challenges, and achievements to the larger WordPress Community.
+  
+2. **Information Exchange:** They serve as a conduit for communication, exchanging crucial information with other team representatives and with the leadership of the WordPress project.
+
+**Rep Responsibilities**
+
+- **Rotation of Duties:** The Hosting team ensures that there are at least two Team Reps. Ideally, one rep takes on the primary responsibilities for the first half of the term, while the other serves in a backup capacity. In the second half of the term, the roles switch. This structure ensures continuity, as the backup rep has spent about three months learning the nuances of the role before taking the primary responsibilities.
+
+- **Monthly Updates:** The primary Team Rep shoulders the responsibility of posting a monthly update of the Hosting team's activities on the Make/Updates blog. This update might include progress reports, challenges faced, and any other critical developments. Furthermore, they must highlight any issues or concerns that other teams within the community need to be cognizant of. In the event the primary rep is unavailable to post the update, the backup rep must ensure it's done. A lapse of updates spanning 3 months will result in the need to appoint new reps who can maintain these duties.
+
+- **Quarterly Reports:** All teams, including Hosting, are encouraged to contribute to a quarterly progress report. This report comprises details such as contact points within the team, the team's current and most recent priorities, challenges they're navigating, and their most noteworthy achievements.
+
+### Project Leads
+
+In the diverse and collaborative environment of the WordPress Community, each team is involved in various projects to help make WordPress better for all its users. Within the Hosting Team, a crucial role exists: the Project Lead.
+
+**Role of a Project Lead**
+
+A Project Lead is responsible for guiding and overseeing a specific project under the purview of the Hosting Team. They steer the project towards its objectives, ensuring quality, consistency, and timeliness. Their tasks range from planning and setting milestones to coordinating with team members and stakeholders. Based on the nature of the project, the requirements and skills for a Project Lead may differ.
+
+**Projects and specifics**
+
+1. **Documentation Projects:**
+
+   - **Projects Under This Category:** 
+     - Hosting Handbook
+     - Advanced Administration Handbook
+   - **Required Skills:** 
+     - Mastery in managing and organizing GitHub repositories.
+     - Ideally, experience in Technical Writing is crucial since the essence of these projects is to produce clear, concise, and informative documents.
+   
+2. **Software Projects:**
+
+   - **Projects Under This Category:** 
+     - PHP Unit Test Runner
+     - PHP Unit Test Report
+   - **Required Skills:** 
+     - Proficient in managing GitHub repositories.
+     - Strong understanding of PHP Unit Tests and PHP in general.
+     - Experience or at least familiarity with the creation and programming of WordPress plugins is highly desirable.
 
 ## Hosting Team Onboarding / Offboarding
-
-_NEEDS TO BE IMPROVED, with explanation on why we need access_
 
 - Access to [Make Hosting](https://make.wordpress.org/hosting/)
 - Access to [Make (Agenda)](https://make.wordpress.org/)
