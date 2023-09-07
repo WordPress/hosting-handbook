@@ -70,18 +70,27 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 
 ## Hosting Team Onboarding / Offboarding
 
-- Access to [Make Hosting](https://make.wordpress.org/hosting/)
-- Access to [Make (Agenda)](https://make.wordpress.org/)
-- Access to [Make Updates](https://make.wordpress.org/updates/)
+- Sites
+  - Access to [Make Hosting](https://make.wordpress.org/hosting/)
+  - Access to [Make (Agenda)](https://make.wordpress.org/)
+  - Access to [Make Updates](https://make.wordpress.org/updates/)
 
-- Hosting email ( hosting -at- wordpress.org ) with [HelpScout](https://secure.helpscout.net/)
+- Communication
+  - Hosting email ( hosting -at- wordpress.org ) with [HelpScout](https://secure.helpscout.net/)
+  - Slack "/here" access
+  - Be on the #team-reps Slack channel
 
-- GitHub Teams: [Hosting Team](https://github.com/orgs/WordPress/teams/hosting-team), [Hosting Handbook Team](https://github.com/orgs/WordPress/teams/hosting-handbook-team), [Hosting Documentation Team](https://github.com/orgs/WordPress/teams/hosting-documentation-team), [Hosting Tests Team](https://github.com/orgs/WordPress/teams/hosting-tests-team).
+- GitHub Teams
+  - [Hosting Team](https://github.com/orgs/WordPress/teams/hosting-team)
+  - [Hosting Handbook Team](https://github.com/orgs/WordPress/teams/hosting-handbook-team)
+  - [Hosting Documentation Team](https://github.com/orgs/WordPress/teams/hosting-documentation-team)
+  - [Hosting Tests Team](https://github.com/orgs/WordPress/teams/hosting-tests-team).
 
-- [Hosting Handbook](https://github.com/WordPress/hosting-handbook) Github Repo
-- [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) Github Repo
-- [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) Github Repo (aka test-runner)
-- [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) Github Repo (aka test-reporter)
+- GitHub Repos
+  - [Hosting Handbook](https://github.com/WordPress/hosting-handbook) Github Repo
+  - [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) Github Repo
+  - [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) Github Repo (aka test-runner)
+  - [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) Github Repo (aka test-reporter)
 
 ## Changelog
 
