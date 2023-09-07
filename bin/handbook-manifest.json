@@ -2,77 +2,77 @@
   "index": {
     "title": "Handbook",
     "slug": "handbook",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/index.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/index.md",
     "parent": null,
     "order": -1
   },
   "get-involved": {
     "title": "Get Involved",
     "slug": "get-involved",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/get-involved.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/get-involved.md",
     "parent": null,
     "order": 1
   },
   "team-projects": {
     "title": "Team Projects",
     "slug": "team-projects",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/team-projects.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/team-projects.md",
     "parent": "get-involved",
     "order": 1
   },
   "contributor-day": {
     "title": "Contributor Day",
     "slug": "contributor-day",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/contributor-day.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/contributor-day.md",
     "parent": "get-involved",
     "order": 2
   },
   "server-environment": {
     "title": "Server Environment",
     "slug": "server-environment",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/server-environment.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/server-environment.md",
     "parent": null,
     "order": 2
   },
   "compatibility": {
     "title": "Compatibility",
     "slug": "compatibility",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/compatibility.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/compatibility.md",
     "parent": null,
     "order": 3
   },
   "upgrading": {
     "title": "Upgrading WordPress",
     "slug": "upgrading",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/upgrading.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/upgrading.md",
     "parent": null,
     "order": 4
   },
   "tests": {
     "title": "PHPUnit Tests",
     "slug": "tests",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/tests.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/tests.md",
     "parent": null,
     "order": 5
   },
   "performance": {
     "title": "Performance",
     "slug": "performance",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/performance.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/performance.md",
     "parent": null,
     "order": 10
   },
   "reliability": {
     "title": "Reliability",
     "slug": "reliability",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/reliability.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/reliability.md",
     "parent": null,
     "order": 11
   },
   "security": {
     "title": "Security",
     "slug": "security",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/security.md",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/security.md",
     "parent": null,
     "order": 12
   }
