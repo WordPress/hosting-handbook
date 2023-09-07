@@ -11,6 +11,12 @@
 		"markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/get-involved.md",
 		"parent": null
 	},
+	"team-projects": {
+		"title": "Team Projects",
+		"slug": "team-projects",
+		"markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/master\/team-projects.md",
+		"parent": "get-involved"
+	},
 	"contributor-day": {
 		"title": "Contributor Day",
 		"slug": "contributor-day",
