@@ -1,4 +1,4 @@
-# Handbook
+# WordPress Hosting Handbook
 
 Welcome to the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/handbook/)! Here you will find WordPress hosting best practice documentation developed collaboratively by the Hosting Team. Use the "Contents" menu on the left to navigate topics.
 

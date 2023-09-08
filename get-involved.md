@@ -8,21 +8,11 @@ There is a set of hosting best practices in the [Hosting Handbook](https://make.
 
 The team also runs and maintains a set of [automated hosting tests](https://make.wordpress.org/hosting/test-results/) that run across the hosting environment of many hosting companies. You can set up tests to run on your hosting environment(s), and help improve the tools through fixing bugs, adding features, or improving the design of the test reporter pages.
 
-## Improving Hosting Handbook
+### Improving Hosting Handbook
 
 The Handbook contains information about the Hosting Team, along with hosting recommendations for running WordPress.
 
 The recommendations were put together by the team and used as a basis for [Site Health recommendations](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/) in WordPress. They're meant both as a reference for folks learning to host WordPress, and a way to help WordPress and Hosts improve together.
-
-### How to contribute to the Hosting Handbook
-
-The handbook is in the process of being audited and improved. You can see the progress and contribute [through Github](https://github.com/WordPress/hosting-handbook).
-
-The first thing you'll have to do is [visit the repository page](https://github.com/WordPress/hosting-handbook) where all the information is. It's best to [visit the Issues list](https://github.com/WordPress/hosting-handbook/issues), check if your proposal is already contemplated or pending, and if it isn't, [create a New issue](https://github.com/WordPress/hosting-handbook/issues/new).
-
-After you submit an issue, we can discuss together the suggested changes.
-
-Once a PR is submitted, it will require an approval process. By default, once it is submitted, it will require review and approval by two people from the Hosting team. In cases where there are PRs related to corrections or internal operational elements, created by someone from the Hosting Team, only one review will be required.
 
 ### Improvements in the development of the Automated Hosting Tests
 

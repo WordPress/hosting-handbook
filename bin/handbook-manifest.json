@@ -1,6 +1,6 @@
 {
   "index": {
-    "title": "Handbook",
+    "title": "Hosting Handbook",
     "slug": "handbook",
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/index.md",
     "parent": null,
@@ -42,7 +42,7 @@
     "order": 3
   },
   "upgrading": {
-    "title": "Upgrading WordPress",
+    "title": "Upgrading",
     "slug": "upgrading",
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/upgrading.md",
     "parent": null,
