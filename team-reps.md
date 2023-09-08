@@ -31,6 +31,8 @@ A Team Rep, specifically from the Hosting team, acts as the voice and ambassador
   
 2. **Information Exchange:** They serve as a conduit for communication, exchanging crucial information with other team representatives and with the leadership of the WordPress project.
 
+3. **Meeting Facilitator:** The Team Rep makes sure that the weekly team meetings are prepared and take place. This includes the encouragement of other team members to participate in the agenda creation, collection of topics and facilitation of the meeting. All members of the team can run the meeting, not only the team reps. 
+
 **Rep Responsibilities**
 
 - **Rotation of Duties:** The Hosting team ensures that there are at least two Team Reps. Ideally, one rep takes on the primary responsibilities for the first half of the term, while the other serves in a backup capacity. In the second half of the term, the roles switch. This structure ensures continuity, as the backup rep has spent about three months learning the nuances of the role before taking the primary responsibilities.
@@ -45,7 +47,7 @@ In the diverse and collaborative environment of the WordPress Community, each te
 
 **Role of a Project Lead**
 
-A Project Lead is responsible for guiding and overseeing a specific project under the purview of the Hosting Team. They steer the project towards its objectives, ensuring quality, consistency, and timeliness. Their tasks range from planning and setting milestones to coordinating with team members and stakeholders. Based on the nature of the project, the requirements and skills for a Project Lead may differ.
+A Project Lead is responsible for guiding and overseeing a specific project under the purview of the Hosting Team. They steer the project towards its objectives, ensuring quality, consistency, and timeliness. Their tasks range from planning and setting milestones to coordinating with team members and stakeholders. Based on the nature of the project, the requirements and skills for a Project Lead may differ. It is important to note that any member of the Hosting Team can assume the role of Project Lead by volunteering and coordinating with the Hosting Team Representative. A Project Lead does not need to be a Team Representative, and vice versa.
 
 **Projects and specifics**
 
@@ -68,6 +70,8 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
      - Strong understanding of PHP Unit Tests and PHP in general.
      - Experience or at least familiarity with the creation and programming of WordPress plugins is highly desirable.
 
+
+
 ## Hosting Team Onboarding / Offboarding
 
 - Sites
@@ -79,8 +83,8 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 
 - Communication
   - Hosting email ( hosting -at- wordpress.org ) with [HelpScout](https://secure.helpscout.net/)
-  - Slack "/here" access
-  - Be on the #team-reps Slack channel
+  - Slack "/here" access for the [#hosting](https://wordpress.slack.com/archives/C3D6T7F8Q) Slack channel
+  - Be on the [#team-reps](https://wordpress.slack.com/archives/C023M4VELMB) Slack channel
 
 - GitHub Teams
   - [Hosting Team](https://github.com/orgs/WordPress/teams/hosting-team)
