@@ -27,6 +27,13 @@
     "parent": "get-involved",
     "order": 2
   },
+  "team-reps": {
+    "title": "Team Reps",
+    "slug": "team-reps",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/team-reps.md",
+    "parent": "get-involved",
+    "order": 3
+  },
   "server-environment": {
     "title": "Server Environment",
     "slug": "server-environment",
