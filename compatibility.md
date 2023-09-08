@@ -1,4 +1,4 @@
-## WordPress, PHP, MySQL / MariaDB versions
+# WordPress, PHP, MySQL / MariaDB versions
 
 The relationship between WordPress, PHP and MySQL / MariaDB is very close, and it is very important that the versions of these technologies match for proper operation. The following matrix is focused on information for hosting companies and sysadmins.
 
@@ -36,8 +36,21 @@ WordPress 3.9 | 5.3 - 5.5 | 5.5 - 5.6 | 5.5 - 10.0 | 2014-04-16
 WordPress 3.8 | 5.3 - 5.5 | 5.5 - 5.6 | 5.5 | 2013-12-12
 WordPress 3.7 | 5.3 - 5.5 | 5.5 - 5.6 | 5.5 | 2013-10-24
 
+## Server requirements
+
+WordPress | PHP | MySQL | MariaDB
+---- | ---- | ---- | ----
+WordPress 6.3+ | 7.0+ | 5.0.15+ | 5.5+
+WordPress 5.2+ | 5.6.20+ | 5.0.15+ | 5.5+
+WordPress 3.2+ | 5.2.4+ | 5.0.15+ | 5.5+
+WordPress 2.9+ | 4.3+ | 4.1.2+ | 
+WordPress 2.5+ | 4.3+ | 4.0+ | 
+WordPress 2.1+ | 4.2+ | 4.0+ | 
+WordPress 2.0+ | 4.2+ | 3.23.23+ | 
+
 ## Changelog
 
+- 2023-08-09: Added [Server requirements](https://codex.wordpress.org/Template:Server_requirements)
 - 2023-08-09: Update for WordPress 6.3
 - 2023-04-03: Minor grammatical fixes
 - 2023-02-17: Updated with WordPress 6.2 beta information
