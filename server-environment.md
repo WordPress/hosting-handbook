@@ -110,6 +110,7 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 *   [filter](https://www.php.net/manual/en/book.filter.php) - Used for securely filtering user input.
 *   [image](https://www.php.net/manual/en/book.image.php) (requires libgd >= 2.1.0; requires zlib >= 1.2.0.4; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 *   [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
+*   [shmop](https://www.php.net/manual/en/book.shmop.php) - Shmop is an easy to use set of functions that allows PHP to read, write, create and delete Unix shared memory segments.
 *   [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
 *   [sodium](https://www.php.net/manual/en/book.sodium.php) - (bundled in PHP >=7.2.0; requires libsodium >= 1.0.8) - Validates Signatures and provides securely random bytes.
 *   [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
@@ -161,6 +162,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-09-07: Added shmop PHP extension.
 - 2023-08-02: Updated for WordPress 6.3 and up-to-date everything.
 - 2023-06-08: Added PHP igbinary extension.
 - 2023-05-27: Updated PHP extensions requirements and cache extensions.
