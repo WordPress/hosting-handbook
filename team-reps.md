@@ -74,6 +74,8 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
   - Access to [Make Hosting](https://make.wordpress.org/hosting/)
   - Access to [Make (Agenda)](https://make.wordpress.org/)
   - Access to [Make Updates](https://make.wordpress.org/updates/)
+  - Access to [Contributor profiles Badges](https://profiles.wordpress.org/associations/hosting-contributor/)
+  - Access to [Team profiles Badges](https://profiles.wordpress.org/associations/hosting-team/)
 
 - Communication
   - Hosting email ( hosting -at- wordpress.org ) with [HelpScout](https://secure.helpscout.net/)
