@@ -1,8 +1,10 @@
-# WordPress, PHP, MySQL / MariaDB versions
+# WordPress Compatibility
 
 The relationship between WordPress, PHP and MySQL / MariaDB is very close, and it is very important that the versions of these technologies match for proper operation. The following matrix is focused on information for hosting companies and sysadmins.
 
 [tip]If you are a developer, you will also be interested in the [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/) document from the Core team.[/tip]
+
+## WordPress, PHP, MySQL / MariaDB versions
 
 This table shows the versions available (and security supported) at the time of the WordPress release. It does not mean that WordPress provided 100% full support for those versions (but usually does).
 
