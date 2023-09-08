@@ -39,7 +39,7 @@ WordPress 3.7 | 5.3 - 5.5 | 5.5 - 5.6 | 5.5 | 2013-10-24
 ## Server requirements
 
 WordPress | PHP | MySQL | MariaDB
----- | ---- | ---- | ---- | ----
+---- | ---- | ---- | ----
 WordPress 6.3+ | 7.0+ | 5.0.15+ | 5.5+
 WordPress 5.2+ | 5.6.20+ | 5.0.15+ | 5.5+
 WordPress 3.2+ | 5.2.4+ | 5.0.15+ | 5.5+
