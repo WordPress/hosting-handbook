@@ -55,6 +55,13 @@
     "parent": null,
     "order": 5
   },
+  "learn-hosting": {
+    "title": "Learn Hosting",
+    "slug": "learn-hosting",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/learn-hosting.md",
+    "parent": null,
+    "order": 6
+  },
   "performance": {
     "title": "Performance",
     "slug": "performance",
