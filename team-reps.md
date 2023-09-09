@@ -8,7 +8,9 @@ It's essential for each team to select at least two Team Representatives. These 
 
 More Information about [Team Reps: the Title, Responsibilities...](https://make.wordpress.org/updates/team-reps/)
 
-## Hosting Team Reps
+## Hosting Team
+
+### Hosting Team Reps
 
 The Hosting Team is represented by:
 
@@ -16,6 +18,17 @@ The Hosting Team is represented by:
 - [@crixu](https://profiles.wordpress.org/crixu/)
 - [@javiercasares](https://profiles.wordpress.org/javiercasares/)
 - [@jessibelle](https://profiles.wordpress.org/jessibelle/)
+
+### Hosting Project Leads
+
+The Documentation projects (Hosting Handbook, and Advanced Administration Handbook) are lead by:
+
+- [@javiercasares](https://profiles.wordpress.org/javiercasares/): Hosting Handbook, Advanced Administration Handbook
+- [@crixu](https://profiles.wordpress.org/crixu/): Hosting Handbook
+
+The PHPUnit Test projects (PHPUnit Test Runner, and PHPUnit Test Report) are lead by:
+
+- _nobody is leading those projects_
 
 ## Hosting Team Organization
 
@@ -51,7 +64,6 @@ In order to maintain transparent and democratic governance within the Hosting Te
 
 After the voting period concludes, the nominees with the most votes are contacted to confirm whether they wish to accept the Team Rep role. Once confirmations are received, the new Team Reps are officially announced on make.wordpress.org/hosting.
 
-
 ### Project Leads
 
 In the diverse and collaborative environment of the WordPress Community, each team is involved in various projects to help make WordPress better for all its users. Within the Hosting Team, a crucial role exists: the Project Lead.
@@ -74,14 +86,12 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 2. **Software Projects:**
 
    - **Projects Under This Category:** 
-     - PHP Unit Test Runner
-     - PHP Unit Test Report
+     - PHPUnit Test Runner
+     - PHPUnit Test Report
    - **Required Skills:** 
      - Proficient in managing GitHub repositories.
      - Strong understanding of PHP Unit Tests and PHP in general.
      - Experience or at least familiarity with the creation and programming of WordPress plugins is highly desirable.
-
-
 
 ## Hosting Team Onboarding / Offboarding
 
@@ -89,13 +99,24 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
   - Access to [Make Hosting](https://make.wordpress.org/hosting/)
   - Access to [Make (Agenda)](https://make.wordpress.org/)
   - Access to [Make Updates](https://make.wordpress.org/updates/)
-  - Access to [Contributor profiles Badges](https://profiles.wordpress.org/associations/hosting-contributor/)
-  - Access to [Team profiles Badges](https://profiles.wordpress.org/associations/hosting-team/)
+  - Access to [Hosting Contributor profiles badges](https://profiles.wordpress.org/associations/hosting-contributor/)
+  - Access to [Hosting Team profiles badges](https://profiles.wordpress.org/associations/hosting-team/)
 
 - **Communication**
   - Hosting email ( hosting -at- wordpress.org ) with [HelpScout](https://secure.helpscout.net/)
   - Slack "/here" access for the [#hosting](https://wordpress.slack.com/archives/C3D6T7F8Q) Slack channel
   - Be on the [#team-reps](https://wordpress.slack.com/archives/C023M4VELMB) Slack channel
+  - Be on the [#props](https://wordpress.slack.com/archives/C0FRG66LR) Slack channel
+  - Be on the [#github-teams-collab](https://wordpress.slack.com/archives/C05M6F1AQCV) Slack channel
+  - Be on the [#contributor-day](https://wordpress.slack.com/archives/C0DS2NW14) Slack channel, _recommended_
+  - Be on the [#core-php](https://wordpress.slack.com/archives/C60K3MP2Q) Slack channel, _recommended_
+  - Be on the [#core-site-health](https://wordpress.slack.com/archives/CKSU841L7) Slack channel, _recommended_
+  - Be on the [#core-test](https://wordpress.slack.com/archives/C03B0H5J0) Slack channel, _recommended_
+  - Be on the [#core-upgrade-install](https://wordpress.slack.com/archives/CULBN711P) Slack channel, _recommended_
+  - Be on the [#tide](https://wordpress.slack.com/archives/C7TK8FBUJ) Slack channel, _recommended_
+  - Be on the [#wcasia](https://wordpress.slack.com/archives/CLAFGCLBG) Slack channel, _recommended_
+  - Be on the [#wceu](https://wordpress.slack.com/archives/C1HRSGE2X) Slack channel, _recommended_
+  - Be on the [#wcus](https://wordpress.slack.com/archives/C087S65L2) Slack channel, _recommended_
 
 - **GitHub Teams**
   - [Hosting Team](https://github.com/orgs/WordPress/teams/hosting-team)
@@ -111,4 +132,5 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 
 ## Changelog
 
-- 2023-09-07: New page
+- 2023-09-09: Slack recommendations, added project leads.
+- 2023-09-07: New page.
