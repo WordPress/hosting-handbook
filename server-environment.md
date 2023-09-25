@@ -29,7 +29,7 @@ WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility 
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
-_IMPORTANT: WordPress 6.3 is *compatible with exceptions* with PHP 8.0 and 8.1, and *beta compatible* with PHP 8.2._
+_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and 8.1, and *beta compatible* with PHP 8.2._
 
 **WordPress 6.2**
 
@@ -38,7 +38,7 @@ _IMPORTANT: WordPress 6.3 is *compatible with exceptions* with PHP 8.0 and 8.1, 
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
-_IMPORTANT: WordPress 6.2 is *beta compatible* with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
+_IMPORTANT: WordPress 6.2 is **beta compatible** with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
 
 **WordPress 6.1**
 
@@ -47,7 +47,7 @@ _IMPORTANT: WordPress 6.2 is *beta compatible* with [PHP 8.0](https://make.wordp
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)*
 
-_IMPORTANT: WordPress 6.1 is *beta compatible* with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
+_IMPORTANT: WordPress 6.1 is **beta compatible** with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
 
 **WordPress 6.0**
 
@@ -55,7 +55,7 @@ _IMPORTANT: WordPress 6.1 is *beta compatible* with [PHP 8.0](https://make.wordp
 * [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)*
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
 
-_IMPORTANT: WordPress 6.0 is *beta compatible* with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/) and [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/). If used some of these versions may get some Warnings._
+_IMPORTANT: WordPress 6.0 is **beta compatible** with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/) and [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/). If used some of these versions may get some Warnings._
 
 ### About PHP
 
