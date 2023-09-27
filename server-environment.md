@@ -29,7 +29,7 @@ WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility 
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
-_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and 8.1, and *beta compatible* with PHP 8.2._
+_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and 8.1, and **beta compatible** with PHP 8.2._
 
 **WordPress 6.2**
 
