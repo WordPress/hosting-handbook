@@ -40,6 +40,8 @@ WordPress 3.7 | 5.3 - 5.5 | 5.5 - 5.6 | 5.5 | 2013-10-24
 
 ## Server requirements
 
+This table gives you a snapshot of how WordPress has changed its minimum requirements over time, especially when it comes to PHP and database versions.
+
 WordPress | PHP | MySQL | MariaDB
 ---- | ---- | ---- | ----
 WordPress 6.3+ | 7.0+ | 5.0.15+ | 5.5+
