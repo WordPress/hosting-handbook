@@ -34,6 +34,13 @@
     "parent": "get-involved",
     "order": 3
   },
+  "documentation": {
+    "title": "Documentation",
+    "slug": "documentation",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/documentation.md",
+    "parent": "get-involved",
+    "order": 4
+  },
   "server-environment": {
     "title": "Server Environment",
     "slug": "server-environment",
