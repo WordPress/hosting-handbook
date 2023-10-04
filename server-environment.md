@@ -9,7 +9,7 @@ The web server is piece of software that accepts user web requests and serves th
 The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
-* [nginx](https://nginx.org/) 1.24
+* [nginx](https://nginx.org/) 1.25 / 1.24
 
 Others are used by hosting companies and developers and are known to work well too:
 
@@ -30,6 +30,22 @@ WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility 
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
 _IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and 8.1, and **beta compatible** with PHP 8.2._
+
+_What "compatible with exceptions" means?_
+
+- PHP 8.0
+	- Named parameters. WordPress does not support named parameters.
+	- [Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails](https://core.trac.wordpress.org/ticket/48689).
+
+- PHP 8.1
+	- [htmlentities() et al needs the default value of the flags parameter explicitly set](https://core.trac.wordpress.org/ticket/53465).
+	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
+	- [unregister_setting() for unknown setting](https://core.trac.wordpress.org/ticket/57674).
+
+_What "beta" means?_
+
+- PHP 8.2
+	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
 **WordPress 6.2**
 
@@ -65,12 +81,27 @@ Versions prior to PHP 7.4 are not maintained by the PHP Community, although they
 
 End of life PHP versions:
 
+* PHP 8.3: n/d
+* PHP 8.2: 2025-10-08
+* PHP 8.1: 2024-11-25
+* PHP 8.0: 2023-11-26
 * PHP 7.4: 2022-11-28 _last release: 7.4.33_
 * PHP 7.3: 2021-12-06 _last release: 7.3.33_
 * PHP 7.2: 2020-11-30 _last release: 7.2.34_
 * PHP 7.1: 2019-12-01 _last release: 7.1.33_
 * PHP 7.0: 2019-01-10 _last release: 7.0.33_
 * PHP 5.6: 2018-12-31 _last release: 5.6.40_
+* PHP 5.5: 2016-07-21 _last release: 5.5.38_
+* PHP 5.4: 2015-09-03 _last release: 5.4.45_
+* PHP 5.3: 2014-08-14 _last release: 5.3.29_
+* PHP 5.2: 2011-01-06 _last release: 5.2.17_
+* PHP 5.1: 2006-08-24 _last release: 5.1.6_
+* PHP 5.0: 2005-09-05 _last release: 5.0.5_
+* PHP 4.4: 2008-08-07 _last release: 4.4.9_
+* PHP 4.3: 2005-03-31 _last release: 4.3.11_
+* PHP 4.2: 2002-09-06 _last release: 4.2.3_
+* PHP 4.1: 2002-03-12 _last release: 4.1.2_
+* PHP 4.0: 2001-06-23 _last release: 4.0.6_
 
 ### PHP Extensions
 
@@ -133,10 +164,35 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 For data storage, WordPress uses systems compatible with MySQL.
 
-Officially recommended by WordPress are 
+Officially recommended by WordPress are:
 
-* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0
-* [MariaDB](https://mariadb.org/) 10.11 / 10.6
+* [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 LTS
+* [MariaDB](https://mariadb.org/) 10.11 LTS / 10.6 LTS
+
+End of life MySQL versions:
+
+* MySQL 8.1: n/d
+* MySQL 8.0: 2026-04-30
+* MySQL 5.7: 2023-10-31
+* MySQL 5.6: 2021-02-28
+* MySQL 5.5: 2018-12-31
+
+End of life mariaDB versions:
+
+* MariaDB 11.1: 2024-08-21
+* MariaDB 11.0: 2024-06-07
+* MariaDB 10.10: 2023-11-17
+* MariaDB 10.9: 2023-08-22
+* MariaDB 10.8: 2023-05-20
+* MariaDB 10.7: 2023-02-09
+* MariaDB 10.6: 2026-07-06
+* MariaDB 10.5: 2025-06-24
+* MariaDB 10.4: 2024-06-18
+* MariaDB 10.3: 2023-05-25
+* MariaDB 10.2: 2022-05-22
+* MariaDB 10.1: 2020-10-17
+* MariaDB 10.0: 2019-03-31
+* MariaDB 5.5: 2020-04-11
 
 Other MySQL servers that are known to perform well are:
 
@@ -162,6 +218,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-10-04: Up-to-date. Added some EOL for databases and PHP. Explanation about BETA and EXCEPTIONS for WordPress 6.3.
 - 2023-09-07: Added shmop PHP extension.
 - 2023-08-02: Updated for WordPress 6.3 and up-to-date everything.
 - 2023-06-08: Added PHP igbinary extension.
