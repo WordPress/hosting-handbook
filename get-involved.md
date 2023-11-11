@@ -101,12 +101,13 @@ The following are ways that a volunteer currently can earn a hosting contributor
 * Actively participating in meetings regularly and giving feedback on things discussed.
 * Helping out at a contributor day
 
-If you've contributed and don't yet have a badge, apologies! Since they need to be added manually, please feel free to ping any of the Team Reps.
+If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor and ask for it](https://profiles.wordpress.org/associations/hosting-contributor/). Please feel free to ping any of the Team Reps for further questions.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
 ## Changelog
 
+- 2023-11-11: Update the Badges sectin.
 - 2023-02-17: Up-to-date. More related teams.
 - 2022-06-08: WordCamp Europe 2022 Contributor Day link.
 - 2022-06-02: Adding Github process.

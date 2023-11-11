@@ -9,7 +9,7 @@ The web server is piece of software that accepts user web requests and serves th
 The two most popular ones that are recommended are:
 
 * [Apache HTTPD](https://httpd.apache.org/) 2.4
-* [nginx](https://nginx.org/) 1.25 / 1.24
+* [nginx](https://nginx.org/) 1.24
 
 Others are used by hosting companies and developers and are known to work well too:
 
@@ -23,6 +23,18 @@ _Those are the latest versions at the time of writing this document. Always keep
 PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
+
+**WordPress 6.4**
+
+* [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+* [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+
+_IMPORTANT: WordPress 6.3 is **beta compatible** with PHP 8.3._
+
+_What "beta" means?_
+
+- PHP 8.3
+	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
 **WordPress 6.3**
 
@@ -157,8 +169,10 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ### System Packages
 
-*   [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
+*   [curl](https://curl.se/) (recommended >= 8.4)
 *   [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0)- Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+*   [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
+* 	[OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
 
 ## Database
 
@@ -171,7 +185,8 @@ Officially recommended by WordPress are:
 
 End of life MySQL versions:
 
-* MySQL 8.1: n/d
+* MySQL 8.2: n/d
+* MySQL 8.1: 2023-10-25
 * MySQL 8.0: 2026-04-30
 * MySQL 5.7: 2023-10-31
 * MySQL 5.6: 2021-02-28
@@ -179,8 +194,11 @@ End of life MySQL versions:
 
 End of life mariaDB versions:
 
+* MariaDB 11.3: n/d
+* MariaDB 11.2: n/d
 * MariaDB 11.1: 2024-08-21
 * MariaDB 11.0: 2024-06-07
+* MariaDB 10.11: 2028-02-16
 * MariaDB 10.10: 2023-11-17
 * MariaDB 10.9: 2023-08-22
 * MariaDB 10.8: 2023-05-20
@@ -218,6 +236,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2023-11-11: Up-to-date. Added some EOL for databases and PHP. WordPress 6.4 compatibility. Added more information about system packages.
 - 2023-10-04: Up-to-date. Added some EOL for databases and PHP. Explanation about BETA and EXCEPTIONS for WordPress 6.3.
 - 2023-09-07: Added shmop PHP extension.
 - 2023-08-02: Updated for WordPress 6.3 and up-to-date everything.
