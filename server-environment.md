@@ -29,7 +29,22 @@ WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility 
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
-_IMPORTANT: WordPress 6.4 is **beta compatible** with PHP 8.3._
+_IMPORTANT: WordPress 6.4 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
+
+_What "compatible with exceptions" means?_
+
+- PHP 8.0
+	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
+	- [Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails](https://core.trac.wordpress.org/ticket/48689).
+
+- PHP 8.1
+	- Not all "passing null to non-nullable" issues have been found.
+	- [htmlentities() et al needs the default value of the flags parameter explicitly set](https://core.trac.wordpress.org/ticket/53465).
+	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
+
+- PHP 8.2
+	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
+	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
 
 _What "beta" means?_
 
@@ -41,7 +56,7 @@ _What "beta" means?_
 * [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 * [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
-_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and 8.1, and **beta compatible** with PHP 8.2._
+_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and PHP 8.1, and **beta compatible** with PHP 8.2._
 
 _What "compatible with exceptions" means?_
 
