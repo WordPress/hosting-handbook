@@ -12,12 +12,10 @@ More Information about [Team Reps: the Title, Responsibilities...](https://make.
 
 ### Hosting Team Reps
 
-The Hosting Team (2023) is represented by:
+The Hosting Team (2024) is represented by:
 
-- [@amykamala](https://profiles.wordpress.org/amykamala/)
 - [@crixu](https://profiles.wordpress.org/crixu/)
 - [@javiercasares](https://profiles.wordpress.org/javiercasares/)
-- [@jessibelle](https://profiles.wordpress.org/jessibelle/)
 
 ### Hosting Project Leads
 
