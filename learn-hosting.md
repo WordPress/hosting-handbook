@@ -8,7 +8,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 
 #### PHP
 
-- [Testing your plugins for PHP version compatibility](https://learn.wordpress.org/tutorial/testing-your-plugins-for-php-version-compatibility/) _(English)_
+- [Testing your plugins for PHP version compatibility](https://learn.wordpress.org/tutorial/testing-your-products-for-php-version-compatibility/) _(English)_
 
 #### Performance
 
@@ -55,7 +55,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 - [From Fresh Grad to Professional: A Guide to Choosing Between Freelance and Employment in IT](https://wordpress.tv/2023/07/27/from-fresh-grad-to-professional-a-guide-to-choosing-between-freelance-and-employment-in-it/) _(English)_
 - [Improving website performance with caching](https://wordpress.tv/2023/07/26/improving-website-performance-with-caching/) _(English)_
 - [WordPress database optimization and maintenance](https://wordpress.tv/2023/07/26/micah-wood-wordpress-database-optimization-and-maintenance/) _(English)_
-- [Testing plugins for PHP version compatibility](https://wordpress.tv/2023/08/11/testing-plugins-for-php-version-compatibility/) _(English)_
+- [Testing plugins for PHP version compatibility](https://wordpress.tv/2023/11/30/testing-your-products-for-php-version-compatibility/) _(English)_
 - [Installing Node.js and npm for local WordPress development](https://wordpress.tv/2023/07/22/installing-node-js-and-npm-for-local-wordpress-development/) _(English)_
 - [The WordPress Database](https://wordpress.tv/2023/06/23/the-wordpress-database/) _(English)_
 - [Debugging in WordPress](https://wordpress.tv/2023/07/07/jonathan-bossenger-debugging-in-wordpress-tutorial/) _(English)_
