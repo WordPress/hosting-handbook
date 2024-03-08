@@ -54,9 +54,9 @@ A Team Rep, specifically from the Hosting team, acts as the voice and ambassador
 
 #### The Team Rep Voting Procedure
 
-In order to maintain transparent and democratic governance within the Hosting Team, a structured voting process for selecting Team Representatives is in place. The current running Hostin Team Reps are responsible for this process. This process unfolds annually and consists of distinct phases: the nomination period and the voting window.
+In order to maintain transparent and democratic governance within the Hosting Team, a structured voting process for selecting Team Representatives is in place. The current running Hosting Team Reps are responsible for this process. This process unfolds annually and consists of distinct phases: the nomination period and the voting window.
 
-- **Nomitation Phase:** The nomination period typically takes place in December of each year. During this phase, any active member of the Hosting Team can either nominate themselves or recommend a colleague for the Team Rep position. The Hosting Team will publish a "Call for Nominees" on make.wordpress.org/hosting, where everyone can comment with their nominations. If preferred, nominations can also be sent anonymously to a trusted Team Rep via Direct Messages on Slack.
+- **Nomination Phase:** The nomination period typically takes place in December of each year. During this phase, any active member of the Hosting Team can either nominate themselves or recommend a colleague for the Team Rep position. The Hosting Team will publish a "Call for Nominees" on make.wordpress.org/hosting, where everyone can comment with their nominations. If preferred, nominations can also be sent anonymously to a trusted Team Rep via Direct Messages on Slack.
 
 - **Voting:** Following the conclusion of the nomination period, a two-week voting window is opened. All active Hosting Team members are encouraged to cast their vote for their preferred candidates within this timeframe. The hosting team will create a survey to collect those votes anonymized and will publish the results afterwards on make.wordpress.org/hosting. 
 
