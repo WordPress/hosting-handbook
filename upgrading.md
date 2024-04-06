@@ -197,10 +197,10 @@ _If you don't have PHP 7.4 configured yet, do it. Chances are that everything wi
 
 Upgrade everything normally. Everything should work fine.
 
-## WordPress 6.3 - 6.4
+## WordPress 6.3 - 6.5
 
 Goals
-- WordPress: upgrade to WordPress 6.4
+- WordPress: upgrade to WordPress 6.5
 - PHP: upgrade to PHP 8.1
 - SQL: maintain or upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
 
@@ -217,6 +217,7 @@ Upgrade everything normally. Everything should work fine.
 
 ## Changelog
 
+- 2024-04-05: Updated to WordPress 6.5
 - 2023-10-04: Updated to WordPress 6.4
 - 2023-09-08: Updated to WordPress 6.3
 - 2023-04-07: Updated to WordPress 6.2, and fixes
