@@ -107,7 +107,7 @@ If you've contributed and don't yet have a badge, apologies! [Visit the Hosting 
 
 ## Changelog
 
-- 2023-11-11: Update the Badges sectin.
+- 2023-11-11: Update the Badges section.
 - 2023-02-17: Up-to-date. More related teams.
 - 2022-06-08: WordCamp Europe 2022 Contributor Day link.
 - 2022-06-02: Adding Github process.
