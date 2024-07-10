@@ -2,6 +2,19 @@
 
 Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively when considering that most WordPress websites use third party plugins and themes which commonly introduce additional server-level requirements.
 
+## WordPress Environment recommendations
+
+Quick recommendations:
+
+- [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/?p=106266)
+- [WordPress 6.5 PHP Compatibility](https://make.wordpress.org/hosting/2024/04/05/wordpress-6-5-php-compatibility/)
+- [WordPress 6.4 PHP Compatibility](https://make.wordpress.org/hosting/2023/11/16/wordpress-6-4-php-compatibility/)
+- [WordPress 6.3 PHP Compatibility](https://make.wordpress.org/hosting/2023/10/11/wordpress-6-3-php-compatibility/)
+
+All thge post published are available at:
+
+- [Release Compatibility](https://make.wordpress.org/hosting/category/release-compatibility/)
+
 ## Web Server
 
 The web server is piece of software that accepts user web requests and serves them the appropriate result. There are many different web servers that run on different operation systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
@@ -9,15 +22,15 @@ The web server is piece of software that accepts user web requests and serves th
 The two most popular ones that are recommended are:
 
 - [Apache HTTPD](https://httpd.apache.org/) 2.4
-- [nginx](https://nginx.org/) 1.24
+- [nginx](https://nginx.org/) 1.26
 
 Others are used by hosting companies and developers and are known to work well too:
 
-- [Angie](https://angie.software/en/) 1.5
+- [Angie](https://angie.software/en/) 1.6
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.2 / 6.1 / 6.0 / 5.4
-- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 / 1.7
+- [OpenLiteSpeed](https://openlitespeed.org/) 1.7
 
-_Those are the latest versions at the time of writing this document. Always keep your web server up-to-date to ensure best performance!_
+_Those are the latest versions at the time of writing this document, for WordPress 6.6. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
@@ -25,13 +38,42 @@ PHP is a programming language on which WordPress code is based. This language ru
 
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
 
-**WordPress 6.5**
+### WordPress versions
+
+#### WordPress 6.6
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
 
-_IMPORTANT: WordPress 6.4 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
+_IMPORTANT: WordPress 6.6 is **compatible with exceptions** with PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
+
+_What "compatible with exceptions" means?_
+
+- PHP 8.1
+  - _Not all "passing null to non-nullable" issues have been found._ In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
+  - [`_htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to[ htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_Replace most `strip_tags()` with `wp_strip_tags()`_](https://core.trac.wordpress.org/ticket/57579).
+There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
+  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. NOTE: Has a patch, but moved to WordPress 6.7.
+
+- PHP 8.2
+  - [_`utf8_{encode|decode}` deprecation_](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_Unknown dynamic properties'_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
+
+_What "beta" means?_
+
+- PHP 8.3
+  - _Deprecation notices_. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - [_Improve error handling for `unserialize()`_](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. NOTE: Moved to WordPress 6.7.
+
+#### WordPress 6.5
+
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
+
+_IMPORTANT: WordPress 6.5 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
 
 _What "compatible with exceptions" means?_
 
@@ -53,7 +95,7 @@ _What "beta" means?_
 - PHP 8.3
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
-**WordPress 6.4**
+#### WordPress 6.4
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
@@ -80,7 +122,7 @@ _What "beta" means?_
 - PHP 8.3
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
-**WordPress 6.3**
+#### WordPress 6.3
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
@@ -103,7 +145,7 @@ _What "beta" means?_
 - PHP 8.2
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
-**WordPress 6.2**
+#### WordPress 6.2
 
 - [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
 - [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
@@ -111,15 +153,6 @@ _What "beta" means?_
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
 _IMPORTANT: WordPress 6.2 is **beta compatible** with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
-
-**WordPress 6.1**
-
-- [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
-- [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)*
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)*
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)*
-
-_IMPORTANT: WordPress 6.1 is **beta compatible** with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
 
 ### About PHP
 
@@ -129,9 +162,9 @@ Versions prior to PHP 8.1 are not maintained by the PHP Community, although they
 
 End of life PHP versions:
 
-- PHP 8.3: 2026-11-23
-- PHP 8.2: 2025-10-08
-- PHP 8.1: 2024-11-25
+- PHP 8.3: 2027-12-31
+- PHP 8.2: 2026-12-31
+- PHP 8.1: 2025-12-31
 - PHP 8.0: 2023-11-26 _last release: 8.0.30_
 - PHP 7.4: 2022-11-28 _last release: 7.4.33_
 - PHP 7.3: 2021-12-06 _last release: 7.3.33_
@@ -183,6 +216,11 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 - [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts. 
 - [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
+
+The PHP extensions listed below are _optional_ to imrpove some WordPress functionality.
+
+- [timezonedb](https://pecl.php.net/package/timezonedb) - Timezone Database to be used with PHP's date and time functions
+
 For the sake of completeness, below is a list of the remaining PHP modules WordPress _may_ use in certain situations or if other modules are unavailable. These are fallbacks or optional and not necessarily needed in an optimal environment, but installing them won't hurt.
 
 - [bc](https://www.php.net/manual/en/book.bc.php) - For arbitrary precision mathematics, which supports numbers of any size and precision up to 2147483647 decimal digits.
@@ -209,6 +247,8 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 - [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0)- Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 - [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
 - [OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
+- [WebP](https://developers.google.com/speed/webp/)
+- [AVIF](https://aomediacodec.github.io/av1-avif/)
 
 ## Database
 
@@ -216,49 +256,51 @@ For data storage, WordPress uses systems compatible with MySQL.
 
 Officially recommended by WordPress are:
 
-- [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 LTS
+- [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 LTS, 8.4 LTS
 - [MariaDB](https://mariadb.org/) 10.11 LTS
 
 End of life MySQL versions:
 
+- MySQL 8.4: 2032-04-30
 - MySQL 8.3: n/d
 - MySQL 8.2: n/d
-- MySQL 8.1: 2023-10-25
+- MySQL 8.1: 2023-10-25 _last release: 8.1.0_
 - MySQL 8.0: 2026-04-30
-- MySQL 5.7: 2023-10-31
-- MySQL 5.6: 2021-02-28
-- MySQL 5.5: 2018-12-31
+- MySQL 5.7: 2023-10-31 _last release: 5.7.44_
+- MySQL 5.6: 2021-02-28 _last release: 5.6.51_
+- MySQL 5.5: 2018-12-31 _last release: 5.5.63_
 
 End of life mariaDB versions:
 
-- MariaDB 11.3: 2025-02-16
-- MariaDB 11.2: 2024-11-21
+- MariaDB 11.4: 2029-05-29
+- MariaDB 11.3: 2024-05-29 _last release: 11.3.2_
+- MariaDB 11.2: 2024-11-21 _last release: 11.2.4_
 - MariaDB 11.1: 2024-08-21
-- MariaDB 11.0: 2024-06-07
+- MariaDB 11.0: 2024-06-07 _last release: 11.0.6_
 - MariaDB 10.11: 2028-02-16
-- MariaDB 10.10: 2023-11-17
-- MariaDB 10.9: 2023-08-22
-- MariaDB 10.8: 2023-05-20
-- MariaDB 10.7: 2023-02-09
+- MariaDB 10.10: 2023-11-17 _last release: 10.10.7_
+- MariaDB 10.9: 2023-08-22 _last release: 10.9.8_
+- MariaDB 10.8: 2023-05-20 _last release: 10.8.8_
+- MariaDB 10.7: 2023-02-09 _last release: 10.7.8_
 - MariaDB 10.6: 2026-07-06
 - MariaDB 10.5: 2025-06-24
-- MariaDB 10.4: 2024-06-18
-- MariaDB 10.3: 2023-05-25
-- MariaDB 10.2: 2022-05-22
-- MariaDB 10.1: 2020-10-17
-- MariaDB 10.0: 2019-03-31
-- MariaDB 5.5: 2020-04-11
+- MariaDB 10.4: 2024-06-18 _last release: 10.4.34_
+- MariaDB 10.3: 2023-05-25 _last release: 10.3.39_
+- MariaDB 10.2: 2022-05-22 _last release: 10.2.44_
+- MariaDB 10.1: 2020-10-17 _last release: 10.1.48_
+- MariaDB 10.0: 2019-03-31 _last release: 10.0.38_
+- MariaDB 5.5: 2020-04-11 _last release: 5.5.68_
 
 Other MySQL servers that are known to perform well are:
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0
+- [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0, 8.3
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.11
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0
 - [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
 - [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql) 8.0
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
@@ -273,6 +315,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2024-07-04: Up-to-date for WordPress 6.6 compatibility.
 - 2024-04-06: Up-to-date for WordPress 6.5 compatibility.
 - 2023-11-11: Up-to-date. Added some EOL for databases and PHP. WordPress 6.4 compatibility. Added more information about system packages.
 - 2023-10-04: Up-to-date. Added some EOL for databases and PHP. Explanation about BETA and EXCEPTIONS for WordPress 6.3.
