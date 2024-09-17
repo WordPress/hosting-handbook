@@ -11,7 +11,7 @@ Quick recommendations:
 - [WordPress 6.4 PHP Compatibility](https://make.wordpress.org/hosting/2023/11/16/wordpress-6-4-php-compatibility/)
 - [WordPress 6.3 PHP Compatibility](https://make.wordpress.org/hosting/2023/10/11/wordpress-6-3-php-compatibility/)
 
-All thge post published are available at:
+All the post published are available at:
 
 - [Release Compatibility](https://make.wordpress.org/hosting/category/release-compatibility/)
 
@@ -195,7 +195,7 @@ The PHP extensions listed below are _required_ for a WordPress site to work.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
-- [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0) - Performs remote request operations.
+- [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0 ; PHP >= 8.4 requires libcurl >= 7.61.0) - Performs remote request operations.
 - [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled in PHP) - Used to detect mimetype of file uploads.
@@ -204,7 +204,7 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
 - [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
-- [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0) - SSL-based connections to other hosts.
+- [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0; PHP >= 8.4 requires OpenSSL >= 1.1.1 / < 4.0) - SSL-based connections to other hosts.
 - [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0 recommended PCRE 8.10) - Increases performance of pattern matching in code searches.
 - [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 - [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
@@ -315,6 +315,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2024-09-17: Added minimum version of curl and openssl for PHP 8.4 extension.
 - 2024-07-04: Up-to-date for WordPress 6.6 compatibility.
 - 2024-04-06: Up-to-date for WordPress 6.5 compatibility.
 - 2023-11-11: Up-to-date. Added some EOL for databases and PHP. WordPress 6.4 compatibility. Added more information about system packages.
