@@ -57,9 +57,6 @@ Testing and staging environments are nice and great to have around - if your cus
 
 There are many ways a hosting company can improve its environmental impact.  Charities and companies like [https://onetreeplanted.org](https://onetreeplanted.org/) and [https://theoceancleanup.com](https://theoceancleanup.com/) provide a great way to help compensate for impacts, considering that the first priority should be to avoid and reduce them.
 
-\
-
-
 
 ## Educate Your Customers
 
