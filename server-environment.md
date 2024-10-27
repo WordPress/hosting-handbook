@@ -6,7 +6,7 @@ Although WordPress can work in almost any environment, even very minimal ones, i
 
 Quick recommendations:
 
-- [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/?p=106266)
+- [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/2024/07/10/wordpress-6-6-server-compatibility/)
 - [WordPress 6.5 PHP Compatibility](https://make.wordpress.org/hosting/2024/04/05/wordpress-6-5-php-compatibility/)
 - [WordPress 6.4 PHP Compatibility](https://make.wordpress.org/hosting/2023/11/16/wordpress-6-4-php-compatibility/)
 - [WordPress 6.3 PHP Compatibility](https://make.wordpress.org/hosting/2023/10/11/wordpress-6-3-php-compatibility/)
@@ -26,9 +26,9 @@ The two most popular ones that are recommended are:
 
 Others are used by hosting companies and developers and are known to work well too:
 
-- [Angie](https://angie.software/en/) 1.6
-- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.2 / 6.1 / 6.0 / 5.4
-- [OpenLiteSpeed](https://openlitespeed.org/) 1.7
+- [Angie](https://angie.software/en/) 1.7
+- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3 / 6.2 / 6.1 / 6.0 / 5.4
+- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 / 1.7
 
 _Those are the latest versions at the time of writing this document, for WordPress 6.6. Always keep your web server up-to-date to ensure best performance!_
 
@@ -39,6 +39,62 @@ PHP is a programming language on which WordPress code is based. This language ru
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
 
 ### WordPress versions
+
+#### WordPress 6.7
+
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
+
+_IMPORTANT: WordPress 6.7 is **compatible with exceptions** with PHP 8.0, PHP 8.1, PHP 8.2, and **beta compatible** with PHP 8.3, and PHP 8.4._
+
+_What "compatible with exceptions" mean?_
+
+- PHP 8.0
+  - [**#48689**: Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails.](https://core.trac.wordpress.org/ticket/48689) An investigation is underway as to why on some occasions the access to the files returns some type of error. _NOTE: Has a patch._
+  - [**#49728**: Prepare for the internal functions throwing TypeError or ValueError exceptions on unexpected types/values.](https://core.trac.wordpress.org/ticket/49728) Internal functions will throw an exception if the function call arguments are of a type that is not expected. _NOTE: Has a patch._
+  - [**#51019**: convert_smilies() fails on large tags.](https://core.trac.wordpress.org/ticket/51019) The function fails when dealing with large HTML tags, particularly when an image with a large data URL is included in the post content. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [**#55121**: classic widgets with no settings won't show up in 5.9.](https://core.trac.wordpress.org/ticket/55121) Classic widgets with no settings do not appear correctly in WordPress 5.9 and above. This is due to changes in how widgets are handled in the block editor, causing compatibility problems with older widget setups. _NOTE: Has a patch, but moved to WordPress 6.3._
+  - [**#55257**: map_deep() function incompatibility with incomplete objects in PHP 8.0+.](https://core.trac.wordpress.org/ticket/55257) The function becomes incompatible with incomplete objects when running on PHP 8.0 or higher. _NOTE: Has a patch, but moved to Future Release._
+  - [**#59649**: Named parameters. WordPress does not support named parameters.](https://core.trac.wordpress.org/ticket/59649) PHP 8.0 supports optionally calling functions and class methods by specifying the parameter name, instead of calling them on the order of parameters that they are declared. PHP, and many other programming languages, support positional parameters: The caller passes the parameters in the same order the function/method declares its parameters. _NOTE: Moved to WordPress 6.8._
+  - [**#60745**: WP_Query::parse_query() does not handle invalid query arg values.](https://core.trac.wordpress.org/ticket/60745) The function does not properly handle invalid query argument values. This results in PHP fatal errors when unintended data types, like arrays, are passed where scalars are expected. _NOTE: Has a patch, but moved to WordPress 6.8._
+
+- PHP 8.1
+  - Not all "passing null to non-nullable" issues have been found. In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
+  - [**#53465**: htmlentities() needs the default value of the flags parameter explicitly set.](https://core.trac.wordpress.org/ticket/53465) According to [htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from `ENT_COMPAT` to `ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401`". All use cases for this functionality in Core are being investigated. _NOTE: Has a patch._
+  - [**#57579**: Replace most strip_tags() with wp_strip_tags().](https://core.trac.wordpress.org/ticket/57579) Proposes optimizing how block templates are handled by minimizing unnecessary filesystem calls during their loading process. _NOTE: Has a patch, but moved to Future Release._
+  - [**#57580**: Avoid errors from null parameters in add_submenu_page().](https://core.trac.wordpress.org/ticket/57580) A deprecated error caused by the `wp_normalize_path()` function when null is passed as an argument. This issue occurs primarily due to plugins incorrectly passing null in the `add_submenu_page()` function. _NOTE: Has a patch, but moved to Future Release._
+  - [**#61179**: Deprecated messages about passing null in widgets.php](https://core.trac.wordpress.org/ticket/61179) Addresses a deprecated message issue in `widgets.php`. _NOTE: Has a patch, but moved to WordPress 6.7._
+
+- PHP 8.2
+  - [**#55603**: utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [**#56034**: Unknown dynamic properties'](https://core.trac.wordpress.org/ticket/56034) deprecation. _NOTE: Moved to Future Release._
+  - [**#57304**: Add SensitiveParameter attribute to DB connection and login variables.](https://core.trac.wordpress.org/ticket/57304) This enhancement aims to protect sensitive data in case of errors, making it less likely to be exposed in logs or bug reports. _NOTE: Moved to WordPress 6.7._
+  - [**#60875**: Handler proposal for known dynamic properties that are initialized and set late only when getting its value.](https://core.trac.wordpress.org/ticket/60875) Handling dynamic properties that are initialized only when accessed. Since PHP 8.2 deprecates dynamic (non-declared) properties, the proposal aims to pre-declare these properties while retaining the current design where they are lazily initialized. _NOTE: Moved to WordPress 6.8._
+  - [**#61154**: Fix the 'attributes' dynamic property in WP_Block.](https://core.trac.wordpress.org/ticket/61154) Fixing the 'attributes' dynamic property in the `WP_Block` class. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [**#61890**: Handle WP_Term dynamic properties for PHP 8.2](https://core.trac.wordpress.org/ticket/61890). Handling of dynamic properties in the `WP_Term` class to ensure compatibility. _NOTE: Has a patch, but moved to WordPress 6.8._
+
+_What "beta" mean?_
+
+- PHP 8.3
+  - Deprecation notices. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - [**#59231**: Prepare for PHP 8.3.](https://core.trac.wordpress.org/ticket/59231). _NOTE: Has a patch, but moved to WordPress 6.7._
+  - [**#59232**: Introduce #[Override] attribute to mark overloaded methods](https://core.trac.wordpress.org/ticket/59232) This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [**#59233**: Improve error handling for unserialize()](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
+  - [**#59654**: PHP 8.x: various compatibility fixes for WordPress 6.7](https://core.trac.wordpress.org/ticket/59654). This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
+
+- PHP 8.4
+  - Deprecation notices. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - [**#62061**: Prepare for PHP 8.4.](https://core.trac.wordpress.org/ticket/62061). _NOTE: Has a patch._
+
+_Other related tickets_
+
+- PHP
+  - [**#51525**: Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type().](https://core.trac.wordpress.org/ticket/51525)
+  - [**#54183**: Tests: decide on how to handle deprecations in PHPUnit](https://core.trac.wordpress.org/ticket/54183)
+  - [**#54537**: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved.](https://core.trac.wordpress.org/ticket/54537)
+  - [**#58874**: Code Modernization: Consider using the null coalescing operator.](https://core.trac.wordpress.org/ticket/58874)
+  - [**#59234**: Introduce a `wp_json_decode()` function, including validation when available](https://core.trac.wordpress.org/ticket/59234)
 
 #### WordPress 6.6
 
@@ -145,15 +201,6 @@ _What "beta" means?_
 - PHP 8.2
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
-#### WordPress 6.2
-
-- [PHP 7.4](https://www.php.net/ChangeLog-7.php#PHP_7_4)
-- [PHP 8.0](https://www.php.net/ChangeLog-8.php#PHP_8_0)
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
-
-_IMPORTANT: WordPress 6.2 is **beta compatible** with [PHP 8.0](https://make.wordpress.org/core/2020/11/23/wordpress-and-php-8-0/), [PHP 8.1](https://make.wordpress.org/core/2022/01/10/wordpress-5-9-and-php-8-0-8-1/) and PHP 8.2. If used some of these versions may get some Warnings._
-
 ### About PHP
 
 PHP 8.1 is maintained by the PHP Community only as _Security fix only_ starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
@@ -257,10 +304,12 @@ For data storage, WordPress uses systems compatible with MySQL.
 Officially recommended by WordPress are:
 
 - [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 LTS, 8.4 LTS
-- [MariaDB](https://mariadb.org/) 10.11 LTS
+- [MariaDB](https://mariadb.org/) 10.6 LTS, 10.11 LTS, 11.4 LTS
 
 End of life MySQL versions:
 
+- MySQL 9.1: n/d
+- MySQL 9.0: 2024-10-15
 - MySQL 8.4: 2032-04-30
 - MySQL 8.3: n/d
 - MySQL 8.2: n/d
@@ -272,10 +321,11 @@ End of life MySQL versions:
 
 End of life mariaDB versions:
 
+- MariaDB 11.5: n/d
 - MariaDB 11.4: 2029-05-29
 - MariaDB 11.3: 2024-05-29 _last release: 11.3.2_
 - MariaDB 11.2: 2024-11-21 _last release: 11.2.4_
-- MariaDB 11.1: 2024-08-21
+- MariaDB 11.1: 2024-08-21 _last release: 11.1.6_
 - MariaDB 11.0: 2024-06-07 _last release: 11.0.6_
 - MariaDB 10.11: 2028-02-16
 - MariaDB 10.10: 2023-11-17 _last release: 10.10.7_
@@ -293,7 +343,7 @@ End of life mariaDB versions:
 
 Other MySQL servers that are known to perform well are:
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database) 8.0, 8.3
+- [Percona MySQL Server](https://www.percona.com/software/mysql-database)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.11
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0
