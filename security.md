@@ -158,7 +158,7 @@ Memcached is a memory object caching solution commonly used to provide database 
 
 ### WordPress Automatic Updates
 
-WordPress has the ability to automatically apply security updates. This should be enabled in almost all cases. The exception is if files are not writeable, outside of `wp-content/uploads`, for security reasons. In this instance, an alternative, expedient, and, preferably, automatic update process should be made available. See [Configuring Automatic Background Updates  
+WordPress has the ability to automatically apply security updates. This should be enabled in almost all cases. The exception is if files are not writable, outside of `wp-content/uploads`, for security reasons. In this instance, an alternative, expedient, and, preferably, automatic update process should be made available. See [Configuring Automatic Background Updates  
 ](https://codex.wordpress.org/Configuring_Automatic_Background_Updates)for details on automatic update configuration.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
