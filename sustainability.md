@@ -20,7 +20,7 @@ Data centers with green certifications (e.g., LEED, ISO 50001) are optimized for
 
 ## Regional Data Centers 
 
-Where possible, offer region-specific hosting options to minimize data transfer. Educate customers to understand the benefits of local data centers. Add a CDN to accommodate international traffic in an efficient manner.  
+Where possible, offer region-specific hosting options to minimize data transfer. Educate customers to understand the benefits of local data centers. Add a CDN to accommodate international traffic in an efficient manner.
 
 
 ## Employee and Office Sustainability 
@@ -55,7 +55,7 @@ Testing and staging environments are nice and great to have around - if your cus
 
 ## Reinvestment in Carbon and Environmental Projects
 
-There are many ways a hosting company can improve its environmental impact.  Charities and companies like [https://onetreeplanted.org](https://onetreeplanted.org/) and [https://theoceancleanup.com](https://theoceancleanup.com/) provide a great way to help compensate for impacts, considering that the first priority should be to avoid and reduce them.
+There are many ways a hosting company can improve its environmental impact. Charities and companies like [https://onetreeplanted.org](https://onetreeplanted.org/) and [https://theoceancleanup.com](https://theoceancleanup.com/) provide a great way to help compensate for impacts, considering that the first priority should be to avoid and reduce them.
 
 
 ## Educate Your Customers
