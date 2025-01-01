@@ -12,10 +12,10 @@ More Information about [Team Reps: the Title, Responsibilities...](https://make.
 
 ### Hosting Team Reps
 
-The Hosting Team (2024) is represented by:
+The Hosting Team (2025) is represented by:
 
 - [@crixu](https://profiles.wordpress.org/crixu/)
-- [@javiercasares](https://profiles.wordpress.org/javiercasares/)
+- [@zunaid321](https://profiles.wordpress.org/zunaid321/)
 
 ### Hosting Project Leads
 
@@ -130,5 +130,6 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 
 ## Changelog
 
+- Updated team reps for 2025
 - 2023-09-09: Slack recommendations, added project leads.
 - 2023-09-07: New page.
