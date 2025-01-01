@@ -130,6 +130,6 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 
 ## Changelog
 
-- Updated team reps for 2025
+- 2025-01-01: Updated team reps for 2025
 - 2023-09-09: Slack recommendations, added project leads.
 - 2023-09-07: New page.
