@@ -61,6 +61,7 @@ WordPress 2.0+ | 4.2+ | 3.23.23+ |
 
 ## Changelog
 
+- 2024-04-15: Updated to WordPress 6.8
 - 2024-10-27: Updated to WordPress 6.7
 - 2024-07-04: Updated to WordPress 6.6
 - 2024-04-05: Updated to WordPress 6.5
