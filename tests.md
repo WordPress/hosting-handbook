@@ -249,7 +249,7 @@ The first thing to do is [create a user on WordPress.org](https://login.wordpres
 
 Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new?assignees=&labels=test-reporter-request&projects=&template=test_reporter_request.md&title=%5BTest+Reporter%5D+) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
 
-[tip]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is./tip]
+[tip]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is.[/tip]
 
 [info]Someone in the hosting team will review the request and add a user for you, or request additional information. The team will reply as quickly as possible, but as this step is manual, please be patient.[/info]
 
