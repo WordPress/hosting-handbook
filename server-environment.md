@@ -264,7 +264,7 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 - [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
 
-The PHP extensions listed below are _optional_ to imrpove some WordPress functionality.
+The PHP extensions listed below are _optional_ to improve some WordPress functionality.
 
 - [timezonedb](https://pecl.php.net/package/timezonedb) - Timezone Database to be used with PHP's date and time functions
 
