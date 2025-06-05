@@ -197,11 +197,11 @@ _If you don't have PHP 7.4 configured yet, do it. Chances are that everything wi
 
 Upgrade everything normally. Everything should work fine.
 
-## WordPress 6.3 - 6.7
+##### WordPress 6.3 - 6.8
 
 Goals
-- WordPress: upgrade to WordPress 6.7
-- PHP: upgrade to PHP 8.1
+- WordPress: upgrade to WordPress 6.8
+- PHP: upgrade to at least PHP 8.1 (WordPress 6.6+ supports PHP 8.2)
 - SQL: maintain or upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
 
 Losses:
@@ -213,12 +213,13 @@ _If you don't have PHP 8.1 configured yet, do it. Chances are that everything wi
 
 When WordPress 6.3 was released, support for PHP 5.6 dropped and PHP 7.0 was stablished as the minimum PHP version. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
 
-When WordPress 6.6 was released, support for PHP 7.0 and 7.1 dropped and PHP 7.2.25 was stablished as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable.
+When WordPress 6.6 was released, support for PHP 7.0 and 7.1 dropped and PHP 7.2.25 was stablished as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable. WordPress 6.6 also supports PHP 8.2 so you can try switching to PHP 8.2 when upgraded WordPress. 
 
 Upgrade everything normally. Everything should work fine.
 
 ## Changelog
 
+- 2025-06-05: Updated to WordPress 6.8, and added mentions for PHP 8.2
 - 2024-10-27: Updated to WordPress 6.7
 - 2024-07-04: Updated to WordPress 6.6
 - 2024-04-05: Updated to WordPress 6.5
