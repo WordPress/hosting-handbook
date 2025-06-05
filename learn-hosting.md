@@ -69,7 +69,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 - [Passkeys -The Future of Authentication](https://wordpress.tv/2023/05/22/passkeys-the-future-of-authentication/) _(English)_
 - [WordPress Data Privacy](https://wordpress.tv/2023/05/22/mujeebu-rahman-wordpress-data-privacy/) _(English)_
 - [Safeguarding Your Website – Smart WordPress Security](https://wordpress.tv/2023/05/22/maestro-stevens-safeguarding-your-website-smart-wordpress-security/) _(English)_
-- [Testing plugins for PHP 8](https://wordpress.tv/2023/05/19/testing-plugins-for-php-8/) _(English)_
+- [Testing your products for PHP version compatibility](https://wordpress.tv/2023/11/30/testing-your-products-for-php-version-compatibility/) _(English)_
 - [Entén i millora la velocitat del teu web WordPress](https://wordpress.tv/2023/05/09/enten-i-millora-la-velocitat-del-teu-web-wordpress/) _(Catalan)_
 - [Caballo de troya: vulnerabilidades en WordPress](https://wordpress.tv/2023/05/09/caballo-de-troya-vulnerabilidades-en-wordpress/) _(Spanish)_
 - [Administra WordPress des de la línia d’ordres (CLI)](https://wordpress.tv/2023/05/09/administra-wordpress-des-de-la-linia-dordres-cli/) _(Catalan)_
