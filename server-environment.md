@@ -299,58 +299,122 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ## Database
 
-For data storage, WordPress uses systems compatible with MySQL.
+For data storage, WordPress uses systems compatible with MySQL. 
 
-Officially recommended by WordPress are:
+### Officially recommended versions
 
-- [MySQL](https://dev.mysql.com/downloads/mysql/) 8.0 LTS, 8.4 LTS
-- [MariaDB](https://mariadb.org/) 10.6 LTS, 10.11 LTS, 11.4 LTS
+Below are the officially recommended Long Term Support versions of [MySQL](https://dev.mysql.com/downloads/mysql/) and [MariaDB](https://mariadb.org/).
 
-End of life MySQL versions:
+| Software  | Version    | EOL Date          |
+|-----------|------------|-------------------|
+| MySQL     | 8.4 LTS    | April 2032        |
+| MySQL     | 8.0 LTS    | April 2026        |
+| MariaDB   | 11.8 LTS   | June 2030         |
+| MariaDB   | 11.4 LTS   | May 29, 2029      |
+| MariaDB   | 10.11 LTS  | February 16, 2028 |
+| MariaDB   | 10.6 LTS   | July 6, 2026      |
 
-- MySQL 9.1: n/d
-- MySQL 9.0: 2024-10-15
-- MySQL 8.4: 2032-04-30
-- MySQL 8.3: n/d
-- MySQL 8.2: n/d
-- MySQL 8.1: 2023-10-25 _last release: 8.1.0_
-- MySQL 8.0: 2026-04-30
-- MySQL 5.7: 2023-10-31 _last release: 5.7.44_
-- MySQL 5.6: 2021-02-28 _last release: 5.6.51_
-- MySQL 5.5: 2018-12-31 _last release: 5.5.63_
+### End of life MySQL versions
 
-End of life mariaDB versions:
+The following versions of MySQL have reached their end of life (EOL) and are no longer supported by the MySQL community. **It is highly recommended to upgrade to a supported version for security and performance reasons.**
 
-- MariaDB 11.5: n/d
-- MariaDB 11.4: 2029-05-29
-- MariaDB 11.3: 2024-05-29 _last release: 11.3.2_
-- MariaDB 11.2: 2024-11-21 _last release: 11.2.4_
-- MariaDB 11.1: 2024-08-21 _last release: 11.1.6_
-- MariaDB 11.0: 2024-06-07 _last release: 11.0.6_
-- MariaDB 10.11: 2028-02-16
-- MariaDB 10.10: 2023-11-17 _last release: 10.10.7_
-- MariaDB 10.9: 2023-08-22 _last release: 10.9.8_
-- MariaDB 10.8: 2023-05-20 _last release: 10.8.8_
-- MariaDB 10.7: 2023-02-09 _last release: 10.7.8_
-- MariaDB 10.6: 2026-07-06
-- MariaDB 10.5: 2025-06-24
-- MariaDB 10.4: 2024-06-18 _last release: 10.4.34_
-- MariaDB 10.3: 2023-05-25 _last release: 10.3.39_
-- MariaDB 10.2: 2022-05-22 _last release: 10.2.44_
-- MariaDB 10.1: 2020-10-17 _last release: 10.1.48_
-- MariaDB 10.0: 2019-03-31 _last release: 10.0.38_
-- MariaDB 5.5: 2020-04-11 _last release: 5.5.68_
+| Version | Initial GA Release | Final Release             | EOL Date          |
+|---------|--------------------|---------------------------|-------------------|
+| 9.2*    | January 21, 2025   | 9.2.0 (January 21, 2025)  | April 15, 2025    |
+| 9.1*    | October 15, 2024   | 9.1.0 (October 15, 2024)  | January 21, 2025  |
+| 9.0*    | July 1, 2024       | 9.0.1 (July 23, 2024)     | October 15, 2024  |
+| 8.3*    | January 16, 2024   | 8.3.0 (January 16, 2024)  | July 1, 2024      |
+| 8.2*    | October 25, 2023   | 8.2.0 (October 25, 2024)  | January 16, 2024  |
+| 8.1*    | July 18, 2023      | 8.1.0 (July 18, 2023)     | October 25, 2023  |
+| 5.7     | October 21, 2015   | 5.7.44 (October 25, 2023) | October 21, 2023  |
+| 5.6     | February 5, 2013   | 5.6.51 (January 20, 2021) | February 5, 2021  |
+| 5.5     | December 3, 2010   | 5.5.62 (October 22, 2018) | December 3, 2018  |
+| 5.1     | November 14, 2008  | 5.1.73 (December 3, 2013) | December 31, 2013 |
+| 5.0     | October 19, 2005   | 5.0.96 (March 21, 2012)   | March 21, 2012    |
 
-Other MySQL servers that are known to perform well are:
+### End of life MariaDB versions
+
+The following versions of MariaDB have reached their end of life (EOL) and are no longer supported by the MariaDB community. **It is highly recommended to upgrade to a supported version for security and performance reasons.**
+
+| Version | Initial GA Release | Final Release               | EOL Date          |
+|---------|--------------------|-----------------------------|-------------------|
+| 11.5    | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
+| 11.3    | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
+| 11.2    | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
+| 11.1    | August 21, 2023    | 11.1.6 (August 14, 2024)    | August 21, 2024   |
+| 11.0    | June 7, 2023       | 11.0.6 (May 17, 2024)       | June 6, 2024      |
+| 10.10   | November 17, 2022  | 10.10.7 (November 14, 2023) | November 17, 2023 |
+| 10.9    | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
+| 10.8    | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
+| 10.7    | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
+| 10.5    | June 24, 2020      | 10.8.8 (May 10, 2023)       | June 24, 2025     |
+| 10.4    | June 16, 2019      | 10.4.34 (May 17, 2024)      | June 18, 2024     |
+| 10.3    | May 25, 2018       | 10.3.39 (May 10, 2023)      | May 25, 2023      |
+| 10.2    | May 23, 2017       | 10.2.44 (May 21, 2022)      | May 23, 2022      |
+| 10.1    | October 17, 2015   | 10.1.48 (November 4, 2020)  | October 17, 2020  |
+| 10.0    | March 31, 2014     | 10.0.38 (January 31, 2019)  | March 31, 2019    |
+| 5.5     | April 11, 2012     | 5.5.68 (May 12, 2020)       | April 11, 2020    |
+| 5.3     | February 29, 2012  | 5.3.12 (January 30, 2013)   | March 1, 2017     |
+| 5.2     | November 10, 2010  | 5.2.14 (January 30, 2013)   | November 10, 2015 |
+| 5.1     | February 1, 2010   | 5.1.67 (January 30, 2013)   | February 1, 2015  |
+
+
+### Innovation Releases
+
+In addition to Long Term Support versions, both MariaDB and MySQL have "innovation releases". These releases have much shorter support periods (typically 2-6 months at most) and are intended for users who need access to the latest features.
+
+Innovation releases are generally production-ready from a quality and stability perspective and safe to use. However, using these releases in production is **not recommended** because:
+- any new features included in innovation releases are subject to change in the future.
+- support (including security fixes) is limited to a short period of time measured in months, not years.
+
+As a way to catch problems with new features that will land in upcoming LTS versions, WordPress Core tests against actively supported innovation releases. However, the project does not recommend these versions for general use.
+
+#### MySQL Innovation Releases
+
+| Version  | Initial GA Release | Final Release            | EOL Date         |
+|----------|--------------------|--------------------------|------------------|
+| **9.3*** | January 21, 2025   |                          | July 2025        |
+| 9.2      | January 21, 2025   | 9.2.0 (January 21, 2025) | April 15, 2025   |
+| 9.1      | October 15, 2024   | 9.1.0 (October 15, 2024) | January 21, 2025 |
+| 9.0      | July 1, 2024       | 9.0.1 (July 23, 2024)    | October 15, 2024 |
+| 8.3      | January 16, 2024   | 8.3.0 (January 16, 2024) | July 1, 2024     |
+| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2024) | January 16, 2024 |
+| 8.1      | July 18, 2023      | 8.1.0 (July 18, 2023)    | October 25, 2023 |
+
+`*` Indicates the current innovation release.
+
+#### MariaDB Innovation/Short-Term Releases
+ 
+The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This will start with the 12.0 release.
+
+Previously MariaDB referred to these releases as "short-term releases".
+
+| Version | Initial GA Release | Final Release            | EOL Date         |
+|---------|--------------------|--------------------------|------------------|
+| 11.5    | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
+| 11.3    | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
+| 11.2*   | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
+| 11.1*   | August 21, 2023    | 11.1.6 (August 14, 2024)    | August 21, 2024   |
+| 11.0*   | June 7, 2023       | 11.0.6 (May 17, 2024)       | June 6, 2024      |
+| 10.10*  | November 17, 2022  | 10.10.7 (November 14, 2023) | November 17, 2023 |
+| 10.9*   | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
+| 10.8*   | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
+| 10.7*   | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
+
+`*` Indicates a short-term release.
+
+### Other MySQL servers
+
+While WordPress does not regularly test against these MySQL servers, they are known to perform well.
 
 - [Percona MySQL Server](https://www.percona.com/software/mysql-database)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
-- [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/) 10.11
-- [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) 8.0
+- [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
+- [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
 - [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
-- [Google Cloud MySQL](https://cloud.google.com/sql/mysql) 8.0
+- [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql) 8.0
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
