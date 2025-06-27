@@ -264,7 +264,7 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 - [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
 
-The PHP extensions listed below are _optional_ to imrpove some WordPress functionality.
+The PHP extensions listed below are _optional_ to improve some WordPress functionality.
 
 - [timezonedb](https://pecl.php.net/package/timezonedb) - Timezone Database to be used with PHP's date and time functions
 
@@ -394,12 +394,12 @@ Previously MariaDB referred to these releases as "short-term releases".
 | 11.5    | Innovation   | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
 | 11.3    | Innovation   | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
 | 11.2    | short-term   | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
-| 11.1    | short-term   | August 21, 2023    | 11.1.6 (August 14, 2024)    | August 21, 2024   |
-| 11.0    | short-term   | June 7, 2023       | 11.0.6 (May 17, 2024)       | June 6, 2024      |
-| 10.10   | short-term   | November 17, 2022  | 10.10.7 (November 14, 2023) | November 17, 2023 |
-| 10.9    | short-term   | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
-| 10.8    | short-term   | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
-| 10.7    | short-term   | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
+| 11.1    | Short-term   | August 21, 2023    | 11.1.6 (August 14, 2024)    | August 21, 2024   |
+| 11.0    | Short-term   | June 7, 2023       | 11.0.6 (May 17, 2024)       | June 6, 2024      |
+| 10.10   | Short-term   | November 17, 2022  | 10.10.7 (November 14, 2023) | November 17, 2023 |
+| 10.9    | Short-term   | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
+| 10.8    | Short-term   | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
+| 10.7    | Short-term   | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
 
 ### Other MySQL servers
 
