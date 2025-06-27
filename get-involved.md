@@ -71,9 +71,16 @@ Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting
 
 If you want to get an idea of what a contributor day with the hosting team might look like, take a look at some work notes from the team from previous contributor days!
 
+* [WordCamp Europe 2025 Contributor Day](https://make.wordpress.org/hosting/2025/06/05/wordcamp-europe-2025-contributor-day/)
+* [WordCamp Asia 2025 Contributor Day](https://make.wordpress.org/hosting/2025/02/25/wordcamp-asia-2025-contributor-day-summary/)
+* [WordCamp Malaysia 2024 Contributor Day](https://make.wordpress.org/hosting/2024/11/22/wordcamp-malaysia-2024-contributor-day-recap/)
+* [WordCamp Europe 2024 Contributor Day](https://make.wordpress.org/hosting/2024/05/01/wordcamp-europe-2024-contributor-day/)
+* [WordCamp Europe 2023 Contributor Day](https://make.wordpress.org/hosting/2023/04/26/wordcamp-europe-2023-contributor-day/)
+* [WordCamp US 2022 Contributor Day](https://make.wordpress.org/hosting/2022/09/11/wordcamp-us-2022-contributor-day-summary/) 
+* [WordCamp Europe 2022 Contributor Day](https://make.wordpress.org/hosting/2022/06/06/wordcamp-europe-2022-contributor-day-summary/)
+* [WordCamp Europe 2020 Contributor Day](https://docs.google.com/document/d/14BuRJRp7bS1dqj2Dezxawg9QMWOWrMmg1XXJPyLKOis/)
 * [WordCamp US 2019 Contributor Day](https://docs.google.com/document/d/1Mb_7ZVslbD4L_cmXqBuiaeOPd8CF7v2D3c3iCN572QY/)
-* [WordCamp EU 2020 Contributor Day](https://docs.google.com/document/d/14BuRJRp7bS1dqj2Dezxawg9QMWOWrMmg1XXJPyLKOis/)
-* [WordCamp EU 2022 Contributor Day](https://make.wordpress.org/hosting/2022/06/06/wordcamp-europe-2022-contributor-day-summary/)
+
 
 ## Related WordPress Teams
 
