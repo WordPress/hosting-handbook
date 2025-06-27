@@ -108,7 +108,7 @@ The following are ways that a volunteer currently can earn a hosting contributor
 * Actively participating in meetings regularly and giving feedback on things discussed.
 * Helping out at a contributor day
 
-If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor and ask for it](https://profiles.wordpress.org/associations/hosting-contributor/). Please feel free to ping any of the Team Reps for further questions.
+If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor page and submit a request](https://profiles.wordpress.org/associations/hosting-contributor/) with details on your contribution. Please feel free to ping any of the Team Reps on Slack with questions.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
