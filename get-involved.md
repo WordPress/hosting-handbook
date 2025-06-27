@@ -71,9 +71,16 @@ Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting
 
 If you want to get an idea of what a contributor day with the hosting team might look like, take a look at some work notes from the team from previous contributor days!
 
+* [WordCamp Europe 2025 Contributor Day](https://make.wordpress.org/hosting/2025/06/05/wordcamp-europe-2025-contributor-day/)
+* [WordCamp Asia 2025 Contributor Day](https://make.wordpress.org/hosting/2025/02/25/wordcamp-asia-2025-contributor-day-summary/)
+* [WordCamp Malaysia 2024 Contributor Day](https://make.wordpress.org/hosting/2024/11/22/wordcamp-malaysia-2024-contributor-day-recap/)
+* [WordCamp Europe 2024 Contributor Day](https://make.wordpress.org/hosting/2024/05/01/wordcamp-europe-2024-contributor-day/)
+* [WordCamp Europe 2023 Contributor Day](https://make.wordpress.org/hosting/2023/04/26/wordcamp-europe-2023-contributor-day/)
+* [WordCamp US 2022 Contributor Day](https://make.wordpress.org/hosting/2022/09/11/wordcamp-us-2022-contributor-day-summary/) 
+* [WordCamp Europe 2022 Contributor Day](https://make.wordpress.org/hosting/2022/06/06/wordcamp-europe-2022-contributor-day-summary/)
+* [WordCamp Europe 2020 Contributor Day](https://docs.google.com/document/d/14BuRJRp7bS1dqj2Dezxawg9QMWOWrMmg1XXJPyLKOis/)
 * [WordCamp US 2019 Contributor Day](https://docs.google.com/document/d/1Mb_7ZVslbD4L_cmXqBuiaeOPd8CF7v2D3c3iCN572QY/)
-* [WordCamp EU 2020 Contributor Day](https://docs.google.com/document/d/14BuRJRp7bS1dqj2Dezxawg9QMWOWrMmg1XXJPyLKOis/)
-* [WordCamp EU 2022 Contributor Day](https://make.wordpress.org/hosting/2022/06/06/wordcamp-europe-2022-contributor-day-summary/)
+
 
 ## Related WordPress Teams
 
@@ -101,7 +108,7 @@ The following are ways that a volunteer currently can earn a hosting contributor
 * Actively participating in meetings regularly and giving feedback on things discussed.
 * Helping out at a contributor day
 
-If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor and ask for it](https://profiles.wordpress.org/associations/hosting-contributor/). Please feel free to ping any of the Team Reps for further questions.
+If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor page and submit a request](https://profiles.wordpress.org/associations/hosting-contributor/) with details on your contribution. Please feel free to ping any of the Team Reps on Slack with questions.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
