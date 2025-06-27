@@ -373,7 +373,7 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 
 | Version  | Initial GA Release | Final Release            | EOL Date         |
 |----------|--------------------|--------------------------|------------------|
-| **9.3*** | January 21, 2025   |                          | July 2025        |
+| **9.3*** | April 15, 2025     |                          | July 2025        |
 | 9.2      | January 21, 2025   | 9.2.0 (January 21, 2025) | April 15, 2025   |
 | 9.1      | October 15, 2024   | 9.1.0 (October 15, 2024) | January 21, 2025 |
 | 9.0      | July 1, 2024       | 9.0.1 (July 23, 2024)    | October 15, 2024 |
