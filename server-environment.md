@@ -1,17 +1,19 @@
 # Server Environment
 
-Although WordPress can work in almost any environment, even very minimal ones, it must be acknowledged that it does not work completely well in these. That's why here we are going to make some minimum recommendations of the environment in which it would work most effectively when considering that most WordPress websites use third party plugins and themes which commonly introduce additional server-level requirements.
+Although WordPress can work in almost any environment, some environments are more optimal for functionality and performance while others are less so. Below are a few minimum recommendations for server environment configurations within which WordPress operates most efficiently, with consideration for WordPress websites that use third party plugins and themes which commonly introduce additional server-level requirements.
 
 ## WordPress Environment recommendations
 
 Quick recommendations:
 
+- [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
+- [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
 - [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/2024/07/10/wordpress-6-6-server-compatibility/)
 - [WordPress 6.5 PHP Compatibility](https://make.wordpress.org/hosting/2024/04/05/wordpress-6-5-php-compatibility/)
 - [WordPress 6.4 PHP Compatibility](https://make.wordpress.org/hosting/2023/11/16/wordpress-6-4-php-compatibility/)
 - [WordPress 6.3 PHP Compatibility](https://make.wordpress.org/hosting/2023/10/11/wordpress-6-3-php-compatibility/)
 
-All the post published are available at:
+All published posts on compatibility are available at:
 
 - [Release Compatibility](https://make.wordpress.org/hosting/category/release-compatibility/)
 
