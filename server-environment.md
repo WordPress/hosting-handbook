@@ -83,7 +83,7 @@ _What does “beta compatible” or "beta support" mean?_
 
 _IMPORTANT: WordPress 6.7 is **compatible with exceptions** with PHP 8.0, PHP 8.1, PHP 8.2, and **beta compatible** with PHP 8.3, and PHP 8.4._
 
-_What "compatible with exceptions" mean?_
+_What does 'compatible with exceptions' mean?_
 
 - PHP 8.0
   - [**#48689**: Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails.](https://core.trac.wordpress.org/ticket/48689) An investigation is underway as to why on some occasions the access to the files returns some type of error. _NOTE: Has a patch._
@@ -109,7 +109,7 @@ _What "compatible with exceptions" mean?_
   - [**#61154**: Fix the 'attributes' dynamic property in WP_Block.](https://core.trac.wordpress.org/ticket/61154) Fixing the 'attributes' dynamic property in the `WP_Block` class. _NOTE: Has a patch, but moved to WordPress 6.8._
   - [**#61890**: Handle WP_Term dynamic properties for PHP 8.2](https://core.trac.wordpress.org/ticket/61890). Handling of dynamic properties in the `WP_Term` class to ensure compatibility. _NOTE: Has a patch, but moved to WordPress 6.8._
 
-_What "beta" mean?_
+_What does "beta" mean?_
 
 - PHP 8.3
   - Deprecation notices. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
@@ -139,7 +139,7 @@ _Other related tickets_
 
 _IMPORTANT: WordPress 6.6 is **compatible with exceptions** with PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
 
-_What "compatible with exceptions" means?_
+_What does 'compatible with exceptions' mean?_
 
 - PHP 8.1
   - _Not all "passing null to non-nullable" issues have been found._ In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
@@ -152,7 +152,7 @@ There are rare occasions when the `strip_tags()` function is passed a null value
   - [_`utf8_{encode|decode}` deprecation_](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. NOTE: Has a patch, but moved to WordPress 6.7.
   - [_Unknown dynamic properties'_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
 
-_What "beta" means?_
+_What does "beta" mean?_
 
 - PHP 8.3
   - _Deprecation notices_. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
@@ -166,7 +166,7 @@ _What "beta" means?_
 
 _IMPORTANT: WordPress 6.5 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
 
-_What "compatible with exceptions" means?_
+_What does 'compatible with exceptions' mean?_
 
 - PHP 8.0
 	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
@@ -181,7 +181,7 @@ _What "compatible with exceptions" means?_
 	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
 	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
 
-_What "beta" means?_
+_What does "beta" mean?_
 
 - PHP 8.3
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
@@ -193,7 +193,7 @@ _What "beta" means?_
 
 _IMPORTANT: WordPress 6.4 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
 
-_What "compatible with exceptions" means?_
+_What does 'compatible with exceptions' mean?_
 
 - PHP 8.0
 	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
@@ -208,7 +208,7 @@ _What "compatible with exceptions" means?_
 	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
 	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
 
-_What "beta" means?_
+_What does "beta" mean?_
 
 - PHP 8.3
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
@@ -220,7 +220,7 @@ _What "beta" means?_
 
 _IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and PHP 8.1, and **beta compatible** with PHP 8.2._
 
-_What "compatible with exceptions" means?_
+_What does 'compatible with exceptions' mean?_
 
 - PHP 8.0
 	- Named parameters. WordPress does not support named parameters.
@@ -231,7 +231,7 @@ _What "compatible with exceptions" means?_
 	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
 	- [unregister_setting() for unknown setting](https://core.trac.wordpress.org/ticket/57674).
 
-_What "beta" means?_
+_What does "beta" mean?_
 
 - PHP 8.2
 	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
