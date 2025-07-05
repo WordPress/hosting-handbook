@@ -268,7 +268,7 @@ End of life PHP versions:
 
 ### PHP Extensions
 
-WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing WordPress will either have to do more work to do the task the module helps with or, in the worst case, will remove functionality. All the extensions are for installations with PHP >= 7.4.
+WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing, WordPress will either have to do more work to do the task the module helps with, or in the worst case, will remove functionality. All the extensions are for installations with PHP >= 7.4.
 
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
