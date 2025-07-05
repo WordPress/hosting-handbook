@@ -38,9 +38,42 @@ _Those are the latest versions at the time of writing this document, for WordPre
 
 PHP is a programming language on which WordPress code is based. This language runs on the server and it is important to keep it up to date, both for security and functionality.
 
-WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
+WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)). For hosting companies, the following is recommended:
 
 ### WordPress versions
+
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.7&milestone=6.8&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+
+#### WordPress 6.8
+
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Candidate Support)
+
+_IMPORTANT: WordPress 6.8 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4 (1), 8.0(1), 8.1, and 8.2 and **beta compatible** with PHP 8.3, and PHP 8.4._ _As of the WordPress 6.8 release in April 2025, the term 'compatible with exceptions' is no longer used._
+
+_What does “beta compatible” or "beta support" mean?_
+
+'Beta compatible' or 'beta support' means that WordPress Core is actively working towards full compatibility with that PHP version, but there may still be some issues that are in the process of being resolved. Below are tickets outlining known issues regarding beta support for PHP 8.3 and 8.4. More information on when a PHP version goes from [beta to fully supported](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) is documented by the core team.
+
+- PHP 8.3
+  - When using a 'Beta Compatible' PHP version, Deprecation notices may be seen in error logs, wp-admin or on-page. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future PHP versions. With a deprecation notice, the PHP code will continue to work, and nothing is broken.
+  - [#59231: Prepare for PHP 8.3.](https://core.trac.wordpress.org/ticket/59231). _NOTE: Closed/Fixed_
+  - [#59232: Introduce #[Override] attribute to mark overloaded methods](https://core.trac.wordpress.org/ticket/59232) This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59233: Improve error handling for unserialize()](https://core.trac.wordpress.org/ticket/59233). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
+
+- PHP 8.4
+  - Deprecation notices.  A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future PHP versions. With a deprecation notice, the PHP code will continue to work, and nothing is broken.
+  - [#62061: Prepare for PHP 8.4.](https://core.trac.wordpress.org/ticket/62061). _NOTE: Closed/Fixed_
+
+- Other PHP Related Tickets 
+  - [#51525: Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type().](https://core.trac.wordpress.org/ticket/51525). _Note: Moved to Future Release._
+  - [#54183: Tests: decide on how to handle deprecations in PHPUnit](https://core.trac.wordpress.org/ticket/54183). _Note: Moved to Future Release._
+  - [#54537: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved.](https://core.trac.wordpress.org/ticket/54537). _Note: Moved to Future Release._
+  - [#58874: Code Modernization: Consider using the null coalescing operator.](https://core.trac.wordpress.org/ticket/58874). _Note: Moved to Future Release._
+  - [#59234: Introduce a wp_json_decode() function, including validation when available](https://core.trac.wordpress.org/ticket/59234). _Note: This ticket has been closed and won’t be moving forward._
+
 
 #### WordPress 6.7
 
