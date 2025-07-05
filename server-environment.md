@@ -19,20 +19,20 @@ All published posts on compatibility are available at:
 
 ## Web Server
 
-The web server is piece of software that accepts user web requests and serves them the appropriate result. There are many different web servers that run on different operation systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
+A web server is piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
 
-The two most popular ones that are recommended are:
+The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
 - [Apache HTTPD](https://httpd.apache.org/) 2.4
-- [nginx](https://nginx.org/) 1.26
+- [nginx](https://nginx.org/) 1.26 & 1.27
 
-Others are used by hosting companies and developers and are known to work well too:
+Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
 - [Angie](https://angie.software/en/) 1.7
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3 / 6.2 / 6.1 / 6.0 / 5.4
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 / 1.7
 
-_Those are the latest versions at the time of writing this document, for WordPress 6.6. Always keep your web server up-to-date to ensure best performance!_
+_Those are the latest versions at the time of writing this document, for WordPress 6.8. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
