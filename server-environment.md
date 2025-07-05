@@ -400,6 +400,7 @@ If you have an older version, you can activate the `Site Health` section install
 
 ## Changelog
 
+- 2025-06-04: Added WP 6.8 section, adjusted language and grammar.
 - 2024-09-17: Added minimum version of curl and openssl for PHP 8.4 extension.
 - 2024-07-04: Up-to-date for WordPress 6.6 compatibility.
 - 2024-04-06: Up-to-date for WordPress 6.5 compatibility.
