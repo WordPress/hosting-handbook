@@ -112,14 +112,14 @@ _What does 'compatible with exceptions' mean?_
 _What does "beta" mean?_
 
 - PHP 8.3
-  - Deprecation notices. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - Deprecation notices. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
   - [**#59231**: Prepare for PHP 8.3.](https://core.trac.wordpress.org/ticket/59231). _NOTE: Has a patch, but moved to WordPress 6.7._
   - [**#59232**: Introduce #[Override] attribute to mark overloaded methods](https://core.trac.wordpress.org/ticket/59232) This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [**#59233**: Improve error handling for unserialize()](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
   - [**#59654**: PHP 8.x: various compatibility fixes for WordPress 6.7](https://core.trac.wordpress.org/ticket/59654). This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
 
 - PHP 8.4
-  - Deprecation notices. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - Deprecation notices. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
   - [**#62061**: Prepare for PHP 8.4.](https://core.trac.wordpress.org/ticket/62061). _NOTE: Has a patch._
 
 _Other related tickets_
@@ -155,7 +155,7 @@ There are rare occasions when the `strip_tags()` function is passed a null value
 _What does "beta" mean?_
 
 - PHP 8.3
-  - _Deprecation notices_. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - _Deprecation notices_. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
   - [_Improve error handling for `unserialize()`_](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. NOTE: Moved to WordPress 6.7.
 
 #### WordPress 6.5
@@ -184,7 +184,7 @@ _What does 'compatible with exceptions' mean?_
 _What does "beta" mean?_
 
 - PHP 8.3
-	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+	- Deprecation notices: A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
 #### WordPress 6.4
 
@@ -211,7 +211,7 @@ _What does 'compatible with exceptions' mean?_
 _What does "beta" mean?_
 
 - PHP 8.3
-	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+	- Deprecation notices: A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
 #### WordPress 6.3
 
@@ -234,7 +234,7 @@ _What does 'compatible with exceptions' mean?_
 _What does "beta" mean?_
 
 - PHP 8.2
-	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+	- Deprecation notices: A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
 
 ### About PHP
 
