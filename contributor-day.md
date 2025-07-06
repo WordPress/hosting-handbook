@@ -39,7 +39,3 @@ In order for your contributions on GitHub to appear on your WordPress profile, y
 The projects of the Hosting team can vary, in addition to being able to cross with those of other teams.
 
 Please, check our [Hosting Projects](https://make.wordpress.org/hosting/handbook/get-involved/team-projects/).
-
-## Changelog
-
-- 2022-11-12: First version.

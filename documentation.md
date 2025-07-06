@@ -82,7 +82,3 @@ It’s necessary to validate that the content remains current, in addition to be
 [Team Reps](https://make.wordpress.org/hosting/handbook/get-involved/team-reps/)
 
 Information about the Team Reps, which should be updated annually or as changes occur, in addition to possible alterations in the onboarding and offboarding processes, like access to tools, Slack channels, or any other ongoing developments.
-
-## Changelog
-
-- 2023-10-04: New page.

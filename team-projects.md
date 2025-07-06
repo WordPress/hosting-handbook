@@ -100,7 +100,3 @@ To work on this project yo will need:
 ### Help
 
 If help is needed, please ask in the [#docs](https://wordpress.slack.com/archives/docs), [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@JavierCasares](https://profiles.wordpress.org/javiercasares/), [@lucp](https://profiles.wordpress.org/lucp/), [@milana_cap](https://profiles.wordpress.org/milana_cap/).
-
-## Changelog
-
-- 2023-09-07: First version, from the Contributor Day page.
