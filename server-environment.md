@@ -52,9 +52,9 @@ _IMPORTANT: WordPress 6.8 is **beta compatible** with PHP 8.3, and PHP 8.4._
 
 #### WordPress 6.7
 
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 
 _IMPORTANT: WordPress 6.7 is **compatible with exceptions** with PHP 8.0, PHP 8.1, PHP 8.2, and **beta compatible** with PHP 8.3, and PHP 8.4._
 
@@ -108,9 +108,9 @@ _Other related tickets_
 
 #### WordPress 6.6
 
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 
 _IMPORTANT: WordPress 6.6 is **compatible with exceptions** with PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
 
