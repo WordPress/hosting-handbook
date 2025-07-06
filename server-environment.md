@@ -133,84 +133,6 @@ _What "beta" means?_
   - _Deprecation notices_. A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
   - [_Improve error handling for `unserialize()`_](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. NOTE: Moved to WordPress 6.7.
 
-#### WordPress 6.5
-
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
-- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
-
-_IMPORTANT: WordPress 6.5 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
-
-_What "compatible with exceptions" means?_
-
-- PHP 8.0
-	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
-	- [Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails](https://core.trac.wordpress.org/ticket/48689).
-
-- PHP 8.1
-	- Not all "passing null to non-nullable" issues have been found.
-	- [htmlentities() et al needs the default value of the flags parameter explicitly set](https://core.trac.wordpress.org/ticket/53465).
-	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
-
-- PHP 8.2
-	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
-	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
-
-_What "beta" means?_
-
-- PHP 8.3
-	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
-
-#### WordPress 6.4
-
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
-
-_IMPORTANT: WordPress 6.4 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
-
-_What "compatible with exceptions" means?_
-
-- PHP 8.0
-	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
-	- [Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails](https://core.trac.wordpress.org/ticket/48689).
-
-- PHP 8.1
-	- Not all "passing null to non-nullable" issues have been found.
-	- [htmlentities() et al needs the default value of the flags parameter explicitly set](https://core.trac.wordpress.org/ticket/53465).
-	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
-
-- PHP 8.2
-	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
-	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
-
-_What "beta" means?_
-
-- PHP 8.3
-	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
-
-#### WordPress 6.3
-
-- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
-
-_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and PHP 8.1, and **beta compatible** with PHP 8.2._
-
-_What "compatible with exceptions" means?_
-
-- PHP 8.0
-	- Named parameters. WordPress does not support named parameters.
-	- [Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails](https://core.trac.wordpress.org/ticket/48689).
-
-- PHP 8.1
-	- [htmlentities() et al needs the default value of the flags parameter explicitly set](https://core.trac.wordpress.org/ticket/53465).
-	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
-	- [unregister_setting() for unknown setting](https://core.trac.wordpress.org/ticket/57674).
-
-_What "beta" means?_
-
-- PHP 8.2
-	- Deprecation notices: A deprecation notice is not an error, but rather an indicator of where additional work is needed for compatibility before PHP 9.0. With a deprecation notice, the PHP code will continue to work and nothing is broken.
-
 ### About PHP
 
 PHP 8.1 is maintained by the PHP Community only as _Security fix only_ starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
@@ -227,20 +149,6 @@ End of life PHP versions:
 - PHP 7.4: 2022-11-28 _last release: 7.4.33_
 - PHP 7.3: 2021-12-06 _last release: 7.3.33_
 - PHP 7.2: 2020-11-30 _last release: 7.2.34_
-- PHP 7.1: 2019-12-01 _last release: 7.1.33_
-- PHP 7.0: 2019-01-10 _last release: 7.0.33_
-- PHP 5.6: 2018-12-31 _last release: 5.6.40_
-- PHP 5.5: 2016-07-21 _last release: 5.5.38_
-- PHP 5.4: 2015-09-03 _last release: 5.4.45_
-- PHP 5.3: 2014-08-14 _last release: 5.3.29_
-- PHP 5.2: 2011-01-06 _last release: 5.2.17_
-- PHP 5.1: 2006-08-24 _last release: 5.1.6_
-- PHP 5.0: 2005-09-05 _last release: 5.0.5_
-- PHP 4.4: 2008-08-07 _last release: 4.4.9_
-- PHP 4.3: 2005-03-31 _last release: 4.3.11_
-- PHP 4.2: 2002-09-06 _last release: 4.2.3_
-- PHP 4.1: 2002-03-12 _last release: 4.1.2_
-- PHP 4.0: 2001-06-23 _last release: 4.0.6_
 
 ### PHP Extensions
 
@@ -340,8 +248,6 @@ The following versions of MySQL have reached their end of life (EOL) and are no 
 | 5.7     | October 21, 2015   | 5.7.44 (October 25, 2023) | October 21, 2023  |
 | 5.6     | February 5, 2013   | 5.6.51 (January 20, 2021) | February 5, 2021  |
 | 5.5     | December 3, 2010   | 5.5.62 (October 22, 2018) | December 3, 2018  |
-| 5.1     | November 14, 2008  | 5.1.73 (December 3, 2013) | December 31, 2013 |
-| 5.0     | October 19, 2005   | 5.0.96 (March 21, 2012)   | March 21, 2012    |
 
 ### End of life MariaDB versions
 
@@ -365,9 +271,6 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 | 10.1    | October 17, 2015   | 10.1.48 (November 4, 2020)  | October 17, 2020  |
 | 10.0    | March 31, 2014     | 10.0.38 (January 31, 2019)  | March 31, 2019    |
 | 5.5     | April 11, 2012     | 5.5.68 (May 12, 2020)       | April 11, 2020    |
-| 5.3     | February 29, 2012  | 5.3.12 (January 30, 2013)   | March 1, 2017     |
-| 5.2     | November 10, 2010  | 5.2.14 (January 30, 2013)   | November 10, 2015 |
-| 5.1     | February 1, 2010   | 5.1.67 (January 30, 2013)   | February 1, 2015  |
 
 
 ### Innovation Releases
@@ -430,9 +333,7 @@ Although WordPress may run on older versions, it is recommended to use these or 
 
 ## How do I know which version I have?
 
-If you have WordPress 5.2+, the WordPress Admin already has tools with that information in the `Site Health` section (at `Tools` in the menu).
-
-If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
+The WordPress Admin has tools with that information in the `Site Health` section (at `Tools` in the menu).
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
 
