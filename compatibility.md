@@ -49,7 +49,7 @@ This table gives you a snapshot of how WordPress has changed its minimum require
 
 WordPress | PHP | MySQL | MariaDB
 ---- | ---- | ---- | ----
-WordPress 6.6+ | 7.2.25+ | 5.5.5+ | 5.5.5+
+WordPress 6.6+ | 7.2.24+ | 5.5.5+ | 5.5.5+
 WordPress 6.5+ | 7.0+ | 5.5.5+ | 5.5.5+
 WordPress 6.3+ | 7.0+ | 5.0.15+ | 5.5+
 WordPress 5.2+ | 5.6.20+ | 5.0.15+ | 5.5+
