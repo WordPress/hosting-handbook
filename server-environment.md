@@ -6,6 +6,7 @@ Although WordPress can work in almost any environment, even very minimal ones, i
 
 Quick recommendations:
 
+- [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
 - [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/2024/07/10/wordpress-6-6-server-compatibility/)
 - [WordPress 6.5 PHP Compatibility](https://make.wordpress.org/hosting/2024/04/05/wordpress-6-5-php-compatibility/)
 - [WordPress 6.4 PHP Compatibility](https://make.wordpress.org/hosting/2023/11/16/wordpress-6-4-php-compatibility/)
@@ -39,6 +40,15 @@ PHP is a programming language on which WordPress code is based. This language ru
 WordPress supports many versions of PHP, some even obsolete ([PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)), for hosting companies we recommend:
 
 ### WordPress versions
+
+#### WordPress 6.8
+
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
+
+_IMPORTANT: WordPress 6.8 is **beta compatible** with PHP 8.3, and PHP 8.4._
 
 #### WordPress 6.7
 
