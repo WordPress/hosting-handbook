@@ -49,7 +49,7 @@ This table gives you a snapshot of how WordPress has changed its minimum require
 
 WordPress | PHP | MySQL | MariaDB
 ---- | ---- | ---- | ----
-WordPress 6.6+ | 7.2.25+ | 5.5.5+ | 5.5.5+
+WordPress 6.6+ | 7.2.24+ | 5.5.5+ | 5.5.5+
 WordPress 6.5+ | 7.0+ | 5.5.5+ | 5.5.5+
 WordPress 6.3+ | 7.0+ | 5.0.15+ | 5.5+
 WordPress 5.2+ | 5.6.20+ | 5.0.15+ | 5.5+
@@ -58,19 +58,3 @@ WordPress 2.9+ | 4.3+ | 4.1.2+ |
 WordPress 2.5+ | 4.3+ | 4.0+ | 
 WordPress 2.1+ | 4.2+ | 4.0+ | 
 WordPress 2.0+ | 4.2+ | 3.23.23+ | 
-
-## Changelog
-
-- 2024-04-15: Updated to WordPress 6.8
-- 2024-10-27: Updated to WordPress 6.7
-- 2024-07-04: Updated to WordPress 6.6
-- 2024-04-05: Updated to WordPress 6.5
-- 2023-11-11: Updated to WordPress 6.4
-- 2023-10-04: Updated to WordPress 6.4 (beta), and checked the MariaDB versions (and gaps)
-- 2023-08-09: Added [Server requirements](https://codex.wordpress.org/Template:Server_requirements)
-- 2023-08-09: Update for WordPress 6.3
-- 2023-04-03: Minor grammatical fixes
-- 2023-02-17: Updated with WordPress 6.2 beta information
-- 2022-11-16: Updated with WordPress 6.1 information; improved table visualization
-- 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
-- 2022-06-02: Published from Github

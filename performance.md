@@ -100,11 +100,3 @@ The Transients API should always be used for fragment caching instead of directl
 ## PHP
 
 See [PHP Optimization](https://developer.wordpress.org/advanced-administration/performance/php/).
-
-## Changelog
-
-- 2023-09-14: Moved PHP Optimization to Advanced Administration.
-- 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added
-- 2020-11-09: Lifted PHP Recommendation to 7.4
-- 2020-06-02: Published from Github

@@ -213,18 +213,6 @@ _If you don't have PHP 8.1 configured yet, do it. Chances are that everything wi
 
 When WordPress 6.3 was released, support for PHP 5.6 dropped and PHP 7.0 was established as the minimum PHP version. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
 
-When WordPress 6.6 was released, support for PHP 7.0 and 7.1 dropped and PHP 7.2.25 was established as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable.
+When WordPress 6.6 was released, support for PHP 7.0 and 7.1 dropped and PHP 7.2.24 was established as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable.
 
 Upgrade everything normally. Everything should work fine.
-
-## Changelog
-
-- 2024-10-27: Updated to WordPress 6.7
-- 2024-07-04: Updated to WordPress 6.6
-- 2024-04-05: Updated to WordPress 6.5
-- 2023-10-04: Updated to WordPress 6.4
-- 2023-09-08: Updated to WordPress 6.3
-- 2023-04-07: Updated to WordPress 6.2, and fixes
-- 2023-02-17: Updated to WordPress 6.1
-- 2022-11-12: Updated to WordPress 6.0, and fixes
-- 2022-08-18: First version

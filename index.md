@@ -21,12 +21,3 @@ Everyone is welcome! This may include folks hosting WordPress, interested in lea
 The Hosting Team meets in the WordPress Slack, in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel. The conversations are in English. Check out the [WordPress Meeting calendar](https://make.wordpress.org/meetings#hosting) for the current schedule.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-## Changelog
-
-- 2023-01-31: Updated Team Reps
-- 2021-05-27: Fixing infoboxes
-- 2021-03-31: Team Reps updated
-- 2021-02-17: Changelog added
-- 2020-11-21: Minor text changes and info-block
-- 2020-06-02: Published from Github
