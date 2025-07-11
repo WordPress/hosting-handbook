@@ -73,7 +73,3 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 - [Caballo de troya: vulnerabilidades en WordPress](https://wordpress.tv/2023/05/09/caballo-de-troya-vulnerabilidades-en-wordpress/) _(Spanish)_
 - [Administra WordPress des de la línia d’ordres (CLI)](https://wordpress.tv/2023/05/09/administra-wordpress-des-de-la-linia-dordres-cli/) _(Catalan)_
 - [Secure the emails of your WordPress site with SPF, DKIM and DMARC](https://wordpress.tv/2023/05/10/secure-the-emails-of-your-wordpress-site-with-spf-dkim-and-dmarc/) _(English)_
-
-## Changelog
-
-- 2023-09-08: First version.

@@ -424,29 +424,3 @@ If you have WordPress 5.2+, the WordPress Admin already has tools with that info
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-## Changelog
-
-- 2024-09-17: Added minimum version of curl and openssl for PHP 8.4 extension.
-- 2024-07-04: Up-to-date for WordPress 6.6 compatibility.
-- 2024-04-06: Up-to-date for WordPress 6.5 compatibility.
-- 2023-11-11: Up-to-date. Added some EOL for databases and PHP. WordPress 6.4 compatibility. Added more information about system packages.
-- 2023-10-04: Up-to-date. Added some EOL for databases and PHP. Explanation about BETA and EXCEPTIONS for WordPress 6.3.
-- 2023-09-07: Added shmop PHP extension.
-- 2023-08-02: Updated for WordPress 6.3 and up-to-date everything.
-- 2023-06-08: Added PHP igbinary extension.
-- 2023-05-27: Updated PHP extensions requirements and cache extensions.
-- 2023-04-19: MariaDB fixed with [LTS versions](https://mariadb.org/about/#maintenance-policy)
-- 2023-02-17: Updated LiteSpeed Web Server. Updates for WordPress 6.2 beta and PHP >= 7.4.
-- 2022-11-16: Updated WordPress 6.0 / WordPress 6.1, PHP compatibility information and other versions
-- 2022-06-22: Added PHP extensions requirements and cache extensions
-- 2022-06-06: [Delete MariaDB 10.2](https://core.trac.wordpress.org/ticket/55791)
-- 2022-05-13: Update for WordPress 6.0 and stable software versions; updated deprecated PHP versions and extensions
-- 2021-05-27: Fixing infoboxes
-- 2021-05-07: Updated versions and extensions. [PHP 7.3 bump based on Trac](https://meta.trac.wordpress.org/changeset/10960)
-- 2021-05-05: Updated the imagick (WP\_Image\_Editor) link
-- 2021-05-05: Updated versions (webserver, PHP, SQL)
-- 2021-02-17: Changelog added
-- 2020-11-23: Minor text changes and info-block
-- 2020-07-16: Updated webserver versions and vendors. Updated PHP versions. Updated SQL versions and vendors. Added: How do I know which version I have?. Updated libsodium to sodium
-- 2020-06-02: Published from Github
