@@ -249,7 +249,7 @@ The first thing to do is [create a user on WordPress.org](https://login.wordpres
 
 Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new?assignees=&labels=test-reporter-request&projects=&template=test_reporter_request.md&title=%5BTest+Reporter%5D+) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
 
-[tip]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is./tip]
+[tip]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is.[/tip]
 
 [info]Someone in the hosting team will review the request and add a user for you, or request additional information. The team will reply as quickly as possible, but as this step is manual, please be patient.[/info]
 
@@ -258,12 +258,3 @@ Once the user has been created in the system, you'll get an invitation to join v
 To get things reporting properly, place the username for the bot, along with the application password in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingcompanybot:ABCD 1234 abcd 4567 EFGH efgh'`.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-## Changelog
-
-- 2024-04-06: Updated requirement NodeJS 20.x
-- 2023-08-16: Added requirement NodeJS 16.x
-- 2022-07-12: Added requirement NodeJS 14.x
-- 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added
-- 2021-02-10: Published from Github

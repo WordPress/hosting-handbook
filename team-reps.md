@@ -127,9 +127,3 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
   - [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) Github Repo
   - [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) Github Repo (aka test-runner)
   - [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) Github Repo (aka test-reporter)
-
-## Changelog
-
-- 2025-01-01: Updated team reps for 2025
-- 2023-09-09: Slack recommendations, added project leads.
-- 2023-09-07: New page.

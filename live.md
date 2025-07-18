@@ -54,8 +54,3 @@ If you have an idea for a talk proposal, you can contact us proposing a topic fr
 * [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-## Changelog
-
-- 2023-10-04: Updated to comply with Learn WordPress Meetup.
-- 2021-03-24: First version.

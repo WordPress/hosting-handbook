@@ -171,12 +171,3 @@ Responsible disclosure means the following: if you encounter a security breach (
 To report a security issue, please visit the [WordPress HackerOne](https://hackerone.com/wordpress) program and file a ticket there.
 
 If you encounter security issues or insecure recommendations in the hosting documentation, we would like you to raise an issue in the [hosting-handbook Github repository](https://github.com/WordPress/hosting-handbook/issues/).
-
-## Changelog
-
-- 2022-06-07: Added Responsible Disclosure	
-- 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added
-- 2020-11-23: Minor text changes and info-block. Changed "SSL" to "TLS / SSL"
-- 2020-06-02: Published from Github
-- 
