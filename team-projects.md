@@ -35,7 +35,7 @@ Once a PR is submitted, it will require an approval process. By default, once it
 
 ### Tools
 
-To work on this project yo will need:
+To work on this project you will need:
 
 - A GitHub account
 - A text / Markdown editor
@@ -63,7 +63,7 @@ You can propose improvements or solve those available in both the PHPUnit test r
 
 ### Tools
 
-To work on this project yo will need:
+To work on this project you will need:
 
 - A GitHub account
 - A text / PHP editor
@@ -92,7 +92,7 @@ If you want to help launch the Handbook as soon as possible, [please take an iss
 
 ### Tools
 
-To work on this project yo will need:
+To work on this project you will need:
 
 - A GitHub account
 - A text / Markdown editor
