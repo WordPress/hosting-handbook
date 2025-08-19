@@ -74,7 +74,7 @@ WordPress websites should be run as non-privileged users. If possible, separate 
 
 ### Core and Upload Write Permissions
 
-For automatic security updates to function, PHP must be able to overwrite WordPress core files. If you do not handle automated updates at the infrastructure level, this is the recommended practice.
+For automatic security updates to function, PHP must be able to overwrite WordPress' core files. If you do not handle automated updates at the infrastructure level, this is the recommended practice.
 
 Additionally, WordPress stores assets and user uploaded files in a special uploads directory located in `/wp-content/uploads`, by default, within the WordPress root. The uploads directory must be web-accessible in order for user content and uploaded assets to be loaded by a browser. PHP will also need to be able to write to the user's uploads folder for WordPress to handle uploading user content.
 
