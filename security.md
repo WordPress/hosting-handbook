@@ -30,7 +30,7 @@ Some WordPress security guides recommend using unique usernames for WordPress ad
 
 ### Two-Factor Authentication
 
-Two-factor authentication, also known as 2FA or two-step authentication, is a login scheme that uses a separate, second form of authentication when a user attempts to log in to a service with two-factor authentication enabled. The exact two-factor authentication setup varies from service to service, but it usually involves entering a code or interacting with an application on a smartphone when attempting to log in to a service. WordPress does not have two-factor authentication by default; however, [there are several plugins that provide two-factor authentication for self-hosted WordPress websites](http://wordpress.org/plugins/tags/two-factor-authentication).
+Two-factor authentication, also known as 2FA or two-step authentication, is a login scheme that uses a separate, second form of authentication when a user attempts to log in to a service with two-factor authentication enabled. The exact two-factor authentication setup varies from service to service, but it usually involves entering a code or interacting with an application on a smartphone when attempting to log in to a service. WordPress does not have two-factor authentication by default; however, [there are several plugins that provide two-factor authentication for self-hosted WordPress websites](https://wordpress.org/plugins/tags/two-factor-authentication).
 
 ## File System
 
