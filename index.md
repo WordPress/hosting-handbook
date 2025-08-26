@@ -4,17 +4,17 @@ Welcome to the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/h
 
 ## About the Hosting Team
 
-People in this team are closely related to the world of hosting. They work as system administrators, plugin developers etc., and are concerned about improving the relationship between WordPress and the hosting where they are hosted.
+People in this team are closely related to the world of hosting. They work as system administrators, plugin developers etc., and care about improving the relationship between WordPress and where their WordPress is hosted.
 
-Our goals are ranging wide, although we are primarily focused on publishing documentation about the best options and the best practices hosters can apply when it comes to hosting WordPress. We are also working to offer tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database or the web server) appear.
+Our goals are wide ranging, although we are primarily focused on publishing documentation about the best practices hosters can apply when it comes to hosting WordPress. We are also working to offer tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database or the web server) appear.
 
-If you want to know more, feel free to take a look at our Get Involved section.
+If you want to know more, feel free to take a look at our [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page.
 
 ### What is the WordPress Hosting Team?
 
 The [Hosting Team](https://make.wordpress.org/hosting/) works to improve the WordPress user experience across hosting environments through user collaboration and education.
 
-Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such System Engineers, System Architects, DevOps Engineers and Developers that are working on core, plugins or themes.
+Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such as System Engineers, System Architects, DevOps Engineers and Developers that are working on core, plugins, or themes.
 
 ### When does the Hosting team meet?
 
