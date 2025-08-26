@@ -28,7 +28,7 @@ The talks were inclusive to users of any skill level. Some of the original ideas
 
 ## Languages
 
-Although the main language used in the WordPress Community is English, and the main language of the presentations were also English, presentations in other languages were included, as goals of this initiative were to reach as many people as possible, regardless of where they are or what language they speak. The more people reached, the better!"
+Although the main language used in the WordPress Community is English, and the main language of the presentations were also English, presentations in other languages were included, as goals of this initiative were to reach as many people as possible, regardless of where they are or what language they speak.
 
 ## Presentations
 
