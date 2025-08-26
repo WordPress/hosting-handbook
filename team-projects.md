@@ -42,7 +42,7 @@ To work on this project you will need:
 
 ### Help
 
-If help is needed, please ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@Crixu](https://profiles.wordpress.org/crixu/), [@JavierCasares](https://profiles.wordpress.org/javiercasares/).
+If help is needed, please ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact a Hosting Team rep.
 
 ## Automated Hosting Tests
 
@@ -70,7 +70,7 @@ To work on this project you will need:
 
 ### Help
 
-If help is needed, please ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@pfefferle](https://profiles.wordpress.org/pfefferle/).
+If help is needed, please ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact a Hosting Team rep.
 
 ## Advanced Admin Handbook
 
@@ -99,4 +99,4 @@ To work on this project you will need:
 
 ### Help
 
-If help is needed, please ask in the [#docs](https://wordpress.slack.com/archives/docs), [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact [@JavierCasares](https://profiles.wordpress.org/javiercasares/), [@lucp](https://profiles.wordpress.org/lucp/), [@milana_cap](https://profiles.wordpress.org/milana_cap/).
+If help is needed, please ask in the [#docs](https://wordpress.slack.com/archives/docs), [#hosting](https://wordpress.slack.com/archives/hosting) channel or contact a Hosting Team rep.
