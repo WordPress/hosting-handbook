@@ -428,7 +428,7 @@ Previously MariaDB referred to these releases as "short-term releases".
 |---------|--------------|--------------------|-----------------------------|-------------------|
 | 11.5    | Innovation   | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
 | 11.3    | Innovation   | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
-| 11.2    | short-term   | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
+| 11.2    | Short-term   | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
 | 11.1    | Short-term   | August 21, 2023    | 11.1.6 (August 14, 2024)    | August 21, 2024   |
 | 11.0    | Short-term   | June 7, 2023       | 11.0.6 (May 17, 2024)       | June 6, 2024      |
 | 10.10   | Short-term   | November 17, 2022  | 10.10.7 (November 14, 2023) | November 17, 2023 |
