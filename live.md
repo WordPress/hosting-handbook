@@ -1,18 +1,16 @@
 # WordPress Hosting Live
 
-The WordPress Hosting Team promotes a series of live events focused on teaching elements promoted by the team and reaching all users.
+The WordPress Hosting Team held a series of remote live meetups that were focused on teaching concepts related to hosting and using WordPress
 
-The main WordPress Hosting Live site will be at [Meetup](https://www.meetup.com/learn-wordpress-online-workshops/), hosted at [Make Hosting](https://make.wordpress.org/hosting/) and in collaboration with the [Learn WordPress](https://learn.wordpress.org/) team. You can also find the streaming at [YouTube](https://www.youtube.com/channel/UCUHFMCXJxXHcfls9w6Hzt6A) and [Twitter](https://twitter.com/WPHostingTeam).
+The WordPress Hosting Live meetups group can be found at [Meetup](https://www.meetup.com/learn-wordpress-online-workshops/), brought to you by the [Make Hosting Team](https://make.wordpress.org/hosting/) in collaboration with the [Learn WordPress Team](https://learn.wordpress.org/). You can find event archives on the [YouTube channel](https://www.youtube.com/channel/UCUHFMCXJxXHcfls9w6Hzt6A) and [Twitter](https://twitter.com/WPHostingTeam).
 
 ## What is it?
 
-The original idea of this project was to have streaming events in which a person directs the event as a host, and one or more people give a presentation on a particular topic. Afterwards, there would be a round of questions and answers. The initial platform for broadcasting will be YouTube live, although other systems may be considered.
-
-Other alternative systems can be to have group conversations in Zoom mode in which everyone can participate more dynamically.
+The Hosting Live events project streamed events that allowed knowledgable parties to direct the event as a host and offer a presentation on a particular WordPress hosting related topic, followed by discourse, questions and answers. The events were streamed on YouTube live.
 
 ## The topics
 
-The subject of these events have to be around the world of hosting and what the team usually works on. Among them we can have:
+The subject of the web-hosting focused events were:
 
 * Server Environment (PHP, MySQL, nginx...)
 * Web Performance (caching, CDN, configuration...)
@@ -21,9 +19,7 @@ The subject of these events have to be around the world of hosting and what the 
 
 ### Level of presentations
 
-The talks can be directed to users of any level. While it is true that local Meetups tend to reach all types of users, this channel was designed to raise the level of hosting professionals and teach or discuss topics that are not usually covered.
-
-Some ideas for presentation titles:
+The talks were inclusive to users of any skill level. Some of the original ideas for presentations included titles like:
 
 * WordPress and the new PHP version
 * How we manage updates and maintenance
@@ -32,14 +28,14 @@ Some ideas for presentation titles:
 
 ## Languages
 
-Although the main language used in the WordPress Community is English, and the main language of the presentations (initially established once a month) will also be English, presentations in other languages will be included from time to time, in an effort to ensure that the goals of this initiative will reach as many people as possible, regardless of where they are or what language they speak. The more people we can reach, the better!
+Although the main language used in the WordPress Community is English, and the main language of the presentations were also English, presentations in other languages were included, as goals of this initiative were to reach as many people as possible, regardless of where they are or what language they speak.
 
 ## Presentations
 
 As with any WordPress event, there are a number of limitations that apply across the board. These are included for the good of the global WordPress Community.
 
-* The first slide will include the title of the presentation, the name of the speaker and, if it is a derivative work, the original authors.
-* The second slide will include a presentation card of the speaker(s). In this slide you can inform about the company or business relationship you have, include logos, the page and social networks of the speaker.
+* The first slide must include the title of the presentation, the name of the speaker and, if it is a derivative work, the original authors.
+* The second slide must include a presentation card of the speaker(s). In this slide the speaker can give credit to the company or business relationship sponsoring the contributor or speaker, including logos, social media and other marketing materials of the speaker and their sponsorship.
 * The rest of the slides may not include any mention or commercial logos. As a general rule, no hashtags or social network accounts may be included.
 * The last slide can include a closing message (in Thank You! mode) as well as a link to the speaker's personal website, personal email account or personal social networks, in case anyone viewing the presentation wants to get in touch.
 * The presentation must be under GPL or compatible licenses (EUPL, etc...).
@@ -47,7 +43,7 @@ As with any WordPress event, there are a number of limitations that apply across
 
 ## Propose a talk
 
-If you have an idea for a talk proposal, you can contact us proposing a topic from:
+Although events are not currently taking place, if you want to host a talk or have an idea for a topic, feel free to get in touch through the following:
 
 * [WordPress Hosting Meetup](https://www.meetup.com/learn-wordpress-online-workshops/discussions/)
 * [Make Hosting](https://make.wordpress.org/hosting/)
