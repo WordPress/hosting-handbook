@@ -4,29 +4,20 @@ Welcome to the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/h
 
 ## About the Hosting Team
 
-People in this team are closely related to the world of hosting. They work as system administrators, plugin developers etc., and are concerned about improving the relationship between WordPress and the hosting where they are hosted.
+People in this team are closely related to the world of hosting. They work as system administrators, plugin developers etc., and care about improving the relationship between WordPress and where their WordPress is hosted.
 
-Our goals are ranging wide, although we are primarily focused on publishing documentation about the best options and the best practices hosters can apply when it comes to hosting WordPress. We are also working to offer tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database or the web server) appear.
+Our goals are wide ranging, although we are primarily focused on publishing documentation about the best practices hosters can apply when it comes to hosting WordPress. We are also working to offer tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database or the web server) appear.
 
-If you want to know more, feel free to take a look at our Get Involved section.
+If you want to know more, feel free to take a look at our [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page.
 
 ### What is the WordPress Hosting Team?
 
 The [Hosting Team](https://make.wordpress.org/hosting/) works to improve the WordPress user experience across hosting environments through user collaboration and education.
 
-Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such System Engineers, System Architects, DevOps Engineers and Developers that are working on core, plugins or themes.
+Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such as System Engineers, System Architects, DevOps Engineers and Developers that are working on core, plugins, or themes.
 
 ### When does the Hosting team meet?
 
 The Hosting Team meets in the WordPress Slack, in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel. The conversations are in English. Check out the [WordPress Meeting calendar](https://make.wordpress.org/meetings#hosting) for the current schedule.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-## Changelog
-
-- 2023-01-31: Updated Team Reps
-- 2021-05-27: Fixing infoboxes
-- 2021-03-31: Team Reps updated
-- 2021-02-17: Changelog added
-- 2020-11-21: Minor text changes and info-block
-- 2020-06-02: Published from Github

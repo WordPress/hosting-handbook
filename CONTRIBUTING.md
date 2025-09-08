@@ -37,8 +37,3 @@ There's an included WP-CLI command to take care of this. To run it, from the clo
 - Run `wp hosting-handbook gen-all`.
 
 The manifest should get created inside the repo, in `/bin/handbook-manifest.json`.
-
-## Changelog
-
-- 2022-06-07: Changelog added
-- 2020-06-02: First commit

@@ -55,7 +55,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 - [From Fresh Grad to Professional: A Guide to Choosing Between Freelance and Employment in IT](https://wordpress.tv/2023/07/27/from-fresh-grad-to-professional-a-guide-to-choosing-between-freelance-and-employment-in-it/) _(English)_
 - [Improving website performance with caching](https://wordpress.tv/2023/07/26/improving-website-performance-with-caching/) _(English)_
 - [WordPress database optimization and maintenance](https://wordpress.tv/2023/07/26/micah-wood-wordpress-database-optimization-and-maintenance/) _(English)_
-- [Testing plugins for PHP version compatibility](https://wordpress.tv/2023/11/30/testing-your-products-for-php-version-compatibility/) _(English)_
+- [Testing your products for PHP version compatibility](https://wordpress.tv/2023/11/30/testing-your-products-for-php-version-compatibility/) _(English)_
 - [Installing Node.js and npm for local WordPress development](https://wordpress.tv/2023/07/22/installing-node-js-and-npm-for-local-wordpress-development/) _(English)_
 - [The WordPress Database](https://wordpress.tv/2023/06/23/the-wordpress-database/) _(English)_
 - [Debugging in WordPress](https://wordpress.tv/2023/07/07/jonathan-bossenger-debugging-in-wordpress-tutorial/) _(English)_
@@ -69,12 +69,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 - [Passkeys -The Future of Authentication](https://wordpress.tv/2023/05/22/passkeys-the-future-of-authentication/) _(English)_
 - [WordPress Data Privacy](https://wordpress.tv/2023/05/22/mujeebu-rahman-wordpress-data-privacy/) _(English)_
 - [Safeguarding Your Website – Smart WordPress Security](https://wordpress.tv/2023/05/22/maestro-stevens-safeguarding-your-website-smart-wordpress-security/) _(English)_
-- [Testing plugins for PHP 8](https://wordpress.tv/2023/05/19/testing-plugins-for-php-8/) _(English)_
 - [Entén i millora la velocitat del teu web WordPress](https://wordpress.tv/2023/05/09/enten-i-millora-la-velocitat-del-teu-web-wordpress/) _(Catalan)_
 - [Caballo de troya: vulnerabilidades en WordPress](https://wordpress.tv/2023/05/09/caballo-de-troya-vulnerabilidades-en-wordpress/) _(Spanish)_
 - [Administra WordPress des de la línia d’ordres (CLI)](https://wordpress.tv/2023/05/09/administra-wordpress-des-de-la-linia-dordres-cli/) _(Catalan)_
 - [Secure the emails of your WordPress site with SPF, DKIM and DMARC](https://wordpress.tv/2023/05/10/secure-the-emails-of-your-wordpress-site-with-spf-dkim-and-dmarc/) _(English)_
-
-## Changelog
-
-- 2023-09-08: First version.

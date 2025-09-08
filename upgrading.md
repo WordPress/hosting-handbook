@@ -4,7 +4,9 @@ Upgrading WordPress should be a simple task if its maintained and updated over t
 
 **What happens with older versions?**
 
-WordPress provides security support from WordPress 4.1 to the latest version (WordPress 6.8, __when creating this document__), each with its own database versions, PHP versions and a series of compatibilities that need to be updated over time.
+As a courtesy, the WordPress project makes an effort to provide security support from WordPress 4.7 to the latest version. However, back porting patches is not always possible and therefore versions of WordPress prior to the very latest version are _not officially supported_ as a result.
+
+Each version has its own supported database versions, PHP versions, and a series of compatibilities that need to be updated over time.
 
 **What if it is not updated?**
 
@@ -148,7 +150,7 @@ _If you don't have PHP 7.4 configured yet, do it. Chances are that everything wi
 
 WordPress 4.9 was the last version with the Classic Editor, so, a lot of people, afraid of the new editor, stopped updating WordPress. WordPress 5.0+ is fully compatible with the Classic Editor content, so it can be upgraded without losing any content.
 
-Also, when WordPress 4.9 was released, PHP 7.0+ was very stablished and WordPress 5.0 version had support. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
+Also, when WordPress 4.9 was released, PHP 7.0+ was very established and WordPress 5.0 version had support. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
 
 From WordPress 4.9, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can ease the process.
 
@@ -201,7 +203,9 @@ Upgrade everything normally. Everything should work fine.
 
 Goals
 - WordPress: upgrade to WordPress 6.8
-- PHP: upgrade to at least PHP 8.1 (WordPress 6.6+ supports PHP 8.2)
+
+- PHP: upgrade to PHP 8.1
+
 - SQL: maintain or upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
 
 Losses:
@@ -211,21 +215,9 @@ Losses:
 
 _If you don't have PHP 8.1 configured yet, do it. Chances are that everything will still work normally._
 
-When WordPress 6.3 was released, support for PHP 5.6 dropped and PHP 7.0 was stablished as the minimum PHP version. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
+When WordPress 6.3 was released, support for PHP 5.6 dropped and PHP 7.0 was established as the minimum PHP version. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
 
-When WordPress 6.6 was released, support for PHP 7.0 and 7.1 dropped and PHP 7.2.25 was stablished as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable. WordPress 6.6 also supports PHP 8.2 so you can try switching to PHP 8.2 when upgraded WordPress. 
+When WordPress 6.6 was released, support for PHP 7.0 and 7.1 was dropped, and PHP 7.2.24 was established as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable. WordPress 6.6 supports up to PHP 8.2, while PHP 8.3 is compatible with exceptions.
 
 Upgrade everything normally. Everything should work fine.
 
-## Changelog
-
-- 2025-06-05: Updated to WordPress 6.8, and added mentions for PHP 8.2
-- 2024-10-27: Updated to WordPress 6.7
-- 2024-07-04: Updated to WordPress 6.6
-- 2024-04-05: Updated to WordPress 6.5
-- 2023-10-04: Updated to WordPress 6.4
-- 2023-09-08: Updated to WordPress 6.3
-- 2023-04-07: Updated to WordPress 6.2, and fixes
-- 2023-02-17: Updated to WordPress 6.1
-- 2022-11-12: Updated to WordPress 6.0, and fixes
-- 2022-08-18: First version

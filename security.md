@@ -12,7 +12,7 @@ Keeping any system, not just WordPress, secure is continuous work. Good security
 
 Security largely consists of reducing risk and planning for recovery. Most security plans focus on minimizing the risk of unauthorized access only, but risk can never be successfully reduced to zero. As long as there is some risk, you must plan for recovery so that if something were to happen, user sites are not completely lost and can be quickly restored to normal operation.
 
-Security is also about more than WordPress. It is also about making sure your hosting environment is secure and your personal online practices and behaviors keep you safe. Good security depends on the technology in use and the people using the technology. Obsolete or out-of-date technology can have bugs or vulnerabilities that can put your WordPress website at risk. People's bad online practices can also put your WordPress website as risk. It is important to make sure that not only do you keep the technology you use up-to-date and maintained but also that employees are using security best practices when using the Internet and when interacting with your hosting platform or customer WordPress sites.
+Security is also about more than WordPress. It is also about making sure your hosting environment is secure and your personal online practices and behaviors keep you safe. Good security depends on the technology in use and the people using the technology. Obsolete or out-of-date technology can have bugs or vulnerabilities that can put your WordPress website at risk. People's bad online practices can also put your WordPress website at risk. It is important to make sure that not only do you keep the technology you use up-to-date and maintained but also that employees are using security best practices when using the Internet and when interacting with your hosting platform or customer WordPress sites.
 
 ## Throttling Multiple Login Attempts
 
@@ -30,7 +30,7 @@ Some WordPress security guides recommend using unique usernames for WordPress ad
 
 ### Two-Factor Authentication
 
-Two-factor authentication, also known as 2FA or two-step authentication, is a login scheme that uses a separate, second form of authentication when a user attempts to log in to a service with two-factor authentication enabled. The exact two-factor authentication setup varies from service to service, but it usually involves entering a code or interacting with an application on a smartphone when attempting to log in to a service. WordPress does not have two-factor authentication by default; however, [there are several plugins that provide two-factor authentication for self-hosted WordPress websites](http://wordpress.org/plugins/tags/two-factor-authentication).
+Two-factor authentication, also known as 2FA or two-step authentication, is a login scheme that uses a separate, second form of authentication when a user attempts to log in to a service with two-factor authentication enabled. The exact two-factor authentication setup varies from service to service, but it usually involves entering a code or interacting with an application on a smartphone when attempting to log in to a service. WordPress does not have two-factor authentication by default; however, [there are several plugins that provide two-factor authentication for self-hosted WordPress websites](https://wordpress.org/plugins/tags/two-factor-authentication).
 
 ## File System
 
@@ -171,12 +171,3 @@ Responsible disclosure means the following: if you encounter a security breach (
 To report a security issue, please visit the [WordPress HackerOne](https://hackerone.com/wordpress) program and file a ticket there.
 
 If you encounter security issues or insecure recommendations in the hosting documentation, we would like you to raise an issue in the [hosting-handbook Github repository](https://github.com/WordPress/hosting-handbook/issues/).
-
-## Changelog
-
-- 2022-06-07: Added Responsible Disclosure	
-- 2021-05-27: Fixing infoboxes
-- 2021-02-17: Changelog added
-- 2020-11-23: Minor text changes and info-block. Changed "SSL" to "TLS / SSL"
-- 2020-06-02: Published from Github
-- 
