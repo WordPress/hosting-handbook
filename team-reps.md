@@ -49,7 +49,6 @@ The PHPUnit Test projects (PHPUnit Test Runner, and PHPUnit Test Report) are lea
 
 Within the extensive ecosystem of WordPress, different teams work together to ensure the platform's ongoing development and success. Each of these teams has at least one representative, often referred to as a 'Team Rep'. For the Hosting Team, the Team Rep plays a vital role.
 
-
 #### Role of the Hosting Team Rep
 
 A Team Rep, specifically from the Hosting team, acts as the voice and ambassador of the Hosting Team within the broader WordPress Community. Their tasks are multifaceted:
