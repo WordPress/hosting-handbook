@@ -21,11 +21,27 @@ The Hosting Team (2025) is represented by:
 
 The Documentation projects (Hosting Handbook, and Advanced Administration Handbook) are lead by:
 
-- _Defaults to team reps. The team collectively manages these projects_
+- _Defaults to team reps/admins. The team collectively manages these projects_
 
 The PHPUnit Test projects (PHPUnit Test Runner, and PHPUnit Test Report) are lead by:
 
-- _Defaults to team reps. The team collectively manages these projects_
+- _Defaults to team reps/admins. The team collectively manages these projects_
+
+### Hosting Team Admins
+
+- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - present)
+- [@jessibelle](https://profiles.wordpress.org/jessibelle/) (Team Rep 2023)
+- [@crixu](https://profiles.wordpress.org/crixu/) (Team Rep 2021-present)
+- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023)
+- [@chaion07](https://profiles.wordpress.org/chaion07/) (Team admin since 2021)
+
+#### Past Hosting Team Reps and Admins
+
+- [@javiercasares](https://profiles.wordpress.org/javiercasares/) (Team Rep 2021 - 2024)
+- [@jadonn](https://profiles.wordpress.org/jadonn/) (Team Rep 2018 - 2022)
+- [@pfefferle](https://profiles.wordpress.org/pfefferle/)
+- [@kirasong](https://profiles.wordpress.org/kirasong/) (Started the team in 2017, Team Rep 2017 - 2021)
+- [@danielbachhuber](https://profiles.wordpress.org/danielbachhuber/) (Started the team in 2017)
 
 ## Hosting Team Organization
 
