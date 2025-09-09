@@ -21,18 +21,18 @@ The Hosting Team (2025) is represented by:
 
 The Documentation projects (Hosting Handbook, and Advanced Administration Handbook) are lead by:
 
-- [@javiercasares](https://profiles.wordpress.org/javiercasares/): Hosting Handbook, Advanced Administration Handbook
-- [@crixu](https://profiles.wordpress.org/crixu/): Hosting Handbook
+- _Defaults to team reps. The team collectively manages these projects_
 
 The PHPUnit Test projects (PHPUnit Test Runner, and PHPUnit Test Report) are lead by:
 
-- _nobody is leading those projects_
+- _Defaults to team reps. The team collectively manages these projects_
 
 ## Hosting Team Organization
 
 ### Team Reps
 
 Within the extensive ecosystem of WordPress, different teams work together to ensure the platform's ongoing development and success. Each of these teams has at least one representative, often referred to as a 'Team Rep'. For the Hosting Team, the Team Rep plays a vital role.
+
 
 #### Role of the Hosting Team Rep
 
