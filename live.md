@@ -6,7 +6,7 @@ The WordPress Hosting Live meetups group can be found at [Meetup](https://www.me
 
 ## What is it?
 
-The Hosting Live events project streamed events that allowed knowledgable parties to direct the event as a host and offer a presentation on a particular WordPress hosting related topic, followed by discourse, questions and answers. The events were streamed on YouTube live.
+The Hosting Live events project streamed events that allowed knowledgeable parties to direct the event as a host and offer a presentation on a particular WordPress hosting related topic, followed by discourse, questions, and answers. The events were streamed on YouTube live.
 
 ## The topics
 
@@ -34,10 +34,10 @@ Although the main language used in the WordPress Community is English, and the m
 
 As with any WordPress event, there are a number of limitations that apply across the board. These are included for the good of the global WordPress Community.
 
-* The first slide must include the title of the presentation, the name of the speaker and, if it is a derivative work, the original authors.
-* The second slide must include a presentation card of the speaker(s). In this slide the speaker can give credit to the company or business relationship sponsoring the contributor or speaker, including logos, social media and other marketing materials of the speaker and their sponsorship.
+* The first slide must include the title of the presentation, the name of the speaker, and, if it is a derivative work, the original authors.
+* The second slide must include a presentation card of the speaker(s). In this slide, the speaker can give credit to the company or business relationship sponsoring the contributor or speaker, including logos, social media, and other marketing materials of the speaker and their sponsorship.
 * The rest of the slides may not include any mention or commercial logos. As a general rule, no hashtags or social network accounts may be included.
-* The last slide can include a closing message (in Thank You! mode) as well as a link to the speaker's personal website, personal email account or personal social networks, in case anyone viewing the presentation wants to get in touch.
+* The last slide can include a closing message (in Thank You! mode) as well as a link to the speaker's personal website, personal email account, or personal social networks, in case anyone viewing the presentation wants to get in touch.
 * The presentation must be under GPL or compatible licenses (EUPL, etc...).
 * The [Code of Conduct](https://learn.wordpress.org/code-of-conduct/) must be observed at all times.
 
