@@ -86,7 +86,7 @@ If you want to get an idea of what a contributor day with the hosting team might
 
 If you are interested in the [Hosting Team](https://make.wordpress.org/hosting/), you may be interested in these other teams as well:
 
-* [Core](https://make.wordpress.org/core/): The core team makes WordPress. Whether you're a seasoned PHP, HTML, JavaScript, or CSS developer or are just learning to code, we'd love to have you on board. You can write code, fix bugs, debate decisions, and help with development.
+* [Core](https://make.wordpress.org/core/): The core team makes WordPress. Whether you're a seasoned PHP, HTML, JavaScript, or CSS developer or are just learning to code, Core would love to have you on board. You can write code, fix bugs, debate decisions, and help with development.
 * [Core Performance](https://make.wordpress.org/performance/): The core performance team is dedicated to monitoring, enhancing, and promoting performance in WordPress core and its surrounding ecosystem.
 * [CLI](https://make.wordpress.org/cli/): WP-CLI is the official command line tool for interacting with and managing your WordPress sites.
 * [Documentation](https://make.wordpress.org/docs/): Good documentation lets people help themselves when they get stuck. The docs team is responsible for creating documentation and is always on the look-out for writers. The blog has discussion around the team's current projects.
