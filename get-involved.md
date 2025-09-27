@@ -65,7 +65,7 @@ Feel free to ask in the main [#hosting](https://wordpress.slack.com/archives/hos
 
 If you've never been on the Hosting Team before and you want to contribute, a good time to start is on a Contributor Day. You can check to see if your nearest community has a Hosting team, and if not, you can always participate in the Contributor Days associated with WCAsia ([WordCamp Asia](https://asia.wordcamp.org/)), WCEU ([WordCamp Europe](https://europe.wordcamp.org/)), and WCUS ([WordCamp US](https://us.wordcamp.org/)).
 
-Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, check it, and start participating. We always have something to do!
+Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, check it, and start participating. The team always has something to do!
 
 ### Contributor Day Notes
 
