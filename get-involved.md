@@ -57,15 +57,15 @@ During each meeting, we try to create a post with a synopsis of what is chatted 
 
 There's always a need for more folks to join! If you're interested in helping out with taking notes, chat with one of the Team Reps for access to the team's [make site](https://make.wordpress.org/hosting/wp-admin/). Once you have access, you'll be able to start with templates of previous meeting notes.
 
-You can check out recommendations on style in this [Core Handbook page](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/). They don't all apply because it's a guide from Core — the biggest thing is to be careful not to accidentally representing WordPress.org or the team if it's not a WordPress.org or team decision, and to get peer review before posting.
+You can check out recommendations on style in this [Core Handbook page](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/). They don't all apply because it's a guide from Core — the biggest thing is to be careful not to accidentally represent WordPress.org or the team if it's not a WordPress.org or team decision, and to get peer review before posting.
 
 Feel free to ask in the main [#hosting](https://wordpress.slack.com/archives/hosting/) channel for review, or any of the Team Reps directly if you don't get a reply right away.
 
 ## Getting Started at Contributing
 
-If you've never been on the Hosting Team before and you want to contribute, a good time to start is on a Contributor Day. You can check to see if your nearest community has a Hosting team, and if not, you can always participate in the Contributor Days associated with WCAsia ([WordCamp Asia](https://asia.wordcamp.org/)), WCEU ([WordCamp Europe](https://europe.wordcamp.org/)) and WCUS ([WordCamp US](https://us.wordcamp.org/)).
+If you've never been on the Hosting Team before and you want to contribute, a good time to start is on a Contributor Day. You can check to see if your nearest community has a Hosting team, and if not, you can always participate in the Contributor Days associated with WCAsia ([WordCamp Asia](https://asia.wordcamp.org/)), WCEU ([WordCamp Europe](https://europe.wordcamp.org/)), and WCUS ([WordCamp US](https://us.wordcamp.org/)).
 
-Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, check it and start participating. We always have something to do!
+Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, check it, and start participating. The team always has something to do!
 
 ### Contributor Day Notes
 
@@ -84,9 +84,9 @@ If you want to get an idea of what a contributor day with the hosting team might
 
 ## Related WordPress Teams
 
-If you are interested in the [Hosting Team](https://make.wordpress.org/hosting/), you may be interested on these other teams as well:
+If you are interested in the [Hosting Team](https://make.wordpress.org/hosting/), you may be interested in these other teams as well:
 
-* [Core](https://make.wordpress.org/core/): The core team makes WordPress. Whether you're a seasoned PHP, HTML, JavaScript or CSS developer or are just learning to code, we'd love to have you on board. You can write code, fix bugs, debate decisions, and help with development.
+* [Core](https://make.wordpress.org/core/): The core team makes WordPress. Whether you're a seasoned PHP, HTML, JavaScript, or CSS developer or are just learning to code, Core would love to have you on board. You can write code, fix bugs, debate decisions, and help with development.
 * [Core Performance](https://make.wordpress.org/performance/): The core performance team is dedicated to monitoring, enhancing, and promoting performance in WordPress core and its surrounding ecosystem.
 * [CLI](https://make.wordpress.org/cli/): WP-CLI is the official command line tool for interacting with and managing your WordPress sites.
 * [Documentation](https://make.wordpress.org/docs/): Good documentation lets people help themselves when they get stuck. The docs team is responsible for creating documentation and is always on the look-out for writers. The blog has discussion around the team's current projects.
