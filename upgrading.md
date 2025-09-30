@@ -1,20 +1,20 @@
 # Upgrading WordPress
 
-Upgrading WordPress should be a simple task if its maintained and updated over time and adapted to each major version with the [requirements of that moment](https://make.wordpress.org/hosting/handbook/server-environment/).
+Upgrading WordPress should be a simple task if it's maintained and updated over time and adapted to each major version with the [requirements of that moment](https://make.wordpress.org/hosting/handbook/server-environment/).
 
 **What happens with older versions?**
 
-As a courtesy, the WordPress project makes an effort to provide security support from WordPress 4.7 to the latest version. However, back porting patches is not always possible and therefore versions of WordPress prior to the very latest version are _not officially supported_ as a result.
+As a courtesy, the WordPress project makes an effort to provide security support from WordPress 4.7 to the latest version. However, backporting patches is not always possible and therefore versions of WordPress prior to the very latest version are _not officially supported_ as a result.
 
 Each version has its own supported database versions, PHP versions, and a series of compatibilities that need to be updated over time.
 
 **What if it is not updated?**
 
-On this page there are some ideas and suggestions on how to upgrade. In many cases it will not be possible to upgrade the operating system, include new PHP versions, so will have to migrate WordPress to an updated hosting.
+On this page there are some ideas and suggestions on how to upgrade. In many cases it will not be possible to upgrade the operating system, include new PHP versions, so you will have to migrate WordPress to an updated hosting.
 
 Many assumptions will be made in this document, as each case will be different. Before doing any kind of upgrade, please make a backup of all site data: WordPress files, Database, Certificates and OS / Services configurations.
 
-IMPORTANT: This is a very manual process, not a massive one. There will be probably losses and some updates will be needed after the upgrade.
+IMPORTANT: This is a very manual process, not a massive one. There will probably be losses and some updates will be needed after the upgrade.
 
 [tip]In case only a major version (X.X) is indicated, use its minor (X.X.x) latest version available.[/tip]
 
@@ -42,7 +42,7 @@ As with any upgrade, the first thing to do is to make a backup copy. The best wa
 4. Configure the wp-config.php with all the new data.
 5. Access the "/wp-admin/" page, and follow the upgrading process.
 
-With this way, WordPress will be able to maintain and update the contents in the database and be able to work with these contents in an updated version of WordPress.
+This way, WordPress will be able to maintain and update the contents in the database and be able to work with these contents in an updated version of WordPress.
 
 A WordPress with the default theme, and all the contents should now be available.
 
