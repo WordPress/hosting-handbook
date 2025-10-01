@@ -71,3 +71,11 @@ Make sure to check your initial baseline to always be able to see progress and c
 ## Continuous Improvement and Auditing
 
 Sustainability is an ongoing commitment. Hosting providers should regularly audit their energy, water, and waste management practices and continually stay updated on the latest technologies to improve their environmental performance.
+
+## Renewable Energy Certificates (RECs)
+
+Hosting providers may also complement their sustainability efforts by purchasing Renewable Energy Certificates (RECs), which offset energy consumption through investment in renewable sources. For example: [Renewable Energy Certificates (RECs)](https://www.climateimpact.com/business-solutions/energy-attribute-certificates-eacs/renewable-energy-certificates-recs)
+
+## Eco-Friendly Plugin and Theme Development
+
+Encourage plugin and theme developers to adopt sustainable coding practices. Lightweight code, minimal external dependencies, and efficient database queries reduce the overall energy demand of websites running on shared infrastructure. WordPress-specific sustainability guidelines could help developers build with efficiency in mind.
