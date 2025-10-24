@@ -131,6 +131,8 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
   - Be on the [#wceu](https://wordpress.slack.com/archives/C1HRSGE2X) Slack channel, _recommended_
   - Be on the [#wcus](https://wordpress.slack.com/archives/C087S65L2) Slack channel, _recommended_
 
+- **GitHub**
+    >  Disclaimer: Pages and Teams in this section are visible exclusively to only members of the WP Org on GitHub.
 - **GitHub Teams**
   - [Hosting Team](https://github.com/orgs/WordPress/teams/hosting-team)
   - [Hosting Handbook Team](https://github.com/orgs/WordPress/teams/hosting-handbook-team)
