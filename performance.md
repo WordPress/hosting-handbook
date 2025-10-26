@@ -65,7 +65,7 @@ Support for a persistent object cache gives WordPress, plugins, and themes, a pl
 
 For these reasons, persistent object caching support is commonly offered with managed WordPress hosting.
 
-<img src="https://make.wordpress.org/hosting/files/2018/08/wordpress-object-caching-example.png" alt="Full Page Cache Example" width="100%">
+<img src="https://make.wordpress.org/hosting/files/2018/08/wordpress-object-caching-example.png" alt="Object Cache Example" width="100%">
 
 > Transients are inherently sped up by caching plugins, where normal Options are not. A memcached plugin, for example, would make WordPress store transient values in fast memory instead of in the database. For this reason, transients should be used to store any data that is expected to expire, or which can expire at any time. Transients should also never be assumed to be in the database, since they may not be stored there at all.
 
