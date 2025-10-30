@@ -51,7 +51,7 @@ Full Page Caching stores the HTML output of a request, but all the CSS, JS, imag
 
 It's important to have the ability to expire caches when necessary to avoid serving visitors old data. When available, selective caching is preferred over purging the entire cache, to avoid the cost of WordPress regenerating every page for the site. Furthermore, it's good practice to exclude certain types of pages from your full page caching completely because they are different for each user. For example, if you have an online store, it's imperative that your cart, checkout and profile pages are completely dynamic. In general, it’s a good idea to exclude all logged in users from the cache because they are supposed to see personalized content. Another important aspect is the default caching period, which can be different for each website depending on how often data is changed.
 
-<img src="https://make.wordpress.org/hosting/files/2018/08/full-page-caching-response-example.png" alt="Full Page Cache Example" style=" max-width: 700px;">
+<img src="https://make.wordpress.org/hosting/files/2018/08/full-page-caching-response-example.png" alt="Full Page Cache Example" style="max-width: 100%; max-height: 100%; object-fit: contain;">
 
 ### Object Cache
 
@@ -65,7 +65,7 @@ Support for a persistent object cache gives WordPress, plugins, and themes, a pl
 
 For these reasons, persistent object caching support is commonly offered with managed WordPress hosting.
 
-<img src="https://make.wordpress.org/hosting/files/2018/08/wordpress-object-caching-example.png" alt="Object Cache Example" style=" max-width: 700px;">
+<img src="https://make.wordpress.org/hosting/files/2018/08/wordpress-object-caching-example.png" alt="Object Cache Example" style="max-width: 100%; max-height: 100%; object-fit: contain;">
 
 > Transients are inherently sped up by caching plugins, where normal Options are not. A memcached plugin, for example, would make WordPress store transient values in fast memory instead of in the database. For this reason, transients should be used to store any data that is expected to expire, or which can expire at any time. Transients should also never be assumed to be in the database, since they may not be stored there at all.
 
