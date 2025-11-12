@@ -1,8 +1,8 @@
 # Monthly Hosting Team Updates
-The Hosting Team is publishing monthly updates to make.wordpress.org/hosting and https://make.wordpress.org/updates/ with the team activtiy currently measured in:
+The Hosting Team is publishing monthly updates to make.wordpress.org/hosting and https://make.wordpress.org/updates/ with the team activity currently measured in:
 
-- Acitvity on the Hosting Tests
-- GitHub Activities on Hosting Team mantained Repos 
+- Activity on the Hosting Tests
+- GitHub Activities on Hosting Team maintained Repos 
 
 As an example you can view the monthly update for [July 2025](https://wp.me/p8aY12-Bn7), which was the first one published.
 
