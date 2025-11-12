@@ -2,7 +2,7 @@
 
 This is the repository for the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/handbook/).
 
-The live Handbook is currently being migrated here, but the goal is to have the Handbook there directly generated from this repository.
+The live Handbook is currently being migrated here, with the goal of having it generated directly from this repository.
 
 ## Getting Started
 
