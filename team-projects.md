@@ -88,7 +88,7 @@ _Those skills are not required, but help._
 
 Although we are still in a first step, if you know of other WordPress content that could be in this Handbook, please [open an issue](https://github.com/WordPress/Documentation-Issue-Tracker/issues) and discuss it with the Documentation team. Please use the label ["advanced administration"](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration).
 
-If you want to help launch the Handbook as soon as possible, [please take an issue and work on it](https://github.com/zzap/WordPress-Advanced-administration-handbook/issues). You can comment on the site itself if you have any questions, suggestions or improvements.
+If you want to help launch the Handbook as soon as possible, [please take an issue and work on it](https://github.com/WordPress/Advanced-administration-handbook/issues). You can comment on the site itself if you have any questions, suggestions or improvements.
 
 ### Tools
 
