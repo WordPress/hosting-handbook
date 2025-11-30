@@ -18,6 +18,17 @@ IMPORTANT: This is a very manual process, not a massive one. There will probably
 
 [tip]In case only a major version (X.X) is indicated, use its minor (X.X.x) latest version available.[/tip]
 
+## Using WP-CLI for upgrades
+
+If you have access to the command line and WP-CLI is installed, parts of the upgrading process can be simplified by using commands instead of downloading and copying files manually. Always make sure you have a verified backup of your files and database before running any commands.
+
+### Check the current version
+
+You can check which WordPress version is currently installed with:
+
+```bash
+wp core version
+
 ## Upgrading from WordPress 0.7 - 3.6 (by migration)
 
 Goals:
