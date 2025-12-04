@@ -69,7 +69,7 @@ There's always a need for more folks to join! If you're interested in helping ou
 
    * In the WordPress admin, go to **Posts → All Posts**.
    * Find a recent “Hosting Team meeting summary” or “Hosting Meeting Notes” post.
-   * Use the “Duplicate”/“Copy to new draft” option (provided by the duplicator/duplicate-post plugin) to create a new draft from that post. This keeps the basic structure and headings for you.
+   * Use the “Duplicate”/“Copy to new draft” option to create a new draft from that post. This keeps the basic structure and headings for you.
 
 3. **Update the post details**
 
