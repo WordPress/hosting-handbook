@@ -53,7 +53,7 @@ Everything else up for discussion will be handled during the **Open Floor**. Eve
 
 Taking meeting notes is a great way to help out!
 
-During each meeting, we create a post with a synopsis of what is chatted about, to make it easier for those who can't attend to follow along. You can see examples of notes from previous meetings on the [Hosting Team's Make site](https://make.wordpress.org/hosting/tag/weekly-hosting-chat/).
+During each meeting, we create a post summarizing what is discussed, to make it easier for those who can’t attend to stay informed. You can see examples of notes from previous meetings on the [Hosting Team's Make site](https://make.wordpress.org/hosting/tag/weekly-hosting-chat/).
 
 There's always a need for more folks to join! If you're interested in helping out with taking notes, chat with one of the Team Reps for access to the team's [make site](https://make.wordpress.org/hosting/wp-admin/).
 
