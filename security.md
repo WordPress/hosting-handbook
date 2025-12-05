@@ -80,7 +80,7 @@ Additionally, WordPress stores assets and user uploaded files in a special uploa
 
 ## WordPress Users and Roles
 
-WordPress itself defines 5 default types of users (6 if WordPress Multisite is enabled). They are:
+WordPress itself defines 5 default types of users (6 if [WordPress Multisite](https://developer.wordpress.org/advanced-administration/multisite/create-network/) is enabled). They are:
 
 *   Super Administrator (If WordPress Multisite is enabled) - a superuser with access to the special WordPress Multisite administration features and all other normal administration features.
 *   Administrator (slug: 'administrator') - a superuser for the individual WordPress website with access to all of the administration features in the website.
