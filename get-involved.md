@@ -53,17 +53,58 @@ Everything else up for discussion will be handled during the **Open Floor**. Eve
 
 Taking meeting notes is a great way to help out!
 
-During each meeting, we try to create a post with a synopsis of what is chatted about, to make it easier for those who can't attend to follow along. You can see examples of notes from previous meetings on the [Hosting Team's Make site](https://make.wordpress.org/hosting/tag/weekly-hosting-chat/).
+During each meeting, we create a post summarizing what is discussed, to make it easier for those who can’t attend to stay informed. You can see examples of notes from previous meetings on the [Hosting Team's Make site](https://make.wordpress.org/hosting/tag/weekly-hosting-chat/).
 
-There's always a need for more folks to join! If you're interested in helping out with taking notes, chat with one of the Team Reps for access to the team's [make site](https://make.wordpress.org/hosting/wp-admin/). Once you have access, you'll be able to start with templates of previous meeting notes.
+There's always a need for more folks to join! If you're interested in helping out with taking notes, chat with one of the Team Reps for access to the team's [make site](https://make.wordpress.org/hosting/wp-admin/).
 
-You can check out recommendations on style in this [Core Handbook page](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/). They don't all apply because it's a guide from Core — the biggest thing is to be careful not to accidentally represent WordPress.org or the team if it's not a WordPress.org or team decision, and to get peer review before posting.
+##### Step–by–step: how to create meeting notes
 
-Feel free to ask in the main [#hosting](https://wordpress.slack.com/archives/hosting/) channel for review, or any of the Team Reps directly if you don't get a reply right away.
+1. **Request access**
 
-## Getting Started at Contributing
+   * Ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel for access to the Hosting Make site.
+   * A Team Rep can grant you the required role so that you can create and edit posts at  
+     `https://make.wordpress.org/hosting/wp-admin/`.
 
-If you've never been on the Hosting Team before and you want to contribute, a good time to start is on a Contributor Day. You can check to see if your nearest community has a Hosting team, and if not, you can always participate in the Contributor Days associated with WCAsia ([WordCamp Asia](https://asia.wordcamp.org/)), WCEU ([WordCamp Europe](https://europe.wordcamp.org/)), and WCUS ([WordCamp US](https://us.wordcamp.org/)).
+2. **Start from an existing template**
+
+   * In the WordPress admin, go to **Posts → All Posts**.
+   * Find a recent “Hosting Team meeting summary” or “Hosting Meeting Notes” post.
+   * Use the “Duplicate”/“Copy to new draft” option to create a new draft from that post. This keeps the basic structure and headings for you.
+
+3. **Update the post details**
+
+   * Change the **title** to follow the current format, for example:  
+     `Hosting Team meeting summary 2025-11-26`.
+   * Update the **date and time** in the introduction and add a link to the Slack archive, if available.
+   * Check the **tags** and keep them consistent with previous notes, typically including:  
+     `meetings`, `summary`, and `weekly-hosting-chat`.
+
+4. **Write the notes**
+
+   Use the headings from the agenda (for example: *Greetings*, *About the WordPress Community*, *About the WordPress Hosting Team*, *Open Floor*) and add short summaries for each topic that was discussed.
+
+##### What to include in the notes
+
+When writing the content, aim to include:
+
+* **Meeting context** – date, time, and the Slack channel where the meeting was held.
+* **Link to the agenda**, if one was published.
+* **Key discussion points** for each agenda item, written as short, neutral summaries.
+* **Decisions made**, if any (for example, “The team agreed to…”).
+* **Action items**, ideally with who will follow up and, if known, by when.
+* **Links to related tickets, PRs, and posts** mentioned during the meeting.
+* **Next meeting information** – date, time, and channel.
+* **Props / acknowledgements** to people who helped prepare the agenda, notes, or specific work.
+
+Try to keep the tone neutral and descriptive (not personal opinion), and avoid wording that sounds like an official statement on behalf of WordPress.org unless this has been explicitly agreed by the team.
+
+##### Review and publication
+
+1. When you are satisfied with the draft, set the **post status** to **“Pending review”**.
+2. Share a link to the draft in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel and ask for a quick review.
+3. A Team Rep or another experienced contributor will review, make any small adjustments if needed, and publish the notes.
+
+You can check out additional recommendations on writing style in this [Core Handbook page](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/). They don't all apply because it's a guide from Core — the biggest thing is to be careful not to accidentally represent WordPress.org or the team if it's not a WordPress.org or team decision, and to get peer review before posting.
 
 Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, check it, and start participating. The team always has something to do!
 
