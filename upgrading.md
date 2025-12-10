@@ -18,82 +18,14 @@ IMPORTANT: This is a very manual process, not a massive one. There will probably
 
 [tip]In case only a major version (X.X) is indicated, use its minor (X.X.x) latest version available.[/tip]
 
-
----
-
 ## Using WP-CLI for upgrades
 
-If you have access to the command line and WP-CLI is installed, parts of the upgrading process can be simplified by using commands instead of downloading and copying files manually. Always make sure you have a verified backup of your files and database before running any commands.
+If WP-CLI is available on your hosting environment, some parts of the upgrade process can be simplified. Always make sure you have a full backup of the files and the database before running any commands.
 
-### Check the current version
+For the latest and complete list of `wp core` commands and options, please refer to the official WP-CLI documentation:
 
-To see which version of WordPress is currently installed:
+https://developer.wordpress.org/cli/commands/core/
 
-```bash
-wp core version
-```
-
-### Check for available updates
-
-Before upgrading, check whether a new core update is available:
-
-```bash
-wp core check-update
-```
-
-### Upgrade WordPress core
-
-To upgrade WordPress to the latest available version:
-
-```bash
-wp core update
-```
-
-### Upgrade to a specific version
-
-If you need to install a particular version of WordPress:
-
-```bash
-wp core update --version=6.4.2
-```
-
-Replace `6.4.2` with the desired version number.
-
-### Verify core file integrity
-
-If you suspect that WordPress core files may be corrupted or modified:
-
-```bash
-wp core verify-checksums
-```
-
-### Force an update (if a standard update fails)
-
-If a regular upgrade becomes stuck or fails:
-
-```bash
-wp core update --force
-```
-
-### Download core files without affecting content
-
-To download fresh WordPress core files while preserving themes, plugins, and uploads:
-
-```bash
-wp core download --force --skip-content
-```
-
-### Install a specific version without affecting content
-
-To downgrade or reinstall a specific version of WordPress while keeping your content intact:
-
-```bash
-wp core download --version=6.4.2 --force --skip-content
-```
-
-This replaces only the core files and keeps your existing content unchanged.
-
----
 
 ## Upgrading from WordPress 0.7 - 3.6 (by migration)
 
@@ -144,7 +76,7 @@ WordPress Versions <= 4.0 are compatible with PHP versions that are hardly avail
 WP-CLI does not work below PHP 5.6.20, so this update must be manual.
 
 Follow these steps:
-- Backup everything
+- Back up everything
 - Remove unused themes
 - Activate Twenty Ten
 - Delete deactivated plugins
