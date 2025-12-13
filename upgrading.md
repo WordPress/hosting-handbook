@@ -24,7 +24,7 @@ If WP-CLI is available on your hosting environment, some parts of the upgrade pr
 
 For the latest and complete list of `wp core` commands and options, please refer to the official WP-CLI documentation:
 
-https://developer.wordpress.org/cli/commands/core/
+https://docs.google.com/document/d/1mwc_KiQvvmtvpQY0Pmdk9t-SHQLfYrqhbUvE4118zjY/edit?usp=sharing
 
 
 ## Upgrading from WordPress 0.7 - 3.6 (by migration)
