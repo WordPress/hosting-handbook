@@ -8,7 +8,7 @@ It consists of two tools: the Runner is the part that runs core's PHPUnit tests 
 
 ### Runner
 
-Hosting companies can have from several to millions websites hosted with WordPress, so it's important to make sure their configuration is as compatible as possible with the software.
+Hosting companies can have millions of websites hosted with WordPress, so it's important to make sure their configuration is as compatible as possible with the software.
 
 To verify this compatibility, the WordPress Community provides a series of [PHPUnit](https://phpunit.de/) tests with which to check the operation of WordPress in any environment.
 
