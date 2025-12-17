@@ -1,6 +1,6 @@
 # Tests
 
-The WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to help with WordPress' compatibility with hosts as well.
+To improve compatibility with WordPress, the WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to communicate their compatibility status with the WordPress community.
 
 It consists of two tools: the Runner is the part that runs core's PHPUnit tests on a host and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter, which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
 
@@ -14,7 +14,7 @@ To verify this compatibility, the WordPress Community provides a series of [PHPU
 
 ### Reporter
 
-The Runner tests generate a report with the test results related to a bot user (a hosting company), and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page.
+The Runner tests generate a report with the test results related to a bot user associated with a web host, and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page.
 
 ## Try the PHPUnit Test Runner
 
@@ -24,7 +24,7 @@ The [phpunit-test-runner](https://github.com/WordPress/phpunit-test-runner) is a
 
 There is [full documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
 
-The tool can be run manually or through an automated system like Travis. To see how it works and the purpose of this document will show how to run the tests manually.
+The tool can be run manually or through an automated system like Travis. To see how it works, and the purpose of this document, is to show how to run the tests manually.
 
 ### Requirements
 
@@ -72,7 +72,7 @@ The content (in summary form) can be something like this:
 # Path to the directory where files can be prepared before being delivered to the environment.
 export WPT_PREPARE_DIR=/home/wptestrunner/wordpress
 
-# Path to the directory where the WordPress development checkout can be placed and tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
+# Path to the directory where the `wordpress-develop` repository can be copied, and from which tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
 export WPT_TEST_DIR=$WPT_PREPARE_DIR
 
 # API key to authenticate with the reporting service in 'username:password' format. Check the "Creating your bot" section on how to get your authentication.
@@ -143,7 +143,7 @@ Success: Prepared environment.
 
 Now that the environment has been prepared, the next step is to run the tests for the first time.
 
-[info]The 4 steps have to be executed every time a test is done. The preparation of the environment, as well, even if you do not change the configuration.[/info]
+[info]All 4 steps must be executed every time a test is run. That includes the preparation of the environment by running `prepare.php` each time, even if no changes to the env configuration have been made.[/info]
 
 ### Running the test
 
@@ -165,7 +165,7 @@ What do the symbols mean?
 
 `I` → Means that the test has been marked as incomplete.
 
-If you follow these steps, everything should work perfectly and you should not make any mistakes. In case you get any error, it may be normal due to some missing adjustment or extension of PHP, among others. We recommend that you adjust the configuration until it works correctly. After all, this tool is to help you improve the optimal configuration for WordPress in that infrastructure.
+If you follow these steps, everything should work perfectly and you should not make any mistakes. If you encounter errors after following these steps, it may be due to some missing adjustment or extension of PHP, among others. We recommend that you adjust the configuration until it works correctly. After all, this tool is to help you improve the optimal configuration for WordPress in that infrastructure.
 
 ### Creating a report
 
@@ -239,7 +239,7 @@ Do not forget that this tool aims to verify that the environment and infrastruct
 
 The goal? To be error-free and have the green light for the perfect configuration.
 
-[alert]Some tests may be skipped, or there may be tests with some risk. It is normal for errors to occur even with a properly configured environment.[/alert]
+[alert]Some tests may be skipped, or there may be tests that PHPUnit considers "risky".[/alert]
 
 ## How to report: Creating your bot for WordPress.org
 
