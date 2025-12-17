@@ -207,7 +207,7 @@ The content of this file is somewhat similar to this:
 }
 ```
 
-In addition to this report, a definitive file with all the information on what happened in the tests will be provided. This is the one that includes all the tests that are made (more than 10,000), giving information on the time that they take to be executed, problems that have arisen...
+In addition to this report, a definitive file with all the information on what happened in the tests will be provided. This is the one that includes all the tests that are made (more than 10,000), giving information on the time that they take to be executed and any problems that may have arisen.
 
 ```bash
 cat /home/wptestrunner/wordpress/junit.xml
