@@ -1,6 +1,6 @@
 # Tests
 
-The WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to help with WordPress compatibility with hosts as well.
+The WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to help with WordPress' compatibility with hosts as well.
 
 It consists of two tools: the Runner is the part that runs core's PHPUnit tests on a host and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter, which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
 
