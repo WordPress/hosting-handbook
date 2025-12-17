@@ -24,7 +24,7 @@ The [phpunit-test-runner](https://github.com/WordPress/phpunit-test-runner) is a
 
 There is [full documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
 
-The tool can be run manually or through an automated system like Travis. To see how it works, and the purpose of this document, is to show how to run the tests manually.
+The tool can be run manually or through an automated system like Travis. The purpose of this document is to show how to run the tests manually to illustrate how it works.
 
 ### Requirements
 
