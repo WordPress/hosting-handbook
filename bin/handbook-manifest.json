@@ -83,6 +83,13 @@
     "parent": null,
     "order": 6
   },
+  "live": {
+    "title": "WordPress Hosting Live",
+    "slug": "live",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/live.md",
+    "parent": null,
+    "order": 7
+  },
   "performance": {
     "title": "Performance",
     "slug": "performance",
