@@ -466,6 +466,13 @@ While WordPress does not regularly test against these MySQL servers, they are kn
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
 
+#### Experimental: SQLite (feature plugin)
+**Note:** WordPress Core officially supports **MySQL/MariaDB** for production. SQLite is **opt-in and experimental** via the community [SQLite Database Integration](https://make.wordpress.org/playground/2025/06/13/introducing-a-new-sqlite-driver-for-wordpress/) feature plugin. Treat this as a testing/evaluation path for hosts—not a wholesale replacement.
+
+**Host feedback wanted**
+If you trial this with cohorts, please share: traffic profile, caching, write rates, DB file sizes, error logs, and any plugin/theme incompatibilities. Feedback is most useful if a future Core merge is proposed.
+
+
 ## How do I know which version I have?
 
 If you have WordPress 5.2+, the WordPress Admin already has tools with that information in the `Site Health` section (at `Tools` in the menu).
