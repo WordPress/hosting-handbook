@@ -59,29 +59,19 @@ There's always a need for more folks to join! If you're interested in helping ou
 
 ##### Step–by–step: how to create meeting notes
 
-1. **Request access**
-
-   * Ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel for access to the Hosting Make site.
-   * A Team Rep can grant you the required role so that you can create and edit posts at  
-     `https://make.wordpress.org/hosting/wp-admin/`.
-
-2. **Start from an existing template**
-
-   * In the WordPress admin, go to **Posts → All Posts**.
-   * Find a recent “Hosting Team meeting summary” or “Hosting Meeting Notes” post.
-   * Use the “Duplicate”/“Copy to new draft” option to create a new draft from that post. This keeps the basic structure and headings for you.
-
-3. **Update the post details**
-
-   * Change the **title** to follow the current format, for example:  
-     `Hosting Team meeting summary 2025-11-26`.
-   * Update the **date and time** in the introduction and add a link to the Slack archive, if available.
-   * Check the **tags** and keep them consistent with previous notes, typically including:  
-     `meetings`, `summary`, and `weekly-hosting-chat`.
-
-4. **Write the notes**
-
-   Use the headings from the agenda (for example: *Greetings*, *About the WordPress Community*, *About the WordPress Hosting Team*, *Open Floor*) and add short summaries for each topic that was discussed.
+1.  **Request access**
+    *   Ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel for access to the Hosting Make site.
+    *   A Team Rep can grant you the required role so that you can create and edit posts at `https://make.wordpress.org/hosting/wp-admin/`.
+2.  **Start from an existing template**
+    *   In the WordPress admin, go to **Posts → All Posts**.
+    *   Find a recent "Hosting Team meeting summary" or "Hosting Meeting Notes" post.
+    *   Use the "Duplicate"/"Copy to new draft" option to create a new draft from that post. This keeps the basic structure and headings for you.
+3.  **Update the post details**
+    *   Change the **title** to follow the current format, for example: `Hosting Team meeting summary 2025-11-26`.
+    *   Update the **date and time** in the introduction and add a link to the Slack archive, if available.
+    *   Check the **tags** and keep them consistent with previous notes, typically including: `meetings`, `summary`, and `weekly-hosting-chat`.
+4.  **Write the notes**
+    *   Use the headings from the agenda (for example: _Greetings_, _About the WordPress Community_, _About the WordPress Hosting Team_, _Open Floor_) and add short summaries for each topic that was discussed.
 
 ##### What to include in the notes
 
