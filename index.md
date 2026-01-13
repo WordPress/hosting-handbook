@@ -4,11 +4,23 @@ Welcome to the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/h
 
 ## About the Hosting Team
 
-People in this team are closely related to the world of hosting. They work as system administrators, plugin developers etc., and care about improving the relationship between WordPress and where their WordPress is hosted.
+The WordPress Hosting Team consists of experienced professionals dedicated to bridging the gap between WordPress and hosting environments. Our members include system administrators, hosting providers, plugin developers, and server infrastructure experts who are passionate about optimizing WordPress performance and reliability in production environments.
 
-Our goals are wide ranging, although we are primarily focused on publishing documentation about the best practices hosters can apply when it comes to hosting WordPress. We are also working to offer tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database or the web server) appear.
+### Our Mission
 
-If you want to know more, feel free to take a look at our [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page.
+We believe that great hosting experiences enable WordPress to thrive. Our team works to:
+
+- **Publish authoritative documentation** on hosting best practices, server configurations, and environment recommendations for WordPress deployments
+- **Maintain compatibility guides** that help hosting providers and site owners understand which server environments work best with each WordPress release
+- **Monitor and evaluate** new PHP versions, databases (MySQL/MariaDB), and web servers to ensure WordPress compatibility and performance
+- **Provide technical resources** that help the WordPress community make informed decisions about their hosting infrastructure
+- **Advocate for WordPress** within the hosting industry and represent hosting needs within the broader WordPress project
+
+### What We Do
+
+We focus on publishing documentation about best practices for hosting WordPress and providing tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database, and the web server) appear.
+
+**Get Involved:** If you want to know more and join our efforts, feel free to visit our [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page.
 
 ### What is the WordPress Hosting Team?
 
