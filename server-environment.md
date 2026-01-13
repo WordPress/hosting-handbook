@@ -268,26 +268,40 @@ End of life PHP versions:
 
 ### PHP Extensions
 
-WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing, WordPress will either have to do more work to do the task the module helps with, or in the worst case, will remove functionality. All the extensions are for installations with PHP >= 7.4.
+WordPress core makes use of various PHP extensions when they're available. If the preferred extension is missing, WordPress will either have to do more work to do the task the module helps with, or in the worst case, will remove functionality.
+
+Notes:
+
+- Some extensions are built into PHP (or enabled by default) and require no special action in a typical hosting environment.
+- Other extensions are optional and may need to be installed/enabled depending on how PHP is packaged.
+
+The lists below assume PHP >= 7.2 (the minimum supported PHP version for WordPress at the time of writing).
+
+#### Built-in extensions (no hosting action required)
+
+The following extensions are part of PHP itself and are always enabled in supported PHP versions (>= 7.2). No hosting configuration is needed:
+
+- [pcre](https://www.php.net/manual/en/book.pcre.php) - Regular expression engine used throughout PHP and WordPress.
+
+#### Required extensions
 
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
-- [json](https://www.php.net/manual/en/book.json.php) (bundled in >=8.0.0) - Used for communications with other servers and processing data in JSON format.
-- One of either [mysqli](https://www.php.net/manual/en/book.mysqli.php) (bundled in >=5.0.0), or [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) - Connects to MySQL for database interactions.
+- [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format. (Always enabled in PHP >= 8.0; enabled by default in PHP 7.x but can be disabled in custom builds.)
+- [mysqli](https://www.php.net/manual/en/book.mysqli.php) - Connects to MySQL/MariaDB for database interactions. Many PHP builds use [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) as the underlying driver, but `mysqlnd` is not a standalone replacement for `mysqli`.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 - [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0 ; PHP >= 8.4 requires libcurl >= 7.61.0) - Performs remote request operations.
 - [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
-- [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) - Works with metadata stored in images.
-- [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled in PHP) - Used to detect mimetype of file uploads.
-- [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) - Used for hashing, including passwords and update packages.
+- [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
+- [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
+- [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
 - [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 - [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0; PHP >= 8.4 requires OpenSSL >= 1.1.1 / < 4.0) - SSL-based connections to other hosts.
-- [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0 recommended PCRE 8.10) - Increases performance of pattern matching in code searches.
 - [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
 - [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
@@ -311,7 +325,7 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 - [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
 - [shmop](https://www.php.net/manual/en/book.shmop.php) - Shmop is an easy to use set of functions that allows PHP to read, write, create and delete Unix shared memory segments.
 - [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
-- [sodium](https://www.php.net/manual/en/book.sodium.php) - (bundled in PHP >=7.2.0; requires libsodium >= 1.0.8) - Validates Signatures and provides securely random bytes.
+- [sodium](https://www.php.net/manual/en/book.sodium.php) (bundled with PHP as of 7.2.0; requires libsodium >= 1.0.8) - Validates signatures and provides securely random bytes.
 - [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
 - [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >= 1.2.0.4) - Gzip compression and decompression.
 
@@ -451,6 +465,13 @@ While WordPress does not regularly test against these MySQL servers, they are kn
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
+
+#### Experimental: SQLite (feature plugin)
+**Note:** WordPress Core officially supports **MySQL/MariaDB** for production. SQLite is **opt-in and experimental** via the community [SQLite Database Integration](https://make.wordpress.org/playground/2025/06/13/introducing-a-new-sqlite-driver-for-wordpress/) feature plugin. Treat this as a testing/evaluation path for hosts—not a wholesale replacement.
+
+**Host feedback wanted**
+If you trial this with cohorts, please share: traffic profile, caching, write rates, DB file sizes, error logs, and any plugin/theme incompatibilities. Feedback is most useful if a future Core merge is proposed.
+
 
 ## How do I know which version I have?
 
