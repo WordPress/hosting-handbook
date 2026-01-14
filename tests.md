@@ -1,20 +1,20 @@
 # Tests
 
-The WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published them on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to help WordPress' compatibility with hosts as well.
+To improve compatibility with WordPress, the WordPress Hosting Team provides tools for hosting companies to run the WordPress automated tests on their infrastructure to improve compatibility with WordPress. These results can be published on the [Host Test Result information page](https://make.wordpress.org/hosting/test-results/), to communicate their compatibility status with the WordPress community.
 
-It consists of two tools: the Runner is the part that runs core's PHPUnit tests on a host and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
+It consists of two tools: the Runner is the part that runs core's PHPUnit tests on a host and optionally [sends the information to the results page](https://make.wordpress.org/hosting/test-results/); and the Reporter, which is the plugin that [works on the hosting page](https://make.wordpress.org/hosting/) and shows the results.
 
 ## What is it
 
 ### Runner
 
-Hosting companies can have several to millions of websites hosted with WordPress, so it's important to make sure their configuration is as compatible as possible with the software.
+Hosting companies can have millions of websites hosted with WordPress, so it's important to make sure their configuration is as compatible as possible with the software.
 
 To verify this compatibility, the WordPress Community provides a series of [PHPUnit](https://phpunit.de/) tests with which to check the operation of WordPress in any environment.
 
 ### Reporter
 
-The Runner tests generates a report with the test results related to a bot user (a hosting company), and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page.
+The Runner tests generate a report with the test results related to a bot user associated with a web host, and this captures and displays those test results at the [Host Test Result](https://make.wordpress.org/hosting/test-results/) page.
 
 ## Try the PHPUnit Test Runner
 
@@ -22,9 +22,9 @@ The Runner tests generates a report with the test results related to a bot user 
 
 The [phpunit-test-runner](https://github.com/WordPress/phpunit-test-runner) is a tool designed to make it easier for hosting companies to run the WordPress project's automated tests.
 
-There is a [whole documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
+There is [full documentation about this tool](https://make.wordpress.org/hosting/test-results-getting-started/). Also, if you want, you can make your test results appear in the [Host Test Results page](https://make.wordpress.org/hosting/test-results/) of WordPress.
 
-The tool can be run manually or through an automated system like Travis. To see how it works and the purpose of this document, will be shown how to run the tests manually.
+The tool can be run manually or through an automated system like Travis. The purpose of this document is to show how to run the tests manually to illustrate how it works.
 
 ### Requirements
 
@@ -53,7 +53,7 @@ node -v
 
 ### Installing the Runner
 
-First, download the software. This example use `/home/wptestrunner/` folder, but set the best for this environment.
+First, download the software. This example uses the `/home/wptestrunner/` folder, but set it to the best for this environment.
 
 ```bash
 cd /home/wptestrunner/
@@ -72,7 +72,7 @@ The content (in summary form) can be something like this:
 # Path to the directory where files can be prepared before being delivered to the environment.
 export WPT_PREPARE_DIR=/home/wptestrunner/wordpress
 
-# Path to the directory where the WordPress develop checkout can be placed and tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
+# Path to the directory where the `wordpress-develop` repository can be copied, and from which tests can be run. When running tests in the same environment, set WPT_TEST_DIR to WPT_PREPARE_DIR
 export WPT_TEST_DIR=$WPT_PREPARE_DIR
 
 # API key to authenticate with the reporting service in 'username:password' format. Check the "Creating your bot" section on how to get your authentication.
@@ -113,11 +113,11 @@ export WPT_SSH_PRIVATE_KEY_BASE64=
 export WPT_DEBUG=
 ```
 
-Configure the folder where the WordPress software downloads and the database accesses will be made in order to prepare the tests.
+Configure the folder where the WordPress software downloads and the database accesses will be made to prepare the tests.
 
 ### Preparing the environment
 
-Before performing the first test, let's update all the components. This process can be run before each test in this environment if wanted to keep it up to date, although it will depend more if it is in a production environment.
+Before performing the first test, let's update all the components. This process can be run before each test in this environment if you want to keep it up to date, although it will depend more on whether it is in a production environment.
 
 ```bash
 cd /home/wptestrunner/phpunit-test-runner/
@@ -127,13 +127,13 @@ source .env
 
 ### Preparing the test
 
-Now there is the environment ready, run the test preparation.
+Now that the environment is ready, run the test preparation.
 
 ```bash
 php prepare.php
 ```
 
-The system will run a long series of installations, configurations and compilations of different elements in order to prepare the test. If warnings and warnings come out you should not worry too much, as it is quite normal. At the end of the process it will warn you if it needs something it doesn't have. If it works, you should see something like this at the end:
+The system will run a long series of installations, configurations, and compilations of different elements in order to prepare the test. If warnings come out, you should not worry too much, as it is quite normal. At the end of the process, it will warn you if it needs something it doesn't have. If it works, you should see something like this at the end:
 
 ```
 Done.
@@ -143,7 +143,7 @@ Success: Prepared environment.
 
 Now that the environment has been prepared, the next step is to run the tests for the first time.
 
-[info]The 4 steps have to be executed every time a test is done. The preparation of the environment as well, even if you do not change the configuration.[/info]
+[info]All 4 steps must be executed every time a test is run. That includes the preparation of the environment by running `prepare.php` each time, even if no changes to the env configuration have been made.[/info]
 
 ### Running the test
 
@@ -161,11 +161,11 @@ What do the symbols mean?
 
 `F` → Means that the test has failed. Information about why this happened is displayed at the end.
 
-`E` → It means that the test has failed due to a PHP error, which can be an error, warning or notice.
+`E` → It means that the test has failed due to a PHP error, which can be an error, warning, or notice.
 
 `I` → Means that the test has been marked as incomplete.
 
-If you follow these steps, everything should work perfectly and not make any mistakes. In case you get any error, it may be normal due to some missing adjustment or extension of PHP, among others. We recommend that you adjust the configuration until it works correctly. After all, this tool is to help you improve the optimal configuration for WordPress in that infrastructure.
+If you follow these steps, everything should work perfectly and you should not make any mistakes. If you encounter errors after following these steps, it may be due to some missing adjustment or extension of PHP, among others. We recommend that you adjust the configuration until it works correctly. After all, this tool is to help you improve the optimal configuration for WordPress in that infrastructure.
 
 ### Creating a report
 
@@ -207,13 +207,13 @@ The content of this file is somewhat similar to this:
 }
 ```
 
-In addition to this report, a definitive file with all the information of what happened in the tests. This is the one that includes all the tests that are made (more than 10,000) giving information of the time that they take to be executed, problems that have arisen...
+In addition to this report, a definitive file with all the information on what happened in the tests will be provided. This is the one that includes all the tests that are made (more than 10,000), giving information on the time that they take to be executed and any problems that may have arisen.
 
 ```bash
 cat /home/wptestrunner/wordpress/junit.xml
 ```
 
-At this point we can generate the reports by sending them to WordPress.org, if necessary. Even if you haven't included the WordPress user (see below for how to create it), you can still run this file.
+At this point, we can generate the reports by sending them to WordPress.org, if necessary. Even if you haven't included the WordPress user (see below for how to create it), you can still run this file.
 
 ```bash
 php report.php
@@ -231,15 +231,15 @@ php cleanup.php
 
 Once this first manual test has been done, please automate all these steps in a script, since it is required that each of these steps is executed sequentially for each test execution.
 
-This script should be run every time there is a change / commit in the WordPress master. Many hosting companies use a cron to run the script every few hours / days to make the appropriate checks, or when a change is made.
+This script should be run every time there is a change / commit in the WordPress master. Many hosting companies use a cron to run the script every few hours/days to make the appropriate checks, or when a change is made.
 
 ### Improving the configuration
 
-Do not forget that the aim of this tool is to verify that the environment and infrastructure is the optimal one for WordPress to work, so, following the example, could make several improvements such as installing the extension of `bcmath`, `gd`, `libsodium`, `mcrypt`, `mod_xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`.
+Do not forget that this tool aims to verify that the environment and infrastructure are the optimal ones for WordPress to work, so, following the example, you could make several improvements, such as installing the extension of `bcmath`, `gd`, `libsodium`, `mcrypt`, `mod_xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`.
 
-The goal? To be error free and have the green light for the perfect configuration.
+The goal? To be error-free and have the green light for the perfect configuration.
 
-[alert]Some tests may be skipped or there may be tests with some risk. It is normal for errors to occur even with a properly configured environment.[/alert]
+[alert]Some tests may be skipped, or there may be tests that PHPUnit considers "risky".[/alert]
 
 ## How to report: Creating your bot for WordPress.org
 
@@ -253,8 +253,8 @@ Create [an issue on the test page](https://github.com/WordPress/phpunit-test-run
 
 [info]Someone in the hosting team will review the request and add a user for you, or request additional information. The team will reply as quickly as possible, but as this step is manual, please be patient.[/info]
 
-Once the user has been created in the system, you'll get an invitation to join via email. Then, you can log into make/hosting and create an Application Password in Users -> Your Profile.
+Once the user has been created in the system, you'll get an invitation to join via email. Then, you can log into make.wordpress.org/hosting and create an Application Password in Users -> Your Profile.
 
-To get things reporting properly, place the username for the bot, along with the application password in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingcompanybot:ABCD 1234 abcd 4567 EFGH efgh'`.
+To get things reporting properly, place the username for the bot, along with the application password, in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingcompanybot:ABCD 1234 abcd 4567 EFGH efgh'`.
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
