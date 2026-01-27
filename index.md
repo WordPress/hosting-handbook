@@ -7,6 +7,9 @@ Welcome to the [WordPress Hosting Handbook](https://make.wordpress.org/hosting/h
 The WordPress Hosting Team consists of experienced professionals dedicated to bridging the gap between WordPress and hosting environments. Our members include system administrators, hosting providers, plugin developers, and server infrastructure experts who are passionate about optimizing WordPress performance and reliability in production environments.
 
 ### The Hosting Team Mission
+Hosting Team members are typically professionals in the web hosting industry; system administrators, support technicians, software engineers, plugin developers, etc., who are invested in supporting a relationship between WordPress and WordPress web hosts.
+
+The team's goals and projects are focused on facilitating collaboration between the WordPress Open Source Project and Web Hosts, through distributed testing on hosting systems and documentation on best practices as applicable to hosting WordPress.
 
 The Hosting Team believes that great hosting experiences enable WordPress to thrive. The team works to:
 
