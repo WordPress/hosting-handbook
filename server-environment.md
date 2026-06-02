@@ -6,7 +6,7 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
-- [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/04/16/wordpress-6-9-server-compatibility/)
+- [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
 - [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/2024/07/10/wordpress-6-6-server-compatibility/)
