@@ -61,15 +61,11 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 More information on [how PHP versions moved from beta to full support](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) is available here.
 
 - PHP 8.4
-  - Deprecation notices may be visible.
-  - Deprecations do not break functionality and are expected during the transition phase.
-  - WordPress Core continues active compatibility work.
+  - Fully compatible as of April 2026
   - [#62061: Prepare for PHP 8.4](https://core.trac.wordpress.org/ticket/62061). _NOTE: Closed / Fixed_
 
 - PHP 8.5
-  - Initial compatibility work is underway.
-  - Deprecation notices may occur as PHP 8.5 introduces new language changes.
-  - Full compatibility is targeted for a future WordPress release.
+  - Fully compatible as of April 2026
   - [#63061: Prepare for PHP 8.5](https://core.trac.wordpress.org/ticket/63061)
 
 - Other PHP Related Tickets
