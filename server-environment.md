@@ -56,14 +56,9 @@ _IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
-- What does "beta compatible" or "beta support" mean?
-  - “Beta compatible” or “beta support” means that WordPress Core is actively working toward full compatibility with that PHP version, but some issues may still be under review or pending resolution.
-  - When using a beta-supported PHP version:
-    - Deprecation notices may appear in error logs, wp-admin, or on the front end.
-    - Deprecation notices are not errors and do not indicate broken functionality.
-    - They signal areas of the codebase that will need updates for future PHP versions.
-  - More information on how PHP versions move from beta to full support is documented by the Core team:
-    - https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/
+“Beta compatible” or “beta support” means that WordPress Core is actively working toward full compatibility with that PHP version. However, as of [WordPress 7.0 the "beta" language is no longer in use](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/).
+
+More information on [how PHP versions moved from beta to full support](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) is available here.
 
 - PHP 8.4
   - Deprecation notices may be visible.
