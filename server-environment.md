@@ -52,7 +52,7 @@ Below are details on specific WordPress versions, PHP compatibility for that ver
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 - [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Candidate Support)
 
-_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, and 8.3, and **beta compatible** with PHP 8.4 and PHP 8.5. As of the WordPress 6.9 release, the term "compatible with exceptions" is no longer used._
+_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5. As of the WordPress 6.9 release, the term "compatible with exceptions" is no longer used._
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
