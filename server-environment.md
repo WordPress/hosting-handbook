@@ -62,18 +62,18 @@ More information on [how PHP versions moved from beta to full support](https://m
 
 - PHP 8.4
   - Fully compatible as of April 2026
-  - [#62061: Prepare for PHP 8.4](https://core.trac.wordpress.org/ticket/62061). _NOTE: Closed / Fixed_
+  - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
 
 - PHP 8.5
   - Fully compatible as of April 2026
-  - [#63061: Prepare for PHP 8.5](https://core.trac.wordpress.org/ticket/63061)
+  - [#63061](https://core.trac.wordpress.org/ticket/63061): Prepare for PHP 8.5
 
 - Other PHP Related Tickets
-  - [#51525: Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type()](https://core.trac.wordpress.org/ticket/51525). _Note: Moved to Future Release._
-  - [#54183: Tests: decide on how to handle deprecations in PHPUnit](https://core.trac.wordpress.org/ticket/54183). _Note: Moved to Future Release._
-  - [#54537: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved](https://core.trac.wordpress.org/ticket/54537). _Note: Moved to Future Release._
-  - [#58874: Code Modernization: Consider using the null coalescing operator](https://core.trac.wordpress.org/ticket/58874). _Note: Moved to Future Release._
-  - [#59234: Introduce a wp_json_decode() function, including validation when available](https://core.trac.wordpress.org/ticket/59234). _Note: Closed and will not be moving forward._
+  - [#51525](https://core.trac.wordpress.org/ticket/51525): Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type(). _Note: Moved to Future Release._
+  - [#54183](https://core.trac.wordpress.org/ticket/54183): Tests: decide on how to handle deprecations in PHPUnit. _Note: Moved to Future Release._
+  - [#54537](https://core.trac.wordpress.org/ticket/54537): Tests: Enable PHP version check once PHP 8.0 compatibility is achieved. _Note: Moved to Future Release._
+  - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _Note: Moved to Future Release._
+  - [#59234](https://core.trac.wordpress.org/ticket/59234): Introduce a `wp_json_decode()` function, including validation when available. _Note: Closed and will not be moving forward._
 
 ### Notes for Hosts and Developers
 
