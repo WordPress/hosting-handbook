@@ -45,27 +45,25 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.7&milestone=6.8&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
+The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
+
 #### WordPress 6.9
 
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
-- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Candidate Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
 
-_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5. As of the WordPress 6.9 release, the term "compatible with exceptions" is no longer used._
+_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
-
-“Beta compatible” or “beta support” means that WordPress Core is actively working toward full compatibility with that PHP version. However, as of [WordPress 7.0 the "beta" language is no longer in use](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/).
-
-More information on [how PHP versions moved from beta to full support](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) is available here.
 
 - PHP 8.4
   - Fully compatible as of April 2026
   - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
 
 - PHP 8.5
-  - Fully compatible as of April 2026
+  - Fully compatible as of May 2026
   - [#63061](https://core.trac.wordpress.org/ticket/63061): Prepare for PHP 8.5
 
 - Other PHP Related Tickets
@@ -78,30 +76,26 @@ More information on [how PHP versions moved from beta to full support](https://m
 ### Notes for Hosts and Developers
 
 - PHP 8.3 or later is recommended for production environments.
-- PHP 8.4 is suitable for testing and staging.
-- PHP 8.5 should be considered experimental until full compatibility is announced.
+- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
+- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later. Hosts should test their full stack before making a new PHP version the default for production environments.
 
 #### WordPress 6.8
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
-- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Candidate Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 
-_IMPORTANT: WordPress 6.8 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4 (1), 8.0(1), 8.1, and 8.2 and **beta compatible** with PHP 8.3, and PHP 8.4._ _As of the WordPress 6.8 release in April 2025, the term 'compatible with exceptions' is no longer used._
-
-_What does “beta compatible” or "beta support" mean?_
-
-'Beta compatible' or 'beta support' means that WordPress Core is actively working towards full compatibility with that PHP version, but there may still be some issues that are in the process of being resolved. Below are tickets outlining known issues regarding beta support for PHP 8.3 and 8.4. More information on when a PHP version goes from [beta to fully supported](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) is documented by the core team.
+_IMPORTANT: WordPress 6.8 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4 (1), 8.0 (1), 8.1, 8.2, 8.3, and PHP 8.4._
 
 - PHP 8.3
-  - When using a 'Beta Compatible' PHP version, Deprecation notices may be seen in error logs, wp-admin or on-page. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future PHP versions. With a deprecation notice, the PHP code will continue to work, and nothing is broken.
+  - Fully compatible as of July 2025
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Closed/Fixed_
   - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
 
 - PHP 8.4
-  - Deprecation notices.  A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future PHP versions. With a deprecation notice, the PHP code will continue to work, and nothing is broken.
+  - Fully compatible as of May 2026
   - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed/Fixed_
 
 - Other PHP Related Tickets 
@@ -116,10 +110,11 @@ _What does “beta compatible” or "beta support" mean?_
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4)
 
-_IMPORTANT: WordPress 6.7 is **compatible with exceptions** with PHP 8.0, PHP 8.1, PHP 8.2, and **beta compatible** with PHP 8.3, and PHP 8.4._
+_IMPORTANT: WordPress 6.7 is **fully compatible** with PHP 8.0, PHP 8.1, PHP 8.2, PHP 8.3, and PHP 8.4._
 
-_What does 'compatible with exceptions' mean?_
+_Related PHP compatibility tickets_
 
 - PHP 8.0
   - [#48689](https://core.trac.wordpress.org/ticket/48689): Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails. An investigation is underway as to why on some occasions the access to the files returns some type of error. _NOTE: Has a patch._
@@ -145,17 +140,15 @@ _What does 'compatible with exceptions' mean?_
   - [#61154](https://core.trac.wordpress.org/ticket/61154): Fix the 'attributes' dynamic property in WP_Block. Fixing the 'attributes' dynamic property in the `WP_Block` class. _NOTE: Has a patch, but moved to WordPress 6.8._
   - [#61890](https://core.trac.wordpress.org/ticket/61890): Handle WP_Term dynamic properties for PHP 8.2. Handling of dynamic properties in the `WP_Term` class to ensure compatibility. _NOTE: Has a patch, but moved to WordPress 6.8._
 
-_What does "beta" mean?_
-
 - PHP 8.3
-  - Deprecation notices. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - Fully compatible as of May 2026
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Has a patch, but moved to WordPress 6.7._
   - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
   - [#59654](https://core.trac.wordpress.org/ticket/59654): PHP 8.x: various compatibility fixes for WordPress 6.7. This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
 
 - PHP 8.4
-  - Deprecation notices. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - Fully compatible as of May 2026
   - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Has a patch._
 
 _Other related tickets_
@@ -173,9 +166,9 @@ _Other related tickets_
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
 
-_IMPORTANT: WordPress 6.6 is **compatible with exceptions** with PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
+_IMPORTANT: WordPress 6.6 is **fully compatible** with PHP 8.1, PHP 8.2, and PHP 8.3._
 
-_What does 'compatible with exceptions' mean?_
+_Related PHP compatibility tickets_
 
 - PHP 8.1
   - _Not all "passing null to non-nullable" issues have been found._ In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
@@ -188,10 +181,8 @@ There are rare occasions when the `strip_tags()` function is passed a null value
   - [_`utf8_{encode|decode}` deprecation_](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. NOTE: Has a patch, but moved to WordPress 6.7.
   - [_Unknown dynamic properties'_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
 
-_What does "beta" mean?_
-
 - PHP 8.3
-  - _Deprecation notices_. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+  - Fully compatible as of May 2026
   - [_Improve error handling for `unserialize()`_](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. NOTE: Moved to WordPress 6.7.
 
 #### WordPress 6.5
@@ -200,9 +191,9 @@ _What does "beta" mean?_
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
 
-_IMPORTANT: WordPress 6.5 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
+_IMPORTANT: WordPress 6.5 is **fully compatible** with PHP 8.0, PHP 8.1, PHP 8.2, and PHP 8.3._
 
-_What does 'compatible with exceptions' mean?_
+_Related PHP compatibility tickets_
 
 - PHP 8.0
 	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
@@ -217,19 +208,18 @@ _What does 'compatible with exceptions' mean?_
 	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
 	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
 
-_What does "beta" mean?_
-
 - PHP 8.3
-	- Deprecation notices: A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+	- Fully compatible as of May 2026.
 
 #### WordPress 6.4
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3)
 
-_IMPORTANT: WordPress 6.4 is **compatible with exceptions** with PHP 8.0, PHP 8.1, and PHP 8.2, and **beta compatible** with PHP 8.3._
+_IMPORTANT: WordPress 6.4 is **fully compatible** with PHP 8.0, PHP 8.1, PHP 8.2, and PHP 8.3._
 
-_What does 'compatible with exceptions' mean?_
+_Related PHP compatibility tickets_
 
 - PHP 8.0
 	- [Named parameters](https://core.trac.wordpress.org/ticket/59649). WordPress does not support named parameters.
@@ -244,19 +234,17 @@ _What does 'compatible with exceptions' mean?_
 	- [utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension.
 	- [Unknown dynamic properties](https://core.trac.wordpress.org/ticket/56034) deprecations.
 
-_What does "beta" mean?_
-
 - PHP 8.3
-	- Deprecation notices: A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+	- Fully compatible as of May 2026.
 
 #### WordPress 6.3
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2)
 
-_IMPORTANT: WordPress 6.3 is **compatible with exceptions** with PHP 8.0 and PHP 8.1, and **beta compatible** with PHP 8.2._
+_IMPORTANT: WordPress 6.3 is **fully compatible** with PHP 8.0, PHP 8.1, and PHP 8.2._
 
-_What does 'compatible with exceptions' mean?_
+_Related PHP compatibility tickets_
 
 - PHP 8.0
 	- Named parameters. WordPress does not support named parameters.
@@ -267,10 +255,8 @@ _What does 'compatible with exceptions' mean?_
 	- [Replace most strip_tags() with wp_strip_tags()](https://core.trac.wordpress.org/ticket/57579).
 	- [unregister_setting() for unknown setting](https://core.trac.wordpress.org/ticket/57674).
 
-_What does "beta" mean?_
-
 - PHP 8.2
-	- Deprecation notices: A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
+	- Fully compatible as of May 2026.
 
 ### About PHP
 
