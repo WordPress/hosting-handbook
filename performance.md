@@ -77,6 +77,22 @@ The web server must read, compile, and run each PHP script. An opcode cache stor
 
 As with any cache, opcode caches can keep changes from taking effect until the cache expires or is purged. With opcode cache specifically, this means older versions of the compiled PHP code will be loaded. When updating plugins, themes, or WordPress core, the appropriate files should be purged from the cache to avoid continuing to load the older versions.
 
+[OPcache](https://www.php.net/manual/en/book.opcache.php) is the opcode cache bundled with modern PHP versions. It improves PHP performance by storing precompiled script bytecode in shared memory, which reduces the need to load and parse the same PHP files on each request.
+
+For production WordPress environments, OPcache should generally be enabled for web requests and sized for the site or hosting platform. Important [OPcache runtime configuration](https://www.php.net/manual/en/opcache.configuration.php) settings to review include:
+
+- `opcache.memory_consumption`, which controls the shared memory available to OPcache.
+- `opcache.max_accelerated_files`, which controls how many scripts can be cached.
+- `opcache.validate_timestamps` and `opcache.revalidate_freq`, which control how OPcache checks whether cached PHP files have changed.
+
+If `opcache.validate_timestamps` is disabled, file changes will not be picked up automatically. In that configuration, OPcache must be reset or specific scripts must be invalidated during deployment, or the web server/PHP process must be restarted, so updates to WordPress core, plugins, and themes do not continue serving older compiled code.
+
+During active development, a shorter revalidation interval can reduce confusion when code changes do not appear immediately. In production, a longer interval or manual invalidation can reduce filesystem checks, but it should be paired with a reliable deployment or update process that clears OPcache when files change.
+
+Hosts should also monitor OPcache usage over time. If the cache runs out of memory, reaches the configured script limit, or restarts frequently because of wasted memory, the site may lose some of the performance benefit and spend more time recompiling PHP files.
+
+On shared or multi-user hosting, review the [OpCache Security](security.md#opcache-security) guidance before enabling a shared OPcache configuration.
+
 ### Fragment Cache
 
 This caching method allows saving sections of otherwise non-cacheable dynamic website content. It can help especially for sites where the majority of the page is static, but has certain dynamic elements, like a shopping cart, or for membership sites.
