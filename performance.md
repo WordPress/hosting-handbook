@@ -82,6 +82,7 @@ As with any cache, opcode caches can keep changes from taking effect until the c
 For production WordPress environments, OPcache should generally be enabled for web requests and sized for the site or hosting platform. Important [OPcache runtime configuration](https://www.php.net/manual/en/opcache.configuration.php) settings to review include:
 
 - `opcache.memory_consumption`, which controls the shared memory available to OPcache.
+- `opcache.interned_strings_buffer`, which controls the memory available for interned strings. WordPress and plugins can reuse many strings, so hosts may need to tune this above the PHP default for larger sites.
 - `opcache.max_accelerated_files`, which controls how many scripts can be cached.
 - `opcache.validate_timestamps` and `opcache.revalidate_freq`, which control how OPcache checks whether cached PHP files have changed.
 
