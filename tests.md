@@ -231,7 +231,62 @@ php cleanup.php
 
 Once this first manual test has been done, please automate all these steps in a script, since it is required that each of these steps is executed sequentially for each test execution.
 
-This script should be run every time there is a change / commit in the WordPress master. Many hosting companies use a cron to run the script every few hours/days to make the appropriate checks, or when a change is made.
+This script should be run every time there is a change or commit in WordPress trunk. Many hosting companies use a cron to run the script every few hours or days to make the appropriate checks, or when a change is made.
+
+The exact script depends on your environment, but the following example shows the basic order for a local runner installation. Adjust the paths and database settings in `.env` before using it.
+
+```bash
+#!/usr/bin/env bash
+
+set -u
+
+RUNNER_DIR="/home/wptestrunner/phpunit-test-runner"
+LOCK_FILE="/tmp/wordpress-test-runner.lock"
+
+exec 9>"$LOCK_FILE"
+flock -n 9 || {
+	echo "Another WordPress test runner job is already running."
+	exit 0
+}
+
+cd "$RUNNER_DIR" || exit 1
+git pull --ff-only || exit $?
+source .env || exit $?
+
+php prepare.php || exit $?
+
+status=0
+php test.php || status=$?
+php report.php || {
+	result=$?
+	if [ "$status" -eq 0 ]; then
+		status=$result
+	fi
+}
+php cleanup.php || {
+	result=$?
+	if [ "$status" -eq 0 ]; then
+		status=$result
+	fi
+}
+
+exit "$status"
+```
+
+Save the script outside the web root, make it executable, and run it manually before scheduling it:
+
+```bash
+chmod 700 /home/wptestrunner/run-wordpress-tests.sh
+/home/wptestrunner/run-wordpress-tests.sh
+```
+
+After confirming that the script works, schedule it with cron or another job runner. For example, the following cron entry runs the script every six hours and writes the output to a log file:
+
+```bash
+0 */6 * * * /home/wptestrunner/run-wordpress-tests.sh >> /home/wptestrunner/test-runner.log 2>&1
+```
+
+Use a dedicated test directory and database. If your environment is configured for concurrent runs, use separate test directories and table prefixes for each job.
 
 ### Improving the configuration
 
@@ -257,4 +312,4 @@ Once the user has been created in the system, you'll get an invitation to join v
 
 To get things reporting properly, place the username for the bot, along with the application password, in the .env file, which will look something like this: `export WPT_REPORT_API_KEY='examplehostingcompanybot:ABCD 1234 abcd 4567 EFGH efgh'`.
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
