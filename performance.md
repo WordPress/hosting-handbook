@@ -69,7 +69,7 @@ For these reasons, persistent object caching support is commonly offered with ma
 
 > Transients are inherently sped up by caching plugins, where normal Options are not. A memcached plugin, for example, would make WordPress store transient values in fast memory instead of in the database. For this reason, transients should be used to store any data that is expected to expire, or which can expire at any time. Transients should also never be assumed to be in the database, since they may not be stored there at all.
 
-###### source: [WordPress Codex](https://codex.wordpress.org/Transients_API)
+###### source: [WordPress Common APIs Handbook](https://developer.wordpress.org/apis/transients/)
 
 ### Opcode Cache
 
