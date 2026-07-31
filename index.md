@@ -8,7 +8,7 @@ People in this team are closely related to the world of hosting. They work as sy
 
 Our goals are wide ranging, although we are primarily focused on publishing documentation about the best practices hosters can apply when it comes to hosting WordPress. We are also working to offer tools to help improve WordPress performance when new versions and different elements of its environment (such as PHP, the database or the web server) appear.
 
-If you want to know more, feel free to take a look at our [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page.
+If you want to know more, feel free to take a look at our [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page. New contributors can also start with the [Hosting Team FAQ](https://make.wordpress.org/hosting/handbook/get-involved/faq/).
 
 ### What is the WordPress Hosting Team?
 
