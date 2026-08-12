@@ -77,12 +77,12 @@ The web server must read, compile, and run each PHP script. An opcode cache stor
 
 As with any cache, opcode caches can keep changes from taking effect until the cache expires or is purged. With opcode cache specifically, this means older versions of the compiled PHP code will be loaded. When updating plugins, themes, or WordPress core, the appropriate files should be purged from the cache to avoid continuing to load the older versions.
 
-[OPcache](https://www.php.net/manual/en/book.opcache.php) is the opcode cache bundled with modern PHP versions. It improves PHP performance by storing precompiled script bytecode in shared memory, which reduces the need to load and parse the same PHP files on each request.
+[OPcache](https://www.php.net/manual/en/book.opcache.php) is a PHP extension, bundled with PHP 5.5.0 and later, that acts as a caching mechanism to boost PHP performance. Precompiled script bytecode, low level binary representations of code, are stored in memory, enabling PHP files to be fetched from memory instead of loading and parsing files on each request.
 
-For production WordPress environments, OPcache should generally be enabled for web requests and sized for the site or hosting platform. Important [OPcache runtime configuration](https://www.php.net/manual/en/opcache.configuration.php) settings to review include:
+For production WordPress environments, it's recommended that OPcache be enabled for web requests and sized for the site or hosting platform. Important [OPcache runtime configuration](https://www.php.net/manual/en/opcache.configuration.php) settings to review include:
 
 - `opcache.memory_consumption`, which controls the shared memory available to OPcache.
-- `opcache.interned_strings_buffer`, which controls the memory available for interned strings. WordPress and plugins can reuse many strings, so hosts may need to tune this above the PHP default for larger sites.
+- `opcache.interned_strings_buffer`, which controls the memory available for interned strings (distinct string values stored in memory). WordPress and plugins can reuse many strings, so hosts may need to tune this above their standard PHP default to accommodate larger sites.
 - `opcache.max_accelerated_files`, which controls how many scripts can be cached.
 - `opcache.validate_timestamps` and `opcache.revalidate_freq`, which control how OPcache checks whether cached PHP files have changed.
 
