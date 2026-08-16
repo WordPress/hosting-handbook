@@ -1,7 +1,5 @@
 # WordPress 7.0 Server Compatibility
 
-_DRAFT — not yet published. Intended for [make.wordpress.org/hosting](https://make.wordpress.org/hosting/), category "Release Compatibility". See `drafts/README.md` before moving this file._
-
 The Hosting Team reviews the compatibility between each WordPress release and the server software it runs on: PHP, MySQL / MariaDB and the web server. This post covers **WordPress 7.0**, released on **20 May 2026**.
 
 _This post is published retrospectively. WordPress 7.0 shipped in May 2026 and the compatibility review was not posted at the time, so the versions below describe the software landscape as it stood at the 7.0 release date rather than today. Hosts running 7.0 today should also read the WordPress 7.1 Server Compatibility post._
