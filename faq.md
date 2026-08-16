@@ -26,7 +26,7 @@ The team publishes best-practice documentation and compatibility guidance that a
 
 ### When does the team meet?
 
-The Hosting Team meets in the WordPress Slack [#hosting](https://wordpress.slack.com/archives/hosting/) channel. Check the [WordPress Meeting calendar](https://make.wordpress.org/meetings/#hosting) for the current schedule.
+The Hosting Team meets in the WordPress Slack [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Wednesdays at 0900 and 1700 UTC. Check the [WordPress Meeting calendar](https://make.wordpress.org/meetings/#hosting) for the current schedule.
 
 ## Contributing
 
@@ -58,7 +58,7 @@ At Contributor Days, look for issues labeled for the event (for example, `WCUS26
 - [PHPUnit test reporter issues](https://github.com/WordPress/phpunit-test-reporter/issues)
 - [Advanced Admin Handbook issues](https://github.com/WordPress/Advanced-administration-handbook/issues)
 
-Comment on an issue to say you are working on it. If you are unsure which issue to choose, ask a table lead or post in [#hosting](https://wordpress.slack.com/archives/hosting/).
+If you want to work on a ticket, folks who are members of the WordPress organization in Github can self-assign on the upper right of the ticket. If you can't self-assign, please comment on the issue to say you are working on it. If you are unsure which issue to choose, ask a table lead or post in [#hosting](https://wordpress.slack.com/archives/hosting/).
 
 ### What accounts do I need?
 
@@ -75,10 +75,10 @@ Full setup steps are on the [Contributor Day](https://make.wordpress.org/hosting
 ### How does the Pull Request process work?
 
 1. Find or open an issue describing the change
-2. Fork the repository and create a branch for your work
-3. Make your edits and open a Pull Request (PR)
+2. [Fork the repository](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo) and [create a branch for your work](https://git-scm.com/docs/git-checkout) entitled with the ticket number. (i.e. `WCUS26-393-jazzs3quence`)
+3. Make your edits and [open a Pull Request (PR)](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request)
 4. Request review from Hosting Team members in the PR
-5. Most handbook PRs need **approval from two Hosting Team members** before merge
+5. PRs require **approval from two Hosting Team members** before merge
 
 See [Contributing](https://github.com/WordPress/hosting-handbook/blob/main/CONTRIBUTING.md) in this repository for technical details.
 
@@ -86,7 +86,7 @@ See [Contributing](https://github.com/WordPress/hosting-handbook/blob/main/CONTR
 
 Contributions that can earn a badge include accepted PRs, documentation improvements, helping set up automated tests, meeting notes, regular meeting participation, and helping at Contributor Days. See [Team Badges](https://make.wordpress.org/hosting/handbook/get-involved/#team-badges) on the Get Involved page.
 
-If you have contributed and do not yet have a badge, [submit a request](https://profiles.wordpress.org/associations/hosting-contributor/) with details about your work.
+If you have contributed and do not yet have a badge, [submit a member request for here](https://profiles.wordpress.org/associations/hosting-contributor/) with details about your work.
 
 ## Git and GitHub basics
 
@@ -95,7 +95,7 @@ Many Hosting Team projects use Git and GitHub. You do not need to be an expert, 
 ### Install Git
 
 - **Windows:** [Git for Windows](https://git-scm.com/download/win)
-- **macOS:** Git is included with Xcode Command Line Tools, or install via [Homebrew](https://brew.sh/) (`brew install git`)
+- **macOS:** Git is included with Xcode Command Line Tools, or install via [Homebrew](https://git-scm.com/install/mac) (`brew install git`)
 - **Linux:** Use your distribution package manager (for example, `sudo apt install git`)
 
 Verify the install:
