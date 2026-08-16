@@ -94,3 +94,21 @@ Note that the page's heading and its navigation label are not always the same st
 **Keep emoji out of page content**, commit messages, and pull request titles.
 
 **Prose must not read as model output.** Handbook pages carry WordPress house style rather than any individual's voice. When generating or rewriting text, strip the usual tells — formulaic openings, stacked hedging, rhetorical triples, sentences of uniform length, summary paragraphs that restate what was just said — and leave the house voice intact. Do not layer a personal writing style onto a handbook page. Pull request descriptions and issue bodies are different; those are a contributor speaking as themselves.
+
+---
+
+## AI assistance disclosure
+
+A page drafted or substantially rewritten with an AI model carries a line saying so, written as its own italic paragraph:
+
+```markdown
+_Page contents were AI assisted._
+```
+
+It is the last line of the file. On a page that ends with the contributor `[info]` footer it goes after that footer, so the disclosure closes the page rather than interrupting it.
+
+The wording is fixed. It names no model and makes no claim about how much of the page was machine-written, because a longer note invites an argument about degree that a reader does not need in order to calibrate. What the reader needs is that the page was drafted with a model and is worth reading with that in mind.
+
+Scope is the page, not the commit. Drafting a page, or rewriting whole sections of one, puts the line on. A typo fix, a version bump, or a merge conflict resolved with an assistant open does not. Applying it to every incidental edit would leave it on every page and tell a reader nothing.
+
+The convention came from review rather than from a written policy: it was requested on **PR #415**, on the WordPress 7.1 compatibility page, and applied to the already-merged 7.0 page in **PR #424**. **(unverified: whether the Documentation team has a WordPress-wide AI disclosure standard this should match. None was found, but the search was not exhaustive; if one exists, it governs and this section should defer to it.)**

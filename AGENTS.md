@@ -47,6 +47,7 @@ Each item links to the section that explains it.
 6. **Never put a ticket's description inside a Trac link's text.** It breaks the hovercards. → [§6](#6-page-conventions)
 7. **Never write props or `Co-authored-by:` trailers.** props-bot owns them. → [§2](#2-repository-facts)
 8. **Never leave scratch, planning, or working files in the repository.** At the root they get published; anywhere else they end up in a pull request. → [§4](#4-the-publishing-pipeline)
+9. **Never publish a page you drafted or substantially rewrote with a model without the disclosure line.** The page says so itself, not only the pull request. → [§6](#6-page-conventions)
 
 ---
 
@@ -116,6 +117,8 @@ Match the file you are editing. When in doubt, [`.ref/30-style.md`](/.ref/30-sty
 **Trac links use the bare ticket number as the link text**, with the description following outside the link. Putting the description inside the link text breaks the hovercard preview that Trac attaches to those links.
 
 **Prose must not read as model output.** Handbook pages carry WordPress house style. If you are generating or rewriting prose, strip the tells — formulaic openings, hedging stacked on hedging, rhetorical triples, uniform sentence length — and leave the house voice alone. Do not layer a personal writing voice onto handbook pages.
+
+**A page written with AI assistance says so on the page.** Close it with `_Page contents were AI assisted._` on its own line, last in the file, after the contributor footer where there is one. The wording is fixed, and it is deliberately short. This covers a page you drafted or substantially rewrote with a model; it does not cover a typo fix or a version bump made with an assistant open, and adding it to those drains it of meaning. [`.ref/30-style.md`](/.ref/30-style.md) records the placement and where the convention came from.
 
 ---
 

@@ -62,3 +62,26 @@ Every external URL introduced by this pass was requested. All resolved except tw
 Neither was opened in a browser to confirm the page content is still what the surrounding text claims. **(unverified: reachability was checked; content was not.)**
 
 Internal relative links in `AGENTS.md`, `CLAUDE.md`, and this directory were resolved against the filesystem. All point at files that exist.
+
+---
+
+## 2026-08-16 — AI assistance disclosure
+
+Added the disclosure convention to `AGENTS.md` §3 and §6, `CLAUDE.md`, and [`30-style.md`](30-style.md).
+
+### Verified by reading source
+
+| Claim | Where | How |
+|---|---|---|
+| The exact wording of the disclosure line | [`30-style.md`](30-style.md) | Read the review thread on PR #415 and the line as committed on that branch. |
+| It is written as an italic paragraph and is the file's last line | `30-style.md` | Read the tail of the compatibility page on the PR #415 branch, where it follows the contributor `[info]` footer. |
+| The convention was requested in review rather than carried over from a policy | `30-style.md`, `AGENTS.md` §6 | Read the review on PR #415 in full. It asks for a sentence recording that AI was used as a tool; the wording was settled afterwards. |
+| PR #424 applies the same line to the merged 7.0 page | `30-style.md` | Opened the pull request and read its diff. One line, matching the 7.1 wording and placement. |
+
+### Not verified
+
+**Whether a WordPress-wide AI disclosure standard exists.** The Documentation Style Guide and the handbook's own contributing docs were not searched exhaustively for one. This convention is local to this repository and came from a single reviewer. If a project-wide standard exists or is published later, it governs, and both `AGENTS.md` §6 and `30-style.md` should defer to it rather than compete with it.
+
+**How the line renders on the published handbook.** It is ordinary Markdown emphasis and will render as italics. Whether it reads as a disclosure to somebody skimming the published page, rather than as a trailing aside, was not checked against make.wordpress.org.
+
+**The boundary between "substantially rewrote" and a small edit is a judgment, not a rule.** It is stated in prose in both files and no test distinguishes the two cases. Expect it to be applied inconsistently until reviewers converge on it.
