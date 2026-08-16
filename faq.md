@@ -36,7 +36,7 @@ You do not need to be a developer or systems administrator to help. Many contrib
 
 - Improve or expand [Hosting Handbook](https://make.wordpress.org/hosting/handbook/) pages
 - Help with the [Advanced Admin Handbook](https://developer.wordpress.org/advanced-administration/) in collaboration with the Documentation Team
-- Draft content in Google Docs or another format you are comfortable with — a team member can help turn it into a Pull Request
+- If you don't code or know how to use Git you can still contribute. Folks are welcome to draft content in Google Docs or another format you are comfortable with — a team member can help turn it into a Pull Request
 - Take meeting notes (see [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/#meetings-taking-notes))
 
 Git is required for many projects, but handbook work can start with a written draft. Ask in [#hosting](https://wordpress.slack.com/archives/hosting/) if you need a hand getting your content into GitHub.
