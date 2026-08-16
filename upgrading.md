@@ -173,5 +173,7 @@ PHP changes:
 - WP 6.3 dropped PHP 5.6  
 - WP 6.6 dropped PHP 7.0 & 7.1  
 - WP 6.6 requires PHP 7.2.24+  
+- WP 7.0 dropped PHP 7.2 & 7.3  
+- WP 7.0 requires PHP 7.4+  
 
 Upgrade normally. Everything should work fine.

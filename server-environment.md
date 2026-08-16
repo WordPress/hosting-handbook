@@ -7,6 +7,7 @@ Although WordPress can work in almost any environment, some environments are mor
 Quick recommendations:
 
 - [WordPress 7.1 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-1/)
+- [WordPress 7.0 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-0/)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
@@ -48,6 +49,14 @@ Below are details on specific WordPress versions, PHP compatibility for that ver
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
 
+### Notes for Hosts and Developers
+
+- PHP 8.4 or later is recommended for production environments.
+- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
+- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later.
+- PHP 8.3 moved to security-only support on 31 December 2025, and PHP 8.2 reaches end of life on 31 December 2026. Plan migrations for sites still on those versions.
+- Hosts should test their full stack before making a new PHP version the default for production environments.
+
 #### WordPress 7.1
 
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
@@ -70,6 +79,39 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
   - [#65519](https://core.trac.wordpress.org/ticket/65519): Adoption of `array_any()` and `array_all()` across core.
   - [#65598](https://core.trac.wordpress.org/ticket/65598): Adoption of `array_first()` and `array_last()`.
   - [#64897](https://core.trac.wordpress.org/ticket/64897): Coding standards work for the 7.1 cycle, covering the null coalescing and `str_contains()` conversions.
+
+#### WordPress 7.0
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Security Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
+
+_IMPORTANT: WordPress 7.0 raised the minimum required PHP version from 7.2.24 to 7.4. Support for PHP 7.2 and 7.3 was dropped in this release._
+
+_IMPORTANT: WordPress 7.0 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+- PHP 7.4
+  - Minimum supported version as of WordPress 7.0
+  - [#62622](https://core.trac.wordpress.org/ticket/62622): Increase the minimum supported version of PHP to 7.4. _NOTE: Closed / Fixed._
+
+- PHP 8.5
+  - Fully compatible as of May 2026
+  - [#64322](https://core.trac.wordpress.org/ticket/64322): Media: Adjustments for official HEIF/HEIC support added in PHP 8.5. _NOTE: Closed / Fixed._
+
+- Other PHP Related Tickets
+  - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _NOTE: Closed / Fixed. Deferred since WordPress 6.8, and completed in 7.0 because the 7.4 minimum made the operator available everywhere._
+  - [#63430](https://core.trac.wordpress.org/ticket/63430): Code Modernization: Replace `isset()` ternary checks with the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#64488](https://core.trac.wordpress.org/ticket/64488): Code Modernization: Replace `if` statements with the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#64497](https://core.trac.wordpress.org/ticket/64497): Code Modernization: Utilize the spaceship operator in sort comparison logic. _NOTE: Closed / Fixed._
+  - [#64773](https://core.trac.wordpress.org/ticket/64773): Code Modernization: Use `str_starts_with()` in `WP_Duotone` class methods. _NOTE: Closed / Fixed._
+  - [#64928](https://core.trac.wordpress.org/ticket/64928): Code Modernization: Replace the deprecated `auto_detect_line_endings` setting. _NOTE: Closed / Fixed._
+  - [#64864](https://core.trac.wordpress.org/ticket/64864): Code Modernization: Fix "passing null to non-nullable" deprecation from `previous_posts()`. _NOTE: Closed / Fixed._
+  - [#64728](https://core.trac.wordpress.org/ticket/64728): Toolbar: Prevent PHP deprecation warning in admin bar when a node is added with a `null` parent. _NOTE: Closed / Fixed._
+  - [#64332](https://core.trac.wordpress.org/ticket/64332): Database: Further correct the MariaDB version check in `wpdb::has_cap()`. _NOTE: Closed / Fixed._
+  - [#63697](https://core.trac.wordpress.org/ticket/63697): Site Health: Add test and debug data for opcode cache. _NOTE: Closed / Fixed._
 
 #### WordPress 6.9
 
@@ -96,12 +138,6 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
   - [#54537](https://core.trac.wordpress.org/ticket/54537): Tests: Enable PHP version check once PHP 8.0 compatibility is achieved. _Note: Moved to Future Release._
   - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _Note: Moved to Future Release._
   - [#59234](https://core.trac.wordpress.org/ticket/59234): Introduce a `wp_json_decode()` function, including validation when available. _Note: Closed and will not be moving forward._
-
-### Notes for Hosts and Developers
-
-- PHP 8.3 or later is recommended for production environments.
-- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
-- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later. Hosts should test their full stack before making a new PHP version the default for production environments.
 
 #### WordPress 6.8
 
@@ -284,15 +320,17 @@ _Related PHP compatibility tickets_
 
 ### About PHP
 
-PHP 8.1 is maintained by the PHP Community only as _Security fix only_ starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, starting 2024-12-31 and 2025-12-31 respectively. Keeping your PHP to the latest stable version is important for WordPress speed and security.
 
-Versions prior to PHP 8.1 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
+Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
 End-of-life PHP versions:
 
+- PHP 8.5: 2029-12-31
+- PHP 8.4: 2028-12-31
 - PHP 8.3: 2027-12-31
 - PHP 8.2: 2026-12-31
-- PHP 8.1: 2025-12-31
+- PHP 8.1: 2025-12-31 _last release: 8.1.34_
 - PHP 8.0: 2023-11-26 _last release: 8.0.30_
 - PHP 7.4: 2022-11-28 _last release: 7.4.33_
 - PHP 7.3: 2021-12-06 _last release: 7.3.33_
