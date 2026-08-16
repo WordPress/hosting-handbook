@@ -126,6 +126,6 @@ For step-by-step upgrade paths from any older WordPress version, see [Upgrading 
 
 ---
 
-_This page was drafted with the help of Claude, an AI assistant. Every version number, support date and Trac ticket on it was checked by hand against php.net, the MySQL and MariaDB release calendars, and WordPress Trac before it was published._
-
 _Questions or corrections? Leave a comment below, or find us in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the [WordPress Slack](https://make.wordpress.org/chat/)._
+
+_Page contents were AI assisted._
