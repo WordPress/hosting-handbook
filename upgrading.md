@@ -157,12 +157,12 @@ Upgrade normally. Everything should work.
 
 ---
 
-## WordPress 6.3 - 6.8
+## WordPress 6.3 - 7.1
 
 Goals:
-- WordPress: upgrade to WordPress 6.8
-- PHP: upgrade to PHP 8.1
-- SQL: upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
+- WordPress: upgrade to WordPress 7.1
+- PHP: upgrade to PHP 8.4
+- SQL: upgrade to MySQL 8.4 LTS / MariaDB 11.4 LTS
 
 Losses:
 - Content: none

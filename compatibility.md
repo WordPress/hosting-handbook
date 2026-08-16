@@ -10,6 +10,7 @@ This table shows the versions available (and security supported) at the time of 
 
 WordPress | PHP | MySQL | MariaDB | Launch date
 ---- | ---- | ---- | ---- | ----
+WordPress 7.1 | 8.2 - 8.5 | 8.4 / 9.7 | 10.11 / 11.4 / 11.8 / 12.3 | 2026-08-19
 WordPress 6.8 | 8.1 - 8.4 | 8.0 / 8.4 / 9.1 | 10.5 - 10.6 / 10.11 / 11.4 - 11.5 | 2025-04-15
 WordPress 6.7 | 8.1 - 8.4 | 8.0 / 8.4 / 9.1 | 10.5 - 10.6 / 10.11 / 11.4 - 11.5 | 2024-11-12
 WordPress 6.6 | 8.1 - 8.3 | 8.0 / 8.2 - 8.4 | 10.5 - 10.6 / 10.11 / 11.1 - 11.2 / 11.4 | 2024-07-16
