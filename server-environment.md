@@ -1,6 +1,6 @@
 # Server Environment
 
-Although WordPress can work in almost any environment, some environments are more optimal for functionality and performance while others are less so. Below are a few minimum recommendations for server environment configurations within which WordPress operates most efficiently, with consideration for WordPress websites that use third party plugins and themes which commonly introduce additional server-level requirements.
+Although WordPress can work in almost any environment, some environments are more optimal for functionality and performance while others are less so. Below are a few minimum recommendations for server environment configurations within which WordPress operates most efficiently, with consideration for WordPress websites that use third-party plugins and themes which commonly introduce additional server-level requirements.
 
 ## WordPress Environment recommendations
 
@@ -299,7 +299,7 @@ PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, 
 
 Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
-End of life PHP versions:
+End-of-life PHP versions:
 
 - PHP 8.5: 2029-12-31
 - PHP 8.4: 2028-12-31
@@ -356,7 +356,7 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
 - [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
-- [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
+- [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
 - [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
@@ -368,7 +368,7 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 
 - [apcu](https://www.php.net/manual/en/book.apcu.php) – In-memory key-value store for PHP (former APC stripped of opcode caching).
 - [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached >= 1.0.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
-- [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts. 
+- [opcache](https://www.php.net/manual/en/book.opcache.php) - Stores precompiled PHP bytecode to reduce repeated script parsing and compilation. See [Opcode Cache](performance.md#opcode-cache) for performance guidance.
 - [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
 
@@ -411,7 +411,7 @@ For data storage, WordPress uses systems compatible with MySQL.
 
 ### Officially recommended versions
 
-Below are the officially recommended Long Term Support versions of [MySQL](https://dev.mysql.com/downloads/mysql/) and [MariaDB](https://mariadb.org/).
+Below are the officially recommended Long-Term Support versions of [MySQL](https://dev.mysql.com/downloads/mysql/) and [MariaDB](https://mariadb.org/).
 
 | Software  | Version    | EOL Date          |
 |-----------|------------|-------------------|
@@ -422,7 +422,7 @@ Below are the officially recommended Long Term Support versions of [MySQL](https
 | MariaDB   | 10.11 LTS  | February 16, 2028 |
 | MariaDB   | 10.6 LTS   | July 6, 2026      |
 
-### End of life MySQL versions
+### End-of-life MySQL versions
 
 The following versions of MySQL have reached their end of life (EOL) and are no longer supported by the MySQL community. **It is highly recommended to upgrade to a supported version for security and performance reasons.**
 
@@ -440,7 +440,7 @@ The following versions of MySQL have reached their end of life (EOL) and are no 
 | 5.1     | November 14, 2008  | 5.1.73 (December 3, 2013) | December 31, 2013 |
 | 5.0     | October 19, 2005   | 5.0.96 (March 21, 2012)   | March 21, 2012    |
 
-### End of life MariaDB versions
+### End-of-life MariaDB versions
 
 The following versions of MariaDB have reached their end of life (EOL) and are no longer supported by the MariaDB community. **It is highly recommended to upgrade to a supported version for security and performance reasons.**
 
