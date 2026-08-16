@@ -1,9 +1,5 @@
 # WordPress 7.1 Server Compatibility
 
-_DRAFT — hold until WordPress 7.1 ships on 19 August 2026, then publish. Everything below is verified against the 7.1 release branch; re-check only if the release date moves. Intended for [make.wordpress.org/hosting](https://make.wordpress.org/hosting/), category "Release Compatibility"._
-
-_Keep this file inside `drafts/`. `bin/command.php` builds the handbook manifest with `glob( HOSTING_HANDBOOK_PATH . '/*.md' )` and skips only `README`, `CODE_OF_CONDUCT` and `CONTRIBUTING`, so any other `.md` file at the repository root becomes a published handbook page the next time the manifest is regenerated. Files in this subdirectory are invisible to that glob._
-
 The Hosting Team reviews the compatibility between each WordPress release and the server software it runs on: PHP, MySQL / MariaDB and the web server. This post covers **WordPress 7.1**, released on **19 August 2026**.
 
 Previous compatibility articles:
