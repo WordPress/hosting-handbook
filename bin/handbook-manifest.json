@@ -62,11 +62,18 @@
     "parent": null,
     "order": 3
   },
-  "wordpress-7-0-server-compatibility": {
-    "title": "WordPress 7.0 Server Compatibility",
-    "slug": "wordpress-7-0-server-compatibility",
-    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/wordpress-7-0-server-compatibility.md",
+  "version": {
+    "title": "Version Compatibility",
+    "slug": "version",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/versions\/index.md",
     "parent": "compatibility",
+    "order": 1
+  },
+  "7-0-compatibility": {
+    "title": "WordPress 7.0 Server Compatibility",
+    "slug": "7-0",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/versions\/7-0-compatibility.md",
+    "parent": "version",
     "order": 1
   },
   "upgrading": {
