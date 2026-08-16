@@ -47,39 +47,53 @@ The following versions were available and receiving security support on 20 May 2
 
 ### PHP
 
-| Version | Status at release | End of life |
-|---------|-------------------|-------------|
-| PHP 8.5 | Active Support    | 2029-12-31  |
-| PHP 8.4 | Active Support    | 2028-12-31  |
-| PHP 8.3 | Security Support  | 2027-12-31  |
-| PHP 8.2 | Security Support  | 2026-12-31  |
+Version | Status at release | End of life
+---- | ---- | ----
+PHP 8.5 | Active Support | 2029-12-31
+PHP 8.4 | Active Support | 2028-12-31
+PHP 8.3 | Security Support | 2027-12-31
+PHP 8.2 | Security Support | 2026-12-31
 
 PHP 8.1 reached end of life on 31 December 2025 and was no longer supported upstream when WordPress 7.0 shipped.
 
 ### MySQL
 
-| Version   | Type       | End of life |
-|-----------|------------|-------------|
-| MySQL 9.7 | LTS        | 2034-04-21  |
-| MySQL 8.4 | LTS        | 2032-04-30  |
+Version | Type | End of life
+---- | ---- | ----
+MySQL 9.7 | LTS | 2034-04-21
+MySQL 8.4 | LTS | 2032-04-30
 
 MySQL 8.0 reached end of life on 30 April 2026, three weeks before the WordPress 7.0 release. Sites still on MySQL 8.0 should be migrated to 8.4 LTS.
 
 ### MariaDB
 
-| Version      | Type | End of life |
-|--------------|------|-------------|
-| MariaDB 12.2 | —    | 2026-05-28  |
-| MariaDB 11.8 | LTS  | 2028-06-04  |
-| MariaDB 11.4 | LTS  | 2029-05-29  |
-| MariaDB 10.11| LTS  | 2028-02-16  |
-| MariaDB 10.6 | LTS  | 2026-07-06  |
+Version | Type | End of life
+---- | ---- | ----
+MariaDB 12.2 | — | 2026-05-28
+MariaDB 11.8 | LTS | 2028-06-04
+MariaDB 11.4 | LTS | 2029-05-29
+MariaDB 10.11 | LTS | 2028-02-16
+MariaDB 10.6 | LTS | 2026-07-06
 
 MariaDB 10.6 was within weeks of its end-of-life date at the time of the 7.0 release and should not be used for new installations.
 
 ### Web servers
 
-_TODO: confirm the current stable versions at the 7.0 release date before publishing. The handbook's [Server Environment](https://make.wordpress.org/hosting/handbook/server-environment/) page lists Apache HTTPD 2.4, nginx 1.26 & 1.27, Angie 1.7, LiteSpeed 6.x and OpenLiteSpeed 1.8, but the nginx entries in particular look stale._
+The versions below were current and receiving fixes on 20 May 2026.
+
+Software | Version at release | Released
+---- | ---- | ----
+Apache HTTPD | 2.4.67 | 2026-05-04
+nginx | 1.30.1 (stable) / 1.31.0 (mainline) | 2026-05-13
+Angie | 1.11.5 | 2026-05-15
+LiteSpeed Web Server | 6.3.5 | 2026-03-24
+OpenLiteSpeed | 1.9.0.1 (latest) / 1.8.5 (stable) | 2026-04-22 / 2026-01-08
+
+Two of these projects ship a supported branch that is not their newest release, which matters if you would rather not follow every version. nginx maintains a stable branch alongside mainline and retires the previous stable each April, so 1.30 was the conservative choice on the 7.0 release date. OpenLiteSpeed labels 1.8.x stable and 1.9.x latest, and ships both.
+
+The other three do not offer that choice. Apache HTTPD patches only the newest 2.4.x, and Angie and LiteSpeed Web Server each release on a single line, so for those three the current version is the only one receiving fixes.
+
+Check which branch you were on rather than assuming it was current. nginx retired 1.29 on 13 May 2026, a week before WordPress 7.0 shipped, and 1.28 five weeks before that. The 1.26 and 1.27 branches had been end of life for over a year by then.
 
 ## WordPress and PHP
 

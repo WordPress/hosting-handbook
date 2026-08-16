@@ -25,15 +25,15 @@ A web server is piece of software that receives and accepts web requests from we
 The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
 - [Apache HTTPD](https://httpd.apache.org/) 2.4
-- [nginx](https://nginx.org/) 1.26 & 1.27
+- [nginx](https://nginx.org/) 1.30 (stable) / 1.31 (mainline)
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.7
-- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3 / 6.2 / 6.1 / 6.0 / 5.4
-- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 / 1.7
+- [Angie](https://angie.software/en/) 1.12
+- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
+- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
-_Those are the latest versions at the time of writing this document, for WordPress 6.8. Always keep your web server up-to-date to ensure best performance!_
+_Every version listed above still receives fixes, and anything below them does not. nginx and OpenLiteSpeed each maintain a supported branch that is not their newest release, so 1.30 and 1.8 are the options for hosts who would rather not track the latest version. Apache HTTPD, Angie and LiteSpeed Web Server patch only their current version, so on those there is no supported alternative to staying current. Checked at the WordPress 7.0 release. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
