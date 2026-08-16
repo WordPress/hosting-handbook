@@ -6,7 +6,6 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
-- [WordPress 7.1 Server Compatibility](TODO-url-once-published)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
@@ -26,15 +25,15 @@ A web server is piece of software that receives and accepts web requests from we
 The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
 - [Apache HTTPD](https://httpd.apache.org/) 2.4
-- [nginx](https://nginx.org/) 1.26 & 1.27
+- [nginx](https://nginx.org/) 1.30 (stable) / 1.31 (mainline)
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.7
-- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3 / 6.2 / 6.1 / 6.0 / 5.4
-- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 / 1.7
+- [Angie](https://angie.software/en/) 1.12
+- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
+- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
-_Those are the latest versions at the time of writing this document, for WordPress 7.1. Always keep your web server up-to-date to ensure best performance!_
+_Every version listed above still receives fixes, and anything below them does not. nginx and OpenLiteSpeed each maintain a supported branch that is not their newest release, so 1.30 and 1.8 are the options for hosts who would rather not track the latest version. Apache HTTPD, Angie and LiteSpeed Web Server patch only their current version, so on those there is no supported alternative to staying current. Checked at the WordPress 7.1 release. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
@@ -44,7 +43,7 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.7&milestone=6.8&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
 
@@ -57,12 +56,19 @@ The Core team retired the ["compatible with exceptions" label in April 2025](htt
 
 _IMPORTANT: WordPress 7.1 requires PHP 7.4 or later, unchanged from WordPress 7.0._
 
-_TODO: WordPress 7.1 is scheduled for release on 19 August 2026. Confirm the final "fully compatible" PHP list once the release ships — it is expected to match WordPress 7.0 (PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5) — and confirm whether any PHP 8.6 compatibility work is included._
+_IMPORTANT: WordPress 7.1 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
 - Other PHP Related Tickets
-  - TODO: pull the PHP-keyword ticket list for [Trac milestone 7.1](https://core.trac.wordpress.org/query?milestone=7.1&keywords=~php) and list each entry here. Keep the ticket number alone as the link text, exactly as in the WordPress 6.9 block below — putting the description inside the link text breaks the Trac hovercards.
+  - [#65342](https://core.trac.wordpress.org/ticket/65342): Charset: Polyfill `mb_ord()` and `mb_chr()`. _NOTE: Closed / Fixed._
+  - [#65143](https://core.trac.wordpress.org/ticket/65143): Code Modernization: Add a polyfill for `clamp()`. _NOTE: Closed / Fixed._
+  - [#65408](https://core.trac.wordpress.org/ticket/65408): Code Modernization: Replace `strpos()` with `str_contains()`. _NOTE: Closed / Fixed._
+  - [#65403](https://core.trac.wordpress.org/ticket/65403): Code Modernization: Simplify node retrieval using the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#65637](https://core.trac.wordpress.org/ticket/65637): Code Modernization: Avoid returning values in constructors. _NOTE: Closed / Fixed._
+  - [#65519](https://core.trac.wordpress.org/ticket/65519): Adoption of `array_any()` and `array_all()` across core.
+  - [#65598](https://core.trac.wordpress.org/ticket/65598): Adoption of `array_first()` and `array_last()`.
+  - [#64897](https://core.trac.wordpress.org/ticket/64897): Coding standards work for the 7.1 cycle, covering the null coalescing and `str_contains()` conversions.
 
 #### WordPress 6.9
 

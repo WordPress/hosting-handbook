@@ -1,6 +1,6 @@
 # WordPress 7.1 Server Compatibility
 
-_DRAFT — hold until WordPress 7.1 ships on 19 August 2026, then verify the TODOs below and publish. Intended for [make.wordpress.org/hosting](https://make.wordpress.org/hosting/), category "Release Compatibility"._
+_DRAFT — hold until WordPress 7.1 ships on 19 August 2026, then publish. Everything below is verified against the 7.1 release branch; re-check only if the release date moves. Intended for [make.wordpress.org/hosting](https://make.wordpress.org/hosting/), category "Release Compatibility"._
 
 _Keep this file inside `drafts/`. `bin/command.php` builds the handbook manifest with `glob( HOSTING_HANDBOOK_PATH . '/*.md' )` and skips only `README`, `CODE_OF_CONDUCT` and `CONTRIBUTING`, so any other `.md` file at the repository root becomes a published handbook page the next time the manifest is regenerated. Files in this subdirectory are invisible to that glob._
 
@@ -8,7 +8,6 @@ The Hosting Team reviews the compatibility between each WordPress release and th
 
 Previous compatibility articles:
 
-- [WordPress 7.0 Server Compatibility](TODO-url-once-published)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
@@ -48,38 +47,52 @@ The following versions are available and receiving security support as of 19 Aug
 
 ### PHP
 
-| Version | Status at release | End of life |
-|---------|-------------------|-------------|
-| PHP 8.5 | Active Support    | 2029-12-31  |
-| PHP 8.4 | Active Support    | 2028-12-31  |
-| PHP 8.3 | Security Support  | 2027-12-31  |
-| PHP 8.2 | Security Support  | 2026-12-31  |
+Version | Status at release | End of life
+---- | ---- | ----
+PHP 8.5 | Active Support | 2029-12-31
+PHP 8.4 | Active Support | 2028-12-31
+PHP 8.3 | Security Support | 2027-12-31
+PHP 8.2 | Security Support | 2026-12-31
 
 PHP 8.2 reaches end of life on 31 December 2026, roughly four months after this release. Hosts should plan migrations for sites still on 8.2.
 
 ### MySQL
 
-| Version   | Type | End of life |
-|-----------|------|-------------|
-| MySQL 9.7 | LTS  | 2034-04-21  |
-| MySQL 8.4 | LTS  | 2032-04-30  |
+Version | Type | End of life
+---- | ---- | ----
+MySQL 9.7 | LTS | 2034-04-21
+MySQL 8.4 | LTS | 2032-04-30
 
 MySQL 8.0 reached end of life on 30 April 2026 and should no longer be used.
 
 ### MariaDB
 
-| Version       | Type | End of life |
-|---------------|------|-------------|
-| MariaDB 12.3  | LTS  | 2029-06-12  |
-| MariaDB 11.8  | LTS  | 2028-06-04  |
-| MariaDB 11.4  | LTS  | 2029-05-29  |
-| MariaDB 10.11 | LTS  | 2028-02-16  |
+Version | Type | End of life
+---- | ---- | ----
+MariaDB 12.3 | LTS | 2029-06-12
+MariaDB 11.8 | LTS | 2028-06-04
+MariaDB 11.4 | LTS | 2029-05-29
+MariaDB 10.11 | LTS | 2028-02-16
 
 MariaDB 10.6 reached end of life on 6 July 2026 and is no longer listed.
 
 ### Web servers
 
-_TODO: confirm the current stable versions before publishing. The handbook's [Server Environment](https://make.wordpress.org/hosting/handbook/server-environment/) page lists Apache HTTPD 2.4, nginx 1.26 & 1.27, Angie 1.7, LiteSpeed 6.x and OpenLiteSpeed 1.8, but the nginx entries in particular look stale._
+The versions below are current and receiving fixes at the 7.1 release.
+
+Software | Version at release | Released
+---- | ---- | ----
+Apache HTTPD | 2.4.68 | 2026-06-08
+nginx | 1.30.4 (stable) / 1.31.3 (mainline) | 2026-07-15
+Angie | 1.12.1 | 2026-07-17
+LiteSpeed Web Server | 6.3.6 | 2026-07-10
+OpenLiteSpeed | 1.9.2 (latest) / 1.8.5 (stable) | 2026-08-06 / 2026-01-08
+
+Two of these projects ship a supported branch that is not their newest release, which matters if you would rather not follow every version. nginx maintains a stable branch alongside mainline and retires the previous stable each April, so 1.30 is the conservative choice. OpenLiteSpeed labels 1.8.x stable and 1.9.x latest, and ships both.
+
+The other three do not offer that choice. Apache HTTPD patches only the newest 2.4.x, and Angie and LiteSpeed Web Server each release on a single line, so for those three the current version is the only one receiving fixes.
+
+Anything older than the versions above has stopped receiving fixes. nginx 1.26 and 1.27 went end of life in April and June 2025, and 1.28 and 1.29 followed in April and May 2026.
 
 ## WordPress and PHP
 
@@ -95,15 +108,19 @@ The Core team retired the ["compatible with exceptions" label in April 2025](htt
 
 ## Related tickets
 
-_TODO: pull the PHP-keyword ticket list for [Trac milestone 7.1](https://core.trac.wordpress.org/query?milestone=7.1&keywords=~php) and list each entry below._
+Worth knowing if your servers are missing extensions:
 
-Use this format exactly — the ticket number alone is the link text, with the description after the link:
+- [#65342](https://core.trac.wordpress.org/ticket/65342): Charset: Polyfill `mb_ord()` and `mb_chr()`. _NOTE: Closed / Fixed._
+- [#65143](https://core.trac.wordpress.org/ticket/65143): Code Modernization: Add a polyfill for `clamp()`. _NOTE: Closed / Fixed._
 
-```
-- [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
-```
+Modernization using functions from newer PHP versions, all of which WordPress polyfills so they stay safe on the 7.4 minimum:
 
-Putting the description inside the link text breaks the Trac hovercards on make.wordpress.org. That regression has already been introduced and fixed twice ([#353](https://github.com/WordPress/hosting-handbook/issues/353), [#399](https://github.com/WordPress/hosting-handbook/issues/399)).
+- [#65408](https://core.trac.wordpress.org/ticket/65408): Code Modernization: Replace `strpos()` with `str_contains()`. _NOTE: Closed / Fixed._
+- [#65403](https://core.trac.wordpress.org/ticket/65403): Code Modernization: Simplify node retrieval using the null coalescing operator. _NOTE: Closed / Fixed._
+- [#65637](https://core.trac.wordpress.org/ticket/65637): Code Modernization: Avoid returning values in constructors. _NOTE: Closed / Fixed._
+- [#65519](https://core.trac.wordpress.org/ticket/65519): Adoption of `array_any()` and `array_all()` across core.
+- [#65598](https://core.trac.wordpress.org/ticket/65598): Adoption of `array_first()` and `array_last()`.
+- [#64897](https://core.trac.wordpress.org/ticket/64897): Coding standards work for the 7.1 cycle, covering the null coalescing and `str_contains()` conversions.
 
 The [WordPress 7.1 Field Guide](https://make.wordpress.org/core/2026/08/05/wordpress-7-1-field-guide/) is the starting point for what changed in this release, though it does not cover server requirements directly.
 
