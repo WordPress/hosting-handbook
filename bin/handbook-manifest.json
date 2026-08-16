@@ -62,6 +62,13 @@
     "parent": null,
     "order": 3
   },
+  "wordpress-7-0-server-compatibility": {
+    "title": "WordPress 7.0 Server Compatibility",
+    "slug": "wordpress-7-0-server-compatibility",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/wordpress-7-0-server-compatibility.md",
+    "parent": "compatibility",
+    "order": 1
+  },
   "upgrading": {
     "title": "Upgrading",
     "slug": "upgrading",
