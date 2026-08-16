@@ -87,8 +87,6 @@ _TODO: confirm the current stable versions before publishing. The handbook's [Se
 
 PHP is the language WordPress is written in, and keeping it current matters for both security and performance.
 
-_TODO: confirm the final compatibility statement once 7.1 ships. It is expected to read:_
-
 **WordPress 7.1 is fully compatible with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5.**
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
