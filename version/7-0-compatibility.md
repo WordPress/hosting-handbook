@@ -139,3 +139,5 @@ For step-by-step upgrade paths from any older WordPress version, see [Upgrading 
 ---
 
 _Questions or corrections? Leave a comment below, or find us in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the [WordPress Slack](https://make.wordpress.org/chat/)._
+
+_Page contents were AI assisted._
