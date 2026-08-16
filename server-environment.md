@@ -533,10 +533,100 @@ Although WordPress may run on older versions, it is recommended to use these or 
 If you trial this with cohorts, please share: traffic profile, caching, write rates, DB file sizes, error logs, and any plugin/theme incompatibilities. Feedback is most useful if a future Core merge is proposed.
 
 
+## Multiple WordPress Instances
+
+Where several WordPress instances run on the same infrastructure, there are three architectures to choose between, distinguished by how instances and databases are paired:
+
+1. **WordPress Multisite Network**: a single WordPress instance, with multiple sites created within it, sharing a single database instance.
+2. **Single database**: multiple WordPress instances sharing a single database instance.
+3. **Multiple databases**: multiple WordPress instances, each using its own database instance.
+
+![Diagram of the three multisite and multi-instance database layouts](https://wordpress.org/documentation/files/2022/06/multisite_db_layout-1024x469.jpg)
+
+### Multiple Instances with Multiple Databases
+
+This has the same installation process as a single WordPress instance. Each instance needs a separate MySQL database.
+
+To make sure each WordPress instance connects to the right database, the connection details go in that instance's [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file:
+
+```
+define('DB_NAME', 'wordpress');    // The name of the database
+define('DB_USER', 'username');     // Your MySQL username
+define('DB_PASSWORD', 'password'); // The users password
+define('DB_HOST', 'localhost' );  // The host of the database
+```
+
+`DB_NAME` is the name of the individual database created for that site hosted on the `DB_HOST` MySQL server. Where different user logins are used for each database, `DB_USER` and `DB_PASSWORD` change to reflect this as well.
+
+Each `wp-config.php` file is uploaded to its specific root or installation directory before running the installation.
+
+### Multiple Instances with a Single Database
+
+As with the multiple-database layout above, the `wp-config.php` file varies for each installation. In this case, however, only a single line is unique to each site:
+
+```
+$table_prefix = 'wp_'; // example: 'wp_' or 'b2' or 'mylogin_'
+```
+
+By default, WordPress assigns the table prefix `wp_` to its MySQL database tables, but this prefix can be anything. This allows unique identifiers for each site in one database. For three sites named _Main_, _Projects_ and _Test_, the prefix in each site's `wp-config.php` would be substituted:
+
+```
+$table_prefix = 'main_';
+$table_prefix = 'projects_';
+$table_prefix = 'test_';
+```
+
+For enhanced security, multiple users can be added to the same database, giving each WordPress instance its own MySQL user.
+
+### Multiple Databases, Same Users
+
+The same userbase can be shared across sites on the same domain by defining the `CUSTOM_USER_TABLE` and optionally the `CUSTOM_USER_META_TABLE` constants to point at the same `wp_your_blog_users` and `wp_your_blog_usermeta` tables. See [Custom User and Usermeta Tables](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#custom-user-and-usermeta-tables).
+
+### The Multisite Feature
+
+The multisite feature installs a single WordPress instance against a single database and creates a _network_ of sites within it.
+
+It appears simpler than the other layouts, but carries its own considerations and restrictions. See [WordPress Multisite](multisite/index.md) and [Create A Network](multisite/create-network.md).
+
 ## How do I know which version I have?
 
 If you have WordPress 5.2+, the WordPress Admin already has tools with that information in the `Site Health` section (at `Tools` in the menu).
 
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
+
+### Reading Server Info with phpinfo()
+
+Site Health reports what WordPress can see. To read the server's own view of PHP version, server software, database version and operating system, use PHP's `phpinfo()` function, which generates a full report of the server configuration.
+
+![Top of PHP Info test file results](https://user-images.githubusercontent.com/1508963/201365720-3a13ccab-c44c-43f2-8326-e3a997c5acfa.jpg)
+
+**Warning:** this file will contain moderately sensitive information about the server that could help an attacker gain access to it. Give the file an obscure filename and delete it as soon as you are done.
+
+In a text editor, save the following as a file with an obscure name, such as `sffdsajk234.php`, with no spaces before or after the command:
+
+```
+<?php phpinfo(); ?>
+```
+
+Upload the file to the root directory of the site, then request it in a browser:
+
+```
+https://example.com/sffdsajk234.php
+```
+
+The result runs several pages. The summary at the top carries most of what is usually needed:
+
+| Field | Example value |
+| -------------- | ------------------------------------------------------------- |
+| PHP            | Version 7.3.0                                                 |
+| System         | Windows NT DESKTOP-LK01DAN 10.0 build 17763 (Windows 10) i586 |
+| Build Date     | Dec 6 2018 01:51:18                                           |
+| Server API     | Apache 2.0 Handler                                            |
+| Apache Version | Apache/2.4.37 (Win32) OpenSSL/1.1.1a PHP/7.3.0                |
+
+Delete the file once finished with it. Leaving it in place could help an attacker compromise the server.
+
+- [PHP.net's phpinfo manual](https://www.php.net/phpinfo)
+- [WordPress Environment PHP library](https://github.com/abelcallejo/wordpress-environment)
 
 [info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
