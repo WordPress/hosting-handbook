@@ -57,8 +57,6 @@ The following versions are available and receiving security support as of 19 Aug
 
 PHP 8.2 reaches end of life on 31 December 2026, roughly four months after this release. Hosts should plan migrations for sites still on 8.2.
 
-_TODO: PHP 8.6 was in beta at the time of writing. Confirm before publishing whether 8.6 had a stable release by 19 August 2026 and, if so, what WordPress 7.1's compatibility status with it is._
-
 ### MySQL
 
 | Version   | Type | End of life |
