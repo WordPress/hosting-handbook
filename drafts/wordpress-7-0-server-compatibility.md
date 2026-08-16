@@ -93,15 +93,32 @@ The Core team retired the ["compatible with exceptions" label in April 2025](htt
 
 ## Related tickets
 
-_TODO: pull the PHP-keyword ticket list for [Trac milestone 7.0](https://core.trac.wordpress.org/query?milestone=7.0&keywords=~php) and list each entry below._
+The minimum version bump itself:
 
-Use this format exactly — the ticket number alone is the link text, with the description after the link:
+- [#62622](https://core.trac.wordpress.org/ticket/62622): Increase the minimum supported version of PHP to 7.4. _NOTE: Closed / Fixed._
 
-```
-- [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
-```
+PHP 8.5 support:
 
-Putting the description inside the link text breaks the Trac hovercards on make.wordpress.org. That regression has already been introduced and fixed twice ([#353](https://github.com/WordPress/hosting-handbook/issues/353), [#399](https://github.com/WordPress/hosting-handbook/issues/399)).
+- [#64322](https://core.trac.wordpress.org/ticket/64322): Media: Adjustments for official HEIF/HEIC support added in PHP 8.5. _NOTE: Closed / Fixed._
+
+Deprecation notices resolved in this release:
+
+- [#64864](https://core.trac.wordpress.org/ticket/64864): Code Modernization: Fix "passing null to non-nullable" deprecation from `previous_posts()`. _NOTE: Closed / Fixed._
+- [#64728](https://core.trac.wordpress.org/ticket/64728): Toolbar: Prevent PHP deprecation warning in admin bar when a node is added with a `null` parent. _NOTE: Closed / Fixed._
+- [#64928](https://core.trac.wordpress.org/ticket/64928): Code Modernization: Replace the deprecated `auto_detect_line_endings` setting. _NOTE: Closed / Fixed._
+
+Modernization the 7.4 minimum unblocked. [#58874](https://core.trac.wordpress.org/ticket/58874) had been deferred since WordPress 6.8 because the null coalescing operator was not available on every supported version. Dropping PHP 7.2 and 7.3 closed it:
+
+- [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _NOTE: Closed / Fixed._
+- [#63430](https://core.trac.wordpress.org/ticket/63430): Code Modernization: Replace `isset()` ternary checks with the null coalescing operator. _NOTE: Closed / Fixed._
+- [#64488](https://core.trac.wordpress.org/ticket/64488): Code Modernization: Replace `if` statements with the null coalescing operator. _NOTE: Closed / Fixed._
+- [#64497](https://core.trac.wordpress.org/ticket/64497): Code Modernization: Utilize the spaceship operator in sort comparison logic. _NOTE: Closed / Fixed._
+- [#64773](https://core.trac.wordpress.org/ticket/64773): Code Modernization: Use `str_starts_with()` in `WP_Duotone` class methods. _NOTE: Closed / Fixed._
+
+Worth knowing if you run the servers:
+
+- [#64332](https://core.trac.wordpress.org/ticket/64332): Database: Further correct the MariaDB version check in `wpdb::has_cap()`. _NOTE: Closed / Fixed._
+- [#63697](https://core.trac.wordpress.org/ticket/63697): Site Health: Add test and debug data for opcode cache. _NOTE: Closed / Fixed._
 
 ## Upgrading WordPress
 

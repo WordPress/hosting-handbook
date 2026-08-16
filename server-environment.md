@@ -6,7 +6,6 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
-- [WordPress 7.0 Server Compatibility](TODO-url-once-published)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
@@ -69,11 +68,25 @@ _IMPORTANT: WordPress 7.0 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
+- PHP 7.4
+  - Minimum supported version as of WordPress 7.0
+  - [#62622](https://core.trac.wordpress.org/ticket/62622): Increase the minimum supported version of PHP to 7.4. _NOTE: Closed / Fixed._
+
 - PHP 8.5
   - Fully compatible as of May 2026
+  - [#64322](https://core.trac.wordpress.org/ticket/64322): Media: Adjustments for official HEIF/HEIC support added in PHP 8.5. _NOTE: Closed / Fixed._
 
 - Other PHP Related Tickets
-  - TODO: pull the PHP-keyword ticket list for [Trac milestone 7.0](https://core.trac.wordpress.org/query?milestone=7.0&keywords=~php) and list each entry here. Keep the ticket number alone as the link text, exactly as in the WordPress 6.9 block above — putting the description inside the link text breaks the Trac hovercards.
+  - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _NOTE: Closed / Fixed. Deferred since WordPress 6.8, and completed in 7.0 because the 7.4 minimum made the operator available everywhere._
+  - [#63430](https://core.trac.wordpress.org/ticket/63430): Code Modernization: Replace `isset()` ternary checks with the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#64488](https://core.trac.wordpress.org/ticket/64488): Code Modernization: Replace `if` statements with the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#64497](https://core.trac.wordpress.org/ticket/64497): Code Modernization: Utilize the spaceship operator in sort comparison logic. _NOTE: Closed / Fixed._
+  - [#64773](https://core.trac.wordpress.org/ticket/64773): Code Modernization: Use `str_starts_with()` in `WP_Duotone` class methods. _NOTE: Closed / Fixed._
+  - [#64928](https://core.trac.wordpress.org/ticket/64928): Code Modernization: Replace the deprecated `auto_detect_line_endings` setting. _NOTE: Closed / Fixed._
+  - [#64864](https://core.trac.wordpress.org/ticket/64864): Code Modernization: Fix "passing null to non-nullable" deprecation from `previous_posts()`. _NOTE: Closed / Fixed._
+  - [#64728](https://core.trac.wordpress.org/ticket/64728): Toolbar: Prevent PHP deprecation warning in admin bar when a node is added with a `null` parent. _NOTE: Closed / Fixed._
+  - [#64332](https://core.trac.wordpress.org/ticket/64332): Database: Further correct the MariaDB version check in `wpdb::has_cap()`. _NOTE: Closed / Fixed._
+  - [#63697](https://core.trac.wordpress.org/ticket/63697): Site Health: Add test and debug data for opcode cache. _NOTE: Closed / Fixed._
 
 #### WordPress 6.9
 
