@@ -157,12 +157,12 @@ Upgrade normally. Everything should work.
 
 ---
 
-## WordPress 6.3 - 6.8
+## WordPress 6.3 - 7.0
 
 Goals:
-- WordPress: upgrade to WordPress 6.8
-- PHP: upgrade to PHP 8.1
-- SQL: upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
+- WordPress: upgrade to WordPress 7.0
+- PHP: upgrade to PHP 8.4
+- SQL: upgrade to MySQL 8.4 LTS / MariaDB 11.4 LTS
 
 Losses:
 - Content: none
@@ -173,5 +173,7 @@ PHP changes:
 - WP 6.3 dropped PHP 5.6  
 - WP 6.6 dropped PHP 7.0 & 7.1  
 - WP 6.6 requires PHP 7.2.24+  
+- WP 7.0 dropped PHP 7.2 & 7.3  
+- WP 7.0 requires PHP 7.4+  
 
 Upgrade normally. Everything should work fine.
