@@ -6,6 +6,7 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
+- [WordPress 7.0 Server Compatibility](TODO-url-once-published)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
@@ -43,9 +44,36 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.7&milestone=6.8&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
+
+### Notes for Hosts and Developers
+
+- PHP 8.4 or later is recommended for production environments.
+- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
+- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later.
+- PHP 8.3 moved to security-only support on 31 December 2025, and PHP 8.2 reaches end of life on 31 December 2026. Plan migrations for sites still on those versions.
+- Hosts should test their full stack before making a new PHP version the default for production environments.
+
+#### WordPress 7.0
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Security Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
+
+_IMPORTANT: WordPress 7.0 raised the minimum required PHP version from 7.2.24 to 7.4. Support for PHP 7.2 and 7.3 was dropped in this release._
+
+_IMPORTANT: WordPress 7.0 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+- PHP 8.5
+  - Fully compatible as of May 2026
+
+- Other PHP Related Tickets
+  - TODO: pull the PHP-keyword ticket list for [Trac milestone 7.0](https://core.trac.wordpress.org/query?milestone=7.0&keywords=~php) and list each entry here. Keep the ticket number alone as the link text, exactly as in the WordPress 6.9 block above — putting the description inside the link text breaks the Trac hovercards.
 
 #### WordPress 6.9
 
@@ -72,12 +100,6 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
   - [#54537](https://core.trac.wordpress.org/ticket/54537): Tests: Enable PHP version check once PHP 8.0 compatibility is achieved. _Note: Moved to Future Release._
   - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _Note: Moved to Future Release._
   - [#59234](https://core.trac.wordpress.org/ticket/59234): Introduce a `wp_json_decode()` function, including validation when available. _Note: Closed and will not be moving forward._
-
-### Notes for Hosts and Developers
-
-- PHP 8.3 or later is recommended for production environments.
-- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
-- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later. Hosts should test their full stack before making a new PHP version the default for production environments.
 
 #### WordPress 6.8
 
@@ -260,15 +282,17 @@ _Related PHP compatibility tickets_
 
 ### About PHP
 
-PHP 8.1 is maintained by the PHP Community only as _Security fix only_ starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, starting 2024-12-31 and 2025-12-31 respectively. Keeping your PHP to the latest stable version is important for WordPress speed and security.
 
-Versions prior to PHP 8.1 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
+Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
 End of life PHP versions:
 
+- PHP 8.5: 2029-12-31
+- PHP 8.4: 2028-12-31
 - PHP 8.3: 2027-12-31
 - PHP 8.2: 2026-12-31
-- PHP 8.1: 2025-12-31
+- PHP 8.1: 2025-12-31 _last release: 8.1.34_
 - PHP 8.0: 2023-11-26 _last release: 8.0.30_
 - PHP 7.4: 2022-11-28 _last release: 7.4.33_
 - PHP 7.3: 2021-12-06 _last release: 7.3.33_
