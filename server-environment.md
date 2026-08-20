@@ -6,6 +6,7 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
+- [WordPress 7.1 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-1/)
 - [WordPress 7.0 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-0/)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
@@ -34,7 +35,7 @@ Additional software used by web hosting companies and developers that are known 
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
-_Every version listed above still receives fixes, and anything below them does not. nginx and OpenLiteSpeed each maintain a supported branch that is not their newest release, so 1.30 and 1.8 are the options for hosts who would rather not track the latest version. Apache HTTPD, Angie and LiteSpeed Web Server patch only their current version, so on those there is no supported alternative to staying current. Checked at the WordPress 7.0 release. Always keep your web server up-to-date to ensure best performance!_
+_Every version listed above still receives fixes, and anything below them does not. nginx and OpenLiteSpeed each maintain a supported branch that is not their newest release, so 1.30 and 1.8 are the options for hosts who would rather not track the latest version. Apache HTTPD, Angie and LiteSpeed Web Server patch only their current version, so on those there is no supported alternative to staying current. Checked at the WordPress 7.1 release. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
@@ -55,6 +56,29 @@ The Core team retired the ["compatible with exceptions" label in April 2025](htt
 - PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later.
 - PHP 8.3 moved to security-only support on 31 December 2025, and PHP 8.2 reaches end of life on 31 December 2026. Plan migrations for sites still on those versions.
 - Hosts should test their full stack before making a new PHP version the default for production environments.
+
+#### WordPress 7.1
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Security Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
+
+_IMPORTANT: WordPress 7.1 requires PHP 7.4 or later, unchanged from WordPress 7.0._
+
+_IMPORTANT: WordPress 7.1 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+- Other PHP Related Tickets
+  - [#65342](https://core.trac.wordpress.org/ticket/65342): Charset: Polyfill `mb_ord()` and `mb_chr()`. _NOTE: Closed / Fixed._
+  - [#65143](https://core.trac.wordpress.org/ticket/65143): Code Modernization: Add a polyfill for `clamp()`. _NOTE: Closed / Fixed._
+  - [#65408](https://core.trac.wordpress.org/ticket/65408): Code Modernization: Replace `strpos()` with `str_contains()`. _NOTE: Closed / Fixed._
+  - [#65403](https://core.trac.wordpress.org/ticket/65403): Code Modernization: Simplify node retrieval using the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#65637](https://core.trac.wordpress.org/ticket/65637): Code Modernization: Avoid returning values in constructors. _NOTE: Closed / Fixed._
+  - [#65519](https://core.trac.wordpress.org/ticket/65519): Adoption of `array_any()` and `array_all()` across core.
+  - [#65598](https://core.trac.wordpress.org/ticket/65598): Adoption of `array_first()` and `array_last()`.
+  - [#64897](https://core.trac.wordpress.org/ticket/64897): Coding standards work for the 7.1 cycle, covering the null coalescing and `str_contains()` conversions.
 
 #### WordPress 7.0
 
