@@ -139,7 +139,7 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
   - [Hosting Tests Team](https://github.com/orgs/WordPress/teams/hosting-tests-team).
 
 - **GitHub Repos**
-  - [Hosting Handbook](https://github.com/WordPress/hosting-handbook) Github Repo
-  - [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) Github Repo
-  - [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) Github Repo (aka test-runner)
-  - [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) Github Repo (aka test-reporter)
+  - [Hosting Handbook](https://github.com/WordPress/hosting-handbook) GitHub Repo
+  - [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) GitHub Repo
+  - [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) GitHub Repo (aka test-runner)
+  - [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) GitHub Repo (aka test-reporter)
