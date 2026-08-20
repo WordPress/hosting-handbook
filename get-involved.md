@@ -16,7 +16,7 @@ The recommendations were put together by the team and used as a basis for [Site 
 
 ### Improvements in the development of the Automated Hosting Tests
 
-The handbook is in the process of being audited and improved. You can see the progress and contribute [through Github](https://github.com/WordPress/phpunit-test-runner).
+The handbook is in the process of being audited and improved. You can see the progress and contribute [through GitHub](https://github.com/WordPress/phpunit-test-runner).
 
 You can propose improvements or solve those available in both the [PHPUnit test runner (issues)](https://github.com/WordPress/phpunit-test-runner/issues) and the [PHPUnit test reporter (issues)](https://github.com/WordPress/phpunit-test-reporter/issues).
 
@@ -142,4 +142,4 @@ The following are ways that a volunteer currently can earn a hosting contributor
 
 If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor page and submit a request](https://profiles.wordpress.org/associations/hosting-contributor/) with details on your contribution. Please feel free to ping any of the Team Reps on Slack with questions.
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
