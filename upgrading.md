@@ -22,6 +22,35 @@ IMPORTANT: This is a very manual process, not a massive one. There will probably
 
 If WP-CLI is available on your hosting environment, some parts of the upgrade process can be simplified. Always make sure you have a full backup of the files and the database before running any commands.
 
+Check the current state of the installation before touching anything:
+
+```bash
+wp core version
+wp core verify-checksums
+wp db export backup-before-upgrade.sql
+```
+
+`verify-checksums` confirms the core files match the official release, so modified or infected files surface before the upgrade instead of being blamed on it afterwards.
+
+**Upgrading to a specific version**
+
+The upgrade paths on this page move through intermediate versions rather than jumping straight to the latest release. WP-CLI can pin each hop:
+
+```bash
+wp core update --version=4.9.31
+wp core update-db
+```
+
+Run the pair once per hop, following the target versions listed in the sections below, and check the site between hops. For CLI-based upgrades, run `update-db` after each core update so database schema changes are applied before continuing to the next hop.
+
+[tip]On multisite, run `wp core update-db --network` so the database upgrade runs across all sites.[/tip]
+
+After the final hop, run `wp core verify-checksums` again to confirm the files match the release.
+
+**Older installations**
+
+The current WP-CLI release does not run on the PHP versions that ship with the oldest WordPress installations. Earlier WP-CLI releases remain available as Phar downloads on the [WP-CLI releases page](https://github.com/wp-cli/wp-cli/releases), and the manual steps in each section below work without WP-CLI.
+
 For the latest and complete list of `wp core` commands and options, please refer to the official WP-CLI documentation:
 
 https://developer.wordpress.org/cli/commands/core/
