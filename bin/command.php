@@ -44,10 +44,14 @@ class Command {
 	 */
 	public function gen_hb_manifest() {
 		$manifest = array();
+
+		// Markdown files at the repository root that are not handbook pages.
+		$skip = array( 'README', 'CODE_OF_CONDUCT', 'CONTRIBUTING', 'AGENTS', 'CLAUDE' );
+
 		// Top-level pages
 		foreach( glob( HOSTING_HANDBOOK_PATH . '/*.md' ) as $file ) {
 			$slug = basename( $file, '.md' );
-			if ( 'README' === $slug || 'CODE_OF_CONDUCT' === $slug || 'CONTRIBUTING' === $slug ) {
+			if ( in_array( $slug, $skip, true ) ) {
 				continue;
 			}
 			$title = '';
