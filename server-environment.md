@@ -430,6 +430,25 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
 
+### PHP Memory Limit
+
+WordPress does not set a PHP `memory_limit` itself, but the two interact directly: a `memory_limit` set too low causes fatal "Allowed memory size exhausted" errors, and WordPress's own memory constants cannot exceed whatever the server's PHP `memory_limit` allows. Raising the WordPress constants alone has no effect if the underlying PHP configuration is capped lower.
+
+- [`WP_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets the memory available to front-end requests. Default: 40M (64M for Multisite).
+- [`WP_MAX_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets a higher ceiling used for admin/back-end requests (block editor, plugin/theme updates, imports, etc.). Default: 256M.
+
+Neither constant increases the memory PHP itself will allow; both are capped by the server's `memory_limit`. See [Memory Limits](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) for full details on how the constants and `php.ini` interact.
+
+Recommendations for hosts, in the absence of a documented minimum from WordPress core:
+
+| Tier | PHP `memory_limit` | Notes |
+|------|---------------------|-------|
+| Minimum | 128M | Sufficient for a vanilla WordPress installation with no additional plugins or themes. Below this, routine admin operations (core/plugin updates, media uploads) become prone to memory-exhaustion fatals. |
+| Recommended default | 256M | Matches the `WP_MAX_MEMORY_LIMIT` default and gives comfortable headroom for a typical production site running a handful of plugins and a modern theme. |
+| Higher / resource-intensive sites | 512M or more | For sites running WooCommerce or other e-commerce, page builders, multilingual plugins, import/export tools, or other memory-heavy workloads. |
+
+These are starting points, not guarantees — actual memory needs scale with the specific plugins and themes installed. Hosts should set `memory_limit` in `php.ini` (or the equivalent per-site override) at or above the recommended tier for their customer base, and monitor logs for memory-exhaustion errors to catch sites that need a higher limit.
+
 ## Database
 
 For data storage, WordPress uses systems compatible with MySQL. 
