@@ -432,12 +432,12 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 
 ### PHP Memory Limit
 
-WordPress does not set a PHP `memory_limit` itself, but the two interact directly: a `memory_limit` set too low causes fatal "Allowed memory size exhausted" errors, and WordPress's own memory constants cannot exceed whatever the server's PHP `memory_limit` allows. Raising the WordPress constants alone has no effect if the underlying PHP configuration is capped lower.
+WordPress does not define the default PHP `memory_limit`, but it may attempt to increase it. When WordPress wants more memory than PHP currently allows, it asks for it at runtime with `ini_set()`: once on load to reach `WP_MEMORY_LIMIT`, and again through `wp_raise_memory_limit()` for admin, cron, and image-processing work. Whether that request succeeds is up to the server. If the server configuration prevents changing `memory_limit`, the request is either skipped or fails quietly, and the configured limit stands.
 
-- [`WP_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets the memory available to front-end requests. Default: 40M (64M for Multisite).
-- [`WP_MAX_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets a higher ceiling used for admin/back-end requests (block editor, plugin/theme updates, imports, etc.). Default: 256M.
+- [`WP_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets the memory available to front-end requests. Default: 40M (64M for Multisite), or the server's current `memory_limit` where PHP will not accept a runtime change.
+- [`WP_MAX_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets a higher limit used for admin/back-end requests (block editor, plugin/theme updates, imports, etc.). Default: 256M, or the server's current `memory_limit` where that is already higher, is unlimited, or cannot be changed at runtime. If `WP_MEMORY_LIMIT` is greater than 256M, `WP_MAX_MEMORY_LIMIT` is set to that value instead.
 
-Neither constant increases the memory PHP itself will allow; both are capped by the server's `memory_limit`. See [Memory Limits](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) for full details on how the constants and `php.ini` interact.
+Both constants depend on PHP accepting a runtime change. Where the host blocks that, neither raises the memory PHP will allow, and the `php.ini` value is the limit. See [Memory Limits](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) for full details on how the constants and `php.ini` interact.
 
 Recommendations for hosts, in the absence of a documented minimum from WordPress core:
 
