@@ -372,6 +372,7 @@ The following extensions are part of PHP itself and are always enabled in suppor
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
 - [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format. (Always enabled in PHP >= 8.0; enabled by default in PHP 7.x but can be disabled in custom builds.)
+- [hash](https://www.php.net/manual/en/book.hash.php) - Provides access to cryptographically secure algorithms for hashing functions.
 - [mysqli](https://www.php.net/manual/en/book.mysqli.php) - Connects to MySQL/MariaDB for database interactions. Many PHP builds use [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) as the underlying driver, but `mysqlnd` is not a standalone replacement for `mysqli`.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
@@ -563,4 +564,4 @@ If you have WordPress 5.2+, the WordPress Admin already has tools with that info
 
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
