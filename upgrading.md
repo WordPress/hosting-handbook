@@ -31,6 +31,12 @@ wp core verify-checksums
 
 `verify-checksums` confirms the core files match the official release, so modified or infected files surface before the upgrade instead of being blamed on it afterwards.
 
+To see which newer versions are available before deciding on the upgrade path:
+
+```bash
+wp core check-update
+```
+
 Take a full backup before going any further. The [Reliability](https://make.wordpress.org/hosting/handbook/reliability/) page links to the backup documentation, including [backing up your database](https://developer.wordpress.org/advanced-administration/security/backup/database/) and [backing up your WordPress files](https://developer.wordpress.org/advanced-administration/security/backup/files/).
 
 **Upgrading to a specific version**
@@ -47,6 +53,24 @@ Run the pair once per hop, following the target versions listed in the sections 
 [tip]On multisite, run `wp core update-db --network` so the database upgrade runs across all sites.[/tip]
 
 After the final hop, run `wp core verify-checksums` again to confirm the files match the release.
+
+**Recovering from a stuck or broken upgrade**
+
+If an update gets stuck or fails partway, force WP-CLI to re-run the same versioned core file update:
+
+```bash
+wp core update --version=4.9.31 --force
+```
+
+Use the same `--version` value as the hop you were trying to complete.
+
+To re-download the core files without replacing the `wp-content` directory, for example when `verify-checksums` keeps reporting modified files:
+
+```bash
+wp core download --force --skip-content
+```
+
+Add `--version=X.X.X` to download the core files for a specific version while keeping `wp-content` in place. This changes files only; it does not roll back database changes, so restore from a backup if `wp core update-db` has already run and you need a full rollback.
 
 **Older installations**
 
