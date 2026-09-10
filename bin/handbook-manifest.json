@@ -13,6 +13,13 @@
     "parent": null,
     "order": 1
   },
+  "faq": {
+    "title": "Hosting Team FAQ",
+    "slug": "faq",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/faq.md",
+    "parent": "get-involved",
+    "order": 0
+  },
   "team-projects": {
     "title": "Team Projects",
     "slug": "team-projects",

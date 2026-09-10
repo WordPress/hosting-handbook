@@ -4,6 +4,8 @@ The Contributor Day is an event, usually parallel to a WordCamp, focused on cont
 
 To participate in a Contributor Day it is only necessary to have a WordPress.org account, and, if possible, access to a Slack team channel.
 
+For quick answers to common questions before or during a Contributor Day, see the [Hosting Team FAQ](https://make.wordpress.org/hosting/handbook/get-involved/faq/).
+
 ## User account
 
 ### WordPress.org user account _(required)_
