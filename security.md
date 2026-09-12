@@ -148,6 +148,14 @@ If Redis is going to be used for database object caching, the Redis server shoul
 
 The Redis server in its default configuration listens on port 6379. The port can be changed in Redis's configuration, but whatever port is used should be protected by a firewall to prevent unauthorized access.
 
+##### Redis Unix sockets
+
+Instead of a TCP port, Redis can listen on a Unix domain socket, which is not reachable over the network at all. Setting `unixsocket` to a socket path and `port 0` in the Redis configuration disables Redis's regular TCP listener, and `unixsocketperm 700` restricts the socket to its owning system user, so access is controlled by file permissions rather than network rules or credentials. The object caching plugin has to support socket connections for this to work. The Redis Object Cache plugin, for example, connects through a socket when `WP_REDIS_SCHEME` is set to `unix` and `WP_REDIS_PATH` points at the socket file.
+
+##### Per-user Redis instances
+
+On servers hosting sites for more than one user, a single shared Redis instance means every site can read every other site's cached data, and a unique cache key salt only reduces accidental collisions, it is not an access control. Running a separate Redis instance per user, each listening on its own Unix socket owned by that user, isolates the sites from each other at the file permission level and can avoid shared Redis credentials. Redis 6 and later can also restrict users to key patterns with ACLs on a shared instance, but separate instances additionally isolate memory, so one site cannot evict another site's cache, and each instance can be given its own memory limit.
+
 ##### Redis cache key salt
 
 If using Redis for database object caching, using a unique Redis cache key salt will help prevent cache collisions -- when two websites try to cache content using the same key. Cache collisions can result in websites accessing the cached data for other websites and can cause other undesirable and unexpected behaviors. The Redis cache key salt is usually configured through the Redis caching plugin or Redis client used to enable Redis database object caching in WordPress websites.
