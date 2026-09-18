@@ -12,36 +12,30 @@ More Information about [Team Reps: the Title, Responsibilities...](https://make.
 
 ### Hosting Team Reps
 
-The Hosting Team (2025) is represented by:
+The Hosting Team (2026) is represented by:
 
-- [@crixu](https://profiles.wordpress.org/crixu/)
-- [@zunaid321](https://profiles.wordpress.org/zunaid321/)
+- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023, 2026)
+- [@jazzs3quence](https://profiles.wordpress.org/jazzs3quence/) (Team Rep 2026)
+- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - 2026)
 
-### Hosting Project Leads
 
-The Documentation projects (Hosting Handbook, and Advanced Administration Handbook) are lead by:
+### Active Hosting Team Admins
 
-- _Defaults to team reps/admins. The team collectively manages these projects_
-
-The PHPUnit Test projects (PHPUnit Test Runner, and PHPUnit Test Report) are lead by:
-
-- _Defaults to team reps/admins. The team collectively manages these projects_
-
-### Hosting Team Admins
-
-- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - present)
-- [@jessibelle](https://profiles.wordpress.org/jessibelle/) (Team Rep 2023)
-- [@crixu](https://profiles.wordpress.org/crixu/) (Team Rep 2021-present)
-- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023)
+- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023, 2026)
 - [@chaion07](https://profiles.wordpress.org/chaion07/) (Team admin since 2021)
+- [@crixu](https://profiles.wordpress.org/crixu/) (Team Rep 2021-present)
+- [@kirasong](https://profiles.wordpress.org/kirasong/) (Started the team in 2017, Team Rep 2017 - 2021)
+- [@jazzs3quence](https://profiles.wordpress.org/jazzs3quence/) (Team Rep 2026)
+- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - present)
+
 
 #### Past Hosting Team Reps and Admins
 
-- [@javiercasares](https://profiles.wordpress.org/javiercasares/) (Team Rep 2021 - 2024)
-- [@jadonn](https://profiles.wordpress.org/jadonn/) (Team Rep 2018 - 2022)
-- [@pfefferle](https://profiles.wordpress.org/pfefferle/)
-- [@kirasong](https://profiles.wordpress.org/kirasong/) (Started the team in 2017, Team Rep 2017 - 2021)
 - [@danielbachhuber](https://profiles.wordpress.org/danielbachhuber/) (Started the team in 2017)
+- [@jadonn](https://profiles.wordpress.org/jadonn/) (Team Rep 2018 - 2022)
+- [@javiercasares](https://profiles.wordpress.org/javiercasares/) (Team Rep 2021 - 2024)
+- [@jessibelle](https://profiles.wordpress.org/jessibelle/) (Team Rep 2023)
+- [@pfefferle](https://profiles.wordpress.org/pfefferle/)
 
 ## Hosting Team Organization
 
