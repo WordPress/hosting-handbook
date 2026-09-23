@@ -1,11 +1,13 @@
 # Server Environment
 
-Although WordPress can work in almost any environment, some environments are more optimal for functionality and performance while others are less so. Below are a few minimum recommendations for server environment configurations within which WordPress operates most efficiently, with consideration for WordPress websites that use third party plugins and themes which commonly introduce additional server-level requirements.
+Although WordPress can work in almost any environment, some environments are more optimal for functionality and performance while others are less so. Below are a few minimum recommendations for server environment configurations within which WordPress operates most efficiently, with consideration for WordPress websites that use third-party plugins and themes which commonly introduce additional server-level requirements.
 
 ## WordPress Environment recommendations
 
 Quick recommendations:
 
+- [WordPress 7.1 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-1/)
+- [WordPress 7.0 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-0/)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
@@ -25,15 +27,15 @@ A web server is piece of software that receives and accepts web requests from we
 The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
 - [Apache HTTPD](https://httpd.apache.org/) 2.4
-- [nginx](https://nginx.org/) 1.26 & 1.27
+- [nginx](https://nginx.org/) 1.30 (stable) / 1.31 (mainline)
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.7
-- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3 / 6.2 / 6.1 / 6.0 / 5.4
-- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 / 1.7
+- [Angie](https://angie.software/en/) 1.12
+- [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
+- [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
-_Those are the latest versions at the time of writing this document, for WordPress 6.8. Always keep your web server up-to-date to ensure best performance!_
+_Every version listed above still receives fixes, and anything below them does not. nginx and OpenLiteSpeed each maintain a supported branch that is not their newest release, so 1.30 and 1.8 are the options for hosts who would rather not track the latest version. Apache HTTPD, Angie and LiteSpeed Web Server patch only their current version, so on those there is no supported alternative to staying current. Checked at the WordPress 7.1 release. Always keep your web server up-to-date to ensure best performance!_
 
 ## PHP
 
@@ -43,9 +45,73 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.7&milestone=6.8&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
+
+### Notes for Hosts and Developers
+
+- PHP 8.4 or later is recommended for production environments.
+- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
+- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later.
+- PHP 8.3 moved to security-only support on 31 December 2025, and PHP 8.2 reaches end of life on 31 December 2026. Plan migrations for sites still on those versions.
+- Hosts should test their full stack before making a new PHP version the default for production environments.
+
+#### WordPress 7.1
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Security Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
+
+_IMPORTANT: WordPress 7.1 requires PHP 7.4 or later, unchanged from WordPress 7.0._
+
+_IMPORTANT: WordPress 7.1 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+- Other PHP Related Tickets
+  - [#65342](https://core.trac.wordpress.org/ticket/65342): Charset: Polyfill `mb_ord()` and `mb_chr()`. _NOTE: Closed / Fixed._
+  - [#65143](https://core.trac.wordpress.org/ticket/65143): Code Modernization: Add a polyfill for `clamp()`. _NOTE: Closed / Fixed._
+  - [#65408](https://core.trac.wordpress.org/ticket/65408): Code Modernization: Replace `strpos()` with `str_contains()`. _NOTE: Closed / Fixed._
+  - [#65403](https://core.trac.wordpress.org/ticket/65403): Code Modernization: Simplify node retrieval using the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#65637](https://core.trac.wordpress.org/ticket/65637): Code Modernization: Avoid returning values in constructors. _NOTE: Closed / Fixed._
+  - [#65519](https://core.trac.wordpress.org/ticket/65519): Adoption of `array_any()` and `array_all()` across core.
+  - [#65598](https://core.trac.wordpress.org/ticket/65598): Adoption of `array_first()` and `array_last()`.
+  - [#64897](https://core.trac.wordpress.org/ticket/64897): Coding standards work for the 7.1 cycle, covering the null coalescing and `str_contains()` conversions.
+
+#### WordPress 7.0
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Security Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
+
+_IMPORTANT: WordPress 7.0 raised the minimum required PHP version from 7.2.24 to 7.4. Support for PHP 7.2 and 7.3 was dropped in this release._
+
+_IMPORTANT: WordPress 7.0 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+- PHP 7.4
+  - Minimum supported version as of WordPress 7.0
+  - [#62622](https://core.trac.wordpress.org/ticket/62622): Increase the minimum supported version of PHP to 7.4. _NOTE: Closed / Fixed._
+
+- PHP 8.5
+  - Fully compatible as of May 2026
+  - [#64322](https://core.trac.wordpress.org/ticket/64322): Media: Adjustments for official HEIF/HEIC support added in PHP 8.5. _NOTE: Closed / Fixed._
+
+- Other PHP Related Tickets
+  - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _NOTE: Closed / Fixed. Deferred since WordPress 6.8, and completed in 7.0 because the 7.4 minimum made the operator available everywhere._
+  - [#63430](https://core.trac.wordpress.org/ticket/63430): Code Modernization: Replace `isset()` ternary checks with the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#64488](https://core.trac.wordpress.org/ticket/64488): Code Modernization: Replace `if` statements with the null coalescing operator. _NOTE: Closed / Fixed._
+  - [#64497](https://core.trac.wordpress.org/ticket/64497): Code Modernization: Utilize the spaceship operator in sort comparison logic. _NOTE: Closed / Fixed._
+  - [#64773](https://core.trac.wordpress.org/ticket/64773): Code Modernization: Use `str_starts_with()` in `WP_Duotone` class methods. _NOTE: Closed / Fixed._
+  - [#64928](https://core.trac.wordpress.org/ticket/64928): Code Modernization: Replace the deprecated `auto_detect_line_endings` setting. _NOTE: Closed / Fixed._
+  - [#64864](https://core.trac.wordpress.org/ticket/64864): Code Modernization: Fix "passing null to non-nullable" deprecation from `previous_posts()`. _NOTE: Closed / Fixed._
+  - [#64728](https://core.trac.wordpress.org/ticket/64728): Toolbar: Prevent PHP deprecation warning in admin bar when a node is added with a `null` parent. _NOTE: Closed / Fixed._
+  - [#64332](https://core.trac.wordpress.org/ticket/64332): Database: Further correct the MariaDB version check in `wpdb::has_cap()`. _NOTE: Closed / Fixed._
+  - [#63697](https://core.trac.wordpress.org/ticket/63697): Site Health: Add test and debug data for opcode cache. _NOTE: Closed / Fixed._
 
 #### WordPress 6.9
 
@@ -72,12 +138,6 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
   - [#54537](https://core.trac.wordpress.org/ticket/54537): Tests: Enable PHP version check once PHP 8.0 compatibility is achieved. _Note: Moved to Future Release._
   - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _Note: Moved to Future Release._
   - [#59234](https://core.trac.wordpress.org/ticket/59234): Introduce a `wp_json_decode()` function, including validation when available. _Note: Closed and will not be moving forward._
-
-### Notes for Hosts and Developers
-
-- PHP 8.3 or later is recommended for production environments.
-- PHP 8.4 is in active support and is fully supported by WordPress 6.7 and later.
-- PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later. Hosts should test their full stack before making a new PHP version the default for production environments.
 
 #### WordPress 6.8
 
@@ -260,15 +320,17 @@ _Related PHP compatibility tickets_
 
 ### About PHP
 
-PHP 8.1 is maintained by the PHP Community only as _Security fix only_ starting 2022-11-26. Keeping your PHP to the latest stable version is important for WordPress speed and security.
+PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, starting 2024-12-31 and 2025-12-31 respectively. Keeping your PHP to the latest stable version is important for WordPress speed and security.
 
-Versions prior to PHP 8.1 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
+Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
-End of life PHP versions:
+End-of-life PHP versions:
 
+- PHP 8.5: 2029-12-31
+- PHP 8.4: 2028-12-31
 - PHP 8.3: 2027-12-31
 - PHP 8.2: 2026-12-31
-- PHP 8.1: 2025-12-31
+- PHP 8.1: 2025-12-31 _last release: 8.1.34_
 - PHP 8.0: 2023-11-26 _last release: 8.0.30_
 - PHP 7.4: 2022-11-28 _last release: 7.4.33_
 - PHP 7.3: 2021-12-06 _last release: 7.3.33_
@@ -310,6 +372,7 @@ The following extensions are part of PHP itself and are always enabled in suppor
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
 - [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format. (Always enabled in PHP >= 8.0; enabled by default in PHP 7.x but can be disabled in custom builds.)
+- [hash](https://www.php.net/manual/en/book.hash.php) - Provides access to cryptographically secure algorithms for hashing functions.
 - [mysqli](https://www.php.net/manual/en/book.mysqli.php) - Connects to MySQL/MariaDB for database interactions. Many PHP builds use [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) as the underlying driver, but `mysqlnd` is not a standalone replacement for `mysqli`.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
@@ -319,7 +382,7 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
 - [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
-- [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop in replacement for the standard PHP serializer.
+- [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
 - [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
@@ -331,7 +394,7 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 
 - [apcu](https://www.php.net/manual/en/book.apcu.php) – In-memory key-value store for PHP (former APC stripped of opcode caching).
 - [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached >= 1.0.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
-- [opcache](https://www.php.net/manual/en/book.opcache.php) - PHP can be configured to preload scripts into the opcache when the engine starts. 
+- [opcache](https://www.php.net/manual/en/book.opcache.php) - Stores precompiled PHP bytecode to reduce repeated script parsing and compilation. See [Opcode Cache](performance.md#opcode-cache) for performance guidance.
 - [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
 
@@ -368,13 +431,32 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
 
+### PHP Memory Limit
+
+WordPress does not define the default PHP `memory_limit`, but it may attempt to increase it. When WordPress wants more memory than PHP currently allows, it asks for it at runtime with `ini_set()`: once on load to reach `WP_MEMORY_LIMIT`, and again through `wp_raise_memory_limit()` for admin, cron, and image-processing work. Whether that request succeeds is up to the server. If the server configuration prevents changing `memory_limit`, the request is either skipped or fails quietly, and the configured limit stands.
+
+- [`WP_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets the memory available to front-end requests. Default: 40M (64M for Multisite), or the server's current `memory_limit` where PHP will not accept a runtime change.
+- [`WP_MAX_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets a higher limit used for admin/back-end requests (block editor, plugin/theme updates, imports, etc.). Default: 256M, or the server's current `memory_limit` where that is already higher, is unlimited, or cannot be changed at runtime. If `WP_MEMORY_LIMIT` is greater than 256M, `WP_MAX_MEMORY_LIMIT` is set to that value instead.
+
+Both constants depend on PHP accepting a runtime change. Where the host blocks that, neither raises the memory PHP will allow, and the `php.ini` value is the limit. See [Memory Limits](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) for full details on how the constants and `php.ini` interact.
+
+Recommendations for hosts, in the absence of a documented minimum from WordPress core:
+
+| Tier | PHP `memory_limit` | Notes |
+|------|---------------------|-------|
+| Minimum | 128M | Sufficient for a vanilla WordPress installation with no additional plugins or themes. Below this, routine admin operations (core/plugin updates, media uploads) become prone to memory-exhaustion fatals. |
+| Recommended default | 256M | Matches the `WP_MAX_MEMORY_LIMIT` default and gives comfortable headroom for a typical production site running a handful of plugins and a modern theme. |
+| Higher / resource-intensive sites | 512M or more | For sites running WooCommerce or other e-commerce, page builders, multilingual plugins, import/export tools, or other memory-heavy workloads. |
+
+These are starting points, not guarantees — actual memory needs scale with the specific plugins and themes installed. Hosts should set `memory_limit` in `php.ini` (or the equivalent per-site override) at or above the recommended tier for their customer base, and monitor logs for memory-exhaustion errors to catch sites that need a higher limit.
+
 ## Database
 
 For data storage, WordPress uses systems compatible with MySQL. 
 
 ### Officially recommended versions
 
-Below are the officially recommended Long Term Support versions of [MySQL](https://dev.mysql.com/downloads/mysql/) and [MariaDB](https://mariadb.org/).
+Below are the officially recommended Long-Term Support versions of [MySQL](https://dev.mysql.com/downloads/mysql/) and [MariaDB](https://mariadb.org/).
 
 | Software  | Version    | EOL Date          |
 |-----------|------------|-------------------|
@@ -385,7 +467,7 @@ Below are the officially recommended Long Term Support versions of [MySQL](https
 | MariaDB   | 10.11 LTS  | February 16, 2028 |
 | MariaDB   | 10.6 LTS   | July 6, 2026      |
 
-### End of life MySQL versions
+### End-of-life MySQL versions
 
 The following versions of MySQL have reached their end of life (EOL) and are no longer supported by the MySQL community. **It is highly recommended to upgrade to a supported version for security and performance reasons.**
 
@@ -403,7 +485,7 @@ The following versions of MySQL have reached their end of life (EOL) and are no 
 | 5.1     | November 14, 2008  | 5.1.73 (December 3, 2013) | December 31, 2013 |
 | 5.0     | October 19, 2005   | 5.0.96 (March 21, 2012)   | March 21, 2012    |
 
-### End of life MariaDB versions
+### End-of-life MariaDB versions
 
 The following versions of MariaDB have reached their end of life (EOL) and are no longer supported by the MariaDB community. **It is highly recommended to upgrade to a supported version for security and performance reasons.**
 
@@ -501,4 +583,4 @@ If you have WordPress 5.2+, the WordPress Admin already has tools with that info
 
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
