@@ -25,7 +25,7 @@ Where possible, offer region-specific hosting options to minimize data transfer.
 
 ## Employee and Office Sustainability 
 
-Sustainability efforts should go beyond data centers and servers. If you’re using an office, make sure that your office building is green and energy efficient. Implement recycling programs within your offices, use energy-efficient lightning and encourage paperless operations. Promote remote work to reduce overall carbon footprint associated with daily commutes and office energy consumption. 
+Sustainability efforts should go beyond data centers and servers. If you’re using an office, make sure that your office building is green and energy efficient. Implement recycling programs within your offices, use energy-efficient lighting and encourage paperless operations. Promote remote work to reduce overall carbon footprint associated with daily commutes and office energy consumption. 
 
 
 ## Sustainable Data Management
