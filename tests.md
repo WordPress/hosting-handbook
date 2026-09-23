@@ -113,6 +113,19 @@ export WPT_SSH_PRIVATE_KEY_BASE64=
 export WPT_DEBUG=
 ```
 
+#### Running tests over SSH
+
+Leave `WPT_SSH_CONNECT` empty when the Runner prepares and executes the tests on the same server. This is the simplest setup and is usually best when the server has Git, Node.js, npm, Composer, PHP, and the other tools needed to prepare WordPress.
+
+Use `WPT_SSH_CONNECT` when the Runner should prepare WordPress locally but execute the tests on another environment, such as a shared hosting account or a remote server that more closely matches the production hosting stack. The value can be a full SSH connection string, such as `user@example.com`, or an SSH alias from the Runner user's SSH config.
+
+When using SSH:
+* Ensure the remote account has access to the configured test directory and database.
+* Keep `WPT_TEST_DIR` pointed at the directory where tests should run on the remote environment.
+* Use `WPT_SSH_OPTIONS` only for SSH options required by the target environment.
+* Store the private key in `WPT_SSH_PRIVATE_KEY_BASE64` as a base64-encoded value, and protect the `.env` file from other users.
+* Use a dedicated test account and database. The Runner creates, modifies, and removes test data, so it should not target a production WordPress site or production database.
+
 Configure the folder where the WordPress software downloads and the database accesses will be made to prepare the tests.
 
 ### Preparing the environment
