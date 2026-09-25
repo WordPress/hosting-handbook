@@ -39,7 +39,7 @@ wp core check-update
 
 Take a full backup before going any further. The [Reliability](https://make.wordpress.org/hosting/handbook/reliability/) page links to the backup documentation, including [backing up your database](https://developer.wordpress.org/advanced-administration/security/backup/database/) and [backing up your WordPress files](https://developer.wordpress.org/advanced-administration/security/backup/files/).
 
-**Upgrading to a specific version**
+### Upgrading to a specific version
 
 The upgrade paths on this page move through intermediate versions rather than jumping straight to the latest release. WP-CLI can pin each hop:
 
@@ -54,7 +54,7 @@ Run the pair once per hop, following the target versions listed in the sections 
 
 After the final hop, run `wp core verify-checksums` again to confirm the files match the release.
 
-**Recovering from a stuck or broken upgrade**
+### Recovering from a stuck or broken upgrade
 
 If an update gets stuck or fails partway, force WP-CLI to re-run the same versioned core file update:
 
@@ -72,7 +72,7 @@ wp core download --force --skip-content
 
 Add `--version=X.X.X` to download the core files for a specific version while keeping `wp-content` in place. This changes files only; it does not roll back database changes, so restore from a backup if `wp core update-db` has already run and you need a full rollback.
 
-**Older installations**
+### Older installations
 
 The current WP-CLI release does not run on the PHP versions that ship with the oldest WordPress installations. Earlier WP-CLI releases remain available as Phar downloads on the [WP-CLI releases page](https://github.com/wp-cli/wp-cli/releases), and the manual steps in each section below work without WP-CLI.
 
