@@ -74,7 +74,7 @@ Sustainability is an ongoing commitment. Hosting providers should regularly audi
 
 ## Renewable Energy Certificates (RECs)
 
-Hosting providers may also complement their sustainability efforts by purchasing Renewable Energy Certificates (RECs), which offset energy consumption through investment in renewable sources. For example: [Renewable Energy Certificates (RECs)](https://www.climateimpact.com/business-solutions/energy-attribute-certificates-eacs/renewable-energy-certificates-recs)
+Hosting providers may also complement their sustainability efforts by purchasing Renewable Energy Certificates (RECs), each representing the environmental attributes of 1 MWh of renewable electricity generation that can be matched against the provider's electricity use (RECs are distinct from carbon offsets). For example: [Renewable Energy Certificates (RECs)](https://www.climateimpact.com/business-solutions/energy-attribute-certificates-eacs/renewable-energy-certificates-recs)
 
 ## Eco-Friendly Plugin and Theme Development
 

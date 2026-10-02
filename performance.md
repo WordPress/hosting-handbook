@@ -12,7 +12,7 @@ Caches typically expire after a certain amount of time and are regenerated so th
 
 In a typical page load, various caches might be checked in the following order:
 
-1.  Local Browser cache / Local Storage / Web App Manifest
+1.  Local Browser cache / Local Storage / Service Worker cache
 2.  [Content Delivery Network (CDN)](#content-delivery-network-cdn-cache)
 3.  [Full Page Cache](#full-page-cache) (Reverse Proxy - Varnish or NGINX)
 4.  [Full Page Cache](#full-page-cache) (File-based Full-page caching with plugins)
