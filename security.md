@@ -56,13 +56,13 @@ Some programs will represent the different kinds of access using letters instead
 
 | Symbolic | Numeric | Permissions |
 | --- | --- | --- |
-| \---------- | 000 | no permissions |
-| \-r-------- | 400 | read only for user |
-| \-rw------- | 600 | read & write only for user |
-| \-rwx------ | 700 | read, write, & execute only for user |
-| \-rwxr-xr-x | 755 | read, write, & execute for user, only read & execute for group and everyone else |
-| \-rw-r--r-- | 644 | read & write for user, only read for group and everyone else |
-| \-rwxrwxrwx | 777 | read, write, and execute for user, group, and everyone else. **Do not use. Security Risk.** |
+| `----------` | 000 | no permissions |
+| `-r--------` | 400 | read only for user |
+| `-rw-------` | 600 | read & write only for user |
+| `-rwx------` | 700 | read, write, & execute only for user |
+| `-rwxr-xr-x` | 755 | read, write, & execute for user, only read & execute for group and everyone else |
+| `-rw-r--r--` | 644 | read & write for user, only read for group and everyone else |
+| `-rwxrwxrwx` | 777 | read, write, and execute for user, group, and everyone else. **Do not use. Security Risk.** |
 
 #### Recommended Default Linux File Permissions
 
