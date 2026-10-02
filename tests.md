@@ -41,6 +41,7 @@ If you are using Debian / Ubuntu, install or update NodeJS with this command:
 curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
 sudo apt -y install nodejs
 node -v
+npm -v
 ```
 
 If you are using RHEL / CentOS, install or update NodeJS with this command:
@@ -49,6 +50,7 @@ If you are using RHEL / CentOS, install or update NodeJS with this command:
 curl -fsSL https://rpm.nodesource.com/setup_24.x | sudo -E bash -
 sudo yum install -y nodejs
 node -v
+npm -v
 ```
 
 ### Installing the Runner
