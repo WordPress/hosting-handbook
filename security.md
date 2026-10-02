@@ -160,13 +160,12 @@ Memcached is a memory object caching solution commonly used to provide database 
 
 WordPress has the ability to automatically apply security updates. This should be enabled in almost all cases. The exception is if files are not writable, outside of `wp-content/uploads`, for security reasons. In this instance, an alternative, expedient, and, preferably, automatic update process should be made available. See [Configuring Automatic Background Updates](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#configuring-automatic-background-updates) for details on automatic update configuration.
 
-[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-
-# Responsible Disclosure
+## Responsible Disclosure
 
 Responsible disclosure means the following: if you encounter a security breach (or a weak spot) concerning the WordPress core software, we would like to hear about this as soon as possible. The WordPress community takes security bugs seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
 To report a security issue, please visit the [WordPress HackerOne](https://hackerone.com/wordpress) program and file a ticket there.
 
 If you encounter security issues or insecure recommendations in the hosting documentation, we would like you to raise an issue in the [hosting-handbook GitHub repository](https://github.com/WordPress/hosting-handbook/issues/).
+
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
