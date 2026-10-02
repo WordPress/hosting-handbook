@@ -172,7 +172,7 @@ If you follow these steps, everything should work perfectly and you should not m
 Even if the test has failed, a report will be made. The first one shows the information about our environment. Among the most important elements are the extensions that are commonly used in WordPress and some utilities that are also generally useful.
 
 ```bash
-cat /home/wptestrunner/wordpress/env.json
+cat /home/wptestrunner/wordpress/tests/phpunit/build/logs/env.json
 ```
 
 The content of this file is somewhat similar to this:
@@ -210,7 +210,7 @@ The content of this file is somewhat similar to this:
 In addition to this report, a definitive file with all the information on what happened in the tests will be provided. This is the one that includes all the tests that are made (more than 10,000), giving information on the time that they take to be executed and any problems that may have arisen.
 
 ```bash
-cat /home/wptestrunner/wordpress/junit.xml
+cat /home/wptestrunner/wordpress/tests/phpunit/build/logs/junit.xml
 ```
 
 At this point, we can generate the reports by sending them to WordPress.org, if necessary. Even if you haven't included the WordPress user (see below for how to create it), you can still run this file.
@@ -253,7 +253,11 @@ cd "$RUNNER_DIR" || exit 1
 git pull --ff-only || exit $?
 source .env || exit $?
 
-php prepare.php || exit $?
+php prepare.php || {
+	status=$?
+	php cleanup.php
+	exit "$status"
+}
 
 status=0
 php test.php || status=$?
@@ -290,7 +294,7 @@ Use a dedicated test directory and database. If your environment is configured f
 
 ### Improving the configuration
 
-Do not forget that this tool aims to verify that the environment and infrastructure are the optimal ones for WordPress to work, so, following the example, you could make several improvements, such as installing the extension of `bcmath`, `gd`, `libsodium`, `mcrypt`, `mod_xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`.
+Do not forget that this tool aims to verify that the environment and infrastructure are the optimal ones for WordPress to work, so, following the example, you could make several improvements, such as installing the extension of `bcmath`, `gd`, `sodium`, `xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`. It is expected that `libsodium`, `mcrypt` and `mod_xml` show `false` in `env.json` on modern PHP.
 
 The goal? To be error-free and have the green light for the perfect configuration.
 
