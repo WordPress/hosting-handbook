@@ -113,6 +113,8 @@ export WPT_SSH_PRIVATE_KEY_BASE64=
 export WPT_DEBUG=
 ```
 
+Configure the folder where the WordPress software downloads and the database accesses will be made to prepare the tests.
+
 #### Running tests over SSH
 
 Leave `WPT_SSH_CONNECT` empty when the Runner prepares and executes the tests on the same server. This is the simplest setup and is usually best when the server has Git, Node.js, npm, Composer, PHP, and the other tools needed to prepare WordPress.
@@ -120,13 +122,12 @@ Leave `WPT_SSH_CONNECT` empty when the Runner prepares and executes the tests on
 Use `WPT_SSH_CONNECT` when the Runner should prepare WordPress locally but execute the tests on another environment, such as a shared hosting account or a remote server that more closely matches the production hosting stack. The value can be a full SSH connection string, such as `user@example.com`, or an SSH alias from the Runner user's SSH config.
 
 When using SSH:
-* Ensure the remote account has access to the configured test directory and database.
-* Keep `WPT_TEST_DIR` pointed at the directory where tests should run on the remote environment.
-* Use `WPT_SSH_OPTIONS` only for SSH options required by the target environment.
-* Store the private key in `WPT_SSH_PRIVATE_KEY_BASE64` as a base64-encoded value, and protect the `.env` file from other users.
+* Ensure the remote account has access to the configured test directory and database. `WPT_DB_HOST` must be reachable from the remote server, because the tests connect to the database from there.
+* Make sure the remote server has `php` and `rsync` available. PHPUnit and `cleanup-db.php` run on the remote server, and the reported PHP version is the remote PHP version.
+* Point `WPT_TEST_DIR` to a directory that is only for the tests. When `WPT_RM_TEST_DIR_CMD` is empty, the Runner deletes this directory at the end of each run.
+* By default, the Runner does not check the server's host key (`-o StrictHostKeyChecking=no`). For better security, add the server to `known_hosts` and set `WPT_SSH_OPTIONS` to `-o StrictHostKeyChecking=yes`.
+* Use `WPT_SSH_PRIVATE_KEY_BASE64` only when the Runner user has no SSH key of its own, for example in a CI job. The Runner writes the decoded key to `~/.ssh/id_rsa`, replacing any existing key, and then needs WP-CLI on the target for its connection check. Otherwise, leave it empty and use the user's own key or an SSH alias. Protect the `.env` file from other users.
 * Use a dedicated test account and database. The Runner creates, modifies, and removes test data, so it should not target a production WordPress site or production database.
-
-Configure the folder where the WordPress software downloads and the database accesses will be made to prepare the tests.
 
 ### Preparing the environment
 
