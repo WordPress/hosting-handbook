@@ -134,11 +134,11 @@ There are several solutions for providing database object caching for WordPress.
 
 #### Redis
 
-Redis is a lightweight, high-performance key-value database server commonly used to cache the results from WordPress database queries. In its default configuration, Redis uses a single database and does not require a username and password to access the database. Redis should also only be accessible from authorized network hosts.
+Redis is a lightweight, high-performance key-value database server commonly used to cache the results from WordPress database queries. By default, Redis clients use database 0, and Redis does not require a username and password to access the database. Redis should also only be accessible from authorized network hosts.
 
 ##### Redis databases
 
-Redis provides 16 databases, number 0 to 15 by default. Redis clients should be configured to use different databases instead of the default database (number 0). Redis can be configured to have additional databases, but that is outside the scope of this document.
+Redis provides 16 databases, number 0 to 15 by default. Numbered databases only namespace keys within one application: they provide no access control (any authenticated client can `SELECT` any database) and are not available on Redis Cluster, which only supports database 0. To isolate tenants on shared hosting, use Redis ACL users (Redis 6 and later) limited to their own key patterns, or run a separate Redis instance per user. Key patterns do not restrict whole-database commands, so deny `FLUSHALL`, `FLUSHDB` and `SWAPDB` for those users. Redis can be configured to have additional databases, but that is outside the scope of this document.
 
 ##### Redis user credentials
 
