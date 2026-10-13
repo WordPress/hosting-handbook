@@ -67,7 +67,7 @@ As with the other caching layers, expiry matters. Static resources should use ve
 
 > In 2005, WordPress introduced its internal object cache — a way of automatically storing any data from the database (not just objects) in PHP memory to prevent unnecessary queries. However, out of the box, WordPress will discard all of those objects at the end of the request, requiring them to be rebuilt from scratch for the next page load. In addition to that, you can use persistent object caching mechanisms like Redis or Memcached which, however, require additional plugins (drop-ins) which allow WordPress to use these services.
 
-###### source: [scalewp.io](https://www.scalewp.io/object-caching/)
+**Source**: [scalewp.io](https://www.scalewp.io/object-caching/)
 
 What does this mean? Think of a standard WordPress homepage displaying the most recent posts. Each of these posts has quite a bit of information associated with it WordPress must look up such as the author, categories, tags, and excerpt.
 
@@ -79,7 +79,7 @@ For these reasons, persistent object caching support is commonly offered with ma
 
 > Transients are inherently sped up by caching plugins, where normal Options are not. A memcached plugin, for example, would make WordPress store transient values in fast memory instead of in the database. For this reason, transients should be used to store any data that is expected to expire, or which can expire at any time. Transients should also never be assumed to be in the database, since they may not be stored there at all.
 
-###### source: [WordPress Common APIs Handbook](https://developer.wordpress.org/apis/transients/)
+**Source**: [WordPress Common APIs Handbook](https://developer.wordpress.org/apis/transients/)
 
 ### Opcode Cache
 
