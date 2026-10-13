@@ -31,7 +31,7 @@ The two most common pieces of web server software, and the ones recommended for 
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.12
+- [Angie](https://en.angie.software/) 1.12
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
@@ -558,14 +558,14 @@ Previously MariaDB referred to these releases as "short-term releases".
 
 While WordPress does not regularly test against these MySQL servers, they are known to perform well.
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database)
+- [Percona MySQL Server](https://www.percona.com/mysql/)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-- [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/)
 - [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/products/databases-for-mysql)
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.

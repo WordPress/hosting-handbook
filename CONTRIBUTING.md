@@ -12,7 +12,7 @@ This document covers the technical details around setup and submitting your cont
 
 Pull Requests are welcome!
 
-Please feel free to start a Pull Request (PR) by [using the "Edit" button](https://help.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository) next to one of the Handbook pages, or by [forking and cloning the repo](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) (check the [Forks](https://github.com/WordPress/hosting-handbook/network/members)).
+Please feel free to start a Pull Request (PR) by [using the "Edit" button](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files) next to one of the Handbook pages, or by [forking and cloning the repo](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) (check the [Forks](https://github.com/WordPress/hosting-handbook/network/members)).
 
 All documentation is written in plain text using the Markdown format. Don't worry about any specific flavor of Markdown it's checked and cleaned before generating it to HTML.
 
@@ -33,7 +33,7 @@ When a new page is added to the Handbook, or if a page's title or path has been 
 There's an included WP-CLI command to take care of this. To run it, from the cloned handbook repo:
 
 - Check if you have WP-CLI installed already by running `wp` or `which wp`
-- If you need it, install WP-CLI using the [instructions from WP-CLI.org](https://wp-cli.org/#Installing) or your favorite package manager.
+- If you need it, install WP-CLI using the [instructions from WP-CLI.org](https://make.wordpress.org/cli/handbook/guides/installing/) or your favorite package manager.
 - Run `wp hosting-handbook gen-all`.
 
 The manifest should get created inside the repo, in `/bin/handbook-manifest.json`.
