@@ -26,6 +26,17 @@ Assets such as images are not automatically imported into the Handbook. Because 
 
 If you are merging a Pull Request with assets, please upload the assets to the [WordPress Hosting Handbook's media library](https://make.wordpress.org/hosting/wp-admin/upload.php) before merge, and link to the uploaded media directly.
 
+## Review Checklist
+
+Before approving or merging a Pull Request, check that:
+
+- **Facts link to a source.** Version numbers, dates and requirements (PHP, MySQL / MariaDB, web servers) link to a primary source, such as the upstream project, the Core handbook or a Trac ticket.
+- **Core changes match the Core team's documentation.** Statements about how WordPress Core behaves or what it requires should agree with the [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/) reference and the [WordPress Requirements page](https://wordpress.org/about/requirements/). If they disagree, or you are unsure, ask in the [#core channel](https://wordpress.slack.com/archives/core/) before merging.
+- **Security guidance has been reviewed by someone with security experience.** Ask for a reviewer in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) when a change touches the Security page or other security advice. Never describe an unfixed vulnerability in an issue or Pull Request. Report it as described in the [Security Policy](/.github/SECURITY.md).
+- **The manifest is up to date.** New, renamed or moved pages need a regenerated `bin/handbook-manifest.json` (see [Generating Manifest](#generating-manifest)).
+- **AI use is disclosed.** Follow the [Hosting Team AI Policy](https://make.wordpress.org/hosting/2026/08/26/hosting-team-ai-policy/), for example with an `AI Assisted` note in the Pull Request description.
+- **The Pull Request links its issue.** Use `Fixes #123` in the description so the issue closes when the Pull Request is merged.
+
 ## Generating Manifest
 
 When a new page is added to the Handbook, or if a page's title or path has been changed during a Pull Request, re-generating the manifest manually is currently required so that it can be imported to the handbook.
