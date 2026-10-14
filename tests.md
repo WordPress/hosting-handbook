@@ -31,24 +31,26 @@ The tool can be run manually or through an automated system like Travis. The pur
 To use the Runner, the following is required:
 * A server / hosting (infrastructure) with the usual configuration you have.
 * A database where you can test (it will be created and destroyed several times)
-* NodeJS 20.x
+* NodeJS 24.x / npm 11.x (WordPress trunk requires Node.js 24.18 or later and npm 11.16 or later, and `npm install` fails on older versions)
 
 #### NodeJS installation
 
 If you are using Debian / Ubuntu, install or update NodeJS with this command:
 
 ```
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
 sudo apt -y install nodejs
 node -v
+npm -v
 ```
 
 If you are using RHEL / CentOS, install or update NodeJS with this command:
 
 ```
-curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://rpm.nodesource.com/setup_24.x | sudo -E bash -
 sudo yum install -y nodejs
 node -v
+npm -v
 ```
 
 ### Installing the Runner
