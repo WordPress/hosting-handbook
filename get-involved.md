@@ -2,7 +2,7 @@
 
 ## What does the Hosting Team do?
 
-To improve the hosting experience and educate people on the best practices on hosting WordPress, the Hosting Team is working on [several projects](https://make.wordpress.org/hosting/team-projects/).
+To improve the hosting experience and educate people on the best practices on hosting WordPress, the Hosting Team is working on [several projects](https://make.wordpress.org/hosting/handbook/get-involved/team-projects/).
 
 There is a set of hosting best practices in the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), including [Performance](https://make.wordpress.org/hosting/handbook/performance/), [Reliability](https://make.wordpress.org/hosting/handbook/reliability/), [Security](https://make.wordpress.org/hosting/handbook/security/) and [Server Environment](https://make.wordpress.org/hosting/handbook/server-environment/) recommendations.
 
@@ -15,8 +15,6 @@ The Handbook contains information about the Hosting Team, along with hosting rec
 The recommendations were put together by the team and used as a basis for [Site Health recommendations](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/) in WordPress. They're meant both as a reference for folks learning to host WordPress, and a way to help WordPress and Hosts improve together.
 
 ### Improvements in the development of the Automated Hosting Tests
-
-The handbook is in the process of being audited and improved. You can see the progress and contribute [through GitHub](https://github.com/WordPress/phpunit-test-runner).
 
 You can propose improvements or solve those available in both the [PHPUnit test runner (issues)](https://github.com/WordPress/phpunit-test-runner/issues) and the [PHPUnit test reporter (issues)](https://github.com/WordPress/phpunit-test-reporter/issues).
 
@@ -103,6 +101,8 @@ Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting
 If you want to get an idea of what a contributor day with the hosting team might look like, take a look at some work notes from the team from previous contributor days!
 
 * [WordCamp US 2026 Contributor Day](https://make.wordpress.org/hosting/2026/09/03/wordcamp-us-2026-contributor-day-recap/)
+* [WordCamp Rajshahi 2026 Contributor Day](https://make.wordpress.org/hosting/2026/07/02/wordcamp-rajshahi-2026-contributor-day-summary/)
+* [WordCamp Europe 2026 Contributor Day](https://make.wordpress.org/hosting/2026/06/03/wordcamp-europe-2026-contributor-day/)
 * [WordCamp US 2025 Contributor Day](https://make.wordpress.org/hosting/2025/09/02/wordcamp-us-2025-contributor-day-summary/)
 * [WordCamp Europe 2025 Contributor Day](https://make.wordpress.org/hosting/2025/06/05/wordcamp-europe-2025-contributor-day/)
 * [WordCamp Asia 2025 Contributor Day](https://make.wordpress.org/hosting/2025/02/25/wordcamp-asia-2025-contributor-day-summary/)

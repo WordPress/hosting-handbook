@@ -76,7 +76,7 @@ If help is needed, please ask in the [#hosting](https://wordpress.slack.com/arch
 
 ### What
 
-This new documentation is proposed as advanced regarding what currently exists for end users ([UserHub / Support](https://wordpress.org/support/)), with the goal that the documentation for users is free of advanced technical material, and that the documentation for developers ([DevHub](https://developer.wordpress.org/)) is very differentiated between what is development, and what are advanced development or system configurations.
+The [Advanced Administration Handbook](https://developer.wordpress.org/advanced-administration/) is live. It is more advanced than what currently exists for end users ([UserHub / Support](https://wordpress.org/documentation/)), so that the documentation for users is free of advanced technical material, and the documentation for developers ([DevHub](https://developer.wordpress.org/)) is very differentiated between what is development, and what are advanced development or system configurations.
 
 ### Skills
 
@@ -86,9 +86,9 @@ _Those skills are not required, but help._
 
 ### How
 
-Although we are still in a first step, if you know of other WordPress content that could be in this Handbook, please [open an issue](https://github.com/WordPress/Documentation-Issue-Tracker/issues) and discuss it with the Documentation team. Please use the label ["advanced administration"](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration).
+If you know of other WordPress content that could be in this Handbook, please [open an issue](https://github.com/WordPress/Documentation-Issue-Tracker/issues) and discuss it with the Documentation team. Please use the label ["advanced administration"](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration).
 
-If you want to help launch the Handbook as soon as possible, [please take an issue and work on it](https://github.com/WordPress/Advanced-administration-handbook/issues). You can comment on the site itself if you have any questions, suggestions or improvements.
+If you want to help improve the Handbook, [please take an issue and work on it](https://github.com/WordPress/Advanced-administration-handbook/issues). If you have any questions, suggestions or improvements, ask in the [#hosting](https://wordpress.slack.com/archives/hosting) channel on Slack or in those GitHub issues.
 
 ### Tools
 
