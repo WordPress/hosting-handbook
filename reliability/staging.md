@@ -31,14 +31,14 @@ A staging copy has the same data as the live site. Without changes, it can:
 
 To prevent these problems:
 
-1. Block search engines. Protect the copy with a password (HTTP authentication), or set the "Discourage search engines" option:
+1. Restrict access to the copy with HTTP authentication or another access control. You can also set the "Discourage search engines" option, but it does not restrict access, and search engines do not have to follow it:
 
    ```
    wp option update blog_public 0
    ```
 
 2. Stop or capture outgoing email, for example with a mail catcher on the staging server.
-3. Disable the system cron job of the copy, or review its scheduled events before you enable it.
+3. Disable automatic WP-Cron on the copy by setting `DISABLE_WP_CRON` to `true` in `wp-config.php`, and disable any system cron job or external scheduler that calls its `wp-cron.php` or runs its events. Review the scheduled events before you enable cron again.
 4. Tell customers to use test or sandbox credentials for payment and other external services.
 
 ## Change the URLs
@@ -46,7 +46,7 @@ To prevent these problems:
 The copy needs its own URL. WordPress stores URLs in the database, also inside serialized data. Do not change the URLs with plain SQL `REPLACE` statements, because this breaks serialized data. Use [`wp search-replace`](https://developer.wordpress.org/cli/commands/search-replace/), which handles serialized data:
 
 ```
-wp search-replace 'https://example.com' 'https://staging.example.com' --all-tables --dry-run
+wp search-replace 'https://example.com' 'https://staging.example.com' --all-tables-with-prefix --dry-run
 ```
 
 Read the result of the `--dry-run` command first. Then run the command again without `--dry-run`.
