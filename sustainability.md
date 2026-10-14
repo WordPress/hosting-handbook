@@ -40,7 +40,7 @@ Optimizing performance is crucial for reducing server load and energy consumptio
 
 ## Security is paramount
 
-Raise awareness with your customers around the impact of security on everything. Hackers and dangerous bots can overload your servers and generate unwanted power and data impacts. We recommend to at least use a tool like WP Scan or Pathstack to make sure you are aware of vulnerability and can react to it. 
+Raise awareness with your customers around the impact of security on everything. Hackers and dangerous bots can overload your servers and generate unwanted power and data impacts. We recommend to at least use a tool like WP Scan or Patchstack to make sure you are aware of vulnerability and can react to it. 
 
 
 ## Use Longevity Hardware

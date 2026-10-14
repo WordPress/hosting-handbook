@@ -109,7 +109,7 @@ PHP opcode caching can significantly improve the performance of PHP processing f
 
 #### Validate permission
 
-The following setting makes PHP check that the current user has the necessary permissions to access the cached file. It should be enabled at the root php.ini configuration level to prevent users from accessing other users cached files.  
+The following setting makes PHP check that the current user has the necessary permissions to access the cached file. It should be enabled at the root php.ini configuration level to prevent users from accessing other users' cached files.  
 `opcache.validate_permission = On`
 
 This setting is not enabled by default. It is also only available as of PHP 7.0.14.
@@ -138,7 +138,7 @@ Redis is a lightweight, high-performance key-value database server commonly used
 
 ##### Redis databases
 
-Redis provides 16 databases, number 0 to 15 by default. Redis clients should be configured to use different databases instead of the default database (number 0). Redis can be configured to have additional databases, but that is outside the scope of this document.
+Redis provides 16 databases, numbered 0 to 15 by default. Redis clients should be configured to use different databases instead of the default database (number 0). Redis can be configured to have additional databases, but that is outside the scope of this document.
 
 ##### Redis user credentials
 
