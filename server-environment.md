@@ -394,7 +394,7 @@ The PHP extensions listed below are _recommended_ to allow some WordPress cache 
 
 - [apcu](https://www.php.net/manual/en/book.apcu.php) – In-memory key-value store for PHP (former APC stripped of opcode caching).
 - [memcached](https://www.php.net/manual/en/book.memcached.php) (requires libmemcached >= 1.0.0) - memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
-- [opcache](https://www.php.net/manual/en/book.opcache.php) - Stores precompiled PHP bytecode to reduce repeated script parsing and compilation. See [Opcode Cache](performance.md#opcode-cache) for performance guidance.
+- [opcache](https://www.php.net/manual/en/book.opcache.php) - Stores precompiled PHP bytecode to reduce repeated script parsing and compilation. See [Opcode Cache](https://make.wordpress.org/hosting/handbook/performance/#opcode-cache) for performance guidance.
 - [redis](https://pecl.php.net/package/redis) - PHP extension for interfacing with Redis.
 
 
