@@ -378,16 +378,16 @@ The PHP extensions listed below are _required_ for a WordPress site to work.
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 - [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0 ; PHP >= 8.4 requires libcurl >= 7.61.0) - Performs remote request operations.
-- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
+- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
 - [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
-- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1; PHP >= 8.5 requires ICU >= 57.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 - [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0; PHP >= 8.4 requires OpenSSL >= 1.1.1 / < 4.0) - SSL-based connections to other hosts.
-- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
+- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing, such as from a third-party site.
 - [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary). APCu, Memcached, and Redis are alternatives of which only one needs to be used.
@@ -409,14 +409,14 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 - [image](https://www.php.net/manual/en/book.image.php) (requires libgd >= 2.1.0; requires zlib >= 1.2.0.4; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 - [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
 - [shmop](https://www.php.net/manual/en/book.shmop.php) - Shmop is an easy to use set of functions that allows PHP to read, write, create and delete Unix shared memory segments.
-- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
+- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
 - [sodium](https://www.php.net/manual/en/book.sodium.php) (bundled with PHP as of 7.2.0; requires libsodium >= 1.0.8) - Validates signatures and provides securely random bytes.
-- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
-- [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >= 1.2.0.4) - Gzip compression and decompression.
+- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
+- [zlib](https://www.php.net/manual/en/book.zlib.php) (PHP >= 8.4 requires zlib >= 1.2.11; earlier versions require zlib >= 1.2.0.4) - Gzip compression and decompression.
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >= 1.2; recommended libssh >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh2 >= 1.2; recommended libssh2 >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
 - [ftp](https://www.php.net/manual/en/book.ftp.php) - Implement client access to files servers speaking the File Transfer Protocol (FTP).
 - [sockets](https://www.php.net/manual/en/book.sockets.php) - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
