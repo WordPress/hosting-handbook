@@ -8,18 +8,20 @@ The relationship between WordPress, PHP and MySQL / MariaDB is very close, and i
 
 This table shows the versions available (and security supported) at the time of the WordPress release. It does not mean that WordPress provided 100% full support for those versions (but usually does).
 
+Short-lived database releases (MySQL Innovation releases and MariaDB short-term and rolling releases) only receive fixes until the next release ships. They are shown with the month their upstream support ended, for example `12.2 (until 2026-05)`. Long-term releases are shown without a date.
+
 WordPress | PHP | MySQL | MariaDB | Launch date
 ---- | ---- | ---- | ---- | ----
 WordPress 7.1 | 8.2 - 8.5 | 8.4 / 9.7 | 10.11 / 11.4 / 11.8 / 12.3 | 2026-08-19
-WordPress 7.0 | 8.2 - 8.5 | 8.4 / 9.7 | 10.6 / 10.11 / 11.4 / 11.8 / 12.2 | 2026-05-20
-WordPress 6.9 | 8.1 - 8.5 | 8.0 / 8.4 / 9.5 | 10.6 / 10.11 / 11.4 / 11.8 / 12.1 | 2025-12-02
-WordPress 6.8 | 8.1 - 8.4 | 8.0 / 8.4 / 9.1 | 10.5 - 10.6 / 10.11 / 11.4 - 11.5 | 2025-04-15
-WordPress 6.7 | 8.1 - 8.4 | 8.0 / 8.4 / 9.1 | 10.5 - 10.6 / 10.11 / 11.4 - 11.5 | 2024-11-12
-WordPress 6.6 | 8.1 - 8.3 | 8.0 / 8.2 - 8.4 | 10.5 - 10.6 / 10.11 / 11.1 - 11.2 / 11.4 | 2024-07-16
-WordPress 6.5 | 8.1 - 8.3 | 8.0 - 8.3 | 10.4 - 10.6 / 10.11 / 11.0 - 11.3 | 2024-04-02
-WordPress 6.4 | 8.0 - 8.2 | 8.0 - 8.2 | 10.4 - 10.6 / 10.10 - 11.1 | 2023-11-07
-WordPress 6.3 | 8.0 - 8.2 | 5.7 - 8.1 | 10.4 - 10.6 / 10.9 - 11.0 | 2023-08-08
-WordPress 6.2 | 8.0 - 8.2 | 5.7 - 8.0 | 10.3 - 10.11 | 2023-03-28
+WordPress 7.0 | 8.2 - 8.5 | 8.4 / 9.7 | 10.6 / 10.11 / 11.4 / 11.8 / 12.2 (until 2026-05) | 2026-05-20
+WordPress 6.9 | 8.1 - 8.5 | 8.0 / 8.4 / 9.5 (until 2026-01) | 10.6 / 10.11 / 11.4 / 11.8 / 12.1 (until 2026-02) | 2025-12-02
+WordPress 6.8 | 8.1 - 8.4 | 8.0 / 8.4 / 9.3 (until 2025-07) | 10.5 - 10.6 / 10.11 / 11.4 / 11.7 (until 2025-05) | 2025-04-15
+WordPress 6.7 | 8.1 - 8.4 | 8.0 / 8.4 / 9.1 (until 2025-01) | 10.5 - 10.6 / 10.11 / 11.2 (until 2024-11) / 11.4 / 11.5 (until 2024-11) | 2024-11-12
+WordPress 6.6 | 8.1 - 8.3 | 8.0 / 8.4 / 9.0 (until 2024-10) | 10.5 - 10.6 / 10.11 / 11.1 (until 2024-08) / 11.2 (until 2024-11) / 11.4 | 2024-07-16
+WordPress 6.5 | 8.1 - 8.3 | 8.0 / 8.3 (until 2024-04) | 10.4 - 10.6 / 10.11 / 11.0 (until 2024-06) / 11.1 (until 2024-08) / 11.2 (until 2024-11) / 11.3 (until 2024-05) | 2024-04-02
+WordPress 6.4 | 8.0 - 8.2 | 8.0 / 8.2 (until 2024-01) | 10.4 - 10.6 / 10.10 (until 2023-11) / 10.11 / 11.0 (until 2024-06) / 11.1 (until 2024-08) | 2023-11-07
+WordPress 6.3 | 8.0 - 8.2 | 5.7 - 8.0 / 8.1 (until 2023-10) | 10.4 - 10.6 / 10.9 (until 2023-08) / 10.10 (until 2023-11) / 10.11 / 11.0 (until 2024-06) | 2023-08-08
+WordPress 6.2 | 8.0 - 8.2 | 5.7 - 8.0 | 10.3 - 10.6 / 10.8 (until 2023-05) / 10.9 (until 2023-08) / 10.10 (until 2023-11) / 10.11 | 2023-03-28
 WordPress 6.1 | 7.4 - 8.1 | 5.7 - 8.0 | 10.3 - 10.6 | 2022-11-01
 WordPress 6.0 | 7.4 - 8.1 | 5.7 - 8.0 | 10.3 - 10.6 | 2022-05-24
 WordPress 5.9 | 7.4 - 8.1 | 5.7 - 8.0 | 10.2 - 10.6 | 2022-01-25
