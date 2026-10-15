@@ -104,6 +104,13 @@
     "parent": null,
     "order": 6
   },
+  "wp-cli": {
+    "title": "WP-CLI",
+    "slug": "wp-cli",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/wp-cli.md",
+    "parent": null,
+    "order": 7
+  },
   "performance": {
     "title": "Performance",
     "slug": "performance",
