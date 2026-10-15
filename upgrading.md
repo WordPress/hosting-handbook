@@ -22,6 +22,74 @@ IMPORTANT: This is a very manual process, not a massive one. There will probably
 
 If WP-CLI is available on your hosting environment, some parts of the upgrade process can be simplified. Always make sure you have a full backup of the files and the database before running any commands.
 
+Check the current state of the installation before touching anything:
+
+```bash
+wp core version
+wp core verify-checksums
+```
+
+`verify-checksums` confirms the core files match the official release, so modified or infected files surface before the upgrade instead of being blamed on it afterwards.
+
+To see which newer versions are available before deciding on the upgrade path:
+
+```bash
+wp core check-update
+```
+
+Take a full backup before going any further. The [Reliability](https://make.wordpress.org/hosting/handbook/reliability/) page links to the backup documentation, including [backing up your database](https://developer.wordpress.org/advanced-administration/security/backup/database/) and [backing up your WordPress files](https://developer.wordpress.org/advanced-administration/security/backup/files/).
+
+### Upgrading to a specific version
+
+The upgrade paths on this page move through intermediate versions rather than jumping straight to the latest release. WP-CLI can pin each hop:
+
+```bash
+wp core update --version=4.9.33
+wp core update-db
+```
+
+Run the pair once per hop, following the target versions listed in the sections below, and check the site between hops. For CLI-based upgrades, run `update-db` after each core update so database schema changes are applied before continuing to the next hop.
+
+The sections below name a branch, such as 4.9. For each hop, use the newest release of that branch from the [WordPress releases page](https://wordpress.org/download/releases/), which may be newer than the one in this example.
+
+[tip]On multisite, run `wp core update-db --network` so the database upgrade runs across all sites.[/tip]
+
+After the final hop, run `wp core verify-checksums` again to confirm the files match the release.
+
+### Recovering from a stuck or broken upgrade
+
+If an update gets stuck or fails partway, force WP-CLI to re-run the same versioned core file update:
+
+```bash
+wp core update --version=4.9.33 --force
+```
+
+Use the same `--version` value as the hop you were trying to complete.
+
+If the command stops with "Another update is currently in progress.", an earlier run left its lock behind. The lock expires on its own after 15 minutes, or you can remove it:
+
+```bash
+wp option delete core_updater.lock
+```
+
+If the site keeps showing "Briefly unavailable for scheduled maintenance. Check back in a minute.", an interrupted update left a `.maintenance` file in the WordPress root directory. WordPress ignores the file once it is 10 minutes old. To clear the message right away, delete the file or run:
+
+```bash
+wp maintenance-mode deactivate
+```
+
+To re-download the core files without replacing the `wp-content` directory, for example when `verify-checksums` keeps reporting modified files:
+
+```bash
+wp core download --force --skip-content
+```
+
+Add `--version=X.X.X` to download the core files for a specific version while keeping `wp-content` in place. This changes files only; it does not roll back database changes, so restore from a backup if `wp core update-db` has already run and you need a full rollback.
+
+### Older installations
+
+The current WP-CLI release does not run on the PHP versions that ship with the oldest WordPress installations. Earlier WP-CLI releases remain available as Phar downloads on the [WP-CLI releases page](https://github.com/wp-cli/wp-cli/releases), and the manual steps in each section below work without WP-CLI.
+
 For the latest and complete list of `wp core` commands and options, please refer to the official WP-CLI documentation:
 
 https://developer.wordpress.org/cli/commands/core/
