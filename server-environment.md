@@ -6,6 +6,7 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
+- [WordPress 7.2 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-2/)
 - [WordPress 7.1 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-1/)
 - [WordPress 7.0 Server Compatibility](https://make.wordpress.org/hosting/handbook/compatibility/version/7-0/)
 - [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/2026/05/27/wordpress-6-9-server-compatibility/)
@@ -56,6 +57,30 @@ The Core team retired the ["compatible with exceptions" label in April 2025](htt
 - PHP 8.5 is in active support and is fully supported by WordPress 6.9 and later.
 - PHP 8.3 moved to security-only support on 31 December 2025, and PHP 8.2 reaches end of life on 31 December 2026. Plan migrations for sites still on those versions.
 - Hosts should test their full stack before making a new PHP version the default for production environments.
+
+#### WordPress 7.2
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Security Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
+- [PHP 8.6](https://www.php.net/ChangeLog-8.php#PHP_8_6) (Active Support)
+
+_IMPORTANT: WordPress 7.2 requires PHP 7.4 or later, unchanged from WordPress 7.0._
+
+_IMPORTANT: WordPress 7.2 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+_PHP 8.6 was released on 19 November 2026. Check the Core team's [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/) reference for its current status with WordPress 7.2._
+
+- Other PHP Related Tickets
+  - [#65904](https://core.trac.wordpress.org/ticket/65904): Build/Test Tools: Run PHPUnit tests against PHP 8.6. _NOTE: Closed / Fixed._
+  - [#66137](https://core.trac.wordpress.org/ticket/66137): Tests: Replace deprecated `mb_split()` with `preg_split()`. _NOTE: Closed / Fixed. PHP 8.6 deprecates all `mbstring` regular expression functions._
+  - [#65965](https://core.trac.wordpress.org/ticket/65965): Code Modernization: Replace `socket_set_timeout()` usage in the Snoopy library, deprecated in PHP 8.5. _NOTE: Closed / Fixed._
+  - [#65773](https://core.trac.wordpress.org/ticket/65773): Code Modernization: Use `array_key_first()` for an array's first key. _NOTE: Closed / Fixed._
+  - [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_all()` and `is_iterable()`.
+  - [#65823](https://core.trac.wordpress.org/ticket/65823): Adoption of the null coalescing assignment operator (`??=`) for default values.
 
 #### WordPress 7.1
 
