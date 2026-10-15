@@ -97,6 +97,13 @@
     "parent": null,
     "order": 5
   },
+  "wordpress-setup": {
+    "title": "WordPress Setup",
+    "slug": "wordpress-setup",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/wordpress-setup.md",
+    "parent": null,
+    "order": 8
+  },
   "learn-hosting": {
     "title": "Learn Hosting",
     "slug": "learn-hosting",
