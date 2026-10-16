@@ -36,46 +36,43 @@ The meeting is usually to connect about WordPress happenings throughout the week
 
 The agenda usually consists of the following topics:
 
-*   Greetings
-*   About the WordPress Community
-*   About the WordPress Hosting Team
+*   WordPress News
+*   Hosting Team
 *   Open Floor
 
-During the **Greetings** we do a "Wave in" to get an overview who is in for the meeting and check how everyone is doing. New attendees are welcomed to introduce themselves.
+In the **WordPress News** section the team talks about the latest happenings in the WordPress space and their impacts on hosts. Examples are new WordPress releases, new proposals or WordCamp.
 
-In the **About the WordPress Community** section the team talks about the latest happenings in the WordPress space and their impacts on hosts. Examples are new WordPress releases, new proposals or WordCamp.
-
-The **About the WordPress Hosting Team** part of the meeting focuses on open tasks or issues on hosting related projects like the Handbook or the Automated Hosting Tests. Additionally, we handle requests from other teams here.
+The **Hosting Team** part of the meeting focuses on open tasks or issues on hosting related projects like the Handbook or the Automated Hosting Tests. Additionally, we handle requests from other teams here.
 
 Everything else up for discussion will be handled during the **Open Floor**. Every attendee can bring up topics here to discuss or just to inform hosts.
 
-#### Meetings: Taking notes
+#### Meetings: Preparing the agenda
 
-Taking meeting notes is a great way to help out!
+Preparing the meeting agenda is a great way to help out!
 
-During each meeting, we create a post summarizing what is discussed, to make it easier for those who can’t attend to stay informed. You can see examples of notes from previous meetings on the [Hosting Team's Make site](https://make.wordpress.org/hosting/tag/weekly-hosting-chat/).
+For each meeting, we publish an agenda post, so everyone can see what is planned and suggest additions in the comments. You can see examples of agenda posts on the [Hosting Team's Make site](https://make.wordpress.org/hosting/tag/weekly-hosting-chat/).
 
-There's always a need for more folks to join! If you're interested in helping out with taking notes, chat with one of the Team Reps for access to the team's [make site](https://make.wordpress.org/hosting/wp-admin/).
+There's always a need for more folks to join! If you're interested in helping out with the agenda posts, chat with one of the Team Reps for access to the team's [make site](https://make.wordpress.org/hosting/wp-admin/).
 
-##### Step–by–step: how to create meeting notes
+##### Step–by–step: how to create the agenda post
 
 1.  **Request access**
     *   Ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel for access to the Hosting Make site.
-    *   A Team Rep can grant you the required role so that you can create and edit posts at `https://make.wordpress.org/hosting/wp-admin/`.
+    *   A Team Rep can grant you the required role so that you can create and edit posts at [https://make.wordpress.org/hosting/wp-admin/](https://make.wordpress.org/hosting/wp-admin/).
 2.  **Start from an existing template**
     *   In the WordPress admin, go to **Posts → All Posts**.
-    *   Find a recent "Hosting Team meeting summary" or "Hosting Meeting Notes" post.
+    *   Find a recent "Hosting Team Meeting Agenda" post, for example [Hosting Team Meeting Agenda 2026-09-30](https://make.wordpress.org/hosting/2026/09/30/hosting-team-meeting-agenda-2026-09-30/).
     *   Use the "Duplicate"/"Copy to new draft" option to create a new draft from that post. This keeps the basic structure and headings for you.
 3.  **Update the post details**
-    *   Change the **title** to follow the current format, for example: `Hosting Team meeting summary 2025-11-26`.
-    *   Update the **date and time** in the introduction and add a link to the Slack archive, if available.
-    *   Check the **tags** and keep them consistent with previous notes, typically including: `meetings`, `summary`, and `weekly-hosting-chat`.
-4.  **Write the notes**
-    *   Use the headings from the agenda (for example: _Greetings_, _About the WordPress Community_, _About the WordPress Hosting Team_, _Open Floor_) and add short summaries for each topic that was discussed.
+    *   Change the **title** to follow the current format, for example: `Hosting Team Meeting Agenda 2026-09-30`.
+    *   Update the **date and time** in the **Next Meeting** section at the top of the post.
+    *   Check the **tags** and keep them consistent with previous agenda posts, typically including: `agenda`, `hosting`, `hosting-community`, `meetings`, and `weekly-hosting-chat`.
+4.  **Write the agenda**
+    *   Keep the headings from the template (_WordPress News_, _Hosting Team_, _Open Floor_) and add the items for the meeting under _WordPress News_ and _Hosting Team_, such as links to recent posts, discussion topics, and _Tickets/PRs_.
 
-##### What to include in the notes
+##### If you also write meeting notes
 
-When writing the content, aim to include:
+The team currently publishes agenda posts rather than meeting summaries. If you write notes after a meeting, aim to include:
 
 * **Meeting context** – date, time, and the Slack channel where the meeting was held.
 * **Link to the agenda**, if one was published.
@@ -92,7 +89,7 @@ Try to keep the tone neutral and descriptive (not personal opinion), and avoid w
 
 1. When you are satisfied with the draft, set the **post status** to **“Pending review”**.
 2. Share a link to the draft in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel and ask for a quick review.
-3. A Team Rep or another experienced contributor will review, make any small adjustments if needed, and publish the notes.
+3. A Team Rep or another experienced contributor will review, make any small adjustments if needed, and publish the post.
 
 You can check out additional recommendations on writing style in this [Core Handbook page](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/). They don't all apply because it's a guide from Core — the biggest thing is to be careful not to accidentally represent WordPress.org or the team if it's not a WordPress.org or team decision, and to get peer review before posting.
 
