@@ -39,7 +39,11 @@ Losses:
 - Plugins: all
 - Themes: all
 
+<<<<<<< HEAD
+These are the oldest versions of WordPress, which have been unsupported for years. In general, some functionality in themes and plugins may be lost, although the content itself should remain intact.
+=======
 These are the oldest versions of WordPress and the ones that have not been supported for years. In general, you have to assume some losses, although not of the contents, but probably of some functionality on themes and plugins.
+>>>>>>> upstream/main
 
 Considering that the goal is to keep the contents and assuming the loss of the rest of the elements, there are some steps.
 
