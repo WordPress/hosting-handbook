@@ -324,6 +324,8 @@ PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, 
 
 Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
+_Known issue (October 2026): PHP 8.4.27 and 8.5.12, the [21 October 2026 security releases](https://www.php.net/archive/2026.php), have a regression that can crash PHP with `zend_mm_heap corrupted` when SimpleXML objects end up in a reference cycle ([php/php-src#24488](https://github.com/php/php-src/issues/24488)). WordPress importers, feed parsers and many plugins use SimpleXML. The fix is committed upstream and will be in PHP 8.4.28 and 8.5.13. Do not downgrade to avoid the crash: 8.4.26, 8.5.11 and earlier are affected by the vulnerabilities those releases fix. If the crash affects you, PHP 8.3.36 and 8.2.35 include the same security fixes and do not have the regression. This note will be removed once the fixed releases are available._
+
 End-of-life PHP versions:
 
 - PHP 8.5: 2029-12-31
