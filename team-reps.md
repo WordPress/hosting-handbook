@@ -91,7 +91,7 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 2. **Software Projects:**
     - **Projects Under This Category:**
         - PHPUnit Test Runner
-        - PHPUnit Test Report
+        - PHPUnit Test Reporter
     - **Required Skills:**
         - Proficient in managing GitHub repositories.
         - Strong understanding of PHP Unit Tests and PHP in general.

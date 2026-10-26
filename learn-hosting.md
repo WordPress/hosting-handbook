@@ -18,7 +18,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 
 #### Security
 
-- [7 Tips to improve website security](https://learn.wordpress.org/tutorial/7-tips-to-improve-website-security/) _(English)_
+- [7 Tips to improve website security](https://wordpress.tv/2023/07/11/7-tips-to-improve-website-security/) _(English)_
 - [Managing Updates](https://learn.wordpress.org/tutorial/managing-updates/) _(English)_
 - [Seguridad: formularios, acceso y contraseña](https://learn.wordpress.org/tutorial/seguridad-formularios-acceso-y-contrasena/) _(Spanish)_
 
@@ -66,7 +66,7 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 - [Front-end Performance and WordPress](https://wordpress.tv/2023/05/23/front-end-performance-and-wordpress/) _(English)_
 - [Working with Version Control](https://wordpress.tv/2023/05/24/working-with-version-control/) _(English)_
 - [WordPress Through the Terminal](https://wordpress.tv/2023/05/22/wordpress-through-the-terminal-4/) _(English)_
-- [Passkeys -The Future of Authentication](https://wordpress.tv/2023/05/22/passkeys-the-future-of-authentication/) _(English)_
+- [Passkeys - The Future of Authentication](https://wordpress.tv/2023/05/22/passkeys-the-future-of-authentication/) _(English)_
 - [WordPress Data Privacy](https://wordpress.tv/2023/05/22/mujeebu-rahman-wordpress-data-privacy/) _(English)_
 - [Safeguarding Your Website – Smart WordPress Security](https://wordpress.tv/2023/05/22/maestro-stevens-safeguarding-your-website-smart-wordpress-security/) _(English)_
 - [Entén i millora la velocitat del teu web WordPress](https://wordpress.tv/2023/05/09/enten-i-millora-la-velocitat-del-teu-web-wordpress/) _(Catalan)_
