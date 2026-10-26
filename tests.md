@@ -31,24 +31,26 @@ The tool can be run manually or through an automated system like Travis. The pur
 To use the Runner, the following is required:
 * A server / hosting (infrastructure) with the usual configuration you have.
 * A database where you can test (it will be created and destroyed several times)
-* NodeJS 20.x
+* NodeJS 24.x / npm 11.x (WordPress trunk requires Node.js 24.18 or later and npm 11.16 or later, and `npm install` fails on older versions)
 
 #### NodeJS installation
 
 If you are using Debian / Ubuntu, install or update NodeJS with this command:
 
 ```
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
 sudo apt -y install nodejs
 node -v
+npm -v
 ```
 
 If you are using RHEL / CentOS, install or update NodeJS with this command:
 
 ```
-curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://rpm.nodesource.com/setup_24.x | sudo -E bash -
 sudo yum install -y nodejs
 node -v
+npm -v
 ```
 
 ### Installing the Runner
@@ -114,6 +116,20 @@ export WPT_DEBUG=
 ```
 
 Configure the folder where the WordPress software downloads and the database accesses will be made to prepare the tests.
+
+#### Running tests over SSH
+
+Leave `WPT_SSH_CONNECT` empty when the Runner prepares and executes the tests on the same server. This is the simplest setup and is usually best when the server has Git, Node.js, npm, Composer, PHP, and the other tools needed to prepare WordPress.
+
+Use `WPT_SSH_CONNECT` when the Runner should prepare WordPress locally but execute the tests on another environment, such as a shared hosting account or a remote server that more closely matches the production hosting stack. The value can be a full SSH connection string, such as `user@example.com`, or an SSH alias from the Runner user's SSH config.
+
+When using SSH:
+* Ensure the remote account has access to the configured test directory and database. `WPT_DB_HOST` must be reachable from the remote server, because the tests connect to the database from there.
+* Make sure the remote server has `php` and `rsync` available. PHPUnit and `cleanup-db.php` run on the remote server, and the reported PHP version is the remote PHP version.
+* Point `WPT_TEST_DIR` to a directory that is only for the tests. When `WPT_RM_TEST_DIR_CMD` is empty, the Runner deletes this directory at the end of each run.
+* By default, the Runner does not check the server's host key (`-o StrictHostKeyChecking=no`). For better security, add the server to `known_hosts` and set `WPT_SSH_OPTIONS` to `-o StrictHostKeyChecking=yes`.
+* Use `WPT_SSH_PRIVATE_KEY_BASE64` only when the Runner user has no SSH key of its own, for example in a CI job. The Runner writes the decoded key to `~/.ssh/id_rsa`, replacing any existing key, and then needs WP-CLI on the target for its connection check. Otherwise, leave it empty and use the user's own key or an SSH alias. Protect the `.env` file from other users.
+* Use a dedicated test account and database. The Runner creates, modifies, and removes test data, so it should not target a production WordPress site or production database.
 
 ### Preparing the environment
 
