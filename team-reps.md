@@ -67,7 +67,7 @@ In order to maintain transparent and democratic governance within the Hosting Te
 
 - **Nomination Phase:** The nomination period typically opens in October or November of each year. During this phase, any active member of the Hosting Team can either nominate themselves or recommend a colleague for the Team Rep position. The Hosting Team will publish a "Call for Nominees" on make.wordpress.org/hosting, where everyone can comment with their nominations. If preferred, nominations can also be sent anonymously to a trusted Team Rep via Direct Messages on Slack.
 
-- **Voting:** Following the conclusion of the nomination period, a voting window of two to three weeks is opened. All active Hosting Team members are encouraged to cast their vote for their preferred candidates within this timeframe. The hosting team will create a survey to collect those votes anonymized and will publish the results afterwards on make.wordpress.org/hosting. 
+- **Voting:** Following the conclusion of the nomination period, a voting window is opened, usually for two to three weeks. The dates and any extensions are announced on make.wordpress.org/hosting. All active Hosting Team members are encouraged to cast their vote for their preferred candidates within this timeframe. The hosting team will create a survey to collect those votes anonymized and will publish the results afterwards on make.wordpress.org/hosting. 
 
 After the voting period concludes, the nominees with the most votes are contacted to confirm whether they wish to accept the Team Rep role. Once confirmations are received, the new Team Reps are officially announced on make.wordpress.org/hosting.
 
