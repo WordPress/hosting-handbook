@@ -82,10 +82,10 @@ wp maintenance-mode deactivate
 To re-download the core files without replacing the `wp-content` directory, for example when `verify-checksums` keeps reporting modified files:
 
 ```bash
-wp core download --force --skip-content
+wp core download --version=X.X.X --force --skip-content
 ```
 
-Add `--version=X.X.X` to download the core files for a specific version while keeping `wp-content` in place. This changes files only; it does not roll back database changes, so restore from a backup if `wp core update-db` has already run and you need a full rollback.
+Set `--version` to the version the site is on, as shown by `wp core version`, or to the earlier version you are rolling back to. Without `--version`, WP-CLI downloads the latest release instead, which would skip the remaining hops. This changes files only; it does not roll back database changes, so restore from a backup if `wp core update-db` has already run and you need a full rollback.
 
 ### Older installations
 
