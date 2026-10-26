@@ -22,7 +22,7 @@ All published posts on compatibility are available at:
 
 ## Web Server
 
-A web server is piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
+A web server is a piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
 
 The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
@@ -151,7 +151,7 @@ _IMPORTANT: WordPress 6.8 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4
 - PHP 8.3
   - Fully compatible as of July 2025
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Closed/Fixed_
-  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce `#[Override]` attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
 
 - PHP 8.4
@@ -203,7 +203,7 @@ _Related PHP compatibility tickets_
 - PHP 8.3
   - Fully compatible as of May 2026
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Has a patch, but moved to WordPress 6.7._
-  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce `#[Override]` attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
   - [#59654](https://core.trac.wordpress.org/ticket/59654): PHP 8.x: various compatibility fixes for WordPress 6.7. This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
 
@@ -232,14 +232,14 @@ _Related PHP compatibility tickets_
 
 - PHP 8.1
   - _Not all "passing null to non-nullable" issues have been found._ In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
-  - [`_htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to[ htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
-  - [_Replace most `strip_tags()` with `wp_strip_tags()`_](https://core.trac.wordpress.org/ticket/57579).
-There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
-  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_`htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to [htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_Replace most `strip_tags()` with `wp_strip_all_tags()`_](https://core.trac.wordpress.org/ticket/57579).
+    There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
+  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. Fixed in [changeset 53886](https://core.trac.wordpress.org/changeset/53886) and released in WordPress 6.1.
 
 - PHP 8.2
   - [_`utf8_{encode|decode}` deprecation_](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. NOTE: Has a patch, but moved to WordPress 6.7.
-  - [_Unknown dynamic properties'_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
+  - [_Unknown dynamic properties_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
 
 - PHP 8.3
   - Fully compatible as of May 2026
@@ -378,16 +378,16 @@ The PHP extensions listed below are _required_ for a WordPress site to work.
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 - [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0 ; PHP >= 8.4 requires libcurl >= 7.61.0) - Performs remote request operations.
-- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
+- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
 - [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
-- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1; PHP >= 8.5 requires ICU >= 57.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 - [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0; PHP >= 8.4 requires OpenSSL >= 1.1.1 / < 4.0) - SSL-based connections to other hosts.
-- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
+- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing, such as from a third-party site.
 - [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary). APCu, Memcached, and Redis are alternatives of which only one needs to be used.
@@ -409,14 +409,14 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 - [image](https://www.php.net/manual/en/book.image.php) (requires libgd >= 2.1.0; requires zlib >= 1.2.0.4; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 - [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
 - [shmop](https://www.php.net/manual/en/book.shmop.php) - Shmop is an easy to use set of functions that allows PHP to read, write, create and delete Unix shared memory segments.
-- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
+- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
 - [sodium](https://www.php.net/manual/en/book.sodium.php) (bundled with PHP as of 7.2.0; requires libsodium >= 1.0.8) - Validates signatures and provides securely random bytes.
-- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
-- [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >= 1.2.0.4) - Gzip compression and decompression.
+- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
+- [zlib](https://www.php.net/manual/en/book.zlib.php) (PHP >= 8.4 requires zlib >= 1.2.11; earlier versions require zlib >= 1.2.0.4) - Gzip compression and decompression.
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >= 1.2; recommended libssh >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh2 >= 1.2; recommended libssh2 >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
 - [ftp](https://www.php.net/manual/en/book.ftp.php) - Implement client access to files servers speaking the File Transfer Protocol (FTP).
 - [sockets](https://www.php.net/manual/en/book.sockets.php) - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
@@ -425,11 +425,12 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 ### System Packages
 
 - [curl](https://curl.se/) (recommended >= 8.4)
-- [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0)- Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+- [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 - [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
 - [OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
+- [tzdata-legacy](https://packages.ubuntu.com/noble/tzdata-legacy) (Ubuntu 24.04 and newer, Debian 13) - Contains the deprecated time zone names, such as `Europe/Kiev` and `US/Eastern`. PHP from the distribution or from the ondrej PPA uses the system time zone database (`php -i` shows `"Olson" Timezone Database Version => 0.system`). Without this package, a site whose time zone setting is one of these names stops with a fatal error: an uncaught `DateInvalidTimeZoneException` on PHP 8.3 and later, a plain `Exception` before that. To check, run `php -r 'new DateTimeZone("Europe/Kiev");'`: it prints nothing when the name is valid.
 
 ### PHP Memory Limit
 
@@ -473,6 +474,7 @@ The following versions of MySQL have reached their end of life (EOL) and are no 
 
 | Version | Initial GA Release | Final Release             | EOL Date          |
 |---------|--------------------|---------------------------|-------------------|
+| 26.7    | July 28, 2026      | 26.7.1 (August 18, 2026)  | October 20, 2026  |
 | 9.6     | January 20, 2026   | 9.6.0 (January 20, 2026)  | April 21, 2026    |
 | 9.5     | October 21, 2025   | 9.5.0 (October 21, 2025)  | January 20, 2026  |
 | 9.4     | July 22, 2025      | 9.4.0 (July 22, 2025)     | October 21, 2025  |
@@ -511,7 +513,7 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 | 10.8    | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
 | 10.7    | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
 | 10.6    | July 6, 2021       | 10.6.28 (August 13, 2026)   | July 6, 2026      |
-| 10.5    | June 24, 2020      | 10.8.8 (May 10, 2023)       | June 24, 2025     |
+| 10.5    | June 24, 2020      | 10.5.29 (May 8, 2025)      | June 24, 2025     |
 | 10.4    | June 16, 2019      | 10.4.34 (May 17, 2024)      | June 18, 2024     |
 | 10.3    | May 25, 2018       | 10.3.39 (May 10, 2023)      | May 25, 2023      |
 | 10.2    | May 23, 2017       | 10.2.44 (May 21, 2022)      | May 23, 2022      |
@@ -537,7 +539,8 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 
 | Version  | Initial GA Release | Final Release            | EOL Date         |
 |----------|--------------------|--------------------------|------------------|
-| 26.7*    | July 28, 2026      |                          |                  |
+| 26.10*   | October 20, 2026   |                          |                  |
+| 26.7     | July 28, 2026      | 26.7.1 (August 18, 2026) | October 20, 2026 |
 | 9.6      | January 20, 2026   | 9.6.0 (January 20, 2026) | April 21, 2026   |
 | 9.5      | October 21, 2025   | 9.5.0 (October 21, 2025) | January 20, 2026 |
 | 9.4      | July 22, 2025      | 9.4.0 (July 22, 2025)    | October 21, 2025 |
@@ -546,7 +549,7 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 | 9.1      | October 15, 2024   | 9.1.0 (October 15, 2024) | January 21, 2025 |
 | 9.0      | July 1, 2024       | 9.0.1 (July 23, 2024)    | October 15, 2024 |
 | 8.3      | January 16, 2024   | 8.3.0 (January 16, 2024) | July 1, 2024     |
-| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2024) | January 16, 2024 |
+| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2023) | January 16, 2024 |
 | 8.1      | July 18, 2023      | 8.1.0 (July 18, 2023)    | October 25, 2023 |
 
 `*` Indicates the current innovation release.
