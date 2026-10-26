@@ -44,13 +44,14 @@ Take a full backup before going any further. The [Reliability](https://make.word
 The upgrade paths on this page move through intermediate versions rather than jumping straight to the latest release. WP-CLI can pin each hop:
 
 ```bash
-wp core update --version=4.9.33
+wp core update --version=X.X.X
 wp core update-db
+wp core version
 ```
 
-Run the pair once per hop, following the target versions listed in the sections below, and check the site between hops. For CLI-based upgrades, run `update-db` after each core update so database schema changes are applied before continuing to the next hop.
+Run these once per hop, following the target versions listed in the sections below, and check the site between hops. `wp core version` should print the version you asked for: if the version you give is not newer than the installed one, WP-CLI reports success without changing anything. For CLI-based upgrades, run `update-db` after each core update so database schema changes are applied before continuing to the next hop.
 
-The sections below name a branch, such as 4.9. For each hop, use the newest release of that branch from the [WordPress releases page](https://wordpress.org/download/releases/), which may be newer than the one in this example.
+The sections below name a branch, such as 4.9. For each hop, replace `X.X.X` with the newest release of that branch from the [WordPress releases page](https://wordpress.org/download/releases/), for example the newest 4.9.x for a hop to 4.9.
 
 [tip]On multisite, run `wp core update-db --network` so the database upgrade runs across all sites.[/tip]
 
@@ -61,7 +62,7 @@ After the final hop, run `wp core verify-checksums` again to confirm the files m
 If an update gets stuck or fails partway, force WP-CLI to re-run the same versioned core file update:
 
 ```bash
-wp core update --version=4.9.33 --force
+wp core update --version=X.X.X --force
 ```
 
 Use the same `--version` value as the hop you were trying to complete.
