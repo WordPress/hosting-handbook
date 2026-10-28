@@ -45,7 +45,7 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php84&keywords=~php85&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
 
@@ -115,12 +115,12 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 
 #### WordPress 6.9
 
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 - [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
 
-_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
+_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5._
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
@@ -142,7 +142,7 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 #### WordPress 6.8
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 
@@ -361,11 +361,11 @@ Notes:
 - Some extensions are built into PHP (or enabled by default) and require no special action in a typical hosting environment.
 - Other extensions are optional and may need to be installed/enabled depending on how PHP is packaged.
 
-The lists below assume PHP >= 7.2 (the minimum supported PHP version for WordPress at the time of writing).
+The lists below assume PHP >= 7.4 (the minimum supported PHP version for WordPress as of WordPress 7.0).
 
 #### Built-in extensions (no hosting action required)
 
-The following extensions are part of PHP itself and are always enabled in supported PHP versions (>= 7.2). No hosting configuration is needed:
+The following extensions are part of PHP itself and are always enabled in supported PHP versions (>= 7.4). No hosting configuration is needed:
 
 - [pcre](https://www.php.net/manual/en/book.pcre.php) - Regular expression engine used throughout PHP and WordPress.
 
@@ -383,7 +383,6 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 - [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
-- [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
 - [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1; PHP >= 8.5 requires ICU >= 57.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
