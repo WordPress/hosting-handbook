@@ -361,11 +361,11 @@ Notes:
 - Some extensions are built into PHP (or enabled by default) and require no special action in a typical hosting environment.
 - Other extensions are optional and may need to be installed/enabled depending on how PHP is packaged.
 
-The lists below assume PHP >= 7.2 (the minimum supported PHP version for WordPress at the time of writing).
+The lists below assume PHP >= 7.4 (the minimum supported PHP version for WordPress at the time of writing).
 
 #### Built-in extensions (no hosting action required)
 
-The following extensions are part of PHP itself and are always enabled in supported PHP versions (>= 7.2). No hosting configuration is needed:
+The following extensions are part of PHP itself and are always enabled in supported PHP versions (>= 7.4). No hosting configuration is needed:
 
 - [pcre](https://www.php.net/manual/en/book.pcre.php) - Regular expression engine used throughout PHP and WordPress.
 
@@ -373,8 +373,8 @@ The following extensions are part of PHP itself and are always enabled in suppor
 
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
-- [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format. (Always enabled in PHP >= 8.0; enabled by default in PHP 7.x but can be disabled in custom builds.)
-- [hash](https://www.php.net/manual/en/book.hash.php) - Provides access to cryptographically secure algorithms for hashing functions.
+- [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format. (Always enabled in PHP >= 8.0; enabled by default in PHP 7.4 but can be disabled in custom builds.)
+- [hash](https://www.php.net/manual/en/book.hash.php) - Provides access to cryptographically secure algorithms for hashing functions, including hashing passwords and update packages.
 - [mysqli](https://www.php.net/manual/en/book.mysqli.php) - Connects to MySQL/MariaDB for database interactions. Many PHP builds use [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) as the underlying driver, but `mysqlnd` is not a standalone replacement for `mysqli`.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
@@ -383,7 +383,6 @@ The PHP extensions listed below are _highly recommended_ in order to allow WordP
 - [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
-- [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
 - [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1; PHP >= 8.5 requires ICU >= 57.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
