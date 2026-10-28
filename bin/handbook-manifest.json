@@ -118,6 +118,13 @@
     "parent": null,
     "order": 11
   },
+  "cron": {
+    "title": "WP-Cron and System Cron",
+    "slug": "cron",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/reliability\/cron.md",
+    "parent": "reliability",
+    "order": 1
+  },
   "sustainability": {
     "title": "Sustainability",
     "slug": "sustainability",
