@@ -31,7 +31,7 @@ The first thing you'll have to do is [visit the repository page](https://github.
 
 After you submit an issue, we can discuss together the suggested changes.
 
-Once a PR is submitted, it will require an approval process. By default, once it is submitted, it will require review and approval by two people from the Hosting team. In cases where there are PRs related to corrections or internal operational elements, created by someone from the Hosting Team, only one review will be required.
+Once a PR is submitted, it will require an approval process. By default, once it is submitted, it will require review and approval by two people from the Hosting team. See the [merge requirements in CONTRIBUTING.md](https://github.com/WordPress/hosting-handbook/blob/main/CONTRIBUTING.md) for the full list of rules.
 
 ### Tools
 
