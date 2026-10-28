@@ -56,13 +56,13 @@ Some programs will represent the different kinds of access using letters instead
 
 | Symbolic | Numeric | Permissions |
 | --- | --- | --- |
-| \---------- | 000 | no permissions |
-| \-r-------- | 400 | read only for user |
-| \-rw------- | 600 | read & write only for user |
-| \-rwx------ | 700 | read, write, & execute only for user |
-| \-rwxr-xr-x | 755 | read, write, & execute for user, only read & execute for group and everyone else |
-| \-rw-r--r-- | 644 | read & write for user, only read for group and everyone else |
-| \-rwxrwxrwx | 777 | read, write, and execute for user, group, and everyone else. **Do not use. Security Risk.** |
+| `----------` | 000 | no permissions |
+| `-r--------` | 400 | read only for user |
+| `-rw-------` | 600 | read & write only for user |
+| `-rwx------` | 700 | read, write, & execute only for user |
+| `-rwxr-xr-x` | 755 | read, write, & execute for user, only read & execute for group and everyone else |
+| `-rw-r--r--` | 644 | read & write for user, only read for group and everyone else |
+| `-rwxrwxrwx` | 777 | read, write, and execute for user, group, and everyone else. **Do not use. Security Risk.** |
 
 #### Recommended Default Linux File Permissions
 
@@ -134,11 +134,11 @@ There are several solutions for providing database object caching for WordPress.
 
 #### Redis
 
-Redis is a lightweight, high-performance key-value database server commonly used to cache the results from WordPress database queries. In its default configuration, Redis uses a single database and does not require a username and password to access the database. Redis should also only be accessible from authorized network hosts.
+Redis is a lightweight, high-performance key-value database server commonly used to cache the results from WordPress database queries. By default, Redis clients use database 0, and Redis does not require a username and password to access the database. Redis should also only be accessible from authorized network hosts.
 
 ##### Redis databases
 
-Redis provides 16 databases, numbered 0 to 15 by default. Redis clients should be configured to use different databases instead of the default database (number 0). Redis can be configured to have additional databases, but that is outside the scope of this document.
+Redis provides 16 databases, numbered 0 to 15 by default. Numbered databases only namespace keys within one application: they do not enforce access control themselves and are not available on Redis Cluster, which only supports database 0. To isolate tenants on shared hosting, use Redis ACL users (Redis 6 and later) limited to their own key patterns, or run a separate Redis instance per user. Key patterns do not restrict whole-database commands, so deny `FLUSHALL`, `FLUSHDB` and `SWAPDB` for those users. Check that the object cache plugin can still flush its cache under these ACL rules. Plugins that flush with `FLUSHDB` need a selective flush instead: the Redis Object Cache plugin supports one with a non-empty `WP_REDIS_PREFIX` and `WP_REDIS_SELECTIVE_FLUSH` enabled, as long as the ACL allows the commands its flush script runs. Redis can be configured to have additional databases, but that is outside the scope of this document.
 
 ##### Redis user credentials
 

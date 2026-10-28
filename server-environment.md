@@ -324,6 +324,8 @@ PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, 
 
 Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
+_Known issue (October 2026): PHP 8.4.27 and 8.5.12, the [21 October 2026 security releases](https://www.php.net/archive/2026.php#2026-10-21-5), have a regression that can crash PHP when the garbage collector frees a SimpleXML object whose properties were read as a whole, for example with `get_object_vars()`, an `(array)` cast or `json_encode()` ([php/php-src#24488](https://github.com/php/php-src/issues/24488)). PHP-FPM logs that a child exited on a signal, such as `exited on signal 6 (SIGABRT)`; the `zend_mm_heap corrupted` message is logged only when the pool sets `catch_workers_output = yes`. The fix is committed upstream and will be in PHP 8.4.28 and 8.5.13. Do not downgrade to avoid the crash: 8.4.26, 8.5.11 and earlier are affected by the vulnerabilities those releases fix. If an affected site's code runs on PHP 8.3, PHP 8.3.36 includes the fixes for those vulnerabilities and does not have the regression. This note will be removed once the fixed releases are available._
+
 End-of-life PHP versions:
 
 - PHP 8.5: 2029-12-31
@@ -427,7 +429,7 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 - [curl](https://curl.se/) (recommended >= 8.4)
 - [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 - [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
-- [OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
+- [OpenSSL](https://www.openssl.org/) (recommended OpenSSL 3.5 LTS) - OpenSSL 3.0 reached the end of its upstream support on 2026-09-07 ([release strategy](https://openssl-library.org/policies/releasestrat/)). Some distributions still ship 3.0 with their own security fixes, for example Ubuntu 22.04 and 24.04. If you use such a package, check that the distribution still supports it.
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
 - [tzdata-legacy](https://packages.ubuntu.com/noble/tzdata-legacy) (Ubuntu 24.04 and newer, Debian 13) - Contains the deprecated time zone names, such as `Europe/Kiev` and `US/Eastern`. PHP from the distribution or from the ondrej PPA uses the system time zone database (`php -i` shows `"Olson" Timezone Database Version => 0.system`). Without this package, a site whose time zone setting is one of these names stops with a fatal error: an uncaught `DateInvalidTimeZoneException` on PHP 8.3 and later, a plain `Exception` before that. To check, run `php -r 'new DateTimeZone("Europe/Kiev");'`: it prints nothing when the name is valid.
