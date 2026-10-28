@@ -463,12 +463,12 @@ Below are the officially recommended Long-Term Support versions of [MySQL](https
 
 | Software  | Version    | EOL Date          |
 |-----------|------------|-------------------|
+| MySQL     | 9.7 LTS    | April 2034        |
 | MySQL     | 8.4 LTS    | April 2032        |
-| MySQL     | 8.0 LTS    | April 2026        |
-| MariaDB   | 11.8 LTS   | June 2030         |
+| MariaDB   | 12.3 LTS   | June 12, 2029     |
+| MariaDB   | 11.8 LTS   | June 4, 2028      |
 | MariaDB   | 11.4 LTS   | May 29, 2029      |
 | MariaDB   | 10.11 LTS  | February 16, 2028 |
-| MariaDB   | 10.6 LTS   | July 6, 2026      |
 
 ### End-of-life MySQL versions
 
@@ -476,12 +476,18 @@ The following versions of MySQL have reached their end of life (EOL) and are no 
 
 | Version | Initial GA Release | Final Release             | EOL Date          |
 |---------|--------------------|---------------------------|-------------------|
-| 9.2*    | January 21, 2025   | 9.2.0 (January 21, 2025)  | April 15, 2025    |
-| 9.1*    | October 15, 2024   | 9.1.0 (October 15, 2024)  | January 21, 2025  |
-| 9.0*    | July 1, 2024       | 9.0.1 (July 23, 2024)     | October 15, 2024  |
-| 8.3*    | January 16, 2024   | 8.3.0 (January 16, 2024)  | July 1, 2024      |
-| 8.2*    | October 25, 2023   | 8.2.0 (October 25, 2024)  | January 16, 2024  |
-| 8.1*    | July 18, 2023      | 8.1.0 (July 18, 2023)     | October 25, 2023  |
+| 26.7    | July 28, 2026      | 26.7.1 (August 18, 2026)  | October 20, 2026  |
+| 9.6     | January 20, 2026   | 9.6.0 (January 20, 2026)  | April 21, 2026    |
+| 9.5     | October 21, 2025   | 9.5.0 (October 21, 2025)  | January 20, 2026  |
+| 9.4     | July 22, 2025      | 9.4.0 (July 22, 2025)     | October 21, 2025  |
+| 9.3     | April 15, 2025     | 9.3.0 (April 15, 2025)    | July 22, 2025     |
+| 9.2     | January 21, 2025   | 9.2.0 (January 21, 2025)  | April 15, 2025    |
+| 9.1     | October 15, 2024   | 9.1.0 (October 15, 2024)  | January 21, 2025  |
+| 9.0     | July 1, 2024       | 9.0.1 (July 23, 2024)     | October 15, 2024  |
+| 8.3     | January 16, 2024   | 8.3.0 (January 16, 2024)  | July 1, 2024      |
+| 8.2     | October 25, 2023   | 8.2.0 (October 25, 2023)  | January 16, 2024  |
+| 8.1     | July 18, 2023      | 8.1.0 (July 18, 2023)     | October 25, 2023  |
+| 8.0     | April 19, 2018     | 8.0.46 (April 21, 2026)   | April 30, 2026    |
 | 5.7     | October 21, 2015   | 5.7.44 (October 25, 2023) | October 21, 2023  |
 | 5.6     | February 5, 2013   | 5.6.51 (January 20, 2021) | February 5, 2021  |
 | 5.5     | December 3, 2010   | 5.5.62 (October 22, 2018) | December 3, 2018  |
@@ -494,6 +500,11 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 
 | Version | Initial GA Release | Final Release               | EOL Date          |
 |---------|--------------------|-----------------------------|-------------------|
+| 12.2    | February 12, 2026  | 12.2.2 (February 12, 2026)  | May 28, 2026      |
+| 12.1    | November 19, 2025  | 12.1.2 (November 19, 2025)  | February 13, 2026 |
+| 12.0    | August 7, 2025     | 12.0.2 (August 7, 2025)     | November 18, 2025 |
+| 11.7    | February 13, 2025  | 11.7.2 (February 13, 2025)  | May 12, 2025      |
+| 11.6    | November 22, 2024  | 11.6.2 (November 22, 2024)  | February 13, 2025 |
 | 11.5    | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
 | 11.3    | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
 | 11.2    | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
@@ -503,6 +514,7 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 | 10.9    | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
 | 10.8    | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
 | 10.7    | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
+| 10.6    | July 6, 2021       | 10.6.28 (August 13, 2026)   | July 6, 2026      |
 | 10.5    | June 24, 2020      | 10.5.29 (May 8, 2025)      | June 24, 2025     |
 | 10.4    | June 16, 2019      | 10.4.34 (May 17, 2024)      | June 18, 2024     |
 | 10.3    | May 25, 2018       | 10.3.39 (May 10, 2023)      | May 25, 2023      |
@@ -529,7 +541,12 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 
 | Version  | Initial GA Release | Final Release            | EOL Date         |
 |----------|--------------------|--------------------------|------------------|
-| **9.3*** | April 15, 2025     |                          | July 2025        |
+| 26.10*   | October 20, 2026   |                          |                  |
+| 26.7     | July 28, 2026      | 26.7.1 (August 18, 2026) | October 20, 2026 |
+| 9.6      | January 20, 2026   | 9.6.0 (January 20, 2026) | April 21, 2026   |
+| 9.5      | October 21, 2025   | 9.5.0 (October 21, 2025) | January 20, 2026 |
+| 9.4      | July 22, 2025      | 9.4.0 (July 22, 2025)    | October 21, 2025 |
+| 9.3      | April 15, 2025     | 9.3.0 (April 15, 2025)   | July 22, 2025    |
 | 9.2      | January 21, 2025   | 9.2.0 (January 21, 2025) | April 15, 2025   |
 | 9.1      | October 15, 2024   | 9.1.0 (October 15, 2024) | January 21, 2025 |
 | 9.0      | July 1, 2024       | 9.0.1 (July 23, 2024)    | October 15, 2024 |
@@ -541,12 +558,18 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 
 #### MariaDB Innovation/Short-Term Releases
  
-The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This will start with the 12.0 release.
+The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This started with the 12.0 release on August 7, 2025.
 
 Previously MariaDB referred to these releases as "short-term releases".
 
 | Version | Release Type | Initial GA Release | Final Release               | EOL Date          |
 |---------|--------------|--------------------|-----------------------------|-------------------|
+| 13.0*   | Rolling      | September 15, 2026 |                             | Q4 2026           |
+| 12.2    | Rolling      | February 12, 2026  | 12.2.2 (February 12, 2026)  | May 28, 2026      |
+| 12.1    | Rolling      | November 19, 2025  | 12.1.2 (November 19, 2025)  | February 13, 2026 |
+| 12.0    | Rolling      | August 7, 2025     | 12.0.2 (August 7, 2025)     | November 18, 2025 |
+| 11.7    | Innovation   | February 13, 2025  | 11.7.2 (February 13, 2025)  | May 12, 2025      |
+| 11.6    | Innovation   | November 22, 2024  | 11.6.2 (November 22, 2024)  | February 13, 2025 |
 | 11.5    | Innovation   | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
 | 11.3    | Innovation   | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
 | 11.2    | Short-term   | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
@@ -556,6 +579,8 @@ Previously MariaDB referred to these releases as "short-term releases".
 | 10.9    | Short-term   | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
 | 10.8    | Short-term   | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
 | 10.7    | Short-term   | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
+
+`*` Indicates the current rolling release.
 
 ### Other MySQL servers
 
