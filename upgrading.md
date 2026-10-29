@@ -39,7 +39,7 @@ Losses:
 - Plugins: all
 - Themes: all
 
-These are the oldest versions of WordPress and the ones that have not been supported for years. In general, have to assume some losses, although not of the contents, but probably of some functionality on themes and plugins.
+These are the oldest versions of WordPress and the ones that have not been supported for years. In general, you have to assume some losses, although not of the contents, but probably of some functionality on themes and plugins.
 
 Considering that the goal is to keep the contents and assuming the loss of the rest of the elements, there are some steps.
 
