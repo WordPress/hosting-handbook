@@ -4,7 +4,7 @@
 
 To improve the hosting experience and educate people on the best practices on hosting WordPress, the Hosting Team is working on [several projects](https://make.wordpress.org/hosting/team-projects/).
 
-There is a set of hosting best practices in the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), including [Performance](https://make.wordpress.org/hosting/handbook/handbook/performance/), [Reliability](https://make.wordpress.org/hosting/handbook/handbook/reliability/), [Security](https://make.wordpress.org/hosting/handbook/handbook/security/) and [Server Environment](https://make.wordpress.org/hosting/handbook/handbook/server-environment/) recommendations.
+There is a set of hosting best practices in the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), including [Performance](https://make.wordpress.org/hosting/handbook/performance/), [Reliability](https://make.wordpress.org/hosting/handbook/reliability/), [Security](https://make.wordpress.org/hosting/handbook/security/) and [Server Environment](https://make.wordpress.org/hosting/handbook/server-environment/) recommendations.
 
 The team also runs and maintains a set of [automated hosting tests](https://make.wordpress.org/hosting/test-results/) that run across the hosting environment of many hosting companies. You can set up tests to run on your hosting environment(s), and help improve the tools through fixing bugs, adding features, or improving the design of the test reporter pages.
 
@@ -16,7 +16,7 @@ The recommendations were put together by the team and used as a basis for [Site 
 
 ### Improvements in the development of the Automated Hosting Tests
 
-The handbook is in the process of being audited and improved. You can see the progress and contribute [through Github](https://github.com/WordPress/phpunit-test-runner).
+The handbook is in the process of being audited and improved. You can see the progress and contribute [through GitHub](https://github.com/WordPress/phpunit-test-runner).
 
 You can propose improvements or solve those available in both the [PHPUnit test runner (issues)](https://github.com/WordPress/phpunit-test-runner/issues) and the [PHPUnit test reporter (issues)](https://github.com/WordPress/phpunit-test-reporter/issues).
 
@@ -104,6 +104,7 @@ Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting
 
 If you want to get an idea of what a contributor day with the hosting team might look like, take a look at some work notes from the team from previous contributor days!
 
+* [WordCamp US 2026 Contributor Day](https://make.wordpress.org/hosting/2026/09/03/wordcamp-us-2026-contributor-day-recap/)
 * [WordCamp US 2025 Contributor Day](https://make.wordpress.org/hosting/2025/09/02/wordcamp-us-2025-contributor-day-summary/)
 * [WordCamp Europe 2025 Contributor Day](https://make.wordpress.org/hosting/2025/06/05/wordcamp-europe-2025-contributor-day/)
 * [WordCamp Asia 2025 Contributor Day](https://make.wordpress.org/hosting/2025/02/25/wordcamp-asia-2025-contributor-day-summary/)
@@ -144,4 +145,4 @@ The following are ways that a volunteer currently can earn a hosting contributor
 
 If you've contributed and don't yet have a badge, apologies! [Visit the Hosting Contributor page and submit a request](https://profiles.wordpress.org/associations/hosting-contributor/) with details on your contribution. Please feel free to ping any of the Team Reps on Slack with questions.
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]

@@ -4,7 +4,7 @@ The Hosting Team is publishing monthly updates to make.wordpress.org/hosting and
 - Activity on the Hosting Tests
 - GitHub Activities on Hosting Team maintained Repos 
 
-As an example you can view the monthly update for [July 2025](https://wp.me/p8aY12-Bn7), which was the first one published.
+As an example you can view the monthly update for [July 2025](https://make.wordpress.org/hosting/2025/08/07/hosting-team-july-update-aug-7-2025/), which was the first one published.
 
 In order to publish those reports you need to have Administrator access to make.wordpress.org/hosting and Editor access to make.wordpress.org/updates.
 
@@ -12,10 +12,10 @@ In order to publish those reports you need to have Administrator access to make.
 
 ### Activity on Hosting Tests
 
-For Hosting Tests the team reports the newly shared reports by hosts for that month. This data can be gathered from the WordPress Backend of make.wordpress.org/hosting. The results page can be accessed directly https://make.wordpress.org/hosting/wp-admin/edit.php?s&post_status=all&post_type=result&action=-1&m=202507, with having the last number being the year and month you want to get results for. 
+For Hosting Tests the team reports the newly shared reports by hosts for that month. This data can be gathered from the WordPress Backend of make.wordpress.org/hosting. The results page can be accessed directly at `https://make.wordpress.org/hosting/wp-admin/edit.php?s&post_status=all&post_type=result&action=-1&m=202507`, with having the last number being the year and month you want to get results for. 
 While on this page you can see the total amount of all published "posts" as number of all test results ever shared. 
 
-Last but not least the number of test reporters and recent activity can be retrieved from the [WordPress Backend too](https://make.wordpress.org/hosting/wp-admin/users.php?role=test-reporter). The number of recent active reporters can be counted on https://make.wordpress.org/hosting/test-results/. 
+Last but not least the number of test reporters and recent activity can be retrieved from the [WordPress Backend too](https://make.wordpress.org/hosting/wp-admin/users.php?role=test-reporter). The number of recent active reporters can be counted on [Host Test Results](https://make.wordpress.org/hosting/test-results/). 
 
 
 ### GitHub Report

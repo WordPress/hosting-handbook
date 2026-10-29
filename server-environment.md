@@ -22,7 +22,7 @@ All published posts on compatibility are available at:
 
 ## Web Server
 
-A web server is piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
+A web server is a piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
 
 The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
@@ -31,7 +31,7 @@ The two most common pieces of web server software, and the ones recommended for 
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.12
+- [Angie](https://en.angie.software/) 1.12
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
@@ -151,7 +151,7 @@ _IMPORTANT: WordPress 6.8 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4
 - PHP 8.3
   - Fully compatible as of July 2025
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Closed/Fixed_
-  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce `#[Override]` attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
 
 - PHP 8.4
@@ -203,7 +203,7 @@ _Related PHP compatibility tickets_
 - PHP 8.3
   - Fully compatible as of May 2026
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Has a patch, but moved to WordPress 6.7._
-  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce `#[Override]` attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
   - [#59654](https://core.trac.wordpress.org/ticket/59654): PHP 8.x: various compatibility fixes for WordPress 6.7. This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
 
@@ -232,14 +232,14 @@ _Related PHP compatibility tickets_
 
 - PHP 8.1
   - _Not all "passing null to non-nullable" issues have been found._ In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
-  - [`_htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to[ htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
-  - [_Replace most `strip_tags()` with `wp_strip_tags()`_](https://core.trac.wordpress.org/ticket/57579).
-There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
-  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_`htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to [htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_Replace most `strip_tags()` with `wp_strip_all_tags()`_](https://core.trac.wordpress.org/ticket/57579).
+    There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
+  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. Fixed in [changeset 53886](https://core.trac.wordpress.org/changeset/53886) and released in WordPress 6.1.
 
 - PHP 8.2
   - [_`utf8_{encode|decode}` deprecation_](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. NOTE: Has a patch, but moved to WordPress 6.7.
-  - [_Unknown dynamic properties'_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
+  - [_Unknown dynamic properties_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
 
 - PHP 8.3
   - Fully compatible as of May 2026
@@ -324,6 +324,8 @@ PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, 
 
 Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
+_Known issue (October 2026): PHP 8.4.27 and 8.5.12, the [21 October 2026 security releases](https://www.php.net/archive/2026.php#2026-10-21-5), have a regression that can crash PHP when the garbage collector frees a SimpleXML object whose properties were read as a whole, for example with `get_object_vars()`, an `(array)` cast or `json_encode()` ([php/php-src#24488](https://github.com/php/php-src/issues/24488)). PHP-FPM logs that a child exited on a signal, such as `exited on signal 6 (SIGABRT)`; the `zend_mm_heap corrupted` message is logged only when the pool sets `catch_workers_output = yes`. The fix is committed upstream and will be in PHP 8.4.28 and 8.5.13. Do not downgrade to avoid the crash: 8.4.26, 8.5.11 and earlier are affected by the vulnerabilities those releases fix. If an affected site's code runs on PHP 8.3, PHP 8.3.36 includes the fixes for those vulnerabilities and does not have the regression. This note will be removed once the fixed releases are available._
+
 End-of-life PHP versions:
 
 - PHP 8.5: 2029-12-31
@@ -372,21 +374,22 @@ The following extensions are part of PHP itself and are always enabled in suppor
 The PHP extensions listed below are _required_ for a WordPress site to work.
 
 - [json](https://www.php.net/manual/en/book.json.php) - Used for communications with other servers and processing data in JSON format. (Always enabled in PHP >= 8.0; enabled by default in PHP 7.x but can be disabled in custom builds.)
+- [hash](https://www.php.net/manual/en/book.hash.php) - Provides access to cryptographically secure algorithms for hashing functions.
 - [mysqli](https://www.php.net/manual/en/book.mysqli.php) - Connects to MySQL/MariaDB for database interactions. Many PHP builds use [mysqlnd](https://www.php.net/manual/en/book.mysqlnd.php) as the underlying driver, but `mysqlnd` is not a standalone replacement for `mysqli`.
 
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 - [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0 ; PHP >= 8.4 requires libcurl >= 7.61.0) - Performs remote request operations.
-- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
+- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
 - [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
-- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1; PHP >= 8.5 requires ICU >= 57.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 - [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0; PHP >= 8.4 requires OpenSSL >= 1.1.1 / < 4.0) - SSL-based connections to other hosts.
-- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
+- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing, such as from a third-party site.
 - [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary). APCu, Memcached, and Redis are alternatives of which only one needs to be used.
@@ -408,14 +411,14 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 - [image](https://www.php.net/manual/en/book.image.php) (requires libgd >= 2.1.0; requires zlib >= 1.2.0.4; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 - [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
 - [shmop](https://www.php.net/manual/en/book.shmop.php) - Shmop is an easy to use set of functions that allows PHP to read, write, create and delete Unix shared memory segments.
-- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
+- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
 - [sodium](https://www.php.net/manual/en/book.sodium.php) (bundled with PHP as of 7.2.0; requires libsodium >= 1.0.8) - Validates signatures and provides securely random bytes.
-- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
-- [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >= 1.2.0.4) - Gzip compression and decompression.
+- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
+- [zlib](https://www.php.net/manual/en/book.zlib.php) (PHP >= 8.4 requires zlib >= 1.2.11; earlier versions require zlib >= 1.2.0.4) - Gzip compression and decompression.
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >= 1.2; recommended libssh >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh2 >= 1.2; recommended libssh2 >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
 - [ftp](https://www.php.net/manual/en/book.ftp.php) - Implement client access to files servers speaking the File Transfer Protocol (FTP).
 - [sockets](https://www.php.net/manual/en/book.sockets.php) - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
@@ -424,11 +427,31 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 ### System Packages
 
 - [curl](https://curl.se/) (recommended >= 8.4)
-- [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0)- Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+- [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 - [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
-- [OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
+- [OpenSSL](https://www.openssl.org/) (recommended OpenSSL 3.5 LTS) - OpenSSL 3.0 reached the end of its upstream support on 2026-09-07 ([release strategy](https://openssl-library.org/policies/releasestrat/)). Some distributions still ship 3.0 with their own security fixes, for example Ubuntu 22.04 and 24.04. If you use such a package, check that the distribution still supports it.
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
+- [tzdata-legacy](https://packages.ubuntu.com/noble/tzdata-legacy) (Ubuntu 24.04 and newer, Debian 13) - Contains the deprecated time zone names, such as `Europe/Kiev` and `US/Eastern`. PHP from the distribution or from the ondrej PPA uses the system time zone database (`php -i` shows `"Olson" Timezone Database Version => 0.system`). Without this package, a site whose time zone setting is one of these names stops with a fatal error: an uncaught `DateInvalidTimeZoneException` on PHP 8.3 and later, a plain `Exception` before that. To check, run `php -r 'new DateTimeZone("Europe/Kiev");'`: it prints nothing when the name is valid.
+
+### PHP Memory Limit
+
+WordPress does not define the default PHP `memory_limit`, but it may attempt to increase it. When WordPress wants more memory than PHP currently allows, it asks for it at runtime with `ini_set()`: once on load to reach `WP_MEMORY_LIMIT`, and again through `wp_raise_memory_limit()` for admin, cron, and image-processing work. Whether that request succeeds is up to the server. If the server configuration prevents changing `memory_limit`, the request is either skipped or fails quietly, and the configured limit stands.
+
+- [`WP_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets the memory available to front-end requests. Default: 40M (64M for Multisite), or the server's current `memory_limit` where PHP will not accept a runtime change.
+- [`WP_MAX_MEMORY_LIMIT`](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) sets a higher limit used for admin/back-end requests (block editor, plugin/theme updates, imports, etc.). Default: 256M, or the server's current `memory_limit` where that is already higher, is unlimited, or cannot be changed at runtime. If `WP_MEMORY_LIMIT` is greater than 256M, `WP_MAX_MEMORY_LIMIT` is set to that value instead.
+
+Both constants depend on PHP accepting a runtime change. Where the host blocks that, neither raises the memory PHP will allow, and the `php.ini` value is the limit. See [Memory Limits](https://developer.wordpress.org/advanced-administration/performance/php/#memory-limits) for full details on how the constants and `php.ini` interact.
+
+Recommendations for hosts, in the absence of a documented minimum from WordPress core:
+
+| Tier | PHP `memory_limit` | Notes |
+|------|---------------------|-------|
+| Minimum | 128M | Sufficient for a vanilla WordPress installation with no additional plugins or themes. Below this, routine admin operations (core/plugin updates, media uploads) become prone to memory-exhaustion fatals. |
+| Recommended default | 256M | Matches the `WP_MAX_MEMORY_LIMIT` default and gives comfortable headroom for a typical production site running a handful of plugins and a modern theme. |
+| Higher / resource-intensive sites | 512M or more | For sites running WooCommerce or other e-commerce, page builders, multilingual plugins, import/export tools, or other memory-heavy workloads. |
+
+These are starting points, not guarantees — actual memory needs scale with the specific plugins and themes installed. Hosts should set `memory_limit` in `php.ini` (or the equivalent per-site override) at or above the recommended tier for their customer base, and monitor logs for memory-exhaustion errors to catch sites that need a higher limit.
 
 ## Database
 
@@ -480,7 +503,7 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 | 10.9    | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
 | 10.8    | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
 | 10.7    | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
-| 10.5    | June 24, 2020      | 10.8.8 (May 10, 2023)       | June 24, 2025     |
+| 10.5    | June 24, 2020      | 10.5.29 (May 8, 2025)      | June 24, 2025     |
 | 10.4    | June 16, 2019      | 10.4.34 (May 17, 2024)      | June 18, 2024     |
 | 10.3    | May 25, 2018       | 10.3.39 (May 10, 2023)      | May 25, 2023      |
 | 10.2    | May 23, 2017       | 10.2.44 (May 21, 2022)      | May 23, 2022      |
@@ -511,7 +534,7 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 | 9.1      | October 15, 2024   | 9.1.0 (October 15, 2024) | January 21, 2025 |
 | 9.0      | July 1, 2024       | 9.0.1 (July 23, 2024)    | October 15, 2024 |
 | 8.3      | January 16, 2024   | 8.3.0 (January 16, 2024) | July 1, 2024     |
-| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2024) | January 16, 2024 |
+| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2023) | January 16, 2024 |
 | 8.1      | July 18, 2023      | 8.1.0 (July 18, 2023)    | October 25, 2023 |
 
 `*` Indicates the current innovation release.
@@ -538,14 +561,14 @@ Previously MariaDB referred to these releases as "short-term releases".
 
 While WordPress does not regularly test against these MySQL servers, they are known to perform well.
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database)
+- [Percona MySQL Server](https://www.percona.com/mysql/)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-- [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/)
 - [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/products/databases-for-mysql)
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
@@ -563,4 +586,4 @@ If you have WordPress 5.2+, the WordPress Admin already has tools with that info
 
 If you have an older version, you can activate the `Site Health` section installing the WordPress Community Plugin called [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) (more [help for this plugin](https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/)).
 
-[info]If you’re interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]

@@ -12,36 +12,30 @@ More Information about [Team Reps: the Title, Responsibilities...](https://make.
 
 ### Hosting Team Reps
 
-The Hosting Team (2025) is represented by:
+The Hosting Team (2026) is represented by:
 
-- [@crixu](https://profiles.wordpress.org/crixu/)
-- [@zunaid321](https://profiles.wordpress.org/zunaid321/)
+- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023, 2026)
+- [@jazzs3quence](https://profiles.wordpress.org/jazzs3quence/) (Team Rep 2026)
+- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - 2026)
 
-### Hosting Project Leads
 
-The Documentation projects (Hosting Handbook, and Advanced Administration Handbook) are lead by:
+### Active Hosting Team Admins
 
-- _Defaults to team reps/admins. The team collectively manages these projects_
-
-The PHPUnit Test projects (PHPUnit Test Runner, and PHPUnit Test Report) are lead by:
-
-- _Defaults to team reps/admins. The team collectively manages these projects_
-
-### Hosting Team Admins
-
-- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - present)
-- [@jessibelle](https://profiles.wordpress.org/jessibelle/) (Team Rep 2023)
-- [@crixu](https://profiles.wordpress.org/crixu/) (Team Rep 2021-present)
-- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023)
+- [@amykamala](https://profiles.wordpress.org/amykamala/) (Team Rep 2019-2023, 2026)
 - [@chaion07](https://profiles.wordpress.org/chaion07/) (Team admin since 2021)
+- [@crixu](https://profiles.wordpress.org/crixu/) (Team Rep 2021 - 2025)
+- [@kirasong](https://profiles.wordpress.org/kirasong/) (Started the team in 2017, Team Rep 2017 - 2021)
+- [@jazzs3quence](https://profiles.wordpress.org/jazzs3quence/) (Team Rep 2026)
+- [@zunaid321](https://profiles.wordpress.org/zunaid321/) (Team Rep 2025 - 2026)
+
 
 #### Past Hosting Team Reps and Admins
 
-- [@javiercasares](https://profiles.wordpress.org/javiercasares/) (Team Rep 2021 - 2024)
-- [@jadonn](https://profiles.wordpress.org/jadonn/) (Team Rep 2018 - 2022)
-- [@pfefferle](https://profiles.wordpress.org/pfefferle/)
-- [@kirasong](https://profiles.wordpress.org/kirasong/) (Started the team in 2017, Team Rep 2017 - 2021)
 - [@danielbachhuber](https://profiles.wordpress.org/danielbachhuber/) (Started the team in 2017)
+- [@jadonn](https://profiles.wordpress.org/jadonn/) (Team Rep 2018 - 2022)
+- [@javiercasares](https://profiles.wordpress.org/javiercasares/) (Team Rep 2021 - 2024)
+- [@jessibelle](https://profiles.wordpress.org/jessibelle/) (Team Rep 2023)
+- [@pfefferle](https://profiles.wordpress.org/pfefferle/)
 
 ## Hosting Team Organization
 
@@ -71,9 +65,9 @@ A Team Rep, specifically from the Hosting team, acts as the voice and ambassador
 
 In order to maintain transparent and democratic governance within the Hosting Team, a structured voting process for selecting Team Representatives is in place. The current running Hosting Team Reps are responsible for this process. This process unfolds annually and consists of distinct phases: the nomination period and the voting window.
 
-- **Nomination Phase:** The nomination period typically takes place in December of each year. During this phase, any active member of the Hosting Team can either nominate themselves or recommend a colleague for the Team Rep position. The Hosting Team will publish a "Call for Nominees" on make.wordpress.org/hosting, where everyone can comment with their nominations. If preferred, nominations can also be sent anonymously to a trusted Team Rep via Direct Messages on Slack.
+- **Nomination Phase:** The nomination period typically opens in October or November of each year. During this phase, any active member of the Hosting Team can either nominate themselves or recommend a colleague for the Team Rep position. The Hosting Team will publish a "Call for Nominees" on make.wordpress.org/hosting, where everyone can comment with their nominations. If preferred, nominations can also be sent anonymously to a trusted Team Rep via Direct Messages on Slack.
 
-- **Voting:** Following the conclusion of the nomination period, a two-week voting window is opened. All active Hosting Team members are encouraged to cast their vote for their preferred candidates within this timeframe. The hosting team will create a survey to collect those votes anonymized and will publish the results afterwards on make.wordpress.org/hosting. 
+- **Voting:** Following the conclusion of the nomination period, a voting window is opened, usually for two to three weeks. The dates and any extensions are announced on make.wordpress.org/hosting. All active Hosting Team members are encouraged to cast their vote for their preferred candidates within this timeframe. The hosting team will create a survey to collect those votes anonymized and will publish the results afterwards on make.wordpress.org/hosting. 
 
 After the voting period concludes, the nominees with the most votes are contacted to confirm whether they wish to accept the Team Rep role. Once confirmations are received, the new Team Reps are officially announced on make.wordpress.org/hosting.
 
@@ -100,7 +94,7 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
 
    - **Projects Under This Category:** 
      - PHPUnit Test Runner
-     - PHPUnit Test Report
+     - PHPUnit Test Reporter
    - **Required Skills:** 
      - Proficient in managing GitHub repositories.
      - Strong understanding of PHP Unit Tests and PHP in general.
@@ -139,7 +133,7 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
   - [Hosting Tests Team](https://github.com/orgs/WordPress/teams/hosting-tests-team).
 
 - **GitHub Repos**
-  - [Hosting Handbook](https://github.com/WordPress/hosting-handbook) Github Repo
-  - [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) Github Repo
-  - [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) Github Repo (aka test-runner)
-  - [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) Github Repo (aka test-reporter)
+  - [Hosting Handbook](https://github.com/WordPress/hosting-handbook) GitHub Repo
+  - [Advanced Admin Handbook](https://github.com/WordPress/Advanced-administration-handbook) GitHub Repo
+  - [WordPress PHPUnit test suite](https://github.com/WordPress/phpunit-test-runner) GitHub Repo (aka test-runner)
+  - [WordPress PHPUnit test reporter](https://github.com/WordPress/phpunit-test-reporter) GitHub Repo (aka test-reporter)

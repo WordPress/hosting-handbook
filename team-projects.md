@@ -25,7 +25,7 @@ _Those skills are not required, but help._
 
 ### How
 
-The handbook is in the process of being audited and improved. You can see the progress and contribute [through Github](https://github.com/WordPress/hosting-handbook).
+The handbook is in the process of being audited and improved. You can see the progress and contribute [through GitHub](https://github.com/WordPress/hosting-handbook).
 
 The first thing you'll have to do is [visit the repository page](https://github.com/WordPress/hosting-handbook) where all the information is. It's best to [visit the Issues list](https://github.com/WordPress/hosting-handbook/issues), check if your proposal is already contemplated or pending, and if it isn't, [create a New issue](https://github.com/WordPress/hosting-handbook/issues/new).
 

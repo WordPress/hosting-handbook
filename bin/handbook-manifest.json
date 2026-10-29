@@ -132,6 +132,13 @@
     "parent": null,
     "order": 12
   },
+  "staging": {
+    "title": "Staging Environments",
+    "slug": "staging",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/reliability\/staging.md",
+    "parent": "reliability",
+    "order": 2
+  },
   "security": {
     "title": "Security",
     "slug": "security",
