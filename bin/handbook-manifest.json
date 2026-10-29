@@ -48,6 +48,13 @@
     "parent": "get-involved",
     "order": 5
   },
+  "ai-policy": {
+    "title": "AI Policy",
+    "slug": "ai-policy",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/ai-policy.md",
+    "parent": "get-involved",
+    "order": 6
+  },
   "server-environment": {
     "title": "Server Environment",
     "slug": "server-environment",
