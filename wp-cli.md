@@ -30,6 +30,8 @@ wp plugin verify-checksums --all
 
 `verify-checksums` compares files against the official release from WordPress.org, so modified or injected files show up. Plugin checksums are only available for plugins hosted on WordPress.org.
 
+[tip]On WordPress 7.x sites downloaded with `wp core download` from WP-CLI 2.12 or older, `verify-checksums` reports files under `wp-includes/php-ai-client/` as missing, and cut-off file names as "should not exist". This is a WP-CLI extraction bug ([wp-cli/wp-cli#6320](https://github.com/wp-cli/wp-cli/issues/6320)), not a modified core. `wp core download --force --skip-content` restores the files.[/tip]
+
 ## Plugins and themes
 
 ```bash
@@ -62,8 +64,8 @@ wp plugin list --skip-plugins --skip-themes
 wp db check
 wp db size --human-readable
 wp db size --tables
-wp db export backup.sql
-wp db import backup.sql
+wp db export /path/outside/webroot/backup.sql
+wp db import /path/outside/webroot/backup.sql
 ```
 
 `wp db export` and `wp db import` use the database credentials in `wp-config.php`. Store exports outside the web root, and delete them when they are no longer needed.
@@ -75,7 +77,7 @@ wp search-replace 'https://old.example.com' 'https://new.example.com' --skip-col
 wp search-replace 'https://old.example.com' 'https://new.example.com' --skip-columns=guid
 ```
 
-`search-replace` handles serialized data correctly, which a plain SQL `REPLACE()` does not. Always run it with `--dry-run` first and check the number of replacements. The `guid` column should not be changed on an existing site.
+`search-replace` handles serialized data correctly, which a plain SQL `REPLACE()` does not. Always run it with `--dry-run` first and check the number of replacements. The `guid` column should not be changed on an existing site. On multisite, add `--network` so the tables of every site in the network are included.
 
 ## Caches, rewrites and cron
 
@@ -90,7 +92,7 @@ wp cron event run --due-now
 
 `wp cache flush` clears the object cache. It does not clear a page cache or a CDN, which usually have their own commands or controls.
 
-`wp cron test` checks whether WP-Cron can be triggered over HTTP. If you disable WP-Cron with `DISABLE_WP_CRON` and run it from a system cron job, `wp cron event run --due-now` is a common way to do that.
+`wp cron test` checks whether WP-Cron can be triggered over HTTP. If you disable WP-Cron with `DISABLE_WP_CRON` and run it from a system cron job, `wp cron event run --due-now` is a common way to do that. On those sites `wp cron test` returns an error, which is expected.
 
 ## Maintenance mode
 
@@ -104,12 +106,13 @@ wp maintenance-mode deactivate
 
 ```bash
 wp user list --role=administrator
+wp super-admin list
 wp user reset-password <user>
 wp user session destroy <user> --all
 wp config shuffle-salts
 ```
 
-After a compromise, list the administrator accounts and remove any that should not be there, reset passwords, and destroy existing sessions. `wp config shuffle-salts` replaces the keys and salts in `wp-config.php`, which logs every user out. See the [Security](https://make.wordpress.org/hosting/handbook/security/) page for more.
+After a compromise, list the administrator accounts (and, on multisite, the super admins, who do not need a role on the main site) and remove any that should not be there, reset passwords, and destroy existing sessions. `wp config shuffle-salts` replaces the keys and salts in `wp-config.php`, which logs every user out. See the [Security](https://make.wordpress.org/hosting/handbook/security/) page for more.
 
 ## Configuration and options
 
@@ -128,7 +131,7 @@ wp option get home
 wp media regenerate --only-missing
 ```
 
-Regenerates missing thumbnail sizes, for example after a theme change or a migration. Without `--only-missing`, every thumbnail is regenerated, which can take a long time on large sites.
+Regenerates missing thumbnail sizes, for example after a theme change or a migration. Without `--only-missing`, every thumbnail is regenerated, which can take a long time on large sites. The command asks for confirmation, so add `--yes` when running it from a script.
 
 ## Multisite
 
