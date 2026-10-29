@@ -79,7 +79,7 @@ _PHP 8.6 was released on 19 November 2026. Check the Core team's [PHP Compatibil
   - [#66137](https://core.trac.wordpress.org/ticket/66137): Tests: Replace deprecated `mb_split()` with `preg_split()`. _NOTE: Closed / Fixed. PHP 8.6 deprecates all `mbstring` regular expression functions._
   - [#65965](https://core.trac.wordpress.org/ticket/65965): Code Modernization: Replace `socket_set_timeout()` usage in the Snoopy library, deprecated in PHP 8.5. _NOTE: Closed / Fixed._
   - [#65773](https://core.trac.wordpress.org/ticket/65773): Code Modernization: Use `array_key_first()` for an array's first key. _NOTE: Closed / Fixed._
-  - [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_all()` and `is_iterable()`.
+  - [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_any()`, `array_all()` and `is_iterable()`.
   - [#65823](https://core.trac.wordpress.org/ticket/65823): Adoption of the null coalescing assignment operator (`??=`) for default values.
 
 #### WordPress 7.1

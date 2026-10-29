@@ -1,6 +1,6 @@
 # WordPress 7.2 Server Compatibility
 
-The Hosting Team reviews the compatibility between each WordPress release and the server software it runs on: PHP, MySQL / MariaDB and the web server. This post covers **WordPress 7.2**, scheduled for release on **9 December 2026**.
+The Hosting Team reviews the compatibility between each WordPress release and the server software it runs on: PHP, MySQL / MariaDB and the web server. This post covers **WordPress 7.2**, scheduled for release on **8 December 2026**.
 
 Previous compatibility articles:
 
@@ -42,7 +42,7 @@ The full requirements are documented on the [WordPress Requirements page](https:
 
 ## WordPress compatibility at the time of release
 
-The following versions are available and receiving security support as of 9 December 2026.
+The following versions are available and receiving security support as of 8 December 2026.
 
 ### PHP
 
@@ -60,11 +60,11 @@ PHP 8.6 was released on 19 November 2026. Two changes happen on 31 December 2026
 
 Version | Type | End of life
 ---- | ---- | ----
-MySQL 26.7 | Innovation | when the next Innovation release ships
+MySQL 26.10 | Innovation | when the next Innovation release ships
 MySQL 9.7 | LTS | 2034-04-21
 MySQL 8.4 | LTS | 2032-04-30
 
-MySQL moved to calendar versioning after 9.7, so the first Innovation release after it is 26.7, released in July 2026. Innovation releases are only supported until the next one ships, so they are listed for completeness but are not recommended for new installations.
+MySQL moved to calendar versioning after 9.7. The first Innovation release after it was 26.7 (July 2026), followed by 26.10 on 20 October 2026. Innovation releases are only supported until the next one ships, so they are listed for completeness but are not recommended for new installations.
 
 ### MariaDB
 
@@ -78,17 +78,21 @@ MariaDB 10.11 | LTS | 2028-02-16
 
 MariaDB 13.0 is a rolling release. It stops receiving fixes as soon as the next rolling release ships, so it is listed for completeness but is not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release.
 
+### SQL modes
+
+WordPress 7.2 adds `NO_BACKSLASH_ESCAPES` to the SQL modes it turns off for its own database connection ([#66185](https://core.trac.wordpress.org/ticket/66185)), because the mode breaks escaped queries. The server's global `sql_mode` is not changed. Sites that really need the mode can keep it with the `incompatible_sql_modes` filter in a `db.php` drop-in. See the [dev note](https://make.wordpress.org/core/2026/10/09/no_backslash_escapes-sql-mode-is-now-turned-off-by-default-in-wordpress-7-2/) for details.
+
 ### Web servers
 
 The versions below are current and receiving fixes at the 7.2 release.
 
 Software | Version at release | Released
 ---- | ---- | ----
-Apache HTTPD | 2.4.68 | 2026-06-08
-nginx | 1.30.5 (stable) / 1.31.6 (mainline) | 2026-09-15
-Angie | 1.12.2 | 2026-09-18
+Apache HTTPD | 2.4.69 | 2026-10-01
+nginx | 1.30.6 (stable) / 1.31.8 (mainline) | 2026-10-14 / 2026-10-21
+Angie | 1.12.4 | 2026-10-16
 LiteSpeed Web Server | 6.3.7 | 2026-09-23
-OpenLiteSpeed | 1.9.3 (latest) / 1.8.5 (stable) | 2026-09-30 / 2026-01-08
+OpenLiteSpeed | 1.9.4 (latest) / 1.8.5 (stable) | 2026-10-24 / 2026-01-08
 
 nginx and OpenLiteSpeed each maintain a supported branch that is not their newest release. nginx keeps a stable branch alongside mainline, so 1.30 is the conservative choice. OpenLiteSpeed labels 1.8.x stable and 1.9.x latest, and ships both.
 
@@ -110,7 +114,7 @@ The Core team retired the ["compatible with exceptions" label in April 2025](htt
 
 PHP 8.6 deprecates all `mbstring` regular expression functions, including the `mb_ereg*()` family and `mb_split()`, and they are due to be removed in PHP 9.0. The library behind them, Oniguruma, is no longer maintained. See the [PHP RFC](https://wiki.php.net/rfc/eol-oniguruma) for details.
 
-WordPress Core does not use these functions outside its test suite, which was updated in [#66137](https://core.trac.wordpress.org/ticket/66137). Plugins and themes that still call them will log deprecation notices on PHP 8.6. The PECL package `mb_onig` keeps the functions available for code that cannot be updated yet. The recommended replacement is the PCRE functions with the `/u` modifier.
+WordPress Core does not use these functions outside its test suite, which was updated in [#66137](https://core.trac.wordpress.org/ticket/66137). Plugins and themes that still call them will log deprecation notices on PHP 8.6. The [`mb_onig`](https://github.com/youkidearitai/mb_onig) extension, installable with PIE as `mb_onig/mb_onig`, keeps the functions available for code that cannot be updated yet. The recommended replacement is the PCRE functions with the `/u` modifier.
 
 ## Related tickets
 
@@ -120,10 +124,10 @@ Deprecations in PHP 8.5 and 8.6:
 - [#66137](https://core.trac.wordpress.org/ticket/66137): Tests: Replace deprecated `mb_split()` with `preg_split()`. _NOTE: Closed / Fixed._
 - [#65965](https://core.trac.wordpress.org/ticket/65965): Code Modernization: Replace `socket_set_timeout()` usage in the Snoopy library, deprecated in PHP 8.5. _NOTE: Closed / Fixed._
 
-Modernization using functions from newer PHP versions, all of which WordPress polyfills so they stay safe on the 7.4 minimum:
+Modernization using newer PHP features. `array_find()`, `array_find_key()`, `array_any()` and `array_all()` come from PHP 8.4, and WordPress polyfills them. `array_key_first()`, `is_iterable()` and `??=` are native on the PHP 7.4 minimum:
 
 - [#65773](https://core.trac.wordpress.org/ticket/65773): Code Modernization: Use `array_key_first()` for an array's first key. _NOTE: Closed / Fixed._
-- [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_all()` and `is_iterable()`.
+- [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_any()`, `array_all()` and `is_iterable()`.
 - [#65823](https://core.trac.wordpress.org/ticket/65823): Adoption of the null coalescing assignment operator (`??=`) for default values.
 
 ## Upgrading WordPress
