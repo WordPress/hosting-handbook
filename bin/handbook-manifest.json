@@ -138,5 +138,12 @@
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/security.md",
     "parent": null,
     "order": 13
+  },
+  "http-headers": {
+    "title": "HTTP Security Headers",
+    "slug": "http-headers",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/security\/http-headers.md",
+    "parent": "security",
+    "order": 1
   }
 }
