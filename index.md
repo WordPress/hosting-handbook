@@ -29,7 +29,7 @@ The Hosting Team focuses on end to end distributed hosting tests, providing docu
 
 Everyone is welcome! This may include folks hosting WordPress, interested in learning more about hosting WordPress or folks working directly with WordPress hosts, such as System Engineers, System Architects, DevOps Engineers and Developers that are working on core, plugins, or themes.
 
-**Get Involved:** If you want to know more and join the efforts, feel free to visit the Hosting Handbook [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page.
+**Get Involved:** If you want to know more and join the efforts, feel free to visit the Hosting Handbook [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) page. New contributors can also start with the [Hosting Team FAQ](https://make.wordpress.org/hosting/handbook/get-involved/faq/).
 
 ### When does the Hosting team meet?
 
