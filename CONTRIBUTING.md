@@ -20,6 +20,11 @@ Either way, please include a description of the purpose behind the change so tha
 
 Any edit requires a review from two hosting team members before being merged. Reviews can be requested in the upper right of the Pull Request form.
 
+## Glossary
+
+The Hosting Team glossary is managed separately from this repository. Glossary entries cannot be edited through a handbook Pull Request.
+
+To request a glossary correction or suggest a new entry, open an [Issue in this repository](https://github.com/WordPress/hosting-handbook/issues) or ask the Hosting Team in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) on WordPress Slack.
 ## Assets in Pages
 
 Assets such as images are not automatically imported into the Handbook. Because of that, assets must be included in Pull Requests within the `/assets/` directory in the repo for tracking.
