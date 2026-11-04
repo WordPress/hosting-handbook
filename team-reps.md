@@ -86,16 +86,17 @@ A Project Lead is responsible for guiding and overseeing a specific project unde
         - Hosting Handbook
         - Advanced Administration Handbook
     - **Required Skills:**
-        - Mastery in managing and organizing GitHub repositories.
+        - Basic Git and GitHub usage including forking, branching, committing and opening Pull Requests.
         - Ideally, experience in Technical Writing is crucial since the essence of these projects is to produce clear, concise, and informative documents.
 2. **Software Projects:**
     - **Projects Under This Category:**
         - PHPUnit Test Runner
         - PHPUnit Test Reporter
     - **Required Skills:**
-        - Proficient in managing GitHub repositories.
-        - Strong understanding of PHP Unit Tests and PHP in general.
-        - Experience or at least familiarity with the creation and programming of WordPress plugins is highly desirable.
+        - Mastery in Git and Github including forking, branching, committing, opening Pull Requests, performing code reviews, as well as a strong understanding of agile development practices and protocols.
+        - Strong understanding of PHP,  PHP Unit Tests, Node.js, and the WordPress development ecosystem.
+        - Strong understanding of Hosting system architecture, Linux command line and system administration.
+        - Familiarity with WordPress plugin architecture.
 
 ## Hosting Team Onboarding / Offboarding
 
