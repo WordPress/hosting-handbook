@@ -1,6 +1,6 @@
 # WP-CLI
 
-[WP-CLI](https://wp-cli.org/) is the command-line interface for WordPress. It lets hosts and support teams check, maintain and repair a site from the server without logging in to the dashboard. This page lists the commands that are most useful for hosting work. For every command and option, see the official [WP-CLI command reference](https://developer.wordpress.org/cli/commands/).
+[WP-CLI](https://wp-cli.org/) is the command-line interface for WordPress. It lets hosts and support teams check, maintain and repair a site from the server without logging in to the WordPress admin. This page lists the commands that are most useful for hosting work. For every command and option, see the official [WP-CLI command reference](https://developer.wordpress.org/cli/commands/).
 
 For upgrading WordPress core with WP-CLI, see [Upgrading](https://make.wordpress.org/hosting/handbook/upgrading/).
 
