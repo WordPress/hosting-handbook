@@ -318,7 +318,7 @@ If you / your company want the test [results to appear on the WordPress.org page
 
 The first thing to do is [create a user on WordPress.org](https://login.wordpress.org/register). If your company is called *ExampleHostingCompany, Inc*, for example, call your user something like *examplehostingcompanybot*. Keep in mind that the associated email account should be checked frequently, as emails will arrive regarding the possible operation of the tests.
 
-Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new?assignees=&labels=test-reporter-request&projects=&template=test_reporter_request.md&title=%5BTest+Reporter%5D+) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
+[Create an issue in the test runner repository](https://github.com/WordPress/phpunit-test-runner/issues/new?assignees=&labels=test-reporter-request&projects=&template=test_reporter_request.md&title=%5BTest+Reporter%5D+) requesting that your bot be added as a *Test Reporter*. Make sure to include the bot account’s WordPress.org username, which is required to identify the account and process the request.
 
 [tip]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is.[/tip]
 

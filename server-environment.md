@@ -31,7 +31,7 @@ The two most common pieces of web server software, and the ones recommended for 
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.12
+- [Angie](https://en.angie.software/) 1.12
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
@@ -45,7 +45,7 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php84&keywords=~php85&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
 
@@ -115,7 +115,8 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 
 #### WordPress 6.9
 
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 - [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
@@ -125,7 +126,7 @@ _IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
 - PHP 8.4
-  - Fully compatible as of April 2026
+  - Fully compatible as of May 2026
   - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
 
 - PHP 8.5
@@ -142,7 +143,7 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 #### WordPress 6.8
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 
@@ -561,14 +562,14 @@ Previously MariaDB referred to these releases as "short-term releases".
 
 While WordPress does not regularly test against these MySQL servers, they are known to perform well.
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database)
+- [Percona MySQL Server](https://www.percona.com/mysql/)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-- [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/)
 - [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/products/databases-for-mysql)
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
