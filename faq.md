@@ -6,17 +6,17 @@ For step-by-step account setup, see the [Contributor Day](https://make.wordpress
 
 ## About the Hosting Team
 
+### There's a Hosting Team? I never knew there was a Hosting Team! 
+
+Hi, and welcome! The [Hosting Team](https://make.wordpress.org/hosting/) has been part of the WordPress open source project since 2017. Everyone is welcome to participate — whether you work at a host, run your own sites, or are learning about hosting WordPress for the first time.
+
+Introduce yourself in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, or at a Contributor Day table. There are always opportunities to contribute!
+
 ### What does the Hosting Team do?
 
 The Hosting Team works cross-functionally between WordPress.org and web hosts that support WordPress. The team facilitates testing on hosting infrastructure and communication between WordPress.org and hosts.
 
 In practice, that includes maintaining the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), running [automated hosting tests](https://make.wordpress.org/hosting/test-results/), publishing server compatibility guidance, and collaborating with other WordPress teams. See [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/) and [Team Projects](https://make.wordpress.org/hosting/handbook/get-involved/team-projects/) for details.
-
-### There's a Hosting Team? I never knew there was a Hosting Team!
-
-Hi, and welcome! The [Hosting Team](https://make.wordpress.org/hosting/) has been part of the WordPress open source project since 2017. Everyone is welcome to participate — whether you work at a host, run your own sites, or are learning about hosting WordPress for the first time.
-
-Introduce yourself in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, or at a Contributor Day table. There are always opportunities to contribute!
 
 ### Does the Hosting Team recommend a specific host?
 
