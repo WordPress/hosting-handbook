@@ -30,6 +30,8 @@ Some of the projects are developed through GitHub, so you may need an account.
 
 **If you do not have a user account**, you can [access the Registry of a new account](https://github.com/signup) and follow the steps.
 
+Please create your GitHub account at least one day before the event, because new GitHub accounts have a [24-hour wait](https://make.wordpress.org/hosting/2026/09/30/increased-security-on-hosting-team-repositories/) before they can interact with the Hosting team repositories.
+
 #### Sync your WordPress.org and GitHub profile
 
 In order for your contributions on GitHub to appear on your WordPress profile, you need to relate the account to your profile. To do this, visit the [Edit your WordPress Profile](https://profiles.wordpress.org/me/profile/edit/), and in the **GitHub Username** section add your GitHub account.
