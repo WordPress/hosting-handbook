@@ -25,7 +25,7 @@ These headers are safe for most WordPress sites:
 
 - **`Content-Security-Policy` (CSP)**: a strict policy can break the block editor, themes, and plugins that use inline scripts or third-party resources. Do not set one CSP for all customer sites. Start with `Content-Security-Policy-Report-Only`, read the reports, then enforce the policy per site.
 - **`Permissions-Policy`**: can block browser features, for example camera or geolocation. Some plugins need these features.
-- **`X-XSS-Protection`**: do not add this header. It is non-standard, and MDN recommends `Content-Security-Policy` instead.
+- **`X-XSS-Protection`**: do not add this header. It is non-standard, and [MDN recommends `Content-Security-Policy`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-XSS-Protection) instead.
 
 ## Server examples
 
