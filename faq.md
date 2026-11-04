@@ -126,7 +126,7 @@ Always work on a branch, not directly on `main`, but make sure:
 - your fork is up to date
 - you pull in any updates to your local
 - you always checkout from main  
-- main is fully up to date
+- main is fully up to date with all recent changes
 
 
 ```bash
