@@ -4,7 +4,7 @@ The Hosting Team is publishing monthly updates to make.wordpress.org/hosting and
 - Activity on the Hosting Tests
 - GitHub Activities on Hosting Team maintained Repos 
 
-As an example you can view the monthly update for [July 2025](https://wp.me/p8aY12-Bn7), which was the first one published.
+As an example you can view the monthly update for [July 2025](https://make.wordpress.org/hosting/2025/08/07/hosting-team-july-update-aug-7-2025/), which was the first one published.
 
 In order to publish those reports you need to have Administrator access to make.wordpress.org/hosting and Editor access to make.wordpress.org/updates.
 
