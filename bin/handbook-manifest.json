@@ -13,6 +13,13 @@
     "parent": null,
     "order": 1
   },
+  "faq": {
+    "title": "Hosting Team FAQ",
+    "slug": "faq",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/faq.md",
+    "parent": "get-involved",
+    "order": 0
+  },
   "team-projects": {
     "title": "Team Projects",
     "slug": "team-projects",
@@ -47,6 +54,13 @@
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/team-updates.md",
     "parent": "get-involved",
     "order": 5
+  },
+  "ai-policy": {
+    "title": "AI Policy",
+    "slug": "ai-policy",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/ai-policy.md",
+    "parent": "get-involved",
+    "order": 6
   },
   "server-environment": {
     "title": "Server Environment",
@@ -131,6 +145,13 @@
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/sustainability.md",
     "parent": null,
     "order": 12
+  },
+  "staging": {
+    "title": "Staging Environments",
+    "slug": "staging",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/reliability\/staging.md",
+    "parent": "reliability",
+    "order": 2
   },
   "security": {
     "title": "Security",
