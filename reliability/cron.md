@@ -1,6 +1,6 @@
 # WP-Cron and System Cron
 
-WordPress uses WP-Cron to run scheduled tasks. Examples are scheduled posts, update checks, and many plugin tasks. WP-Cron is not a real system scheduler. It runs only when a request comes to the site.
+WordPress uses [WP-Cron](https://developer.wordpress.org/plugins/cron/) to run scheduled tasks. Examples are scheduled posts, update checks, and many plugin tasks. WP-Cron is not a real system scheduler. It runs only when a request comes to the site.
 
 ## How WP-Cron works
 
