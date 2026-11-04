@@ -1,6 +1,6 @@
 # Hosting Team FAQ
 
-WordCamps and Contributor Days are busy times for the Hosting Team. Table leads often spend a lot of time answering the same onboarding questions. This page collects those answers in one place so contributors can get started quickly and the team can focus on moving tickets forward.
+New contributors often have questions about the Hosting Team. This page answers some of the more common ones!
 
 For step-by-step account setup, see the [Contributor Day](https://make.wordpress.org/hosting/handbook/get-involved/contributor-day/) page. For deeper context on team projects and meetings, see [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/).
 
