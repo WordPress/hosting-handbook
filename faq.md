@@ -66,7 +66,7 @@ Issues marked as [good first issue](https://github.com/WordPress/hosting-handboo
 
 | Account | Required? | Purpose |
 | ---- | ---- | ---- |
-| [WordPress.org](https://login.wordpress.org/register) | Yes | Profile, contributions tracking, Slack signup |
+| [WordPress.org](https://login.wordpress.org/register) | Required | Profile, contributions tracking, Slack signup |
 | [WordPress Slack](https://wordpress.slack.com/signup) | Required | Team chat in [#hosting](https://wordpress.slack.com/archives/hosting/) |
 | [GitHub](https://github.com/signup) | Recommended | Code and documentation contributions |
 
