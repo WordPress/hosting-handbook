@@ -4,7 +4,7 @@
 
 To improve the hosting experience and educate people on the best practices on hosting WordPress, the Hosting Team is working on [several projects](https://make.wordpress.org/hosting/team-projects/).
 
-There is a set of hosting best practices in the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), including [Performance](https://make.wordpress.org/hosting/handbook/handbook/performance/), [Reliability](https://make.wordpress.org/hosting/handbook/handbook/reliability/), [Security](https://make.wordpress.org/hosting/handbook/handbook/security/) and [Server Environment](https://make.wordpress.org/hosting/handbook/handbook/server-environment/) recommendations.
+There is a set of hosting best practices in the [Hosting Handbook](https://make.wordpress.org/hosting/handbook/), including [Performance](https://make.wordpress.org/hosting/handbook/performance/), [Reliability](https://make.wordpress.org/hosting/handbook/reliability/), [Security](https://make.wordpress.org/hosting/handbook/security/) and [Server Environment](https://make.wordpress.org/hosting/handbook/server-environment/) recommendations.
 
 The team also runs and maintains a set of [automated hosting tests](https://make.wordpress.org/hosting/test-results/) that run across the hosting environment of many hosting companies. You can set up tests to run on your hosting environment(s), and help improve the tools through fixing bugs, adding features, or improving the design of the test reporter pages.
 
@@ -23,6 +23,8 @@ You can propose improvements or solve those available in both the [PHPUnit test 
 The Runner repo contains the parts of the hosting tests that run on a host, and the Reporter repo contains the plugin that runs on WordPress.org for receiving and displaying the tests.
 
 ## First Steps for New Contributors
+
+New to the Hosting Team or joining a Contributor Day? New contributors can [start here](https://make.wordpress.org/hosting/handbook/get-involved/#first-steps-for-new-contributors, and be sure to check the [Hosting Team FAQ](https://make.wordpress.org/hosting/handbook/get-involved/faq/) for quick answers to common onboarding questions, including Git and GitHub basics.
 
 ### Slack
 
@@ -102,6 +104,7 @@ Also, you can access the [#hosting](https://wordpress.slack.com/archives/hosting
 
 If you want to get an idea of what a contributor day with the hosting team might look like, take a look at some work notes from the team from previous contributor days!
 
+* [WordCamp US 2026 Contributor Day](https://make.wordpress.org/hosting/2026/09/03/wordcamp-us-2026-contributor-day-recap/)
 * [WordCamp US 2025 Contributor Day](https://make.wordpress.org/hosting/2025/09/02/wordcamp-us-2025-contributor-day-summary/)
 * [WordCamp Europe 2025 Contributor Day](https://make.wordpress.org/hosting/2025/06/05/wordcamp-europe-2025-contributor-day/)
 * [WordCamp Asia 2025 Contributor Day](https://make.wordpress.org/hosting/2025/02/25/wordcamp-asia-2025-contributor-day-summary/)

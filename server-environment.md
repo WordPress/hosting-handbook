@@ -22,7 +22,7 @@ All published posts on compatibility are available at:
 
 ## Web Server
 
-A web server is piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
+A web server is a piece of software that receives and accepts web requests from website visitor computers, then returns the appropriate web data back to the user. There are many different types of pieces of web server software that run on different operating systems. Generally, if your web server supports and executes PHP files, it should be able to work with WordPress.
 
 The two most common pieces of web server software, and the ones recommended for WordPress, are:
 
@@ -31,7 +31,7 @@ The two most common pieces of web server software, and the ones recommended for 
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.12
+- [Angie](https://en.angie.software/) 1.12
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
@@ -45,7 +45,7 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php84&keywords=~php85&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
 
@@ -115,7 +115,8 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 
 #### WordPress 6.9
 
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 - [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
@@ -125,7 +126,7 @@ _IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
 - PHP 8.4
-  - Fully compatible as of April 2026
+  - Fully compatible as of May 2026
   - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
 
 - PHP 8.5
@@ -142,7 +143,7 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 #### WordPress 6.8
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 
@@ -151,7 +152,7 @@ _IMPORTANT: WordPress 6.8 is **fully compatible** with PHP 7.2 (1), 7.3 (1), 7.4
 - PHP 8.3
   - Fully compatible as of July 2025
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Closed/Fixed_
-  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce `#[Override]` attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
 
 - PHP 8.4
@@ -203,7 +204,7 @@ _Related PHP compatibility tickets_
 - PHP 8.3
   - Fully compatible as of May 2026
   - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Has a patch, but moved to WordPress 6.7._
-  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce `#[Override]` attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
   - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
   - [#59654](https://core.trac.wordpress.org/ticket/59654): PHP 8.x: various compatibility fixes for WordPress 6.7. This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
 
@@ -232,14 +233,14 @@ _Related PHP compatibility tickets_
 
 - PHP 8.1
   - _Not all "passing null to non-nullable" issues have been found._ In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
-  - [`_htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to[ htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
-  - [_Replace most `strip_tags()` with `wp_strip_tags()`_](https://core.trac.wordpress.org/ticket/57579).
-There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
-  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_`htmlentities()` needs the default value of the flags parameter explicitly set_](https://core.trac.wordpress.org/ticket/53465). According to [htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from ENT_COMPAT to ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401". All use cases for this functionality in WordPress Core are being investigated. NOTE: Has a patch, but moved to WordPress 6.7.
+  - [_Replace most `strip_tags()` with `wp_strip_all_tags()`_](https://core.trac.wordpress.org/ticket/57579).
+    There are rare occasions when the `strip_tags()` function is passed a null value, which generates a warning that the string is deprecated. NOTE: Has a patch.
+  - [_Update `is_serialized` function to accept `Enums`_](https://core.trac.wordpress.org/ticket/53299). `Enums` are not backwards compatible with older PHP versions. Fixed in [changeset 53886](https://core.trac.wordpress.org/changeset/53886) and released in WordPress 6.1.
 
 - PHP 8.2
   - [_`utf8_{encode|decode}` deprecation_](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. NOTE: Has a patch, but moved to WordPress 6.7.
-  - [_Unknown dynamic properties'_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
+  - [_Unknown dynamic properties_](https://core.trac.wordpress.org/ticket/56034) deprecation. NOTE: Moved to WordPress 6.7.
 
 - PHP 8.3
   - Fully compatible as of May 2026
@@ -324,6 +325,8 @@ PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, 
 
 Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
+_Known issue (October 2026): PHP 8.4.27 and 8.5.12, the [21 October 2026 security releases](https://www.php.net/archive/2026.php#2026-10-21-5), have a regression that can crash PHP when the garbage collector frees a SimpleXML object whose properties were read as a whole, for example with `get_object_vars()`, an `(array)` cast or `json_encode()` ([php/php-src#24488](https://github.com/php/php-src/issues/24488)). PHP-FPM logs that a child exited on a signal, such as `exited on signal 6 (SIGABRT)`; the `zend_mm_heap corrupted` message is logged only when the pool sets `catch_workers_output = yes`. The fix is committed upstream and will be in PHP 8.4.28 and 8.5.13. Do not downgrade to avoid the crash: 8.4.26, 8.5.11 and earlier are affected by the vulnerabilities those releases fix. If an affected site's code runs on PHP 8.3, PHP 8.3.36 includes the fixes for those vulnerabilities and does not have the regression. This note will be removed once the fixed releases are available._
+
 End-of-life PHP versions:
 
 - PHP 8.5: 2029-12-31
@@ -378,16 +381,16 @@ The PHP extensions listed below are _required_ for a WordPress site to work.
 The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
 
 - [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0 ; PHP >= 8.4 requires libcurl >= 7.61.0) - Performs remote request operations.
-- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) - Used to validate Text Widget content and to automatically configure IIS7+.
+- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used to validate Text Widget content and to automatically configure IIS7+.
 - [exif](https://www.php.net/manual/en/book.exif.php) - Works with metadata stored in images.
 - [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) - Used to detect MIME types of file uploads.
 - [hash](https://www.php.net/manual/en/book.hash.php) - Used for hashing, including passwords and update packages. (Always enabled in PHP >= 7.4; on PHP 7.2-7.3 it is commonly enabled but not guaranteed.)
 - [igbinary](https://www.php.net/manual/en/book.igbinary.php) - Increases performance as a drop-in replacement for the standard PHP serializer.
 - [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) - Provides better image quality for media uploads. See [WP\_Image\_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images), and PDF thumbnail support when Ghost Script is available.
-- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1; PHP >= 8.5 requires ICU >= 57.1) - Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
 - [mbstring](https://www.php.net/manual/en/book.mbstring.php) - Used to properly handle UTF8 text.
 - [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0; PHP >= 8.4 requires OpenSSL >= 1.1.1 / < 4.0) - SSL-based connections to other hosts.
-- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) - Used for XML parsing, such as from a third-party site.
+- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing, such as from a third-party site.
 - [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) - Used for decompressing Plugins, Themes, and WordPress update packages.
 
 The PHP extensions listed below are _recommended_ to allow some WordPress cache (if necessary). APCu, Memcached, and Redis are alternatives of which only one needs to be used.
@@ -409,14 +412,14 @@ For the sake of completeness, below is a list of the remaining PHP modules WordP
 - [image](https://www.php.net/manual/en/book.image.php) (requires libgd >= 2.1.0; requires zlib >= 1.2.0.4; optional freetype2) - If Imagick isn't installed, the GD Graphics Library is used as a functionally limited fallback for image manipulation.
 - [iconv](https://www.php.net/manual/en/book.iconv.php) (requires libiconv/POSIX) - Used to convert between character sets.
 - [shmop](https://www.php.net/manual/en/book.shmop.php) - Shmop is an easy to use set of functions that allows PHP to read, write, create and delete Unix shared memory segments.
-- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml) - Used for XML parsing.
+- [simplexml](https://www.php.net/manual/en/book.simplexml.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
 - [sodium](https://www.php.net/manual/en/book.sodium.php) (bundled with PHP as of 7.2.0; requires libsodium >= 1.0.8) - Validates signatures and provides securely random bytes.
-- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml) - Used for XML parsing.
-- [zlib](https://www.php.net/manual/en/book.zlib.php) (requires zlib >= 1.2.0.4) - Gzip compression and decompression.
+- [xmlreader](https://www.php.net/manual/en/book.xmlreader.php) (requires libxml; PHP >= 8.4 requires libxml2 >= 2.9.4) - Used for XML parsing.
+- [zlib](https://www.php.net/manual/en/book.zlib.php) (PHP >= 8.4 requires zlib >= 1.2.11; earlier versions require zlib >= 1.2.0.4) - Gzip compression and decompression.
 
 These extensions are used for file changes, such as updates and plugin/theme installation, when files aren't writeable on the server.
 
-- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh >= 1.2; recommended libssh >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
+- [ssh2](https://www.php.net/manual/en/book.ssh2.php) (requires OpenSSL and libssh2 >= 1.2; recommended libssh2 >= 1.2.9) - Provide access to resources (shell, remote exec, tunneling, file transfer) on a remote machine using a secure cryptographic transport.
 - [ftp](https://www.php.net/manual/en/book.ftp.php) - Implement client access to files servers speaking the File Transfer Protocol (FTP).
 - [sockets](https://www.php.net/manual/en/book.sockets.php) - Implements a low-level interface to the socket communication functions based on the popular BSD sockets.
 
@@ -425,11 +428,12 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 ### System Packages
 
 - [curl](https://curl.se/) (recommended >= 8.4)
-- [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0)- Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
+- [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 - [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
-- [OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
+- [OpenSSL](https://www.openssl.org/) (recommended OpenSSL 3.5 LTS) - OpenSSL 3.0 reached the end of its upstream support on 2026-09-07 ([release strategy](https://openssl-library.org/policies/releasestrat/)). Some distributions still ship 3.0 with their own security fixes, for example Ubuntu 22.04 and 24.04. If you use such a package, check that the distribution still supports it.
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
+- [tzdata-legacy](https://packages.ubuntu.com/noble/tzdata-legacy) (Ubuntu 24.04 and newer, Debian 13) - Contains the deprecated time zone names, such as `Europe/Kiev` and `US/Eastern`. PHP from the distribution or from the ondrej PPA uses the system time zone database (`php -i` shows `"Olson" Timezone Database Version => 0.system`). Without this package, a site whose time zone setting is one of these names stops with a fatal error: an uncaught `DateInvalidTimeZoneException` on PHP 8.3 and later, a plain `Exception` before that. To check, run `php -r 'new DateTimeZone("Europe/Kiev");'`: it prints nothing when the name is valid.
 
 ### PHP Memory Limit
 
@@ -460,12 +464,12 @@ Below are the officially recommended Long-Term Support versions of [MySQL](https
 
 | Software  | Version    | EOL Date          |
 |-----------|------------|-------------------|
+| MySQL     | 9.7 LTS    | April 2034        |
 | MySQL     | 8.4 LTS    | April 2032        |
-| MySQL     | 8.0 LTS    | April 2026        |
-| MariaDB   | 11.8 LTS   | June 2030         |
+| MariaDB   | 12.3 LTS   | June 12, 2029     |
+| MariaDB   | 11.8 LTS   | June 4, 2028      |
 | MariaDB   | 11.4 LTS   | May 29, 2029      |
 | MariaDB   | 10.11 LTS  | February 16, 2028 |
-| MariaDB   | 10.6 LTS   | July 6, 2026      |
 
 ### End-of-life MySQL versions
 
@@ -473,12 +477,18 @@ The following versions of MySQL have reached their end of life (EOL) and are no 
 
 | Version | Initial GA Release | Final Release             | EOL Date          |
 |---------|--------------------|---------------------------|-------------------|
-| 9.2*    | January 21, 2025   | 9.2.0 (January 21, 2025)  | April 15, 2025    |
-| 9.1*    | October 15, 2024   | 9.1.0 (October 15, 2024)  | January 21, 2025  |
-| 9.0*    | July 1, 2024       | 9.0.1 (July 23, 2024)     | October 15, 2024  |
-| 8.3*    | January 16, 2024   | 8.3.0 (January 16, 2024)  | July 1, 2024      |
-| 8.2*    | October 25, 2023   | 8.2.0 (October 25, 2024)  | January 16, 2024  |
-| 8.1*    | July 18, 2023      | 8.1.0 (July 18, 2023)     | October 25, 2023  |
+| 26.7    | July 28, 2026      | 26.7.1 (August 18, 2026)  | October 20, 2026  |
+| 9.6     | January 20, 2026   | 9.6.0 (January 20, 2026)  | April 21, 2026    |
+| 9.5     | October 21, 2025   | 9.5.0 (October 21, 2025)  | January 20, 2026  |
+| 9.4     | July 22, 2025      | 9.4.0 (July 22, 2025)     | October 21, 2025  |
+| 9.3     | April 15, 2025     | 9.3.0 (April 15, 2025)    | July 22, 2025     |
+| 9.2     | January 21, 2025   | 9.2.0 (January 21, 2025)  | April 15, 2025    |
+| 9.1     | October 15, 2024   | 9.1.0 (October 15, 2024)  | January 21, 2025  |
+| 9.0     | July 1, 2024       | 9.0.1 (July 23, 2024)     | October 15, 2024  |
+| 8.3     | January 16, 2024   | 8.3.0 (January 16, 2024)  | July 1, 2024      |
+| 8.2     | October 25, 2023   | 8.2.0 (October 25, 2023)  | January 16, 2024  |
+| 8.1     | July 18, 2023      | 8.1.0 (July 18, 2023)     | October 25, 2023  |
+| 8.0     | April 19, 2018     | 8.0.46 (April 21, 2026)   | April 30, 2026    |
 | 5.7     | October 21, 2015   | 5.7.44 (October 25, 2023) | October 21, 2023  |
 | 5.6     | February 5, 2013   | 5.6.51 (January 20, 2021) | February 5, 2021  |
 | 5.5     | December 3, 2010   | 5.5.62 (October 22, 2018) | December 3, 2018  |
@@ -491,6 +501,11 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 
 | Version | Initial GA Release | Final Release               | EOL Date          |
 |---------|--------------------|-----------------------------|-------------------|
+| 12.2    | February 12, 2026  | 12.2.2 (February 12, 2026)  | May 28, 2026      |
+| 12.1    | November 19, 2025  | 12.1.2 (November 19, 2025)  | February 13, 2026 |
+| 12.0    | August 7, 2025     | 12.0.2 (August 7, 2025)     | November 18, 2025 |
+| 11.7    | February 13, 2025  | 11.7.2 (February 13, 2025)  | May 12, 2025      |
+| 11.6    | November 22, 2024  | 11.6.2 (November 22, 2024)  | February 13, 2025 |
 | 11.5    | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
 | 11.3    | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
 | 11.2    | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
@@ -500,7 +515,8 @@ The following versions of MariaDB have reached their end of life (EOL) and are n
 | 10.9    | August 22, 2022    | 10.9.8 (August 14, 2023)    | August 22, 2023   |
 | 10.8    | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
 | 10.7    | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
-| 10.5    | June 24, 2020      | 10.8.8 (May 10, 2023)       | June 24, 2025     |
+| 10.6    | July 6, 2021       | 10.6.28 (August 13, 2026)   | July 6, 2026      |
+| 10.5    | June 24, 2020      | 10.5.29 (May 8, 2025)      | June 24, 2025     |
 | 10.4    | June 16, 2019      | 10.4.34 (May 17, 2024)      | June 18, 2024     |
 | 10.3    | May 25, 2018       | 10.3.39 (May 10, 2023)      | May 25, 2023      |
 | 10.2    | May 23, 2017       | 10.2.44 (May 21, 2022)      | May 23, 2022      |
@@ -526,26 +542,37 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 
 | Version  | Initial GA Release | Final Release            | EOL Date         |
 |----------|--------------------|--------------------------|------------------|
-| **9.3*** | April 15, 2025     |                          | July 2025        |
+| 26.10*   | October 20, 2026   |                          |                  |
+| 26.7     | July 28, 2026      | 26.7.1 (August 18, 2026) | October 20, 2026 |
+| 9.6      | January 20, 2026   | 9.6.0 (January 20, 2026) | April 21, 2026   |
+| 9.5      | October 21, 2025   | 9.5.0 (October 21, 2025) | January 20, 2026 |
+| 9.4      | July 22, 2025      | 9.4.0 (July 22, 2025)    | October 21, 2025 |
+| 9.3      | April 15, 2025     | 9.3.0 (April 15, 2025)   | July 22, 2025    |
 | 9.2      | January 21, 2025   | 9.2.0 (January 21, 2025) | April 15, 2025   |
 | 9.1      | October 15, 2024   | 9.1.0 (October 15, 2024) | January 21, 2025 |
 | 9.0      | July 1, 2024       | 9.0.1 (July 23, 2024)    | October 15, 2024 |
 | 8.3      | January 16, 2024   | 8.3.0 (January 16, 2024) | July 1, 2024     |
-| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2024) | January 16, 2024 |
+| 8.2      | October 25, 2023   | 8.2.0 (October 25, 2023) | January 16, 2024 |
 | 8.1      | July 18, 2023      | 8.1.0 (July 18, 2023)    | October 25, 2023 |
 
 `*` Indicates the current innovation release.
 
 #### MariaDB Innovation/Short-Term Releases
  
-The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This will start with the 12.0 release.
+The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This started with the 11.3 release in February 2024.
 
 Previously MariaDB referred to these releases as "short-term releases".
 
 | Version | Release Type | Initial GA Release | Final Release               | EOL Date          |
 |---------|--------------|--------------------|-----------------------------|-------------------|
-| 11.5    | Innovation   | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
-| 11.3    | Innovation   | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
+| 13.0*   | Rolling      | September 15, 2026 |                             | Q4 2026           |
+| 12.2    | Rolling      | February 12, 2026  | 12.2.2 (February 12, 2026)  | May 28, 2026      |
+| 12.1    | Rolling      | November 19, 2025  | 12.1.2 (November 19, 2025)  | February 13, 2026 |
+| 12.0    | Rolling      | August 7, 2025     | 12.0.2 (August 7, 2025)     | November 18, 2025 |
+| 11.7    | Rolling      | February 13, 2025  | 11.7.2 (February 13, 2025)  | May 12, 2025      |
+| 11.6    | Rolling      | November 22, 2024  | 11.6.2 (November 22, 2024)  | February 13, 2025 |
+| 11.5    | Rolling      | August 15, 2024    | 11.5.2 (August 15, 2024)    | November 21, 2024 |
+| 11.3    | Rolling      | February 19, 2024  | 11.3.2 (February 19, 2024)  | May 16, 2024      |
 | 11.2    | Short-term   | November 21, 2023  | 11.2.6 (November 4, 2024)   | November 21, 2024 |
 | 11.1    | Short-term   | August 21, 2023    | 11.1.6 (August 14, 2024)    | August 21, 2024   |
 | 11.0    | Short-term   | June 7, 2023       | 11.0.6 (May 17, 2024)       | June 6, 2024      |
@@ -554,18 +581,20 @@ Previously MariaDB referred to these releases as "short-term releases".
 | 10.8    | Short-term   | May 21, 2022       | 10.8.8 (May 10, 2023)       | May 20, 2023      |
 | 10.7    | Short-term   | February 14, 2022  | 10.7.8 (February 6, 2023)   | February 9, 2023  |
 
+`*` Indicates the current rolling release.
+
 ### Other MySQL servers
 
 While WordPress does not regularly test against these MySQL servers, they are known to perform well.
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database)
+- [Percona MySQL Server](https://www.percona.com/mysql/)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-- [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/)
 - [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/products/databases-for-mysql)
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
