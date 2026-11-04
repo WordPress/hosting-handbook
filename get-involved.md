@@ -24,6 +24,8 @@ The Runner repo contains the parts of the hosting tests that run on a host, and 
 
 ## First Steps for New Contributors
 
+New to the Hosting Team or joining a Contributor Day? New contributors can [start here](https://make.wordpress.org/hosting/handbook/get-involved/#first-steps-for-new-contributors, and be sure to check the [Hosting Team FAQ](https://make.wordpress.org/hosting/handbook/get-involved/faq/) for quick answers to common onboarding questions, including Git and GitHub basics.
+
 ### Slack
 
 You can find the global WordPress Slack at [wordpress.slack.com](https://wordpress.slack.com/). A signup and walkthrough are available at [chat.wordpress.org](https://make.wordpress.org/chat/). When you are in, find the [#hosting](https://wordpress.slack.com/archives/hosting/) channel.
