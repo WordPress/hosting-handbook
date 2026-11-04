@@ -29,10 +29,9 @@ For most hosting platforms, a system scheduler gives more reliable results. Use 
 
    This constant stops WordPress from starting cron on page requests. It does not stop the events. Scheduled events still run when the system scheduler calls them.
 
-2. Add a system cron job that runs the due events. With [WP-CLI](https://developer.wordpress.org/cli/commands/cron/event/run/), use:
+2. Add a system cron job that runs the due events. With [WP-CLI](https://developer.wordpress.org/cli/commands/cron/event/run/), use the full path to `wp`, because cron starts jobs with a short `PATH`. Change `/usr/local/bin/wp` if WP-CLI is installed elsewhere:
 
-   ```
-   */5 * * * * cd /path/to/wordpress && wp cron event run --due-now --quiet
+   
    ```
 
    If WP-CLI is not available, request `wp-cron.php` over HTTP:
@@ -50,7 +49,7 @@ An interval of 1 to 5 minutes is common. Select the interval from the needs of t
 Each site in a network has its own cron events. One `wp cron event run` call runs the events of one site only. To run the events of all sites, loop over the sites:
 
 ```
-wp site list --field=url | xargs -I {} wp cron event run --due-now --url={} --quiet
+cd /path/to/wordpress && /usr/local/bin/wp site list --field=url | xargs -I {} /usr/local/bin/wp cron event run --due-now --url={} --quiet
 ```
 
 ## Notes for hosts
@@ -58,7 +57,7 @@ wp site list --field=url | xargs -I {} wp cron event run --due-now --url={} --qu
 - If you set `DISABLE_WP_CRON` for customers, always add the system cron job. Without it, no scheduled events run.
 - Tell customers when you change the cron setup, so they know where their scheduled tasks run.
 - On staging copies, consider disabling the cron job. Scheduled events on a copy can send emails or call external APIs.
-- `wp cron test` (WP-CLI) checks that WP-Cron can spawn through a loopback request.
+- `wp cron test` (WP-CLI) checks that WP-Cron can spawn through a loopback request. With `DISABLE_WP_CRON` set, it reports an error, which is expected.
 
 ## More information
 
