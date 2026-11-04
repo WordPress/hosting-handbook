@@ -39,7 +39,7 @@ You do not need to be a developer or systems administrator to help. Many contrib
 - If you don't code or know how to use Git you can still contribute. Folks are welcome to draft content in Google Docs or another format you are comfortable with — any Hosting team member can help turn it into a Pull Request.
 - Take meeting notes (see [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/#meetings-taking-notes))
 
-Git is required for many projects, but handbook work can start with a written draft. Ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) Slack channel if you need a hand getting your content into GitHub.
+If you create a written draft but don't know how to use Git, please share it in the ticket comments, and ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) Slack channel for help getting your content into GitHub.
 
 ### What projects can I work on?
 
