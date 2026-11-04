@@ -135,7 +135,7 @@ git pull
 git checkout -b <ticket-number>-<your-username> # (example: git checkout -b faq-407-amy)
 ```
 
-Use a short, descriptive branch name related to your change.
+Keep the branch name short and descriptive, and related to your change.
 
 ### Make a commit
 
