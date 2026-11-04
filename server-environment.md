@@ -31,7 +31,7 @@ The two most common pieces of web server software, and the ones recommended for 
 
 Additional software used by web hosting companies and developers that are known to work well with WordPress are:
 
-- [Angie](https://angie.software/en/) 1.12
+- [Angie](https://en.angie.software/) 1.12
 - [LiteSpeed Web Server](https://www.litespeedtech.com/products/litespeed-web-server) 6.3
 - [OpenLiteSpeed](https://openlitespeed.org/) 1.8 (stable) / 1.9 (latest)
 
@@ -45,7 +45,7 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 ### WordPress versions
 
-Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
+Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php84&keywords=~php85&milestone=6.9&milestone=7.0&milestone=7.1&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions.
 
@@ -115,7 +115,8 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 
 #### WordPress 6.9
 
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 - [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Active Support)
@@ -125,7 +126,7 @@ _IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
 - PHP 8.4
-  - Fully compatible as of April 2026
+  - Fully compatible as of May 2026
   - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed / Fixed_
 
 - PHP 8.5
@@ -142,7 +143,7 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 #### WordPress 6.8
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
-- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
 
@@ -324,6 +325,8 @@ PHP 8.2 and PHP 8.3 are maintained by the PHP Community as _Security fix only_, 
 
 Versions prior to PHP 8.2 are not maintained by the PHP Community, although they may receive security updates from operating systems distributions.
 
+_Known issue (October 2026): PHP 8.4.27 and 8.5.12, the [21 October 2026 security releases](https://www.php.net/archive/2026.php#2026-10-21-5), have a regression that can crash PHP when the garbage collector frees a SimpleXML object whose properties were read as a whole, for example with `get_object_vars()`, an `(array)` cast or `json_encode()` ([php/php-src#24488](https://github.com/php/php-src/issues/24488)). PHP-FPM logs that a child exited on a signal, such as `exited on signal 6 (SIGABRT)`; the `zend_mm_heap corrupted` message is logged only when the pool sets `catch_workers_output = yes`. The fix is committed upstream and will be in PHP 8.4.28 and 8.5.13. Do not downgrade to avoid the crash: 8.4.26, 8.5.11 and earlier are affected by the vulnerabilities those releases fix. If an affected site's code runs on PHP 8.3, PHP 8.3.36 includes the fixes for those vulnerabilities and does not have the regression. This note will be removed once the fixed releases are available._
+
 End-of-life PHP versions:
 
 - PHP 8.5: 2029-12-31
@@ -427,7 +430,7 @@ The priority of the transports are Direct file IO, SSH2, FTP PHP Extension, FTP 
 - [curl](https://curl.se/) (recommended >= 8.4)
 - [Ghost Script](https://www.ghostscript.com/) (recommended Ghost Script >= 10.0) - Enables Imagick/ImageMagick to generate PDF thumbnails for the media library. See [Enhanced PDF Support in WordPress 4.7](https://make.wordpress.org/core/2016/11/15/enhanced-pdf-support-4-7/) for details.
 - [ImageMagick](https://imagemagick.org/) (recommended ImageMagick >= 7.1) - Required by Imagick extension.
-- [OpenSSL](https://www.openssl.org/) (recommended >= 3.0)
+- [OpenSSL](https://www.openssl.org/) (recommended OpenSSL 3.5 LTS) - OpenSSL 3.0 reached the end of its upstream support on 2026-09-07 ([release strategy](https://openssl-library.org/policies/releasestrat/)). Some distributions still ship 3.0 with their own security fixes, for example Ubuntu 22.04 and 24.04. If you use such a package, check that the distribution still supports it.
 - [WebP](https://developers.google.com/speed/webp/)
 - [AVIF](https://aomediacodec.github.io/av1-avif/)
 - [tzdata-legacy](https://packages.ubuntu.com/noble/tzdata-legacy) (Ubuntu 24.04 and newer, Debian 13) - Contains the deprecated time zone names, such as `Europe/Kiev` and `US/Eastern`. PHP from the distribution or from the ondrej PPA uses the system time zone database (`php -i` shows `"Olson" Timezone Database Version => 0.system`). Without this package, a site whose time zone setting is one of these names stops with a fatal error: an uncaught `DateInvalidTimeZoneException` on PHP 8.3 and later, a plain `Exception` before that. To check, run `php -r 'new DateTimeZone("Europe/Kiev");'`: it prints nothing when the name is valid.
@@ -584,14 +587,14 @@ Previously MariaDB referred to these releases as "short-term releases".
 
 While WordPress does not regularly test against these MySQL servers, they are known to perform well.
 
-- [Percona MySQL Server](https://www.percona.com/software/mysql-database)
+- [Percona MySQL Server](https://www.percona.com/mysql/)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/)
 - [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/)
-- [Azure Database for MySQL](https://azure.microsoft.com/products/mysql/)
+- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/)
 - [Google Cloud MySQL](https://cloud.google.com/sql/mysql)
 - [DigitalOcean MySQL](https://www.digitalocean.com/products/managed-databases-mysql)
-- [IBM Cloud Databases for MySQL](https://www.ibm.com/cloud/databases-for-mysql)
+- [IBM Cloud Databases for MySQL](https://www.ibm.com/products/databases-for-mysql)
 - [MySQL HeatWave](https://www.oracle.com/mysql/)
 
 Although WordPress may run on older versions, it is recommended to use these or newer ones for security and performance reasons.
