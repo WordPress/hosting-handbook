@@ -121,7 +121,7 @@ Replace `YOUR-USERNAME` with your GitHub username.
 
 ### Create a branch
 
-Always work on a branch, not directly on `main`, but make sure 
+Always work on a branch, not directly on `main`, but make sure: 
 
 - your fork is up to date
 - you pull in any updates to your local
