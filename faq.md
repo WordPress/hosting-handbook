@@ -78,7 +78,7 @@ Full setup steps are on the [Contributor Day](https://make.wordpress.org/hosting
 
 1. Find or open an issue describing the change
 2. [Fork the repository](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo) and [create a branch for your work](https://git-scm.com/docs/git-checkout) named with the ticket number and your username (i.e. `WCUS26-393-jazzs3quence`). Make sure to keep your Main branch up to date, and always checkout from Main.
-3. Make your edits in a code editor on a clean branch labeled with the ticket number and your name, for example `345-amy`. Commit, push and [open a Pull Request (PR)](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) from your local and your fork.
+3. Make your edits in a code editor on the clean branch labeled with the ticket number and your name, for example `345-amy`. Commit, push and [open a Pull Request (PR)](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) from your local and your fork.
 4. Reviews from Hosting Team members can be requested in the upper right of your PR. If no review requests are made, your PR will still be reviewed by Hosting team members.
 5. PRs require **approval from two Hosting Team members** before merge
 
