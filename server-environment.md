@@ -556,7 +556,7 @@ As a way to catch problems with new features that will land in upcoming LTS vers
 
 #### MariaDB Innovation/Short-Term Releases
  
-The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This started with the 12.0 release on August 7, 2025.
+The MariaDB project has decided to retire the concept of innovation releases, replacing them with the concept of "rolling GA releases". This started with the 11.3 release in February 2024.
 
 Previously MariaDB referred to these releases as "short-term releases".
 
