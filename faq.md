@@ -165,6 +165,9 @@ git merge upstream/main
 
 You only need to add the `upstream` remote once per clone.
 
+Alternatively, GitHub provides a Sync Fork button on your forked copy to pull any changes from the upstream repository into your copy. 
+If you're using the Sync Fork button, you don't need to worry about adding the new remote and merging the changes manually with git.
+
 ### Edit a file on GitHub without a local setup
 
 For small documentation changes, you can use GitHub's web editor:
