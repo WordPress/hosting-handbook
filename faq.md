@@ -197,4 +197,4 @@ Past Contributor Day summaries are linked from [Get Involved](https://make.wordp
 
 No question is too basic. Asking early helps you contribute sooner.
 
-[info]Have a question that is not covered here? Comment on [GitHub issue #407](https://github.com/WordPress/hosting-handbook/issues/407) or ask in [#hosting](https://wordpress.slack.com/archives/hosting/) so we can add it to this page.[/info]
+[info]Have a question that is not covered here? Ask in [#hosting](https://wordpress.slack.com/archives/hosting/) so we can add it to this page.[/info]
