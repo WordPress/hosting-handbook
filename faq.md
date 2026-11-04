@@ -88,7 +88,7 @@ See [Contributing](https://github.com/WordPress/hosting-handbook/blob/main/CONTR
 
 Contributions that can earn a badge include accepted PRs, documentation improvements, configuring and troubleshooting distributed host tests, taking meeting notes, regular meeting participation, and helping at Contributor Days. See [Team Badges](https://make.wordpress.org/hosting/handbook/get-involved/#team-badges) on the Get Involved page.
 
-If you have contributed and do not yet have a badge, [submit a member request for here](https://profiles.wordpress.org/associations/hosting-contributor/) with details about your work.
+If you have contributed and do not yet have a badge, [submit a member request for one here](https://profiles.wordpress.org/associations/hosting-contributor/) with details about your work.
 
 ## Git and GitHub basics
 
