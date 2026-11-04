@@ -57,8 +57,11 @@ PHP 8.2 reaches end of life on 31 December 2026, roughly four months after this 
 
 Version | Type | End of life
 ---- | ---- | ----
+MySQL 26.7 | Innovation | 2026-10-20
 MySQL 9.7 | LTS | 2034-04-21
 MySQL 8.4 | LTS | 2032-04-30
+
+MySQL 26.7 is the first Innovation release after MySQL moved to calendar versioning, released on 28 July 2026. Innovation releases are supported only until the next one ships, so its support ended when MySQL 26.10 was released on 20 October 2026. It is listed for completeness and is not recommended for new installations.
 
 MySQL 8.0 reached end of life on 30 April 2026 and should no longer be used.
 
