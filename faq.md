@@ -147,7 +147,7 @@ git add faq.md
 git commit -m "Add Hosting Team FAQ page for Contributor Day onboarding"
 ```
 
-Write a clear commit message that describes what changed and why.
+Write a simple and clear commit message that describes what changed and why.
 
 ### Push and open a Pull Request
 
