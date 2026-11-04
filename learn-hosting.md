@@ -8,26 +8,26 @@ WordPress has a lot of videos, courses and manuals related to Hosting and system
 
 #### PHP
 
-- [Testing your plugins for PHP version compatibility](https://learn.wordpress.org/tutorial/testing-your-products-for-php-version-compatibility/) _(English)_
+- [Testing your plugins for PHP version compatibility](https://learn.wordpress.org/lesson/testing-your-products-for-php-version-compatibility/) _(English)_
 
 #### Performance
 
-- [Improving website performance with caching](https://learn.wordpress.org/tutorial/improving-website-performance-with-caching/) _(English)_
+- [Improving website performance with caching](https://learn.wordpress.org/lesson/improving-website-performance-with-caching/) _(English)_
 - [Image Optimization](https://learn.wordpress.org/tutorial/image-optimization/) _(English)_
 - [Improving Site Performance: An overview](https://learn.wordpress.org/tutorial/improving-site-performance-an-overview/) _(English)_
 
 #### Security
 
 - [7 Tips to improve website security](https://wordpress.tv/2023/07/11/7-tips-to-improve-website-security/) _(English)_
-- [Managing Updates](https://learn.wordpress.org/tutorial/managing-updates/) _(English)_
-- [Seguridad: formularios, acceso y contraseña](https://learn.wordpress.org/tutorial/seguridad-formularios-acceso-y-contrasena/) _(Spanish)_
+- [Managing Updates](https://learn.wordpress.org/lesson/managing-updates/) _(English)_
+- [Seguridad: formularios, acceso y contraseña](https://learn.wordpress.org/lesson/seguridad-formularios-acceso-y-contrasena/) _(Spanish)_
 
 #### Development / Debug
 
 - [Installing Node.js and npm for local WordPress development](https://learn.wordpress.org/tutorial/installing-node-js-and-npm-for-local-wordpress-development/) _(English)_
 - [Debugging in WordPress](https://learn.wordpress.org/tutorial/debugging-in-wordpress/) _(English)_
 - [Tools: Site Health](https://learn.wordpress.org/tutorial/tools-site-health/) _(English)_
-- [Local WordPress Installations (For Beginners)](https://learn.wordpress.org/tutorial/local-wordpress-installations-for-beginners/) _(English)_
+- [Local WordPress Installations (For Beginners)](https://learn.wordpress.org/lesson/local-wordpress-installations-for-beginners/) _(English)_
 - [WordPress Troubleshooting Basics: Part 1](https://learn.wordpress.org/tutorial/wordpress-troubleshooting-basics-part-1/) _(English)_
 
 #### ...and More
