@@ -60,6 +60,8 @@ At Contributor Days, look for issues labeled for the event (for example, 'Contri
 
 If you want to work on a ticket, folks who are members of the WordPress organization in Github can self-assign on the upper right of the ticket. If you can't self-assign, please comment on the issue to say you are working on it. If you are unsure which issue to choose, ask a table lead or post in [#hosting](https://wordpress.slack.com/archives/hosting/).
 
+Issues marked as [good first issue](https://github.com/WordPress/hosting-handbook/issues?q=state%3Aopen%20label%3A%22good%20first%20issue%22) or tagged with [`ContributorDay`](https://github.com/WordPress/hosting-handbook/issues?q=state%3Aopen%20label%3AContributorDay) are good places to start.
+
 ### What accounts do I need?
 
 | Account | Required? | Purpose |
