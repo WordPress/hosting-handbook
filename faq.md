@@ -49,7 +49,7 @@ See [Team Projects](https://make.wordpress.org/hosting/handbook/get-involved/tea
 - **Automated Hosting Tests** — [PHPUnit test runner](https://github.com/WordPress/phpunit-test-runner) and [reporter](https://github.com/WordPress/phpunit-test-reporter)
 - **Advanced Admin Handbook** — advanced system administration documentation
 
-At Contributor Days, look for issues labeled for the event (for example, 'Contributor Day' or `WCUS26`) in the relevant repositories. For flagship WordCamps, the team publishes a post ahead of Contributor Day with information and instructions for contributors.
+At Contributor Days, look for issues labeled for the event (for example, `Contributor Day` or `WCUS26`) in the relevant repositories. For flagship WordCamps, the team publishes a post ahead of Contributor Day with information and instructions for contributors.
 
 ### Where do I find tasks to pick up?
 
