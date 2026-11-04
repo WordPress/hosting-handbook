@@ -14,9 +14,9 @@ In practice, that includes maintaining the [Hosting Handbook](https://make.wordp
 
 ### There's a Hosting Team? I never knew there was a Hosting Team!
 
-Hi, and welcome! The [Hosting Team](https://make.wordpress.org/hosting/) has been part of the WordPress open source project for years. Everyone is welcome — whether you work at a host, run your own sites, or are learning about hosting WordPress for the first time.
+Hi, and welcome! The [Hosting Team](https://make.wordpress.org/hosting/) has been part of the WordPress open source project since 2017. Everyone is welcome to participate — whether you work at a host, run your own sites, or are learning about hosting WordPress for the first time.
 
-Introduce yourself in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, or at a Contributor Day table. There is always something to help with.
+Introduce yourself in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Slack, or at a Contributor Day table. There are always opportunities to contribute!
 
 ### Does the Hosting Team recommend a specific host?
 
@@ -26,7 +26,7 @@ The team publishes best-practice documentation and compatibility guidance that a
 
 ### When does the team meet?
 
-The Hosting Team meets in the WordPress Slack [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Wednesdays at 0900 and 1700 UTC. Check the [WordPress Meeting calendar](https://make.wordpress.org/meetings/#hosting) for the current schedule.
+The Hosting Team meets in the WordPress Slack [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Wednesdays at 09:00 and 18:00 UTC. Check the [WordPress Meeting calendar](https://make.wordpress.org/meetings/#hosting) for the current schedule.
 
 ## Contributing
 
@@ -36,7 +36,7 @@ You do not need to be a developer or systems administrator to help. Many contrib
 
 - Improve or expand [Hosting Handbook](https://make.wordpress.org/hosting/handbook/) pages
 - Help with the [Advanced Admin Handbook](https://developer.wordpress.org/advanced-administration/) in collaboration with the Documentation Team
-- If you don't code or know how to use Git you can still contribute. Folks are welcome to draft content in Google Docs or another format you are comfortable with — a team member can help turn it into a Pull Request
+- If you don't code or know how to use Git you can still contribute. Folks are welcome to draft content in Google Docs or another format you are comfortable with — any Hosting team member can help turn it into a Pull Request.
 - Take meeting notes (see [Get Involved](https://make.wordpress.org/hosting/handbook/get-involved/#meetings-taking-notes))
 
 Git is required for many projects, but handbook work can start with a written draft. Ask in the [#hosting](https://wordpress.slack.com/archives/hosting/) Slack channel if you need a hand getting your content into GitHub.
@@ -49,7 +49,7 @@ See [Team Projects](https://make.wordpress.org/hosting/handbook/get-involved/tea
 - **Automated Hosting Tests** — [PHPUnit test runner](https://github.com/WordPress/phpunit-test-runner) and [reporter](https://github.com/WordPress/phpunit-test-reporter)
 - **Advanced Admin Handbook** — advanced system administration documentation
 
-At Contributor Days, look for issues labeled for the event (for example, `WCUS26`) in the relevant repositories.
+At Contributor Days, look for issues labeled for the event (for example, 'Contributor Day' or `WCUS26`) in the relevant repositories. For flagship WordCamps, the team publishes a post ahead of Contributor Day with information and instructions for contributors.
 
 ### Where do I find tasks to pick up?
 
@@ -65,7 +65,7 @@ If you want to work on a ticket, folks who are members of the WordPress organiza
 | Account | Required? | Purpose |
 | ---- | ---- | ---- |
 | [WordPress.org](https://login.wordpress.org/register) | Yes | Profile, contributions tracking, Slack signup |
-| [WordPress Slack](https://wordpress.slack.com/signup) | Recommended | Team chat in [#hosting](https://wordpress.slack.com/archives/hosting/) |
+| [WordPress Slack](https://wordpress.slack.com/signup) | Required | Team chat in [#hosting](https://wordpress.slack.com/archives/hosting/) |
 | [GitHub](https://github.com/signup) | Recommended | Code and documentation contributions |
 
 Link your GitHub username on your [WordPress.org profile](https://profiles.wordpress.org/me/profile/edit/) so GitHub contributions appear on your WordPress profile.
@@ -76,8 +76,8 @@ Full setup steps are on the [Contributor Day](https://make.wordpress.org/hosting
 
 1. Find or open an issue describing the change
 2. [Fork the repository](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo) and [create a branch for your work](https://git-scm.com/docs/git-checkout) entitled with the ticket number. (i.e. `WCUS26-393-jazzs3quence`)
-3. Make your edits and [open a Pull Request (PR)](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request)
-4. Request review from Hosting Team members in the PR
+3. Make your edits in a code editor on a clean branch labeled with the ticket number and your name, for example `345-amy`. Commit, push and [open a Pull Request (PR)](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) from your local and your fork.
+4. Reviews from Hosting Team members can be requested in the upper right of your PR. If no review requests are made, your PR will still be reviewed by Hosting team members.
 5. PRs require **approval from two Hosting Team members** before merge
 
 See [Contributing](https://github.com/WordPress/hosting-handbook/blob/main/CONTRIBUTING.md) in this repository for technical details.
@@ -119,10 +119,18 @@ Replace `YOUR-USERNAME` with your GitHub username.
 
 ### Create a branch
 
-Always work on a branch, not directly on `main`:
+Always work on a branch, not directly on `main`, but make sure 
+
+- your fork is up to date
+- you pull in any updates to your local
+- you always checkout from main  
+- main is fully up to date
+
 
 ```bash
-git checkout -b add-hosting-team-faq
+git checkout main
+git pull
+git checkout -b <ticket-number>-<your-username> # (example: git checkout -b faq-407-amy)
 ```
 
 Use a short, descriptive branch name related to your change.
@@ -142,7 +150,7 @@ Write a clear commit message that describes what changed and why.
 ### Push and open a Pull Request
 
 ```bash
-git push -u origin add-hosting-team-faq
+git push -u origin faq-407-amy
 ```
 
 Then on GitHub:
