@@ -26,7 +26,7 @@ The team publishes best-practice documentation and compatibility guidance that a
 
 ### When does the team meet?
 
-The Hosting Team meets in the WordPress Slack [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Wednesdays at 09:00 and 18:00 UTC. Check the [WordPress Meeting calendar](https://make.wordpress.org/meetings/#hosting) for the current schedule.
+The Hosting Team meets in the WordPress Slack [#hosting](https://wordpress.slack.com/archives/hosting/) channel on Wednesdays. Check the [WordPress Meeting calendar](https://make.wordpress.org/meetings/#hosting) for the current schedule.
 
 ## Contributing
 
