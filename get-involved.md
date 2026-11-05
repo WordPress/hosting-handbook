@@ -68,7 +68,7 @@ There's always a need for more folks to join! If you're interested in contributi
 3.  **Update the post details**
     *   Change the **title** to update with the relevant content, and make sure to update any times and dates in the title.
     *   Update the **date and time** in the **Next Meeting** section at the top of the post.
-    *   Update the slug in the right sidebar with the new, correct date and info
+    *   Update the slug in the right sidebar with the new, correct date and info.
     *   Check the **tags** and keep them consistent with previous posts on that topic, for example an agenda post includes tags like: `hosting`, `hosting-community`, and `weekly-hosting-chat`.
 4.  **Write the post**
     *   For recurring posts like meeting agendas, keep the headings from the template ( i.e. _WordPress News_, _Hosting Team_, _Open Floor_) and add pertinent info for the topic at hand underneath. Make sure heading hierarchy stays compliant with SEO and Accessibility standards.
