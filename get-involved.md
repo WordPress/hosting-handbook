@@ -63,7 +63,7 @@ There's always a need for more folks to join! If you're interested in contributi
     *  Team reps are able to grant role permissions that allow team members to create and edit posts on [https://make.wordpress.org/hosting/wp-admin/](https://make.wordpress.org/hosting/wp-admin/).
 2.  **Start from an existing template**
     *   In the WordPress admin, go to **Posts → All Posts**.
-    *   Find a relevent post, for example [Hosting Team Meeting Agenda 2026-09-30](https://make.wordpress.org/hosting/2026/09/30/hosting-team-meeting-agenda-2026-09-30/).
+    *   Find a relevant post, for example [Hosting Team Meeting Agenda 2026-09-30](https://make.wordpress.org/hosting/2026/09/30/hosting-team-meeting-agenda-2026-09-30/).
     *   Use the "Clone" option to create a new draft from that post. This keeps the basic structure and headings for you.
 3.  **Update the post details**
     *   Change the **title** to update with the relevant content, and make sure to update any times and dates in the title.
