@@ -31,7 +31,7 @@ For installing WordPress as a site owner, see [How to install WordPress](https:/
 
 ## Recommended steps
 
-- **Set the environment type.** Define `WP_ENVIRONMENT_TYPE` in `wp-config.php` as `production`, `staging`, `development` or `local`. Plugins use [`wp_get_environment_type()`](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) to change their behaviour, for example to avoid sending emails from a staging copy. On staging and development sites, also discourage search engines from indexing the site (Settings > Reading). See [Staging Environments](https://make.wordpress.org/hosting/handbook/reliability/staging/).
+- **Set the environment type.** Define `WP_ENVIRONMENT_TYPE` in `wp-config.php` as `production`, `staging`, `development` or `local`. Plugins use [`wp_get_environment_type()`](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) to change their behavior, for example to avoid sending emails from a staging copy. On staging and development sites, also discourage search engines from indexing the site (Settings > Reading). See [Staging Environments](https://make.wordpress.org/hosting/handbook/reliability/staging/).
 - **Make sure email is delivered.** WordPress sends password resets and notifications through PHP's `mail()` by default. Configure outgoing mail on the server, or offer an SMTP or transactional email service. See [Email](https://developer.wordpress.org/advanced-administration/server/mail/) in the Advanced Administration Handbook.
 - **Run WP-Cron from a system cron job.** By default, scheduled tasks only run when someone visits the site. Set `DISABLE_WP_CRON` to `true` and run due events from the system scheduler, for example every five minutes with `wp cron event run --due-now`. See [Hooking WP-Cron Into the System Task Scheduler](https://developer.wordpress.org/plugins/cron/hooking-wp-cron-into-the-system-task-scheduler/).
 - **Set up caching.** Enable an opcode cache, and offer a page cache and a persistent object cache where your platform supports them. See [Performance](https://make.wordpress.org/hosting/handbook/performance/).
@@ -42,7 +42,7 @@ For installing WordPress as a site owner, see [How to install WordPress](https:/
 
 ## Example: setting up a site with WP-CLI
 
-The commands below show the WordPress part of a setup routine with [WP-CLI](https://developer.wordpress.org/cli/commands/). They assume the system user, the database and HTTPS are already in place, and are run as the site's user in the web root. Replace the example values with your own.
+The commands below show the WordPress part of a setup routine with [WP-CLI](https://developer.wordpress.org/cli/commands/). They assume the system user, the database and HTTPS are already in place, and are run as the site's user in the web root. Replace the example values with your own. For more commands hosts use day to day, see [WP-CLI](https://make.wordpress.org/hosting/handbook/wp-cli/).
 
 ```bash
 # Download WordPress and check the files. The .zip avoids a bug in WP-CLI 2.12 and older that cuts long file names when extracting the .tar.gz.
@@ -64,14 +64,14 @@ wp core install --url=https://example.com --title="Example Site" --admin_user=ex
 wp plugin delete hello
 ```
 
-Then add a system cron job for the site, running as the site's user. Cron runs with a minimal `PATH` (usually `/usr/bin:/bin`), so use the full path to WP-CLI:
+Then add a system cron job for the site, running as the site's user. Cron runs with a minimal `PATH` (usually `/usr/bin:/bin`), and the WP-CLI Phar finds PHP through that `PATH`, so call both by their full paths. Replace `/usr/bin/php` with the PHP binary the site runs on, and `/usr/local/bin/wp` with the path to WP-CLI:
 
 ```bash
-*/5 * * * * /usr/local/bin/wp --path=/path/to/wordpress cron event run --due-now --quiet
+*/5 * * * * /usr/bin/php /usr/local/bin/wp --path=/path/to/wordpress cron event run --due-now --quiet
 ```
 
 On multisite, this runs only the main site's events. Run it for each site, for example by looping over `wp site list --field=url` and passing each one with `--url`.
 
-[tip]The `wp core download` bug ([wp-cli/wp-cli#6320](https://github.com/wp-cli/wp-cli/issues/6320)) affects WordPress 7.x, which has file names longer than 100 characters. It is fixed in WP-CLI's development version but not yet in a release. With an affected version, `wp core verify-checksums` reports missing files under `wp-includes/php-ai-client/`. The core files are incomplete, not modified, and `wp core download --force --skip-content` restores them.[/tip]
+[tip]The `wp core download` bug ([wp-cli/wp-cli#6320](https://github.com/wp-cli/wp-cli/issues/6320)) affects WordPress 7.x, which has file names longer than 100 characters. It is fixed in WP-CLI's development version but not yet in a release. With an affected version, `wp core verify-checksums` reports missing files under `wp-includes/php-ai-client/`. The core files are incomplete, not modified, and `wp core download --version=X.X.X --force --skip-content` restores them. Replace `X.X.X` with the version that `wp core version` prints, so the files stay at the installed version.[/tip]
 
 [info]If you're interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
