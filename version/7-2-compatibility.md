@@ -70,13 +70,13 @@ MySQL moved to calendar versioning after 9.7. The first Innovation release after
 
 Version | Type | End of life
 ---- | ---- | ----
-MariaDB 13.0 | — | when MariaDB 13.1 is released
+MariaDB 13.0 | Rolling | Q4 2026
 MariaDB 12.3 | LTS | 2029-06-12
 MariaDB 11.8 | LTS | 2028-06-04
 MariaDB 11.4 | LTS | 2029-05-29
 MariaDB 10.11 | LTS | 2028-02-16
 
-MariaDB 13.0 is a rolling release. It stops receiving fixes as soon as the next rolling release ships, so it is listed for completeness but is not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release.
+MariaDB 13.0 is a rolling release, not a long-term release. The [MariaDB maintenance policy](https://mariadb.org/about/#maintenance-policy) gives its community end of life as Q4 2026, when the next rolling release replaces it, so it is listed for completeness but is not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release.
 
 ### SQL modes
 
