@@ -29,10 +29,10 @@ For most hosting platforms, a system scheduler gives more reliable results. Use 
 
    This constant stops WordPress from starting cron on page requests. It does not stop the events. Scheduled events still run when the system scheduler calls them.
 
-2. Add a system cron job that runs the due events. With [WP-CLI](https://developer.wordpress.org/cli/commands/cron/event/run/), use the full path to `wp`, because cron starts jobs with a short `PATH`. Change `/usr/local/bin/wp` if WP-CLI is installed elsewhere:
+2. Add a system cron job that runs the due events. With [WP-CLI](https://developer.wordpress.org/cli/commands/cron/event/run/), use the full paths to PHP and `wp`, because cron starts jobs with a short `PATH` and the WP-CLI Phar finds PHP through it. Replace `/usr/bin/php` with the PHP binary the site runs on, and `/usr/local/bin/wp` with the path to WP-CLI:
 
    ```
-   */5 * * * * cd /path/to/wordpress && /usr/local/bin/wp cron event run --due-now --quiet
+   */5 * * * * cd /path/to/wordpress && /usr/bin/php /usr/local/bin/wp cron event run --due-now --quiet
    ```
 
    If WP-CLI is not available, request `wp-cron.php` over HTTP:
@@ -50,7 +50,7 @@ An interval of 1 to 5 minutes is common. Select the interval from the needs of t
 Each site in a network has its own cron events. One `wp cron event run` call runs the events of one site only. To run the events of all sites, loop over the sites:
 
 ```
-cd /path/to/wordpress && /usr/local/bin/wp site list --field=url | xargs -I {} /usr/local/bin/wp cron event run --due-now --url={} --quiet
+cd /path/to/wordpress && /usr/bin/php /usr/local/bin/wp site list --field=url | xargs -I {} /usr/bin/php /usr/local/bin/wp cron event run --due-now --url={} --quiet
 ```
 
 ## Notes for hosts
