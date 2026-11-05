@@ -31,7 +31,8 @@ For most hosting platforms, a system scheduler gives more reliable results. Use 
 
 2. Add a system cron job that runs the due events. With [WP-CLI](https://developer.wordpress.org/cli/commands/cron/event/run/), use the full path to `wp`, because cron starts jobs with a short `PATH`. Change `/usr/local/bin/wp` if WP-CLI is installed elsewhere:
 
-   
+   ```
+   */5 * * * * cd /path/to/wordpress && /usr/local/bin/wp cron event run --due-now --quiet
    ```
 
    If WP-CLI is not available, request `wp-cron.php` over HTTP:
