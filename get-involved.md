@@ -92,7 +92,7 @@ Try to keep the tone neutral and descriptive (not personal opinion), and avoid w
 
 1. When you are satisfied with the draft, set the **post status** to **“Pending review”**.
 2. Share a link to the draft in the [#hosting](https://wordpress.slack.com/archives/hosting/) channel and ask for a quick review.
-3. A Team Rep or another experienced contributor will review, make any small adjustments if needed, and possibly publish the post.
+3. A Team Rep or another experienced contributor will review, make any small adjustments if needed, and publish the post.
 4. Props should be given to team members who contributed to post content at the bottom of the post.
 
 
