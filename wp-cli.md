@@ -30,7 +30,7 @@ wp plugin verify-checksums --all
 
 `verify-checksums` compares files against the official release from WordPress.org, so modified or injected files show up. Plugin checksums are only available for plugins hosted on WordPress.org.
 
-[tip]On WordPress 7.x sites downloaded with `wp core download` from WP-CLI 2.12 or older, `verify-checksums` reports files under `wp-includes/php-ai-client/` as missing, and cut-off file names as "should not exist". This is a WP-CLI extraction bug ([wp-cli/wp-cli#6320](https://github.com/wp-cli/wp-cli/issues/6320)), not a modified core. `wp core download --force --skip-content` restores the files.[/tip]
+[tip]On WordPress 7.x sites downloaded with `wp core download` from WP-CLI 2.12 or older, `verify-checksums` reports files under `wp-includes/php-ai-client/` as missing, and cut-off file names as "should not exist". This is a WP-CLI extraction bug ([wp-cli/wp-cli#6320](https://github.com/wp-cli/wp-cli/issues/6320)), not a modified core. `wp core download --version=X.X.X --force --skip-content` restores the files. Replace `X.X.X` with the version that `wp core version` prints, so the files stay at the installed version instead of being upgraded.[/tip]
 
 ## Plugins and themes
 
