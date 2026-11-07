@@ -102,7 +102,7 @@ During active development, a shorter revalidation interval can reduce confusion 
 
 Hosts should also monitor OPcache usage over time. If the cache runs out of memory, reaches the configured script limit, or restarts frequently because of wasted memory, the site may lose some of the performance benefit and spend more time recompiling PHP files.
 
-On shared or multi-user hosting, review the [OpCache Security](security.md#opcache-security) guidance before enabling a shared OPcache configuration.
+On shared or multi-user hosting, review the [OpCache Security](https://make.wordpress.org/hosting/handbook/security/#opcache-security) guidance before enabling a shared OPcache configuration.
 
 ### Fragment Cache
 
