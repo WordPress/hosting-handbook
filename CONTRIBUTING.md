@@ -30,6 +30,12 @@ The following rules apply to all Hosting team repositories, as announced in [Inc
 - All checks and tests must pass, with only green check marks in the results.
 - New GitHub accounts have a 24-hour wait before they can interact with the repositories.
 
+## Glossary
+
+The Hosting Team [glossary](https://make.wordpress.org/hosting/handbook/glossary/) is managed separately from this repository. Glossary entries cannot be edited through a handbook Pull Request.
+
+To request a glossary correction or suggest a new entry, open an [Issue in this repository](https://github.com/WordPress/hosting-handbook/issues) or ask the Hosting Team in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) on WordPress Slack.
+
 ## Assets in Pages
 
 Assets such as images are not automatically imported into the Handbook. Because of that, assets must be included in Pull Requests within the `/assets/` directory in the repo for tracking.
