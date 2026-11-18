@@ -22,7 +22,7 @@ For a new WordPress 7.2 installation, the recommended minimum versions are:
 
 These recommendations are for **new installations**. They favour the most recent compatible versions rather than the oldest ones that still work.
 
-PHP 8.6 is not yet part of the recommendation. It is released only three weeks before WordPress 7.2, and the Core test suite was still being brought up to date for it during the 7.2 cycle (see the WordPress and PHP section below).
+WordPress 7.2 supports PHP 8.6 (see the WordPress and PHP section below), but it is not yet part of the recommendation. PHP 8.6 is released only three weeks before WordPress 7.2, so plugins, themes and server tooling have had little time to catch up.
 
 ### Where do the recommendations come from?
 
@@ -64,7 +64,7 @@ MySQL 26.10 | Innovation | when the next Innovation release ships
 MySQL 9.7 | LTS | 2034-04-21
 MySQL 8.4 | LTS | 2032-04-30
 
-MySQL moved to calendar versioning after 9.7. The first Innovation release after it was 26.7 (July 2026), followed by 26.10 on 20 October 2026. Innovation releases are only supported until the next one ships, so they are listed for completeness but are not recommended for new installations.
+MySQL moved to calendar versioning after 9.7. The first Innovation release after it was 26.7 (July 2026), followed by 26.10 on 20 October 2026. Innovation releases are only supported until the next one ships, so they are listed for completeness but are not recommended for new installations. Core added MySQL 26.10 to its test matrices on 5 November 2026 ([changeset 65279](https://core.trac.wordpress.org/changeset/65279)).
 
 ### MariaDB
 
@@ -76,7 +76,7 @@ MariaDB 11.8 | LTS | 2028-06-04
 MariaDB 11.4 | LTS | 2029-05-29
 MariaDB 10.11 | LTS | 2028-02-16
 
-MariaDB 13.0 is a rolling release, not a long-term release. The [MariaDB maintenance policy](https://mariadb.org/about/#maintenance-policy) gives its community end of life as Q4 2026, when the next rolling release replaces it, so it is listed for completeness but is not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release.
+MariaDB 13.0 is a rolling release, not a long-term release. The [MariaDB maintenance policy](https://mariadb.org/about/#maintenance-policy) gives its community end of life as Q4 2026, when the next rolling release replaces it, so it is listed for completeness but is not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release. Core added MariaDB 12.3 and 13.0 to its test matrices on 5 November 2026 ([changeset 65280](https://core.trac.wordpress.org/changeset/65280)).
 
 ### SQL modes
 
@@ -88,7 +88,7 @@ The versions below are current and receiving fixes at the 7.2 release.
 
 Software | Version at release | Released
 ---- | ---- | ----
-Apache HTTPD | 2.4.69 | 2026-10-01
+Apache HTTPD | 2.4.71 | 2026-11-11
 nginx | 1.30.6 (stable) / 1.31.8 (mainline) | 2026-10-14 / 2026-10-21
 Angie | 1.12.4 | 2026-10-16
 LiteSpeed Web Server | 6.3.7 | 2026-09-23
@@ -102,11 +102,11 @@ Apache HTTPD patches only the newest 2.4.x, and Angie and LiteSpeed Web Server e
 
 PHP is the language WordPress is written in, and keeping it current matters for both security and performance.
 
-**WordPress 7.2 is fully compatible with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4 and 8.5.**
+**WordPress 7.2 is fully compatible with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, 8.3, 8.4, 8.5 and 8.6.**
 
 _(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
 
-The PHPUnit test suite started running against PHP 8.6 during the 7.2 cycle ([#65904](https://core.trac.wordpress.org/ticket/65904)). Those test jobs were allowed to fail while the remaining compatibility issues were addressed. Check the Core team's [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/) reference for the current PHP 8.6 status before offering it to customers.
+The PHPUnit test suite started running against PHP 8.6 during the 7.2 cycle ([#65904](https://core.trac.wordpress.org/ticket/65904)). Once the known compatibility issues were addressed, Core officially declared PHP 8.6 support for WordPress 7.2 on 10 November 2026 ([#66648](https://core.trac.wordpress.org/ticket/66648)), and the test suite is no longer allowed to fail on it.
 
 The Core team retired the ["compatible with exceptions" label in April 2025](https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/) and the ["beta support" label in May 2026](https://make.wordpress.org/core/2026/05/22/php-support-clarification-2026/). Both labels were removed retroactively from all WordPress versions, so this post uses neither.
 
@@ -118,10 +118,12 @@ WordPress Core does not use these functions outside its test suite, which was up
 
 ## Related tickets
 
-Deprecations in PHP 8.5 and 8.6:
+Compatibility work for PHP 8.5 and 8.6:
 
 - [#65904](https://core.trac.wordpress.org/ticket/65904): Build/Test Tools: Run PHPUnit tests against PHP 8.6. _NOTE: Closed / Fixed._
 - [#66137](https://core.trac.wordpress.org/ticket/66137): Tests: Replace deprecated `mb_split()` with `preg_split()`. _NOTE: Closed / Fixed._
+- [#66648](https://core.trac.wordpress.org/ticket/66648): General: Officially declare support for PHP 8.6. _NOTE: Closed / Fixed._
+- [#66419](https://core.trac.wordpress.org/ticket/66419): Tests: Remove TrueType font detection skips for PHP 8.6, after the upstream fix in PHP 8.6.0RC7. _NOTE: Closed / Fixed._
 - [#65965](https://core.trac.wordpress.org/ticket/65965): Code Modernization: Replace `socket_set_timeout()` usage in the Snoopy library, deprecated in PHP 8.5. _NOTE: Closed / Fixed._
 
 Modernization using newer PHP features. `array_find()`, `array_find_key()`, `array_any()` and `array_all()` come from PHP 8.4, and WordPress polyfills them. `array_key_first()`, `is_iterable()` and `??=` are native on the PHP 7.4 minimum:
