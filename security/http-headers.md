@@ -9,6 +9,7 @@ WordPress sends some security headers on its own. Know these before you add serv
 | Header | Value | Where | WordPress function |
 |---|---|---|---|
 | `X-Frame-Options` | `SAMEORIGIN` | Admin screens and the login screen | `send_frame_options_header()` |
+| `Content-Security-Policy` | `frame-ancestors 'self';` (since WordPress 6.9) | Admin screens and the login screen | `send_frame_options_header()` |
 | `Referrer-Policy` | `strict-origin-when-cross-origin` (filter: `admin_referrer_policy`) | Admin screens and the login screen | `wp_admin_headers()` |
 | `X-Content-Type-Options` | `nosniff` | Some responses, for example REST API and admin-ajax responses | `send_nosniff_header()` |
 
@@ -19,7 +20,7 @@ These headers are safe for most WordPress sites:
 - **`Strict-Transport-Security` (HSTS)**: tells the browser to use only HTTPS for the domain. Send it only when the full site works over HTTPS. Start with a short `max-age`, then increase it. Add `includeSubDomains` only when all subdomains support HTTPS. Add `preload` only when you are sure, because removal from the [preload list](https://hstspreload.org/) is slow.
 - **`X-Content-Type-Options: nosniff`**: stops the browser from guessing the content type. This is important for sites that accept uploads.
 - **`Referrer-Policy: strict-origin-when-cross-origin`**: the same value that WordPress uses on admin screens.
-- **`X-Frame-Options: SAMEORIGIN`**, or the CSP `frame-ancestors` directive: stops other sites from showing the site in a frame. Some customers embed their site on purpose, so make this setting optional.
+- **`X-Frame-Options: SAMEORIGIN`**, or the CSP `frame-ancestors` directive: stops other sites from showing the site in a frame. This also stops the site's posts from loading as WordPress embeds on other sites, and some customers embed their site on purpose, so make this setting optional.
 
 ## Headers that need care
 
