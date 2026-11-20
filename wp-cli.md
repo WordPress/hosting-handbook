@@ -9,7 +9,7 @@ For upgrading WordPress core with WP-CLI, see [Upgrading](https://make.wordpress
 ## Running WP-CLI on a server
 
 - **Run commands as the site's user, not as root.** Running as root can leave files owned by root that the web server cannot write to later. Use `sudo -u <site-user> wp <command>` rather than `--allow-root`.
-- **Point WP-CLI at the right site.** Use `--path=/path/to/wordpress` when you are not in the WordPress directory. On multisite, add `--url=https://site.example.com` to run a command against a single site.
+- **Point WP-CLI at the right site.** Use `--path=/path/to/wordpress` when you are not in the WordPress directory. On multisite, add `--url=site.example.com` to run a command against a single site.
 - **Check the environment first.** `wp --info` shows the WP-CLI version, the PHP binary and version, and the configuration WP-CLI is using. The PHP version used on the command line can differ from the one used by the web server.
 
 ```bash
