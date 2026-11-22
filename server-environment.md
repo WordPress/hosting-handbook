@@ -115,6 +115,7 @@ _(1) These PHP versions are end-of-life and are supported by WordPress for backw
 
 #### WordPress 6.9
 
+- [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
 - [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Security Support)
 - [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
 - [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
