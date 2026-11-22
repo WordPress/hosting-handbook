@@ -6,6 +6,8 @@ WordPress uses [WP-Cron](https://developer.wordpress.org/plugins/cron/) to run s
 
 On each request, WordPress checks for due events. If an event is due, WordPress sends a non-blocking loopback request to `wp-cron.php`, which runs the events. A lock (the `doing_cron` transient) stops parallel runs. The lock lasts for `WP_CRON_LOCK_TIMEOUT` seconds (60 by default).
 
+WP-CLI does not always use this lock. WP-CLI 2.12.0 bundles `cron-command` 2.3.2, which does not check `doing_cron`, so `wp cron event run --due-now` can overlap with another cron run. The check was added in [`cron-command` 2.3.5](https://github.com/wp-cli/cron-command/releases/tag/v2.3.5).
+
 Since WordPress 6.9, WordPress starts this loopback request on the `shutdown` action, after the page is sent. In older versions, the request started before the page was sent, and it increased the Time To First Byte (TTFB).
 
 This design has known limits for hosts:
@@ -38,7 +40,7 @@ For most hosting platforms, a system scheduler gives more reliable results. Use 
    If WP-CLI is not available, request `wp-cron.php` over HTTP:
 
    ```
-   */5 * * * * curl -s -o /dev/null https://example.com/wp-cron.php?doing_wp_cron
+   */5 * * * * curl -f -sS -o /dev/null https://example.com/wp-cron.php?doing_wp_cron
    ```
 
 3. Run the job as the same system user that owns the site files. Do not run it as `root`.
@@ -50,7 +52,7 @@ An interval of 1 to 5 minutes is common. Select the interval from the needs of t
 Each site in a network has its own cron events. One `wp cron event run` call runs the events of one site only. To run the events of all sites, loop over the sites:
 
 ```
-cd /path/to/wordpress && /usr/bin/php /usr/local/bin/wp site list --field=url | xargs -I {} /usr/bin/php /usr/local/bin/wp cron event run --due-now --url={} --quiet
+cd /path/to/wordpress && /usr/bin/php /usr/local/bin/wp site list --archived=0 --spam=0 --deleted=0 --field=url | xargs -I {} /usr/bin/php /usr/local/bin/wp cron event run --due-now --url={} --quiet
 ```
 
 ## Notes for hosts
