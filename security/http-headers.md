@@ -30,10 +30,12 @@ These headers are safe for most WordPress sites:
 
 ## Server examples
 
+These examples use a short HSTS `max-age` of 300 seconds. After you confirm that HTTPS works for the full site, increase the value, for example to `31536000` (one year).
+
 Nginx:
 
 ```nginx
-add_header Strict-Transport-Security "max-age=31536000" always;
+add_header Strict-Transport-Security "max-age=300" always;
 add_header X-Content-Type-Options "nosniff" always;
 add_header Referrer-Policy "strict-origin-when-cross-origin" always;
 ```
@@ -43,7 +45,7 @@ The `always` parameter adds the header to error responses too. Nginx inherits `a
 Apache (requires `mod_headers`):
 
 ```apache
-Header always set Strict-Transport-Security "max-age=31536000"
+Header always set Strict-Transport-Security "max-age=300"
 Header always set X-Content-Type-Options "nosniff"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 ```
@@ -52,6 +54,8 @@ Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
 - After a change, examine the response headers of the home page, an admin screen, and a REST API request. Make sure that no header appears two times with different values.
 - If you set headers at the platform level, document them, and tell customers how to change them per site.
+- A server-level header can override the value that WordPress or a plugin sends. Nginx `add_header` sends its value in addition to the PHP value. For `Referrer-Policy`, browsers use the last valid value, so the `admin_referrer_policy` filter stops having an effect. On Apache with PHP-FPM, `Header always set` replaces the PHP value. In these cases, customers cannot change the value from WordPress.
+- For headers that WordPress may already send, on Apache with PHP-FPM you can use `Header always setifempty` (Apache 2.4.7 and later). It sets the header only when PHP did not send it.
 
 ## More information
 
