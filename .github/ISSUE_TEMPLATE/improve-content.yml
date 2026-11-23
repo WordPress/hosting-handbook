@@ -1,0 +1,36 @@
+name: Improve existing content
+description: Suggest a clarification, example or update for an existing handbook page.
+labels: ["documentation"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Link to the handbook page or to the Markdown file in this repository.
+      placeholder: https://make.wordpress.org/hosting/handbook/...
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Section
+      description: The heading the suggestion applies to, if any.
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change
+      description: What should be added, clarified or updated?
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this needed?
+      description: Explain who it helps, and add source links where possible.
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: AI disclosure
+      description: The Hosting Team requires AI use to be disclosed, see the [AI policy](https://make.wordpress.org/hosting/2026/08/26/hosting-team-ai-policy/).
+      options:
+        - label: AI was used to generate or process this suggestion
