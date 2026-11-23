@@ -11,7 +11,7 @@ WordPress sends some security headers on its own. Know these before you add serv
 | `X-Frame-Options` | `SAMEORIGIN` | Admin screens and the login screen | `send_frame_options_header()` |
 | `Content-Security-Policy` | `frame-ancestors 'self';` (since WordPress 6.9) | Admin screens and the login screen | `send_frame_options_header()` |
 | `Referrer-Policy` | `strict-origin-when-cross-origin` (filter: `admin_referrer_policy`) | Admin screens and the login screen | `wp_admin_headers()` |
-| `X-Content-Type-Options` | `nosniff` | Some responses, for example REST API and admin-ajax responses | `send_nosniff_header()` |
+| `X-Content-Type-Options` | `nosniff` | Some responses, for example REST API and admin-ajax responses | `send_nosniff_header()` for admin-ajax, `WP_REST_Server::serve_request()` for the REST API |
 
 ## Recommended headers
 
