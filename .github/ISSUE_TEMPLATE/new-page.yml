@@ -1,0 +1,45 @@
+name: Add a new page
+description: Propose a new page for the Hosting Handbook.
+labels: ["enhancement", "documentation"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Proposed page title
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Where should it live?
+      description: The handbook section or parent page it belongs to.
+      placeholder: For example, under Get Involved, or a new top-level page
+  - type: textarea
+    id: outline
+    attributes:
+      label: What should the page cover?
+      description: A short outline or the main points. A link to a draft document is fine too.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and references
+      description: Links that back up the content, such as official documentation, Trac tickets or Make posts.
+  - type: dropdown
+    id: author
+    attributes:
+      label: Do you want to write it?
+      options:
+        - "Yes, I will open a pull request"
+        - "Yes, but I need help with Git or GitHub"
+        - "No, I am only proposing it"
+    validations:
+      required: true
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: AI disclosure
+      description: The Hosting Team requires AI use to be disclosed, see the [AI policy](https://make.wordpress.org/hosting/2026/08/26/hosting-team-ai-policy/).
+      options:
+        - label: AI was used to generate or process this proposal

@@ -6,7 +6,7 @@ The goal of the page is to inform users who manage a WordPress site about genera
 
 WordPress is committed to providing a secure experience for users. Information about WordPress's official stance on security and a general discussion about WordPress's overall aims for security can be found on [WordPress.org's Security page](https://wordpress.org/about/security/).
 
-This guide borrows heavily from the WordPress Codex's guide on [Hardening WordPress](https://wordpress.org/support/article/hardening-wordpress/). Since it's publicly editable, advice in the codex should be viewed with caution.
+This guide builds on the [Hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/) page of the Advanced Administration Handbook.
 
 Keeping any system, not just WordPress, secure is continuous work. Good security requires careful planning, monitoring, and periodic maintenance.
 
@@ -56,13 +56,13 @@ Some programs will represent the different kinds of access using letters instead
 
 | Symbolic | Numeric | Permissions |
 | --- | --- | --- |
-| \---------- | 000 | no permissions |
-| \-r-------- | 400 | read only for user |
-| \-rw------- | 600 | read & write only for user |
-| \-rwx------ | 700 | read, write, & execute only for user |
-| \-rwxr-xr-x | 755 | read, write, & execute for user, only read & execute for group and everyone else |
-| \-rw-r--r-- | 644 | read & write for user, only read for group and everyone else |
-| \-rwxrwxrwx | 777 | read, write, and execute for user, group, and everyone else. **Do not use. Security Risk.** |
+| `----------` | 000 | no permissions |
+| `-r--------` | 400 | read only for user |
+| `-rw-------` | 600 | read & write only for user |
+| `-rwx------` | 700 | read, write, & execute only for user |
+| `-rwxr-xr-x` | 755 | read, write, & execute for user, only read & execute for group and everyone else |
+| `-rw-r--r--` | 644 | read & write for user, only read for group and everyone else |
+| `-rwxrwxrwx` | 777 | read, write, and execute for user, group, and everyone else. **Do not use. Security Risk.** |
 
 #### Recommended Default Linux File Permissions
 
@@ -109,7 +109,7 @@ PHP opcode caching can significantly improve the performance of PHP processing f
 
 #### Validate permission
 
-The following setting makes PHP check that the current user has the necessary permissions to access the cached file. It should be enabled at the root php.ini configuration level to prevent users from accessing other users cached files.  
+The following setting makes PHP check that the current user has the necessary permissions to access the cached file. It should be enabled at the root php.ini configuration level to prevent users from accessing other users' cached files.  
 `opcache.validate_permission = On`
 
 This setting is not enabled by default. It is also only available as of PHP 7.0.14.
@@ -134,11 +134,11 @@ There are several solutions for providing database object caching for WordPress.
 
 #### Redis
 
-Redis is a lightweight, high-performance key-value database server commonly used to cache the results from WordPress database queries. In its default configuration, Redis uses a single database and does not require a username and password to access the database. Redis should also only be accessible from authorized network hosts.
+Redis is a lightweight, high-performance key-value database server commonly used to cache the results from WordPress database queries. By default, Redis clients use database 0, and Redis does not require a username and password to access the database. Redis should also only be accessible from authorized network hosts.
 
 ##### Redis databases
 
-Redis provides 16 databases, number 0 to 15 by default. Redis clients should be configured to use different databases instead of the default database (number 0). Redis can be configured to have additional databases, but that is outside the scope of this document.
+Redis provides 16 databases, numbered 0 to 15 by default. Numbered databases only namespace keys within one application: they do not enforce access control themselves and are not available on Redis Cluster, which only supports database 0. To isolate tenants on shared hosting, use Redis ACL users (Redis 6 and later) limited to their own key patterns, or run a separate Redis instance per user. Key patterns do not restrict whole-database commands, so deny `FLUSHALL`, `FLUSHDB` and `SWAPDB` for those users. Check that the object cache plugin can still flush its cache under these ACL rules. Plugins that flush with `FLUSHDB` need a selective flush instead: the Redis Object Cache plugin supports one with a non-empty `WP_REDIS_PREFIX` and `WP_REDIS_SELECTIVE_FLUSH` enabled, as long as the ACL allows the commands its flush script runs. Redis can be configured to have additional databases, but that is outside the scope of this document.
 
 ##### Redis user credentials
 
@@ -147,6 +147,14 @@ If Redis is going to be used for database object caching, the Redis server shoul
 ##### Redis network hosts
 
 The Redis server in its default configuration listens on port 6379. The port can be changed in Redis's configuration, but whatever port is used should be protected by a firewall to prevent unauthorized access.
+
+##### Redis Unix sockets
+
+Instead of a TCP port, Redis can listen on a Unix domain socket, which is not reachable over the network at all. Setting `unixsocket` to a socket path and `port 0` in the Redis configuration disables Redis's regular TCP listener, so socket access is controlled by filesystem permissions rather than network rules. `unixsocketperm 700` restricts the socket to its owning system user, which fits a per-user instance where Redis and PHP run as the same user. If Redis runs as a separate service user, use `unixsocketperm 770` and add the PHP user to the Redis group instead. The object caching plugin has to support socket connections for this to work. The Redis Object Cache plugin, for example, connects through a socket when `WP_REDIS_SCHEME` is set to `unix` and `WP_REDIS_PATH` points at the socket file.
+
+##### Per-user Redis instances
+
+On servers hosting sites for more than one user, a shared Redis instance where every site connects with the same credentials lets every site read every other site's cached data, and a unique cache key salt only reduces accidental collisions, it is not an access control. A properly configured shared instance can isolate cache access: give each tenant its own Redis user restricted to a key pattern with ACLs (Redis 6 and later), disable the default user, and on Valkey 9.1 and later (a Redis-compatible fork) scope users to specific logical databases. Even then, all tenants still share the instance's memory and eviction, so one site's traffic can push another site's cached data out of the shared memory. Running a separate Redis instance per user, each listening on its own Unix socket owned by that user, remains the stronger isolation: access is controlled by file permissions, no credentials are shared, and each instance has its own memory limit and eviction.
 
 ##### Redis cache key salt
 
@@ -160,13 +168,12 @@ Memcached is a memory object caching solution commonly used to provide database 
 
 WordPress has the ability to automatically apply security updates. This should be enabled in almost all cases. The exception is if files are not writable, outside of `wp-content/uploads`, for security reasons. In this instance, an alternative, expedient, and, preferably, automatic update process should be made available. See [Configuring Automatic Background Updates](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#configuring-automatic-background-updates) for details on automatic update configuration.
 
-[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-
-# Responsible Disclosure
+## Responsible Disclosure
 
 Responsible disclosure means the following: if you encounter a security breach (or a weak spot) concerning the WordPress core software, we would like to hear about this as soon as possible. The WordPress community takes security bugs seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
 To report a security issue, please visit the [WordPress HackerOne](https://hackerone.com/wordpress) program and file a ticket there.
 
 If you encounter security issues or insecure recommendations in the hosting documentation, we would like you to raise an issue in the [hosting-handbook GitHub repository](https://github.com/WordPress/hosting-handbook/issues/).
+
+[info]If you’re interested in improving this handbook, check the [GitHub Handbook repo](https://github.com/WordPress/hosting-handbook/), or leave a message in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) of the official [WordPress Slack](https://make.wordpress.org/chat/).[/info]

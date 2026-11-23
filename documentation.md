@@ -47,7 +47,7 @@ The second one is a paragraph that documents the minimum supported versions of P
 
 [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)
 
-This page is dependent on the Core team and is maintained for each version of WordPress. It includes a table specifying compatibility with PHP versions, possible exceptions, and the inclusion of "beta" or "compatible with exceptions" statuses.
+This page is dependent on the Core team and is maintained for each version of WordPress. It includes a table showing which PHP versions each WordPress version supports (Y or N), and a list of past changes to supported PHP versions. The "compatible with exceptions" label (retired in April 2025) and the "beta support" label (retired in May 2026) are no longer used.
 
 ## Hosting Team Projects
 

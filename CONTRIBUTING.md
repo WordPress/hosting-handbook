@@ -12,7 +12,7 @@ This document covers the technical details around setup and submitting your cont
 
 Pull Requests are welcome!
 
-Please feel free to start a Pull Request (PR) by [using the "Edit" button](https://help.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository) next to one of the Handbook pages, or by [forking and cloning the repo](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) (check the [Forks](https://github.com/WordPress/hosting-handbook/network/members)).
+Please feel free to start a Pull Request (PR) by [using the "Edit" button](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files) next to one of the Handbook pages, or by [forking and cloning the repo](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) (check the [Forks](https://github.com/WordPress/hosting-handbook/network/members)).
 
 All documentation is written in plain text using the Markdown format. Don't worry about any specific flavor of Markdown it's checked and cleaned before generating it to HTML.
 
@@ -20,11 +20,28 @@ Either way, please include a description of the purpose behind the change so tha
 
 Any edit requires a review from two hosting team members before being merged. Reviews can be requested in the upper right of the Pull Request form.
 
+## Glossary
+
+The Hosting Team [glossary](https://make.wordpress.org/hosting/handbook/glossary/) is managed separately from this repository. Glossary entries cannot be edited through a handbook Pull Request.
+
+To request a glossary correction or suggest a new entry, open an [Issue in this repository](https://github.com/WordPress/hosting-handbook/issues) or ask the Hosting Team in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) on WordPress Slack.
+
 ## Assets in Pages
 
 Assets such as images are not automatically imported into the Handbook. Because of that, assets must be included in Pull Requests within the `/assets/` directory in the repo for tracking.
 
 If you are merging a Pull Request with assets, please upload the assets to the [WordPress Hosting Handbook's media library](https://make.wordpress.org/hosting/wp-admin/upload.php) before merge, and link to the uploaded media directly.
+
+## Review Checklist
+
+Before approving or merging a Pull Request, check that:
+
+- **Facts link to a source.** Version numbers, dates and requirements (PHP, MySQL / MariaDB, web servers) link to a primary source, such as the upstream project, the Core handbook or a Trac ticket.
+- **Core changes match the Core team's documentation.** Statements about how WordPress Core behaves or what it requires should agree with the [PHP Compatibility and WordPress Versions](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/) reference and the [WordPress Requirements page](https://wordpress.org/about/requirements/). If they disagree, or you are unsure, ask in the [#core channel](https://wordpress.slack.com/archives/core/) before merging.
+- **Security guidance has been reviewed by someone with security experience.** Ask for a reviewer in the [#hosting channel](https://wordpress.slack.com/archives/hosting/) when a change touches the Security page or other security advice. Never describe an unfixed vulnerability in an issue or Pull Request. Report it as described in the [Security Policy](/.github/SECURITY.md).
+- **The manifest is up to date.** New, renamed or moved pages need a regenerated `bin/handbook-manifest.json` (see [Generating Manifest](#generating-manifest)).
+- **AI use is disclosed.** Follow the [Hosting Team AI Policy](https://make.wordpress.org/hosting/2026/08/26/hosting-team-ai-policy/), for example with an `AI Assisted` note in the Pull Request description.
+- **The Pull Request links its issue.** Use `Fixes #123` in the description so the issue closes when the Pull Request is merged.
 
 ## Generating Manifest
 
@@ -33,7 +50,7 @@ When a new page is added to the Handbook, or if a page's title or path has been 
 There's an included WP-CLI command to take care of this. To run it, from the cloned handbook repo:
 
 - Check if you have WP-CLI installed already by running `wp` or `which wp`
-- If you need it, install WP-CLI using the [instructions from WP-CLI.org](https://wp-cli.org/#Installing) or your favorite package manager.
+- If you need it, install WP-CLI using the [instructions from WP-CLI.org](https://make.wordpress.org/cli/handbook/guides/installing/) or your favorite package manager.
 - Run `wp hosting-handbook gen-all`.
 
 The manifest should get created inside the repo, in `/bin/handbook-manifest.json`.

@@ -31,24 +31,57 @@ The tool can be run manually or through an automated system like Travis. The pur
 To use the Runner, the following is required:
 * A server / hosting (infrastructure) with the usual configuration you have.
 * A database where you can test (it will be created and destroyed several times)
-* NodeJS 20.x
+* NodeJS 24.x / npm 11.x (WordPress trunk requires Node.js 24.18 or later and npm 11.16 or later, and `npm install` fails on older versions)
 
 #### NodeJS installation
 
 If you are using Debian / Ubuntu, install or update NodeJS with this command:
 
 ```
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
 sudo apt -y install nodejs
 node -v
+npm -v
 ```
 
 If you are using RHEL / CentOS, install or update NodeJS with this command:
 
 ```
-curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://rpm.nodesource.com/setup_24.x | sudo -E bash -
 sudo yum install -y nodejs
 node -v
+npm -v
+```
+
+### Preparing the server
+
+Besides Node.js, the Runner needs these tools on the server:
+* PHP on the command line, in a version that WordPress supports and with the extensions WordPress needs (at least `mysqli`)
+* Git, to download WordPress and the Runner
+* rsync, which the Runner uses to collect the test results, also when the tests run on the same server
+* [Composer](https://getcomposer.org/). If it is not installed, the Runner downloads it with `wget`
+
+The server also needs outgoing HTTPS access to `github.com`, `ghcr.io` (the WordPress build downloads Gutenberg from the GitHub Container Registry), `registry.npmjs.org` and `repo.packagist.org`. If the server is behind a firewall with an allowlist, add these hosts.
+
+Run the tests with a dedicated system user, not as `root`. This keeps the files, the cron job and the logs of the Runner separated from the rest of the server. The examples in this document use a user called `wptestrunner`.
+
+```bash
+sudo useradd --create-home --shell /bin/bash wptestrunner
+```
+
+Create a database and a database user that are only used for the tests. The Runner creates and deletes tables in this database on every run, so never point it to a database that holds real data.
+
+```sql
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress'@'localhost' IDENTIFIED BY '__PASSWORD__';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+Check that the new user can connect before continuing.
+
+```bash
+mysql -u wordpress -p wordpress -e "SELECT VERSION();"
 ```
 
 ### Installing the Runner
@@ -100,6 +133,12 @@ export WPT_PHPUNIT_CMD=
 # (Optionally) define the command execution to remove the test directory. Use if `rm -r` can't be called directly for some reason.
 export WPT_RM_TEST_DIR_CMD=
 
+# (Optionally) choose the WordPress flavor to test. 0 = WordPress (single site), 1 = WordPress Multisite
+export WPT_FLAVOR=0
+
+# (Optionally) run an extra group of tests. 0 = none, 1 = ajax, 2 = ms-files, 3 = external-http
+export WPT_EXTRATESTS=0
+
 # SSH connection string (can also be an alias). Leave empty if tests are meant to run in the same environment.
 export WPT_SSH_CONNECT=
 
@@ -114,6 +153,20 @@ export WPT_DEBUG=
 ```
 
 Configure the folder where the WordPress software downloads and the database accesses will be made to prepare the tests.
+
+#### Running tests over SSH
+
+Leave `WPT_SSH_CONNECT` empty when the Runner prepares and executes the tests on the same server. This is the simplest setup and is usually best when the server has Git, Node.js, npm, Composer, PHP, and the other tools needed to prepare WordPress.
+
+Use `WPT_SSH_CONNECT` when the Runner should prepare WordPress locally but execute the tests on another environment, such as a shared hosting account or a remote server that more closely matches the production hosting stack. The value can be a full SSH connection string, such as `user@example.com`, or an SSH alias from the Runner user's SSH config.
+
+When using SSH:
+* Ensure the remote account has access to the configured test directory and database. `WPT_DB_HOST` must be reachable from the remote server, because the tests connect to the database from there.
+* Make sure the remote server has `php` and `rsync` available. PHPUnit and `cleanup-db.php` run on the remote server, and the reported PHP version is the remote PHP version.
+* Point `WPT_TEST_DIR` to a directory that is only for the tests. When `WPT_RM_TEST_DIR_CMD` is empty, the Runner deletes this directory at the end of each run.
+* By default, the Runner does not check the server's host key (`-o StrictHostKeyChecking=no`). For better security, add the server to `known_hosts` and set `WPT_SSH_OPTIONS` to `-o StrictHostKeyChecking=yes`.
+* Use `WPT_SSH_PRIVATE_KEY_BASE64` only when the Runner user has no SSH key of its own, for example in a CI job. The Runner writes the decoded key to `~/.ssh/id_rsa`, replacing any existing key, and then needs WP-CLI on the target for its connection check. Otherwise, leave it empty and use the user's own key or an SSH alias. Protect the `.env` file from other users.
+* Use a dedicated test account and database. The Runner creates, modifies, and removes test data, so it should not target a production WordPress site or production database.
 
 ### Preparing the environment
 
@@ -172,7 +225,7 @@ If you follow these steps, everything should work perfectly and you should not m
 Even if the test has failed, a report will be made. The first one shows the information about our environment. Among the most important elements are the extensions that are commonly used in WordPress and some utilities that are also generally useful.
 
 ```bash
-cat /home/wptestrunner/wordpress/env.json
+cat /home/wptestrunner/wordpress/tests/phpunit/build/logs/env.json
 ```
 
 The content of this file is somewhat similar to this:
@@ -210,7 +263,7 @@ The content of this file is somewhat similar to this:
 In addition to this report, a definitive file with all the information on what happened in the tests will be provided. This is the one that includes all the tests that are made (more than 10,000), giving information on the time that they take to be executed and any problems that may have arisen.
 
 ```bash
-cat /home/wptestrunner/wordpress/junit.xml
+cat /home/wptestrunner/wordpress/tests/phpunit/build/logs/junit.xml
 ```
 
 At this point, we can generate the reports by sending them to WordPress.org, if necessary. Even if you haven't included the WordPress user (see below for how to create it), you can still run this file.
@@ -218,6 +271,8 @@ At this point, we can generate the reports by sending them to WordPress.org, if 
 ```bash
 php report.php
 ```
+
+This step copies `env.json` and `junit.xml` to the `WPT_PREPARE_DIR` folder and processes them from there. If `junit.xml` does not exist, the report stops with an error instead of sending an empty result.
 
 ### Cleaning up the environment for other tests
 
@@ -267,7 +322,11 @@ cd "$RUNNER_DIR" || exit 1
 git pull --ff-only || exit $?
 source "$CONFIG_FILE" || exit $?
 
-php prepare.php || exit $?
+php prepare.php || {
+	status=$?
+	php cleanup.php
+	exit "$status"
+}
 
 status=0
 php test.php || status=$?
@@ -348,11 +407,47 @@ The global lock serializes all runs. This is important because each job updates 
 
 ### Improving the configuration
 
-Do not forget that this tool aims to verify that the environment and infrastructure are the optimal ones for WordPress to work, so, following the example, you could make several improvements, such as installing the extension of `bcmath`, `gd`, `libsodium`, `mcrypt`, `mod_xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`.
+Do not forget that this tool aims to verify that the environment and infrastructure are the optimal ones for WordPress to work, so, following the example, you could make several improvements, such as installing the extension of `bcmath`, `gd`, `sodium`, `xml` and `imagick` or utilities such as `ghostscript` and `imagemagick`. It is expected that `libsodium`, `mcrypt` and `mod_xml` show `false` in `env.json` on modern PHP.
 
 The goal? To be error-free and have the green light for the perfect configuration.
 
 [alert]Some tests may be skipped, or there may be tests that PHPUnit considers "risky".[/alert]
+
+### Troubleshooting
+
+#### `npm error code EBADDEVENGINES` while preparing the test
+
+The installed Node.js or npm version is older than the one WordPress requires. The required versions are defined in the `engines` section of the [package.json file of wordpress-develop](https://github.com/WordPress/wordpress-develop/blob/trunk/package.json) and change over time. Check the installed versions with `node -v` and `npm -v` and update them. To update only npm, run `sudo npm install -g npm@latest`.
+
+#### `destination path already exists and is not an empty directory`
+
+`prepare.php` downloads WordPress with `git clone` and needs an empty `WPT_PREPARE_DIR` folder. This error appears when an earlier run stopped before the cleanup step. Run `php cleanup.php` and start again.
+
+#### The build stops with `Failed to fetch GHCR token`
+
+`npm run build` downloads Gutenberg from the GitHub Container Registry. This error means the server cannot reach `ghcr.io`. Allow outgoing HTTPS connections to the hosts listed in the section about preparing the server.
+
+#### Tests fail with unknown timezone names
+
+Some tests use old timezone names, such as `America/Buenos_Aires`. Some Linux distributions ship these names in a separate package that is not installed by default. On Ubuntu 24.04 or newer, and on other distributions that provide it, install the `tzdata-legacy` package:
+
+```bash
+sudo apt -y install tzdata-legacy
+```
+
+To check if PHP knows these names, run this command. It prints nothing when the name is valid:
+
+```bash
+php -r 'new DateTimeZone("America/Buenos_Aires");'
+```
+
+#### `junit.xml was not found` when creating the report
+
+`report.php` reads the results that `test.php` writes to `tests/phpunit/build/logs/junit.xml`. If the file does not exist, the tests did not run to the end. Check the output of `php test.php` for the error that stopped them.
+
+#### The automation script stops at the `source .env` line
+
+The example script is written for Bash. Run it directly or with `bash`, also in the cron entry. If it is started with `sh`, it fails on systems where `sh` is not Bash.
 
 ## How to report: Creating your bot for WordPress.org
 
@@ -360,7 +455,7 @@ If you / your company want the test [results to appear on the WordPress.org page
 
 The first thing to do is [create a user on WordPress.org](https://login.wordpress.org/register). If your company is called *ExampleHostingCompany, Inc*, for example, call your user something like *examplehostingcompanybot*. Keep in mind that the associated email account should be checked frequently, as emails will arrive regarding the possible operation of the tests.
 
-Create [an issue on the test page](https://github.com/WordPress/phpunit-test-runner/issues/new?assignees=&labels=test-reporter-request&projects=&template=test_reporter_request.md&title=%5BTest+Reporter%5D+) asking to include the bot in the results page as a *Test Reporter*, indicating the email account you used with that user.
+[Create an issue in the test runner repository](https://github.com/WordPress/phpunit-test-runner/issues/new?assignees=&labels=test-reporter-request&projects=&template=test_reporter_request.md&title=%5BTest+Reporter%5D+) requesting that your bot be added as a *Test Reporter*. Make sure to include the bot account’s WordPress.org username, which is required to identify the account and process the request.
 
 [tip]The avatar of this user must be your company's logo, and the name and URL must make clear which company it is.[/tip]
 

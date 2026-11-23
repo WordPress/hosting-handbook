@@ -1,0 +1,35 @@
+name: Error on a handbook page
+description: Report something incorrect, outdated or broken on a handbook page.
+labels: ["bug", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the Hosting Handbook accurate. Do not include exploit details or private vulnerability information here, see the [security policy](https://github.com/WordPress/hosting-handbook/security/policy).
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Link to the handbook page or to the Markdown file in this repository.
+      placeholder: https://make.wordpress.org/hosting/handbook/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the text, command or link that is incorrect, outdated or broken.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What should it say?
+      description: Suggest the corrected content if you can, and add a source link.
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: AI disclosure
+      description: The Hosting Team requires AI use to be disclosed, see the [AI policy](https://make.wordpress.org/hosting/2026/08/26/hosting-team-ai-policy/).
+      options:
+        - label: AI was used to generate or process this report
