@@ -20,6 +20,16 @@ Either way, please include a description of the purpose behind the change so tha
 
 Any edit requires a review from two hosting team members before being merged. Reviews can be requested in the upper right of the Pull Request form.
 
+### Merge requirements
+
+The following rules apply to all Hosting team repositories, as announced in [Increased security on Hosting team repositories](https://make.wordpress.org/hosting/2026/09/30/increased-security-on-hosting-team-repositories/):
+
+- Two approvals are required before a Pull Request can be merged.
+- Change requests must be marked as resolved.
+- New pushes must be reviewed and approved again before merging.
+- All checks and tests must pass, with only green check marks in the results.
+- New GitHub accounts have a 24-hour wait before they can interact with the repositories.
+
 ## Glossary
 
 The Hosting Team [glossary](https://make.wordpress.org/hosting/handbook/glossary/) is managed separately from this repository. Glossary entries cannot be edited through a handbook Pull Request.
