@@ -33,7 +33,7 @@ For installing WordPress as a site owner, see [How to install WordPress](https:/
 
 - **Set the environment type.** Define `WP_ENVIRONMENT_TYPE` in `wp-config.php` as `production`, `staging`, `development` or `local`. Plugins use [`wp_get_environment_type()`](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) to change their behavior, for example to avoid sending emails from a staging copy. On staging and development sites, also discourage search engines from indexing the site (Settings > Reading). See [Staging Environments](https://make.wordpress.org/hosting/handbook/reliability/staging/).
 - **Make sure email is delivered.** WordPress sends password resets and notifications through PHP's `mail()` by default. Configure outgoing mail on the server, or offer an SMTP or transactional email service. See [Email](https://developer.wordpress.org/advanced-administration/server/mail/) in the Advanced Administration Handbook.
-- **Run WP-Cron from a system cron job.** By default, scheduled tasks only run when someone visits the site. Set `DISABLE_WP_CRON` to `true` and run due events from the system scheduler, for example every five minutes with `wp cron event run --due-now`. See [Hooking WP-Cron Into the System Task Scheduler](https://developer.wordpress.org/plugins/cron/hooking-wp-cron-into-the-system-task-scheduler/).
+- **Run WP-Cron from a system cron job.** By default, scheduled tasks only run when someone visits the site. Set `DISABLE_WP_CRON` to `true` and run due events from the system scheduler, for example every five minutes with `wp cron event run --due-now`. See [WP-Cron and System Cron](https://make.wordpress.org/hosting/handbook/reliability/cron/) for the details, including multisite and running cron without WP-CLI.
 - **Set up caching.** Enable an opcode cache, and offer a page cache and a persistent object cache where your platform supports them. See [Performance](https://make.wordpress.org/hosting/handbook/performance/).
 - **Set PHP limits that fit WordPress.** Check `memory_limit`, `upload_max_filesize`, `post_max_size` and `max_execution_time`. See [PHP Memory Limit](https://make.wordpress.org/hosting/handbook/server-environment/#php-memory-limit).
 - **Schedule backups, and test restoring them.** Back up both the files and the database, and keep copies off the server. See [Reliability](https://make.wordpress.org/hosting/handbook/reliability/).
@@ -58,7 +58,9 @@ wp config set WP_ENVIRONMENT_TYPE production
 wp config set DISABLE_WP_CRON true --raw
 
 # Install WordPress. Without --admin_password, a random password is generated and shown once.
-wp core install --url=https://example.com --title="Example Site" --admin_user=example-admin --admin_email=owner@example.com
+# --skip-email stops WordPress from also emailing that password in plain text to --admin_email.
+# Give the password to the customer through a secure channel, and do not save or log this output.
+wp core install --url=https://example.com --title="Example Site" --admin_user=example-admin --admin_email=owner@example.com --skip-email
 
 # Remove plugins the customer did not ask for.
 wp plugin delete hello
