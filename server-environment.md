@@ -78,6 +78,7 @@ _PHP 8.6 was released on 19 November 2026. WordPress 7.2 is the first version to
   - [#65904](https://core.trac.wordpress.org/ticket/65904): Build/Test Tools: Run PHPUnit tests against PHP 8.6. _NOTE: Closed / Fixed._
   - [#66137](https://core.trac.wordpress.org/ticket/66137): Tests: Replace deprecated `mb_split()` with `preg_split()`. _NOTE: Closed / Fixed. PHP 8.6 deprecates all `mbstring` regular expression functions._
   - [#66648](https://core.trac.wordpress.org/ticket/66648): General: Officially declare support for PHP 8.6. _NOTE: Closed / Fixed._
+  - [#66419](https://core.trac.wordpress.org/ticket/66419): Upload: Accept both valid MIME types reported for TrueType fonts. _NOTE: Closed / Fixed. Font Library `.ttf` uploads failed when libmagic 5.47 or newer, including the version bundled with PHP 8.6, reported `font/ttf`._
   - [#65965](https://core.trac.wordpress.org/ticket/65965): Code Modernization: Replace `socket_set_timeout()` usage in the Snoopy library, deprecated in PHP 8.5. _NOTE: Closed / Fixed._
   - [#65773](https://core.trac.wordpress.org/ticket/65773): Code Modernization: Use `array_key_first()` for an array's first key. _NOTE: Closed / Fixed._
   - [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_any()`, `array_all()` and `is_iterable()`.

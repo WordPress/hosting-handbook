@@ -230,7 +230,7 @@ Upgrade normally. Everything should work.
 
 Goals:
 - WordPress: upgrade to WordPress 7.2
-- PHP: upgrade to PHP 8.4
+- PHP: upgrade to PHP 8.5
 - SQL: upgrade to MySQL 8.4 LTS / MariaDB 11.4 LTS
 
 Losses:

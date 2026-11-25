@@ -36,7 +36,7 @@ WordPress supports older software for backward compatibility. The absolute minim
 - **MySQL**: 5.5.5+
 - **MariaDB**: 5.5.5+
 
-This is unchanged from WordPress 7.0 and 7.1, confirmed against `$required_php_version` and `$required_mysql_version` in `src/wp-includes/version.php` on trunk.
+This is unchanged from WordPress 7.0 and 7.1, confirmed against `$required_php_version` and `$required_mysql_version` in `src/wp-includes/version.php` on the `7.2` branch. Core has one database minimum (`$required_mysql_version`, 5.5.5) and checks it against the version string the server reports, MariaDB included.
 
 The full requirements are documented on the [WordPress Requirements page](https://wordpress.org/about/requirements/).
 
@@ -70,13 +70,14 @@ MySQL moved to calendar versioning after 9.7. The first Innovation release after
 
 Version | Type | End of life
 ---- | ---- | ----
+MariaDB 13.1 | Rolling | Q1 2027
 MariaDB 13.0 | Rolling | Q4 2026
 MariaDB 12.3 | LTS | 2029-06-12
 MariaDB 11.8 | LTS | 2028-06-04
 MariaDB 11.4 | LTS | 2029-05-29
 MariaDB 10.11 | LTS | 2028-02-16
 
-MariaDB 13.0 is a rolling release, not a long-term release. The [MariaDB maintenance policy](https://mariadb.org/about/#maintenance-policy) gives its community end of life as Q4 2026, when the next rolling release replaces it, so it is listed for completeness but is not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release. Core added MariaDB 12.3 and 13.0 to its test matrices on 5 November 2026 ([changeset 65280](https://core.trac.wordpress.org/changeset/65280)).
+MariaDB 13.1 and 13.0 are rolling releases, not long-term releases. 13.1 was released on 21 November 2026 and replaces 13.0. The [MariaDB maintenance policy](https://mariadb.org/about/#maintenance-policy) gives their community end of life as Q1 2027 for 13.1 and Q4 2026 for 13.0, so 13.0 has only a few weeks of support left at the 7.2 release. Both are listed for completeness but are not recommended for new installations. MariaDB 12.3 LTS is the newest long-term release. Core added MariaDB 12.3 and 13.0 to its test matrices on 5 November 2026 ([changeset 65280](https://core.trac.wordpress.org/changeset/65280)).
 
 ### SQL modes
 
@@ -89,8 +90,8 @@ The versions below are current and receiving fixes at the 7.2 release.
 Software | Version at release | Released
 ---- | ---- | ----
 Apache HTTPD | 2.4.71 | 2026-11-11
-nginx | 1.30.6 (stable) / 1.31.8 (mainline) | 2026-10-14 / 2026-10-21
-Angie | 1.12.4 | 2026-10-16
+nginx | 1.30.8 (stable) / 1.31.10 (mainline) | 2026-11-23 / 2026-11-23
+Angie | 1.12.5 | 2026-11-20
 LiteSpeed Web Server | 6.3.7 | 2026-09-23
 OpenLiteSpeed | 1.9.4 (latest) / 1.8.5 (stable) | 2026-10-24 / 2026-01-08
 
@@ -116,6 +117,10 @@ PHP 8.6 deprecates all `mbstring` regular expression functions, including the `m
 
 WordPress Core does not use these functions outside its test suite, which was updated in [#66137](https://core.trac.wordpress.org/ticket/66137). Plugins and themes that still call them will log deprecation notices on PHP 8.6. The [`mb_onig`](https://github.com/youkidearitai/mb_onig) extension, installable with PIE as `mb_onig/mb_onig`, keeps the functions available for code that cannot be updated yet. The recommended replacement is the PCRE functions with the `/u` modifier.
 
+### TrueType font uploads
+
+libmagic 5.47 and newer reports TrueType (`.ttf`) fonts as `font/ttf` instead of `font/sfnt`. The libmagic bundled with PHP 8.6 includes this change, and PHP builds that use the system libmagic can report either type on any PHP version. Before WordPress 7.2, the Font Library accepted only `font/sfnt`, so `.ttf` uploads failed with a `rest_font_upload_invalid_file_type` error on those servers. WordPress 7.2 accepts both types ([#66419](https://core.trac.wordpress.org/ticket/66419)).
+
 ## Related tickets
 
 Compatibility work for PHP 8.5 and 8.6:
@@ -123,7 +128,7 @@ Compatibility work for PHP 8.5 and 8.6:
 - [#65904](https://core.trac.wordpress.org/ticket/65904): Build/Test Tools: Run PHPUnit tests against PHP 8.6. _NOTE: Closed / Fixed._
 - [#66137](https://core.trac.wordpress.org/ticket/66137): Tests: Replace deprecated `mb_split()` with `preg_split()`. _NOTE: Closed / Fixed._
 - [#66648](https://core.trac.wordpress.org/ticket/66648): General: Officially declare support for PHP 8.6. _NOTE: Closed / Fixed._
-- [#66419](https://core.trac.wordpress.org/ticket/66419): Tests: Remove TrueType font detection skips for PHP 8.6, after the upstream fix in PHP 8.6.0RC7. _NOTE: Closed / Fixed._
+- [#66419](https://core.trac.wordpress.org/ticket/66419): Upload: Accept both valid MIME types reported for TrueType fonts. _NOTE: Closed / Fixed._
 - [#65965](https://core.trac.wordpress.org/ticket/65965): Code Modernization: Replace `socket_set_timeout()` usage in the Snoopy library, deprecated in PHP 8.5. _NOTE: Closed / Fixed._
 
 Modernization using newer PHP features. `array_find()`, `array_find_key()`, `array_any()` and `array_all()` come from PHP 8.4, and WordPress polyfills them. `array_key_first()`, `is_iterable()` and `??=` are native on the PHP 7.4 minimum:
@@ -131,6 +136,8 @@ Modernization using newer PHP features. `array_find()`, `array_find_key()`, `arr
 - [#65773](https://core.trac.wordpress.org/ticket/65773): Code Modernization: Use `array_key_first()` for an array's first key. _NOTE: Closed / Fixed._
 - [#65818](https://core.trac.wordpress.org/ticket/65818): Code modernization work for the 7.2 cycle, including adoption of `array_find()`, `array_find_key()`, `array_any()`, `array_all()` and `is_iterable()`.
 - [#65823](https://core.trac.wordpress.org/ticket/65823): Adoption of the null coalescing assignment operator (`??=`) for default values.
+
+The [WordPress 7.2 Field Guide](https://make.wordpress.org/core/2026/11/20/wordpress-7-2-field-guide/) is the starting point for what changed in this release. It covers the SQL mode change above, but not server requirements.
 
 ## Upgrading WordPress
 
