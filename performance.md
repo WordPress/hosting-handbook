@@ -12,7 +12,7 @@ Caches typically expire after a certain amount of time and are regenerated so th
 
 In a typical page load, various caches might be checked in the following order:
 
-1.  Local Browser cache / Local Storage / Web App Manifest
+1.  Local Browser cache / Local Storage / Service Worker cache
 2.  [Content Delivery Network (CDN)](#content-delivery-network-cdn-cache)
 3.  [Full Page Cache](#full-page-cache) (Reverse Proxy - Varnish or NGINX)
 4.  [Full Page Cache](#full-page-cache) (File-based Full-page caching with plugins)
@@ -47,7 +47,7 @@ In order to display your content, WordPress does a lot of work under the hood, a
 
 The best way to cache these requests is to use a reverse proxy like NGINX or Varnish which stores the output directly into the server memory or hard disk. That saves a lot of processing power because cached content is served straight out of the reverse proxy without hitting your web server, the PHP service, or your database service at all. If a reverse proxy is not available on your current server setup, you can fallback to storing cached content into your file system. It's slower than reverse proxies and a hit reaches your web server and your PHP service at least once, so it can direct the request to the proper cached file but still - it's much faster than doing all the computing for every request.
 
-Full Page Caching stores the HTML output of a request, but all the CSS, JS, images and font files will have to be loaded separately too. They are handled separately and optimizing them is worth investing the time and effort. Static caching can have great effect on those resources. You can often use the same reverse proxy to static resources in the server memory - CSS, JS, Fonts, Images and serve them directly.
+Full Page Caching stores the HTML output of a request, but all the CSS, JS, images and font files will have to be loaded separately too. They are handled separately and optimizing them is worth investing the time and effort. Static caching can have great effect on those resources. You can often use the same reverse proxy to cache static resources in the server memory - CSS, JS, Fonts, Images and serve them directly.
 
 It's important to have the ability to expire caches when necessary to avoid serving visitors old data. When available, selective caching is preferred over purging the entire cache, to avoid the cost of WordPress regenerating every page for the site. Furthermore, it's good practice to exclude certain types of pages from your full page caching completely because they are different for each user. For example, if you have an online store, it's imperative that your cart, checkout and profile pages are completely dynamic. In general, it’s a good idea to exclude all logged in users from the cache because they are supposed to see personalized content. Another important aspect is the default caching period, which can be different for each website depending on how often data is changed.
 
@@ -67,7 +67,7 @@ As with the other caching layers, expiry matters. Static resources should use ve
 
 > In 2005, WordPress introduced its internal object cache — a way of automatically storing any data from the database (not just objects) in PHP memory to prevent unnecessary queries. However, out of the box, WordPress will discard all of those objects at the end of the request, requiring them to be rebuilt from scratch for the next page load. In addition to that, you can use persistent object caching mechanisms like Redis or Memcached which, however, require additional plugins (drop-ins) which allow WordPress to use these services.
 
-###### source: [scalewp.io](https://www.scalewp.io/object-caching/)
+**Source**: [scalewp.io](https://www.scalewp.io/object-caching/)
 
 What does this mean? Think of a standard WordPress homepage displaying the most recent posts. Each of these posts has quite a bit of information associated with it WordPress must look up such as the author, categories, tags, and excerpt.
 
@@ -79,7 +79,7 @@ For these reasons, persistent object caching support is commonly offered with ma
 
 > Transients are inherently sped up by caching plugins, where normal Options are not. A memcached plugin, for example, would make WordPress store transient values in fast memory instead of in the database. For this reason, transients should be used to store any data that is expected to expire, or which can expire at any time. Transients should also never be assumed to be in the database, since they may not be stored there at all.
 
-###### source: [WordPress Common APIs Handbook](https://developer.wordpress.org/apis/transients/)
+**Source**: [WordPress Common APIs Handbook](https://developer.wordpress.org/apis/transients/)
 
 ### Opcode Cache
 
@@ -102,7 +102,7 @@ During active development, a shorter revalidation interval can reduce confusion 
 
 Hosts should also monitor OPcache usage over time. If the cache runs out of memory, reaches the configured script limit, or restarts frequently because of wasted memory, the site may lose some of the performance benefit and spend more time recompiling PHP files.
 
-On shared or multi-user hosting, review the [OpCache Security](security.md#opcache-security) guidance before enabling a shared OPcache configuration.
+On shared or multi-user hosting, review the [OpCache Security](https://make.wordpress.org/hosting/handbook/security/#opcache-security) guidance before enabling a shared OPcache configuration.
 
 ### Fragment Cache
 

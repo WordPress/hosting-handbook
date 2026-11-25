@@ -13,6 +13,13 @@
     "parent": null,
     "order": 1
   },
+  "faq": {
+    "title": "Hosting Team FAQ",
+    "slug": "faq",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/faq.md",
+    "parent": "get-involved",
+    "order": 0
+  },
   "team-projects": {
     "title": "Team Projects",
     "slug": "team-projects",
@@ -47,6 +54,13 @@
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/team-updates.md",
     "parent": "get-involved",
     "order": 5
+  },
+  "ai-policy": {
+    "title": "AI Policy",
+    "slug": "ai-policy",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/ai-policy.md",
+    "parent": "get-involved",
+    "order": 6
   },
   "server-environment": {
     "title": "Server Environment",
@@ -111,6 +125,13 @@
     "parent": null,
     "order": 6
   },
+  "wp-cli": {
+    "title": "WP-CLI",
+    "slug": "wp-cli",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/wp-cli.md",
+    "parent": null,
+    "order": 7
+  },
   "performance": {
     "title": "Performance",
     "slug": "performance",
@@ -125,6 +146,13 @@
     "parent": null,
     "order": 11
   },
+  "cron": {
+    "title": "WP-Cron and System Cron",
+    "slug": "cron",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/reliability\/cron.md",
+    "parent": "reliability",
+    "order": 1
+  },
   "sustainability": {
     "title": "Sustainability",
     "slug": "sustainability",
@@ -132,11 +160,25 @@
     "parent": null,
     "order": 12
   },
+  "staging": {
+    "title": "Staging Environments",
+    "slug": "staging",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/reliability\/staging.md",
+    "parent": "reliability",
+    "order": 2
+  },
   "security": {
     "title": "Security",
     "slug": "security",
     "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/security.md",
     "parent": null,
     "order": 13
+  },
+  "http-headers": {
+    "title": "HTTP Security Headers",
+    "slug": "http-headers",
+    "markdown_source": "https:\/\/github.com\/wordpress\/hosting-handbook\/blob\/main\/security\/http-headers.md",
+    "parent": "security",
+    "order": 1
   }
 }

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question
+    url: https://wordpress.slack.com/archives/hosting/
+    about: "Questions and discussions take place in the #hosting channel on the Making WordPress Slack."
+  - name: Report a security vulnerability
+    url: https://github.com/WordPress/hosting-handbook/security/policy
+    about: "Do not report exploitable vulnerabilities in public issues. Read the security policy first."
